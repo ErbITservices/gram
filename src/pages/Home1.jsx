@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 function Home1() {
@@ -16,7 +17,7 @@ function Home1() {
       </div>
       <div class=" mb-3 btn-container">
         <form class="container-fluid justify-content-start">
-          <a href="/Addnew">
+          <Link to="/Addnew">
             <button
               class="btn btn-success m-3"
               //   onClick={navigate("/master")}
@@ -24,8 +25,8 @@ function Home1() {
             >
               નવી લાઇબ્રેરી ઉમેરો
             </button>
-          </a>
-          <a href="/master">
+          </Link>
+          <Link to="/master">
             <button
               class="btn btn-info m-3"
               //   onClick={navigate("/master")}
@@ -33,8 +34,8 @@ function Home1() {
             >
               નિરીક્ષણ અહેવલ ફોમ
             </button>
-          </a>
-          {/* <a href="/form">
+          </Link>
+          {/* <Link to="/form">
             <button
               class="btn btn-outline-success me-2"
               //   onClick={navigate("/form")}
@@ -42,7 +43,7 @@ function Home1() {
             >
               Form
             </button>
-          </a> */}
+          </Link> */}
 
           <button class="btn btn-danger m-3" onClick={Logout} type="button">
             LogOut

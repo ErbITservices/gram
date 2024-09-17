@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "../components/Footer";
 import { useRef, useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 import { useReactToPrint } from "react-to-print";
@@ -560,11 +561,11 @@ function Addnew() {
             <center>
               <div className="row mb-3 tab2 col-sm-13 align-items-center">
                 <div className=" col">
-                  <a href="/">
+                  <Link to="/">
                     <button type="button" className="btn btn-warning">
                       Back
                     </button>
-                  </a>
+                  </Link>
                 </div>
 
                 <div className=" col">

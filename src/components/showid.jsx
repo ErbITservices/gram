@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import NavBar from "./NavBar";
 
 useLocation;
@@ -11,11 +11,11 @@ function Showid() {
       <h1>Your Library Id Is :- {location.state.id}</h1>
       <div className="row mb-3 tab2 col-sm-13 align-items-center">
         <div className=" col">
-          <a href="/">
+          <Link to="/">
             <button type="button" className="btn btn-warning">
               Back
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </>

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 function Home2() {
@@ -8,20 +9,19 @@ function Home2() {
     navigator("/All_Login");
     localStorage.setItem("login", "");
     // localStorage.setItem("login", "director");
-    
   }
   return (
     <>
       <NavBar titel={"ગ્રામ ગ્રંથાલયનુ પોર્ટલ"}></NavBar>
       <div class=" mb-3">
         <form class="container-fluid justify-content-start">
-          <a href="/Dataintable">
+          <Link to="/Dataintable">
             <button class="btn m-3 btn-info " type="button">
               Report
             </button>
-          </a>
+          </Link>
 
-          <a href="/Addnew">
+          <Link to="/Addnew">
             <button
               class="btn btn-success m-3"
               //   onClick={navigate("/master")}
@@ -29,8 +29,8 @@ function Home2() {
             >
               નવી લાઇબ્રેરી ઉમેરો
             </button>
-          </a>
-          <a href="/master">
+          </Link>
+          <Link to="/master">
             <button
               class="btn btn-info m-3"
               //   onClick={navigate("/master")}
@@ -38,7 +38,7 @@ function Home2() {
             >
               નિરીક્ષણ અહેવલ ફોમ
             </button>
-          </a>
+          </Link>
 
           <button class="btn btn-danger m-3 " onClick={Logout} type="button">
             Log Out

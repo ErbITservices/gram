@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 
@@ -99,9 +100,9 @@ const Login3 = () => {
                   <button type="submit " className="btn btn-submit">
                     Login
                   </button>
-                  <a href="/Forgotpassword">
+                  <Link to="/Forgotpassword">
                     <p>Forgot Password</p>
-                  </a>
+                  </Link>
                 </form>
               </div>
             </div>

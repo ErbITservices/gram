@@ -1,4 +1,5 @@
 import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 
 import { BiBook, BiBookOpen } from "react-icons/bi";
 
@@ -10,11 +11,11 @@ function First() {
       </div>
       <div class=" mb-3 button">
         <form class="container-fluid justify-content-start">
-          <a href="All_Login">
+          <Link to="All_Login">
             <button class="btn btn-outline-success m-3" type="button">
               Login
             </button>
-          </a>
+          </Link>
         </form>
       </div>
     </>

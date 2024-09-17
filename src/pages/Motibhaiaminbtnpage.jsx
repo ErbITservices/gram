@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 import "/src/App.css";
 import { useEffect } from "react";
 import Slideshow from "../components/Slid";
@@ -13,7 +14,7 @@ function Motibhaiaminbtnpage() {
 
       <div class=" mb-3 btn-container">
         <form class="container-fluid justify-content-start">
-          <a href="/Motibhaiamin_1">
+          <Link to="/Motibhaiamin_1">
             <button
               class="btn m-3 btn-primary"
               //   onClick={navigate("/form")}
@@ -21,8 +22,8 @@ function Motibhaiaminbtnpage() {
             >
               મહિલા બાળ
             </button>
-          </a>
-          <a href="/Motibhaiamin_2">
+          </Link>
+          <Link to="/Motibhaiamin_2">
             <button
               class="btn m-3 btn-primary "
               //   onClick={navigate("/form")}
@@ -30,8 +31,8 @@ function Motibhaiaminbtnpage() {
             >
               શહેર ગ્રંથાલય
             </button>
-          </a>
-          <a href="/Motibhaiamin_3">
+          </Link>
+          <Link to="/Motibhaiamin_3">
             <button
               class="btn m-3 btn-primary "
               //   onClick={navigate("/form")}
@@ -39,8 +40,8 @@ function Motibhaiaminbtnpage() {
             >
               શહેર શાખા નગરકક્ષા
             </button>
-          </a>
-          <a href="/Motibhaiamin_4">
+          </Link>
+          <Link to="/Motibhaiamin_4">
             <button
               class="btn  btn-primary m-3"
               //   onClick={navigate("/master")}
@@ -48,8 +49,8 @@ function Motibhaiaminbtnpage() {
             >
               ગ્રામ ગ્રંથાલય
             </button>
-          </a>
-          <a href="/Motibhaiamin_5">
+          </Link>
+          <Link to="/Motibhaiamin_5">
             <button
               class="btn  btn-primary m-3"
               //   onClick={navigate("/master")}
@@ -57,8 +58,8 @@ function Motibhaiaminbtnpage() {
             >
               નગરકક્ષા ૧
             </button>
-          </a>
-          <a href="/Motibhaiamin_6">
+          </Link>
+          <Link to="/Motibhaiamin_6">
             <button
               class="btn  btn-primary m-3"
               //   onClick={navigate("/master")}
@@ -66,8 +67,8 @@ function Motibhaiaminbtnpage() {
             >
               નગરકક્ષા ૨
             </button>
-          </a>
-          <a href="/Motibhaiamin_7">
+          </Link>
+          <Link to="/Motibhaiamin_7">
             <button
               class="btn  btn-primary m-3"
               //   onClick={navigate("/master")}
@@ -75,7 +76,7 @@ function Motibhaiaminbtnpage() {
             >
               વિશીષ્ટ લાઇબ્રેરી
             </button>
-          </a>
+          </Link>
         </form>
       </div>
       <div>

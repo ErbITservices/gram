@@ -4,6 +4,7 @@ import jsPDF from "jspdf";
 import { useEffect, useRef, useState } from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 function Motibhaiaminresult() {
   const pdfref = useRef();
   const downloadpdf = () => {
@@ -119,11 +120,11 @@ function Motibhaiaminresult() {
               >
                 Donwload PDF
               </button>
-              <a href="/">
+              <Link to="/">
                 <button class="btn btn-warning m-3 " type="button">
                   Back
                 </button>
-              </a>
+              </Link>
             </>
           )}
         </div>

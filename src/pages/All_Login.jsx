@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import "/src/App.css";
 import { useEffect } from "react";
@@ -15,7 +15,7 @@ function All_Login() {
       </div>
       <div class=" mb-3 btn-container">
         <form class="container-fluid justify-content-start">
-          <a href="/Login1">
+          <Link to="/login1">
             <button
               class="btn  btn-success"
               //   onClick={navigate("/form")}
@@ -23,8 +23,8 @@ function All_Login() {
             >
               Gandhinagar Director
             </button>
-          </a>
-          <a href="/sclLogin1">
+          </Link>
+          <Link to="/sclLogin1">
             <button
               class="btn loginbtn btn-primary "
               //   onClick={navigate("/form")}
@@ -32,8 +32,8 @@ function All_Login() {
             >
               SCL GANDHINAGAR
             </button>
-          </a>
-          <a href="/sclLogin2">
+          </Link>
+          <Link to="/sclLogin2">
             <button
               class="btn  btn-primary "
               //   onClick={navigate("/form")}
@@ -41,9 +41,9 @@ function All_Login() {
             >
               SCL VADODARA
             </button>
-          </a>
+          </Link>
           <br />
-          <a href="/Login4">
+          <Link to="/Login4">
             <button
               class="btn  btn-primary m-3"
               //   onClick={navigate("/master")}
@@ -51,8 +51,8 @@ function All_Login() {
             >
               ADL AHMEDABAD
             </button>
-          </a>
-          <a href="/Login5">
+          </Link>
+          <Link to="/Login5">
             <button
               class="btn  btn-primary m-3"
               //   onClick={navigate("/master")}
@@ -60,8 +60,8 @@ function All_Login() {
             >
               ADL MEHSANA
             </button>
-          </a>
-          <a href="/Login2">
+          </Link>
+          <Link to="/Login2">
             <button
               class="btn  btn-primary m-3"
               //   onClick={navigate("/master")}
@@ -69,8 +69,8 @@ function All_Login() {
             >
               ADL VADODARA
             </button>
-          </a>
-          <a href="/Login6">
+          </Link>
+          <Link to="/Login6">
             <button
               class="btn  btn-primary m-3"
               //   onClick={navigate("/master")}
@@ -78,8 +78,8 @@ function All_Login() {
             >
               ADL SURAT
             </button>
-          </a>
-          <a href="/Login7">
+          </Link>
+          <Link to="/Login7">
             <button
               class="btn  btn-primary m-3"
               //   onClick={navigate("/master")}
@@ -87,8 +87,8 @@ function All_Login() {
             >
               ADL BHAVNAGAR
             </button>
-          </a>
-          <a href="/Login8">
+          </Link>
+          <Link to="/Login8">
             <button
               class="btn  btn-primary m-3"
               //   onClick={navigate("/master")}
@@ -96,7 +96,7 @@ function All_Login() {
             >
               ADL RAJKOT
             </button>
-          </a>
+          </Link>
         </form>
       </div>
       <div>

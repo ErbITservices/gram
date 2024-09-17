@@ -1,6 +1,7 @@
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 function Enter({ arr }) {
   const pdfref = useRef();
   const downloadpdf = () => {
@@ -1646,11 +1647,12 @@ function Enter({ arr }) {
       <button type="button" onClick={downloadpdf} className="btn btn-primary">
         Donwload PDF
       </button>
-      <a href="Home2/">
+
+      <Link to="Home2">
         <button class="btn btn-danger m-3 " type="button">
           Log Out
         </button>
-      </a>
+      </Link>
     </center>
   );
 }

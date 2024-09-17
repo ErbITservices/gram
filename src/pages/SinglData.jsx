@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { useEffect } from "react";
 import { BiBook, BiBookOpen } from "react-icons/bi";
 import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 import axios from "axios";
 function SingleData(props) {
   let [arr, datastate] = useState([]);

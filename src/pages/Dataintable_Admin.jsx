@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 function Dataintable_Admin() {
   let [arr, datastate] = useState([]);
   let [data, setData] = useState([]);

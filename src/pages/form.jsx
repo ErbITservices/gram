@@ -1,5 +1,6 @@
 import "./Form.css";
 import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useRef, useState } from "react";
 import { BiBook, BiBookOpen } from "react-icons/bi";
@@ -2135,11 +2136,11 @@ function Form() {
         <center>
           <div className="row mb-3 tab2 col-sm-13 align-items-center">
             <div className=" col">
-              <a href="/">
+              <Link to="/">
                 <button type="button" className="btn btn-warning">
                   Back
                 </button>
-              </a>
+              </Link>
             </div>
             <div className=" col">
               <button

@@ -2,6 +2,7 @@ import "../pages/Form.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useRef, useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Footer from "../components/Footer";
 import { FadeLoader } from "react-spinners";
@@ -2400,11 +2401,11 @@ function Master() {
             <center>
               <div className="row mb-3 tab2 col-sm-13 align-items-center">
                 <div className=" col">
-                  <a href="/">
+                  <Link to="/">
                     <button type="button" className="btn btn-warning">
                       Back
                     </button>
-                  </a>
+                  </Link>
                 </div>
 
                 <div className=" col">

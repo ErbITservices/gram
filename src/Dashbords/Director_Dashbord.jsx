@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import Report from "../components/Report";
@@ -55,16 +56,16 @@ function Directo_Dashbord() {
           {showdata === "false" && (
             <div class=" mb-3 btn-container">
               <form class="container-fluid justify-content-start">
-                <a href="/Motibhaiaminbtnpage">
+                <Link to="/Motibhaiaminbtnpage">
                   <button class="btn btn-info m-3" type="button">
                     Moti bhai amin form
                   </button>
-                </a>
-                <a href="/Motibhaiaminresult">
+                </Link>
+                <Link to="/Motibhaiaminresult">
                   <button class="btn m-3 btn-success " type="button">
                     Result of motibhai
                   </button>
-                </a>
+                </Link>
 
                 <button
                   onClick={handleshowdata}
@@ -74,11 +75,11 @@ function Directo_Dashbord() {
                   Report
                 </button>
 
-                {/* <a href="/SingleData">
+                {/* <Link to="/SingleData">
             <button class="btn btn-outline-success me-2" type="button">
               Show Single Data
             </button>
-          </a> */}
+          </Link> */}
 
                 <button
                   class="btn btn-danger m-3"

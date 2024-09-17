@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Report from "../components/Report";
 import { useEffect, useState } from "react";
@@ -60,16 +61,16 @@ function Adl_surat_dashboard() {
                   Report
                 </button>
 
-                <a href="/Addnew">
+                <Link to="/Addnew">
                   <button class="btn btn-success m-3" type="button">
                     નવી લાઇબ્રેરી ઉમેરો
                   </button>
-                </a>
-                <a href="/master">
+                </Link>
+                <Link to="/master">
                   <button class="btn btn-info m-3" type="button">
                     નિરીક્ષણ અહેવલ ફોમ
                   </button>
-                </a>
+                </Link>
 
                 <button
                   class="btn btn-danger m-3 "
