@@ -469,7 +469,7 @@ function Addnew() {
                   <option>Meshana</option>
                   <option>Vadodara</option>
                   <option>Surat</option>
-                  <option>Ahmedabad</option>
+                  <option>Ahemedabad</option>
                   <option>Bhavnagar</option>
                   <option>Rajkot</option>
                 </select>
