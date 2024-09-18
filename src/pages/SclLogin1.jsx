@@ -42,7 +42,7 @@ const SclLogin1 = () => {
           body: JSON.stringify(user),
         }
       );
-
+setloader("false");
       if (response.ok) {
         setloader("false");
 

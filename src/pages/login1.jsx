@@ -46,7 +46,7 @@ const Login = () => {
           body: JSON.stringify(user),
         }
       );
-
+setloader("false");
       if (response.ok) {
         const res_data = await response.json();
         console.log("jaimin", res_data);

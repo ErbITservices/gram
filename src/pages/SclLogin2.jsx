@@ -42,7 +42,7 @@ const SclLogin2 = () => {
           body: JSON.stringify(user),
         }
       );
-
+setloader("false");
       if (response.ok) {
         setloader("false");
         const res_data = await response.json();

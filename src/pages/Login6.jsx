@@ -42,7 +42,7 @@ const Login6 = () => {
           body: JSON.stringify(user),
         }
       );
-
+setloader("false");
       if (response.ok) {
         setloader("false");
 
