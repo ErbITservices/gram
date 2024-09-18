@@ -1,0 +1,195 @@
+
+*{
+  
+  font-family: "Noto Sans Gujarati", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.main {
+  max-width: 800px;
+}
+
+.tablec {
+  border-radius: 10px;
+  background-color: black;
+}
+.form {
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+.form input {
+  border: 1px solid black;
+  transition: 0.5s;
+  /* box-shadow: 3px 3px 20px black; */
+}
+.form input:hover {
+  /* border: 1px solid black; */
+  box-shadow: 3px 3px 20px black;
+  transition: 0.5s;
+}
+.form select {
+  border: 1px solid black;
+}
+.form select:hover {
+  box-shadow: 3px 3px 20px black;
+  transition: 0.5s;
+}
+.form textarea {
+  border: 1px solid black;
+}
+.form textarea:hover {
+  box-shadow: 3px 3px 20px black;
+  transition: 0.5s;
+}
+.form label {
+  color: black;
+  font-size: 18px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.highlight {
+  /* font-weight: 500; */
+  border-bottom: 2px solid grey;
+  display: inline-block;
+}
+.extrahighlight {
+  display: inline-block;
+  font-weight: 700;
+  border-bottom: 2px solid grey;
+}
+.th {
+  width: 20%;
+}
+.tab {
+  text-indent: 30px;
+}
+.tab2 {
+  text-indent: 60px;
+}
+.head {
+  background-color: rgb(0, 65, 133);
+  /* padding: 5px; */
+  display: flex;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  
+  padding: 10px;
+  border: 2px, solid gray;
+}
+.head2 {
+  background-color: rgb(0, 65, 133);
+  padding: 5px;
+  /* display: flex; */
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: 2px, solid gray;
+}
+.form .teablehead {
+  background-color: rgb(0, 65, 133);
+  text-align: center;
+  color: aliceblue;
+  font-size: 30px;
+  
+}
+
+.form table {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.form tbody {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.icon {
+  margin: 0px 20px 0px 20px;
+  font-size: 45px;
+}
+
+.logo {
+  height: 200px;
+  width: 250px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px black;
+  /* padding: 0; */
+  display: inline-block;
+}
+
+.logodiv {
+  width: 20%;
+  /* background-color: aquamarine; */
+  display: inline-block;
+  margin: 10px 0px;
+  text-align: start;
+  /* background-color: black; */
+}
+.logodiv2 {
+  width: 20%;
+  /* background-color: aquamarine; */
+  display: inline-block;
+  margin: 10px 0px;
+  text-align: end;
+  /* background-color: black; */
+}
+.titel {
+  width: 60%;
+  text-align: center;
+  padding-top: 30px;
+  justify-content: end;
+  color: aliceblue;
+  /* background-color: black; */
+}
+.button {
+  width: 100%;
+  text-align: center;
+}
+.button button {
+  width: 150px;
+  margin: 150px 100px 50px 100px;
+}
+
+@media (max-width: 991px){
+  .logodiv2 {
+    display: none;
+  }
+  .logodiv {
+    display: none;
+  }
+  .titel {
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+  justify-content: end;
+  color: aliceblue;
+  /* background-color: black; */
+}
+.btn-container{
+  display: flex;
+  /* background-color: aqua; */
+}
+.btn-container a{
+  margin: 5px;
+ display: block;
+  /* background-color: aqua; */
+
+}
+.btn{
+  min-width: 130px;
+}
+.loginbtn{
+  margin: auto;
+}
+}

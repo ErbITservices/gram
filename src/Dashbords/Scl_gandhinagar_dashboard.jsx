@@ -1,0 +1,101 @@
+import { useNavigate } from "react-router-dom";
+import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
+import Report from "../components/Report";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { FadeLoader } from "react-spinners";
+
+function Scl_gandhinagar_dashboard() {
+  const navigator = useNavigate();
+  const [data, setData] = useState();
+  const [loader, setloader] = useState("false");
+  const [showdata, setshowdata] = useState("false");
+
+  function Logout() {
+    navigator("/All_Login");
+    localStorage.setItem("login", "");
+  }
+  useEffect(() => {
+    setloader("true");
+    const dataget = async () => {
+      try {
+        const response = await axios.get(
+          `https://gramgranthalay-backend-2.onrender.com/district/Gandhinagar`
+        );
+        console.log(response.data), setData(response.data);
+        setloader("false");
+      } catch (error) {
+        console.log(error);
+        setloader("false");
+      }
+    };
+    dataget();
+  }, []);
+  function handleshowdata() {
+    setshowdata("true");
+  }
+  function handleback() {
+    setshowdata("false");
+  }
+  return (
+    <>
+      <NavBar></NavBar>
+      {loader === "true" && (
+        <div className="loader">
+          <h1>Loading...</h1>
+          <FadeLoader color="#00008b" />
+        </div>
+      )}
+      {loader === "false" && (
+        <div>
+          {showdata === "false" && (
+            <div class=" mb-3 btn-container">
+              <form class="container-fluid justify-content-start">
+                <button
+                  onClick={handleshowdata}
+                  class="btn m-3 button-25 "
+                  type="button"
+                >
+                  Report
+                </button>
+
+                <Link to="/Addnew">
+                  <button class="btn btn-success m-3" type="button">
+                    નવી લાઇબ્રેરી ઉમેરો
+                  </button>
+                </Link>
+                <Link to="/master">
+                  <button class="btn btn-info m-3" type="button">
+                    નિરીક્ષણ અહેવલ ફોમ
+                  </button>
+                </Link>
+
+                <button
+                  class="btn btn-danger m-3 "
+                  onClick={Logout}
+                  type="button"
+                >
+                  Log Out
+                </button>
+              </form>
+            </div>
+          )}
+          {showdata === "true" && (
+            <Report
+              handleback={handleback}
+              arr={data}
+              title={"Scl gandhinagar"}
+            />
+          )}
+        </div>
+      )}
+
+      <div>
+        <Footer></Footer>
+      </div>
+    </>
+  );
+}
+export default Scl_gandhinagar_dashboard;
