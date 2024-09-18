@@ -75,50 +75,59 @@ const Login8 = () => {
   return (
     <>
       <NavBar titel={"રાજકોટ Login"}></NavBar>
-      <section>
-        <main>
-          <div className="section-registration">
-            <div className="container grid grid-two-cols">
-              <div className="registration-image reg-img"></div>
-              {/* our main registration code  */}
-              <div className="registration-form">
-                <h1 className="main-heading mb-3">ADL Rajkot Login </h1>
-                <br />
-                <form onSubmit={handleSubmit}>
-                  <div>
-                    <label>User Name </label>
-                    <input
-                      type="text"
-                      name="email"
-                      value={user.email}
-                      onChange={handleInput}
-                      placeholder="User Name"
-                    />
-                  </div>
-
-                  <div>
-                    <label>Password</label>
-                    <input
-                      type="password"
-                      name="password"
-                      value={user.password}
-                      onChange={handleInput}
-                      placeholder="Password"
-                    />
-                  </div>
+      {loader === "true" && (
+        <div className="loader">
+          <h1>Loading...</h1>
+          <FadeLoader color="#00008b" />
+        </div>
+      )}
+      {loader === "false" && (
+        <section>
+          <main>
+            <div className="section-registration">
+              <div className="container grid grid-two-cols">
+                <div className="registration-image reg-img"></div>
+                {/* our main registration code  */}
+                <div className="registration-form">
+                  <h1 className="main-heading mb-3">ADL Rajkot Login </h1>
                   <br />
-                  <button type="submit " className="btn btn-primary">
-                    Login
-                  </button>
-                  <Link to="/Forgotpassword">
-                    <p>Forgot Password</p>
-                  </Link>
-                </form>
+                  <form onSubmit={handleSubmit}>
+                    <div>
+                      <label>User Name </label>
+                      <input
+                        type="text"
+                        name="email"
+                        value={user.email}
+                        onChange={handleInput}
+                        placeholder="User Name"
+                      />
+                    </div>
+
+                    <div>
+                      <label>Password</label>
+                      <input
+                        type="password"
+                        name="password"
+                        value={user.password}
+                        onChange={handleInput}
+                        placeholder="Password"
+                      />
+                    </div>
+                    <br />
+                    <button type="submit " className="btn btn-primary">
+                      Login
+                    </button>
+                    <Link to="/Forgotpassword">
+                      <p>Forgot Password</p>
+                    </Link>
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
-        </main>
-      </section>
+          </main>
+        </section>
+      )}
+
       <div>
         <Footer></Footer>
       </div>
