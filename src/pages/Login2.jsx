@@ -7,6 +7,8 @@ import Footer from "../components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Login2 = () => {
+  
+  const [loader, setloader] = useState("false");
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -30,7 +32,7 @@ const Login2 = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(user);
-
+    setloader("true");
     try {
       const response = await fetch(
         `https://gramgranthalay-backend-2.onrender.com/admin/login`,
@@ -44,6 +46,7 @@ const Login2 = () => {
       );
 
       if (response.ok) {
+        setloader("false");
         const res_data = await response.json();
         console.log("jaimin", res_data);
         //storeTokenInLs(res_data.token);
@@ -61,9 +64,11 @@ const Login2 = () => {
 
         navigate("/Adl_vadodara_dashboard");
       } else {
+        setloader("false");
         alert("Invalid data");
       }
     } catch (err) {
+      setloader("false");
       console.log(err);
     }
   };
