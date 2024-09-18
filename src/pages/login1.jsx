@@ -62,7 +62,7 @@ setloader("false");
           password: "",
         });
         setloader("false");
-        navigate("/Admin_Home");
+        navigate("/Directo_Dashbord");
       } else {
         setloader("false");
         alert("Invalid data");
