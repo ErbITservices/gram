@@ -134,7 +134,6 @@ function App() {
           ></Route>
           <Route path="/Login1" element={<Login />}></Route>
           <Route path="/Login2" element={<Login2 />}></Route>
-          <Route path="/Login3" element={<Login3 />}></Route>
           <Route path="/Login4" element={<Login4 />}></Route>
           <Route path="/Login5" element={<Login5 />}></Route>
           <Route path="/Login6" element={<Login6 />}></Route>
