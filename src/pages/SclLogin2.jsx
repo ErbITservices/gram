@@ -62,7 +62,7 @@ const SclLogin2 = () => {
         });
         console.log("dhh");
 
-        navigate("/Home2");
+        navigate("/Scl_vadodara_dashboard");
       } else {
         setloader("false");
         alert("Invalid data");
