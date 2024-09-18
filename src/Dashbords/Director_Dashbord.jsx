@@ -2,13 +2,14 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Report from "../components/Report";
 import axios from "axios";
 import { FadeLoader } from "react-spinners";
 
 function Directo_Dashbord() {
   const navigator = useNavigate();
+  const district = useRef();
   const [data, setData] = useState();
   const [showdata, setshowdata] = useState("false");
   const [loader, setloader] = useState("false");
@@ -30,15 +31,42 @@ function Directo_Dashbord() {
         console.log(error);
         setloader("false");
       }
+       console.log(district.current);
     };
     dataget();
   }, []);
   function handleshowdata() {
     setshowdata("true");
   }
-  function handleshowdata() {
-    setshowdata("true");
+  async function handledistrictdata() {
+    console.log(district.current.value);
+    if (district.current.value==="All") {
+       try {
+         const response = await axios.get(
+           `https://gramgranthalay-backend-2.onrender.com/form`
+         );
+         console.log(response.data), setData(response.data);
+         setloader("false");
+       } catch (error) {
+         console.log(error);
+         setloader("false");
+       }
+    }
+    else{
+      try {
+        const response = await axios.get(
+          `https://gramgranthalay-backend-2.onrender.com/district/${district.current.value}`
+        );
+        console.log(response.data), setData(response.data);
+        setloader("false");
+      } catch (error) {
+        console.log(error);
+        setloader("false");
+      }
+    }
   }
+
+ 
   function handleback() {
     setshowdata("false");
   }
@@ -92,7 +120,28 @@ function Directo_Dashbord() {
             </div>
           )}
           {showdata === "true" && (
-            <Report handleback={handleback} arr={data} title={"director"} />
+            <>
+              <select
+                required
+                onChange={handledistrictdata}
+                ref={district}
+                className="form-select"
+              >
+                <option selected value="">
+                  Select
+                </option>
+
+                <option>Gandhinagar</option>
+                <option>Meshana</option>
+                <option>Vadodara</option>
+                <option>Surat</option>
+                <option>Ahemedabad</option>
+                <option>Bhavnagar</option>
+                <option>Rajkot</option>
+                <option value={"All"}>All</option>
+              </select>
+              <Report handleback={handleback} arr={data} title={"director"} />
+            </>
           )}
         </div>
       )}
