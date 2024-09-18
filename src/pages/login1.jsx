@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import Footer from "../components/Footer";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import { FadeLoader } from "react-spinners";
 
 const Login = () => {
   
