@@ -8,6 +8,8 @@ import Footer from "../components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Login = () => {
+  
+  const [loader, setloader] = useState("false");
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -31,6 +33,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(user);
+    setloader("true");
 
     try {
       const response = await fetch(
@@ -58,11 +61,14 @@ const Login = () => {
           email: "",
           password: "",
         });
+        setloader("false");
         navigate("/Admin_Home");
       } else {
+        setloader("false");
         alert("Invalid data");
       }
     } catch (err) {
+      setloader("false");
       console.log(err);
     }
   };

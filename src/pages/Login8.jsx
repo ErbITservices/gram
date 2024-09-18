@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 
 const Login8 = () => {
+  
+  const [loader, setloader] = useState("false");
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -28,6 +30,7 @@ const Login8 = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(user);
+    setloader("true");
 
     try {
       const response = await fetch(
@@ -42,8 +45,7 @@ const Login8 = () => {
       );
 
       if (response.ok) {
-        alert("login successful");
-
+        setloader("false");
         const res_data = await response.json();
         console.log("jaimin", res_data);
         //storeTokenInLs(res_data.token);
@@ -62,6 +64,7 @@ const Login8 = () => {
 
         navigate("/Adl_rajkot_dashboard");
       } else {
+        setloader("false");
         alert("Invalid data");
       }
     } catch (err) {

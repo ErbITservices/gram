@@ -44,7 +44,7 @@ function Report({arr,handleback,title}) {
             </tr>
           </thead>
           <tbody>
-            {arr.length != 0 &&
+            {arr &&
               arr.map((i) => (
                 <tr>
                   <td>{i.uid}</td>

@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 
 const Login7 = () => {
+  
+  const [loader, setloader] = useState("false");
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -28,7 +30,7 @@ const Login7 = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(user);
-
+setloader("true");
     try {
       const response = await fetch(
         `https://gramgranthalay-backend-2.onrender.com/admin/login`,
@@ -42,7 +44,7 @@ const Login7 = () => {
       );
 
       if (response.ok) {
-        alert("login successful");
+        setloader("false");
 
         const res_data = await response.json();
         console.log("jaimin", res_data);
@@ -62,9 +64,11 @@ const Login7 = () => {
 
         navigate("/Adl_bhavnagar_dashboard");
       } else {
+        setloader("false");
         alert("Invalid data");
       }
     } catch (err) {
+      setloader("false");
       console.log(err);
     }
   };
