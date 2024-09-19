@@ -861,10 +861,10 @@ function Master() {
                     onChange={handleInput}
                   >
                     <option selected>પસંદ કરો</option>
-                    <option >panchayat</option>
-                    <option >Mandan</option>
-                    <option >school</option>
-                    <option >other</option>
+                    <option>panchayat</option>
+                    <option>Mandan</option>
+                    <option>school</option>
+                    <option>other</option>
                   </select>
                 </div>
                 <div className="col-4">
@@ -973,10 +973,10 @@ function Master() {
                     className="form-select"
                   >
                     <option selected>પસંદ કરો</option>
-                    <option >Graduated</option>
-                    <option >Post Graduated</option>
-                    <option >12th</option>
-                    <option >other</option>
+                    <option>Graduated</option>
+                    <option>Post Graduated</option>
+                    <option>12th</option>
+                    <option>other</option>
                   </select>
                 </div>
                 <div className=" col-3 mb-3">
@@ -2322,6 +2322,56 @@ function Master() {
                               />
                             </div>
                           </div>
+                          <div className="row mb-3 tab col-sm-13 align-items-center">
+                            <div className="col">
+                              <label className="col-form-label ">
+                                અ, બ, ક, અને ડ નો કુલ સરવાળો :
+                              </label>
+                            </div>
+                            <div className="col">
+                              <input
+                                required
+                                type="text"
+                                className="form-control"
+                                value={
+                                  Number(data.kothersmall) +
+                                  Number(data.klightbill) +
+                                  Number(data.kpremium) +
+                                  Number(data.ktrip) +
+                                  Number(data.kmail) +
+                                  Number(data.kstationary) +
+                                  Number(data.ktax) +
+                                  Number(data.krepair) +
+                                  Number(data.krent) +
+                                  Number(data.kbookbinding) +
+                                  Number(data.knewspaper) +
+                                  Number(data.kbook) +
+                                  Number(data.kother) +
+                                  Number(data.ksalary) +
+                                  Number(data.kinfletion) +
+                                  Number(data.kotherbuy) +
+                                  Number(data.kfurnicharrepair) +
+                                  Number(data.kfurnichar)
+                                }
+                              />
+                            </div>
+                          </div>
+                          <div className="row mb-3 tab col-sm-13 align-items-center">
+                            <div className="col">
+                              <label className="col-form-label ">
+                                રિઝર્વ ફંડ ખાતે લઇ જવાની રકમ :
+                              </label>
+                            </div>
+                            <div className="col">
+                              <input
+                                required
+                                type="text"
+                                className="form-control"
+                                name="aprevios"
+                                value={data.aprevios}
+                              />
+                            </div>
+                          </div>
                         </td>
                       </tr>
                       <tr>
@@ -2387,7 +2437,8 @@ function Master() {
                                   Number(data.kinfletion) +
                                   Number(data.kotherbuy) +
                                   Number(data.kfurnicharrepair) +
-                                  Number(data.kfurnichar)
+                                  Number(data.kfurnichar) +
+                                  Number(data.aprevios)
                                 }
                               />
                             </div>
