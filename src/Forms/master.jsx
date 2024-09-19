@@ -861,10 +861,10 @@ function Master() {
                     onChange={handleInput}
                   >
                     <option selected>પસંદ કરો</option>
-                    <option value="ha">panchayat</option>
-                    <option value="na">Mandan</option>
-                    <option value="na">school</option>
-                    <option value="na">other</option>
+                    <option >panchayat</option>
+                    <option >Mandan</option>
+                    <option >school</option>
+                    <option >other</option>
                   </select>
                 </div>
                 <div className="col-4">
@@ -973,10 +973,10 @@ function Master() {
                     className="form-select"
                   >
                     <option selected>પસંદ કરો</option>
-                    <option value="1">Graduated</option>
-                    <option value="2">Post Graduated</option>
-                    <option value="2">12th</option>
-                    <option value="2">other</option>
+                    <option >Graduated</option>
+                    <option >Post Graduated</option>
+                    <option >12th</option>
+                    <option >other</option>
                   </select>
                 </div>
                 <div className=" col-3 mb-3">
@@ -2296,6 +2296,7 @@ function Master() {
                             <div className="col">
                               <input
                                 required
+                                defaultValue={0}
                                 type="number"
                                 className="form-control"
                                 name="klightbill"
