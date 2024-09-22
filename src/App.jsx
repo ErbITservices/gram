@@ -42,6 +42,7 @@ import Admin_Home from "./pages/Admin_home";
 import InputforAdmin from "./components/input_for_admin";
 import Showid from "./components/showid";
 import ConfirmPassword from "./pages/ConfirmPassword";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
@@ -154,6 +155,7 @@ function App() {
           <Route path="/SingleData" element={<SingleData />}></Route>
         </Routes>
       </BrowserRouter>
+      <SpeedInsights />
     </center>
   );
 }

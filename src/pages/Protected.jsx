@@ -13,14 +13,14 @@ function Protected(props) {
         if (login=== "AdlSurat") {
             navigator("/Adl_surat_dashboard");
         }
-        if (login=== "Adlmeshana") {
-            navigator("/Adl_meshana_dashboard");
+        if (login === "Adlmeshana") {
+          navigator("/Adl_meshana_dashboard");
         }
         if (login=== "Adlbhavnagar") {
             navigator("/Adl_bhavnagar_dashboard");
         }
-        if (login=== "Adlvadodara") {
-            navigator("/Adl_vadodara_dashboard");
+        if (login === "Adlvadodara") {
+          navigator("/Adl_vadodara_dashboard");
         }
         if (login=== "Adlrajkot") {
             navigator("/Adl_rajkot_dashboard");
@@ -31,8 +31,8 @@ function Protected(props) {
         if (login=== "sclgandhinagar") {
             navigator("/Scl_gandhinagar_dashboard");
         }
-        if (login=== "sclvadodara") {
-            navigator("/Scl_vadodara_dashboard");
+        if (login === "sclvadodara") {
+          navigator("/Scl_vadodara_dashboard");
         }
         if (login=== "") {
             navigator("/All_Login");

@@ -51,7 +51,7 @@ setloader("false");
         console.log("jaimin", res_data);
         //storeTokenInLs(res_data.token);
 
-        localStorage.setItem("login", "adlrajkot");
+        localStorage.setItem("login", "Adlrajkot");
         localStorage.setItem("district", "Rajkot");
         localStorage.setItem("id", user.email);
         localStorage.setItem("pass", user.password);
