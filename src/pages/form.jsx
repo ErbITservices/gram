@@ -5,8 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useRef, useState } from "react";
 import { BiBook, BiBookOpen } from "react-icons/bi";
 import Footer from "../components/Footer";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
+
+import { useReactToPrint } from "react-to-print";
 function Form() {
   const pdfref = useRef();
   const downloadpdf = useReactToPrint({

@@ -1,31 +1,16 @@
 import axios from "axios";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
+
+import { useReactToPrint } from "react-to-print";
 import { useEffect, useRef, useState } from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 function Motibhaiaminresult() {
   const pdfref = useRef();
-  const downloadpdf = () => {
-    const input = pdfref.current;
-    html2canvas(input).then((canvas) => {
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF("p", "mm", "a0", true);
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfheight = pdf.internal.pageSize.getHeight();
-      const imgwidth = canvas.width;
-      const imgheight = canvas.height;
-      const ratio = Math.min(pdfWidth / imgwidth, pdfheight / imgheight);
-      const imgx = (pdfWidth - imgwidth * ratio) / 2;
-      const imgy = 30;
-      console.log(pdfWidth);
-      console.log(imgwidth);
-      console.log(ratio);
-      pdf.addImage(imgData, "PNG", 0, 0);
-      pdf.save("DataTable.pdf");
-    });
-  };
+  const downloadpdf = useReactToPrint({
+    content: () => pdfref.current,
+    documentTitle: "Ahevalform",
+  });
   const [data, setdata] = useState();
   useEffect(() => {
     const dataget = async () => {};
@@ -105,7 +90,7 @@ function Motibhaiaminresult() {
                 <tbody>
                   {data.map((i) => (
                     <tr>
-                      <td>{i.uid}</td>
+                      <td>{i.currentyear}</td>
                       <td>{i.lname}</td>
                       <td>{i.gam}</td>
                       <td>{i.marks}</td>

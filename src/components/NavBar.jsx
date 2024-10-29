@@ -20,7 +20,7 @@ function NavBar({ titel }) {
         <div className="logodiv2">
           <img
             className="logo"
-            src="https://lh6.googleusercontent.com/proxy/pn9xMoqEI8FOpRnWv9dQDi1ldc2aw3EzFavMDyGdMOlLzd8Z3s2K8OfRvNLkw51NfKRsvkoSWHRq-PP1_nIuDLHPnntCBsIhGTuY0h-7mDWh"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfIk3ncNbk7_3WbuTUlikL85ZL9dXypXMKyA&s"
             alt="logo"
           />
         </div>

@@ -1,7 +1,6 @@
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
+import { useReactToPrint } from "react-to-print";
 import { useRef } from "react";
-function Report({arr,handleback,title}) {
+function Report({ arr, handleback, title }) {
   const pdfref = useRef();
   const downloadpdf = () => {
     const input = pdfref.current;
@@ -21,9 +20,9 @@ function Report({arr,handleback,title}) {
       pdf.addImage(imgData, "PNG", 0, 0);
       pdf.save("DataTable.pdf");
     });
-    };
-    console.log(arr);
-    
+  };
+  console.log(arr);
+
   return (
     <center>
       <div className="main rounded">
