@@ -691,7 +691,7 @@ console.log(finacialyear.current.value);
 
           <div className="row mb-3 col-sm-13 align-items-center">
             <div className=" col-2">
-              <label className="col-sm-10 col-form-label">Library Name :</label>
+              <label className="col-sm-10 col-form-label">ગ્રંથાલયનુ નામ :</label>
             </div>
             <div className="col-8">
               <input
@@ -705,7 +705,7 @@ console.log(finacialyear.current.value);
           </div>
           <div className="row mb-3 col-sm-13 align-items-center">
             <div className=" col-2">
-              <label className="col-sm-10 col-form-label">District :</label>
+              <label className="col-sm-10 col-form-label">જિલ્લો :</label>
             </div>
             <div className="col">
                <select required onChange={handlesettaluka} ref={librarydistrict} className="form-select">
@@ -717,7 +717,7 @@ console.log(finacialyear.current.value);
               </select>
             </div>
             <div className=" col-2">
-              <label className="col-sm-10 col-form-label">Taluko :</label>
+              <label className="col-sm-10 col-form-label">તાલુકો :</label>
             </div>
             <div className="col">
               <select required ref={librarygam} className="form-select">
@@ -732,7 +732,7 @@ console.log(finacialyear.current.value);
           </div>
           <div className="row mb-3 col-sm-13 align-items-center">
             <div className=" col-2">
-              <label className="col-sm-10 col-form-label">Current Year :</label>
+              <label className="col-sm-10 col-form-label">ચાલુ વર્ષ :</label>
             </div>
             <div className="col">
               <select required onChange={handleInput} ref={currentyear} className="form-select">
@@ -747,7 +747,7 @@ console.log(finacialyear.current.value);
               </select>
             </div>
             <div className=" col-2">
-              <label className="col-sm-10 col-form-label">Finacial Year :</label>
+              <label className="col-sm-10 col-form-label">નાણાકીય વર્ષ :</label>
             </div>
             <div className="col">
               <select required ref={finacialyear} 
