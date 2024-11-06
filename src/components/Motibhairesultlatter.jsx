@@ -76,11 +76,15 @@ function Motibhairesultlatter() {
             </div>
           </div>
           <div className="latter">
-                      <h1> bhalaman </h1>
-                      <h3>hfrhfrfuhfu frhfurhfur frhfurhfuhuf f furhfuhruffhhhjfhjdfhdjhfjdhfj</h3>
-                      <p>first one :- { data[0]}</p>
-                      <p>second one :- { data[1]}</p>
-                      <p>third one :- { data[2]}</p>
+            <h1> ભલામણ</h1>
+            <h3>
+              શહેર ગ્રંથાલય કક્ષાના સને ૨૦૨૨-૨૩ ના વર્ષ ના સ્પર્ધક ગ્રંથાલયોના
+              મૂલ્યાંકન બાદ નીચેની વિગતે ગ્રંથાલયોને ક્રમાનુસાર ભલામણ આ પેટા
+              પ્રાદેશિક સમિતિ કરે છે
+            </h3>
+            <p>(૧) ઉત્તમ ગ્રંથાલય :- {data}</p>
+            <p>second one :- {data}</p>
+            <p>third one :- {data}</p>
           </div>
           {data && (
             <>
