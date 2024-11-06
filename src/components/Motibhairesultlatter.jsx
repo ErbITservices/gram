@@ -6,7 +6,9 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 function Motibhairesultlatter() {
-  const pdfref = useRef();
+    const pdfref = useRef();
+    const d = new Date();
+    let year = d.getFullYear();
   const downloadpdf = useReactToPrint({
     content: () => pdfref.current,
     documentTitle: "Ahevalform",
@@ -81,7 +83,7 @@ function Motibhairesultlatter() {
               <div className="latter" ref={pdfref}>
                 <h1> ભલામણ</h1>
                 <h3>
-                  શહેર ગ્રંથાલય કક્ષાના સને ૨૦૨૨-૨૩ ના વર્ષ ના સ્પર્ધક
+                                  શહેર ગ્રંથાલય કક્ષાના સને { year-1}-{year} ના વર્ષ ના સ્પર્ધક
                   ગ્રંથાલયોના મૂલ્યાંકન બાદ નીચેની વિગતે ગ્રંથાલયોને ક્રમાનુસાર
                   ભલામણ આ પેટા પ્રાદેશિક સમિતિ કરે છે
                 </h3>
