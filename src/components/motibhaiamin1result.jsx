@@ -60,7 +60,7 @@ function Motibhaiamin1result({ data }) {
             <div className="col">
               <select required className="form-select" value={data[0].district}>
                 <option selected disabled value="">
-                  Select
+                  {data[0].district}
                 </option>
               </select>
             </div>
@@ -70,7 +70,7 @@ function Motibhaiamin1result({ data }) {
             <div className="col">
               <select required className="form-select" value={data[0].taluko}>
                 <option selected disabled value="">
-                  Select
+                  {data[0].taluko}
                 </option>
               </select>
             </div>
