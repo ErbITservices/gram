@@ -30,9 +30,16 @@ function Motibhaiaminresult() {
       console.log(error);
     }
   }
-  function handleshowdata(e) {
+  async function handleshowdata(e) {
     console.log(e);
-    
+    try {
+          const response = await axios.get(
+            `https://gramgranthalay-backend-2.onrender.com/district/${e}`
+          );
+          console.log(response.data), setpd(response.data);
+        } catch (error) {
+          console.log(error);
+        }
   }
 
   return (
@@ -98,7 +105,7 @@ function Motibhaiaminresult() {
                       <td>{i.lname}</td>
                       <td>{i.gam}</td>
                       <td>{i.marks}</td>
-                      <td><button onClick={handleshowdata}>Show data</button></td>
+                      <td><button onClick={handleshowdata(i.lname)}>Show data</button></td>
                     </tr>
                   ))}
                 </tbody>
