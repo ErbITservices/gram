@@ -75,33 +75,33 @@ function Motibhairesultlatter() {
               </button>
             </div>
           </div>
-          <div className="latter">
-            <h1> ભલામણ</h1>
-            <h3>
-              શહેર ગ્રંથાલય કક્ષાના સને ૨૦૨૨-૨૩ ના વર્ષ ના સ્પર્ધક ગ્રંથાલયોના
-              મૂલ્યાંકન બાદ નીચેની વિગતે ગ્રંથાલયોને ક્રમાનુસાર ભલામણ આ પેટા
-              પ્રાદેશિક સમિતિ કરે છે
-            </h3>
-            <p>(૧) ઉત્તમ ગ્રંથાલય :- {data}</p>
-            <p>(૨) મધ્યમ ગ્રંથાલય :- {data}</p>
-            <p>(૩) સારૂ ગ્રંથાલય :- {data}</p>
-            <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, અમદાવાદ</p>
-            <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, રાજકોટ</p>
-            <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, વડોદરા</p>
-            <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, ભાવનગર</p>
-            <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, સુરત</p>
-            <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, મહેસાણા</p>
-            <p className="latternames">
-              મદદનીશ ગ્રંથાલય નિયામક ગ્રંથાલય નિયામકની કચેરી, ગાંધીનગર
-            </p>
-            <p className="latternames">
-              ગ્રંથાલય નિયામક ગુજરાત રાજ્ય, ગાંધીનગર
-                      </p>
-                      {console.log(data)
-                      }
-          </div>
+
           {data && (
             <>
+              <div className="latter">
+                <h1> ભલામણ</h1>
+                <h3>
+                  શહેર ગ્રંથાલય કક્ષાના સને ૨૦૨૨-૨૩ ના વર્ષ ના સ્પર્ધક
+                  ગ્રંથાલયોના મૂલ્યાંકન બાદ નીચેની વિગતે ગ્રંથાલયોને ક્રમાનુસાર
+                  ભલામણ આ પેટા પ્રાદેશિક સમિતિ કરે છે
+                </h3>
+                <p>(૧) ઉત્તમ ગ્રંથાલય :- {data}</p>
+                <p>(૨) મધ્યમ ગ્રંથાલય :- {data}</p>
+                <p>(૩) સારૂ ગ્રંથાલય :- {data}</p>
+                <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, અમદાવાદ</p>
+                <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, રાજકોટ</p>
+                <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, વડોદરા</p>
+                <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, ભાવનગર</p>
+                <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, સુરત</p>
+                <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, મહેસાણા</p>
+                <p className="latternames">
+                  મદદનીશ ગ્રંથાલય નિયામક ગ્રંથાલય નિયામકની કચેરી, ગાંધીનગર
+                </p>
+                <p className="latternames">
+                  ગ્રંથાલય નિયામક ગુજરાત રાજ્ય, ગાંધીનગર
+                </p>
+                {console.log(data)}
+              </div>
               <table
                 ref={pdfref}
                 className="table table-bordered table-hover rounded"
