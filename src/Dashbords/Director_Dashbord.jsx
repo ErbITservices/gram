@@ -94,6 +94,11 @@ function Directo_Dashbord() {
                     Result of motibhai
                   </button>
                 </Link>
+                <Link to="/Motibhairesultlatter">
+                  <button class="btn m-3 btn-success " type="button">
+                    Print Motibhaiamin Result
+                  </button>
+                </Link>
 
                 <button
                   onClick={handleshowdata}

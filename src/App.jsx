@@ -54,6 +54,7 @@ import Motibhaiamin_4 from "./Forms/Motibhaiamin_4";
 import Motibhaiamin_5 from "./Forms/Motibhaiamin_5";
 import Motibhaiamin_6 from "./Forms/Motibhaiamin_6";
 import Motibhaiamin_7 from "./Forms/Motibhaiamin_7";
+import Motibhairesultlatter from "./components/Motibhairesultlatter";
 import Motibhaiaminbtnpage from "./pages/Motibhaiaminbtnpage";
 
 function App() {
@@ -125,6 +126,10 @@ function App() {
           <Route path="/Motibhaiamin_5" element={<Motibhaiamin_5 />}></Route>
           <Route path="/Motibhaiamin_6" element={<Motibhaiamin_6 />}></Route>
           <Route path="/Motibhaiamin_7" element={<Motibhaiamin_7 />}></Route>
+          <Route
+            path="/Motibhairesultlatter"
+            element={<Motibhairesultlatter />}
+          ></Route>
           <Route
             path="/Motibhaiaminresult"
             element={<Motibhaiaminresult />}

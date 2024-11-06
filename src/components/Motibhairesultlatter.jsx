@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
-function Motibhaiaminresult() {
+function Motibhairesultlatter() {
   const pdfref = useRef();
   const downloadpdf = useReactToPrint({
     content: () => pdfref.current,
@@ -32,7 +32,6 @@ function Motibhaiaminresult() {
   }
   function handleshowdata(e) {
     console.log(e);
-    
   }
 
   return (
@@ -75,6 +74,13 @@ function Motibhaiaminresult() {
                 Search
               </button>
             </div>
+          </div>
+          <div className="latter">
+                      <h1> bhalaman </h1>
+                      <h3>hfrhfrfuhfu frhfurhfur frhfurhfuhuf f furhfuhruffhhhjfhjdfhdjhfjdhfj</h3>
+                      <p>first one :- { data[0]}</p>
+                      <p>second one :- { data[1]}</p>
+                      <p>third one :- { data[2]}</p>
           </div>
           {data && (
             <>
@@ -130,4 +136,4 @@ function Motibhaiaminresult() {
     </>
   );
 }
-export default Motibhaiaminresult;
+export default Motibhairesultlatter;
