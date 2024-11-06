@@ -85,8 +85,8 @@ function Motibhairesultlatter() {
                   ગ્રંથાલયોના મૂલ્યાંકન બાદ નીચેની વિગતે ગ્રંથાલયોને ક્રમાનુસાર
                   ભલામણ આ પેટા પ્રાદેશિક સમિતિ કરે છે
                 </h3>
-                {/* <p>(૧) ઉત્તમ ગ્રંથાલય :- {data}</p>
-                <p>(૨) મધ્યમ ગ્રંથાલય :- {data}</p>
+                <p>(૧) ઉત્તમ ગ્રંથાલય :- {data[0].lname}</p>
+                {/* <p>(૨) મધ્યમ ગ્રંથાલય :- {data}</p>
                 <p>(૩) સારૂ ગ્રંથાલય :- {data}</p> */}
                 <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, અમદાવાદ</p>
                 <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, રાજકોટ</p>
@@ -100,7 +100,7 @@ function Motibhairesultlatter() {
                 <p className="latternames">
                   ગ્રંથાલય નિયામક ગુજરાત રાજ્ય, ગાંધીનગર
                 </p>
-                {console.log(data[0])}
+                {console.log(data[0].lname)}
               </div>
               <table
                 ref={pdfref}
