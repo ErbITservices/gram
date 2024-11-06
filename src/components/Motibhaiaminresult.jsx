@@ -22,7 +22,7 @@ function Motibhaiaminresult() {
     console.log(category.current.value);
     try {
       const response = await axios.get(
-        `http://localhost:5555/${category.current.value}/`
+        `http://gramgranthalay-backend-2.onrender.com/${category.current.value}/`
       );
       console.log(response.data),
         response.data.sort(({ marks: a }, { marks: b }) => b - a);
@@ -37,7 +37,7 @@ function Motibhaiaminresult() {
     console.log(e);
     try {
           const response = await axios.get(
-            `http://localhost:5555/Motibhaiamin1/${e}`
+            `http://gramgranthalay-backend-2.onrender.com/${e}`
           );
           console.log(response.data), setlibrary(response.data);
         } catch (error) {
