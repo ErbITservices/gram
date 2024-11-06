@@ -83,7 +83,7 @@ const Footer = () => {
         <div className="foot-info-contect">
           <div className="info">
             <p className="infotext">
-              Copyright © 2024 All right reserved Erb It Services
+              Copyright © 2024-25 All right reserved PANARAIT Services
             </p>
             <p className="infotext">
               Central Library Department, Government of Gujarat
