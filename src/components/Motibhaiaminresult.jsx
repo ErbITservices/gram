@@ -98,7 +98,7 @@ function Motibhaiaminresult() {
                       <td>{i.lname}</td>
                       <td>{i.gam}</td>
                       <td>{i.marks}</td>
-                      <td><button onClick={handleshowdata(e)}>Show data</button></td>
+                      <td><button onClick={handleshowdata}>Show data</button></td>
                     </tr>
                   ))}
                 </tbody>
