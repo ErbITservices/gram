@@ -37,7 +37,7 @@ function Motibhaiaminresult() {
     console.log(e);
     try {
           const response = await axios.get(
-            `https://gramgranthalay-backend-2.onrender.com/${e}`
+            `https://gramgranthalay-backend-2.onrender.com/Motibhaiamin1/${e}`
           );
           console.log(response.data), setlibrary(response.data);
         } catch (error) {
