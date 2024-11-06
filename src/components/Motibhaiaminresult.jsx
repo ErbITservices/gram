@@ -91,11 +91,12 @@ function Motibhaiaminresult() {
               >
                 <thead>
                   <tr>
-                    <th>Library id</th>
+                    <th>Year</th>
                     <th>Library Name</th>
-
-                    <th>City</th>
+                    <th>Taluko</th>
+                    <th>District</th>
                     <th>Marks</th>
+                    <th>Show Data</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -103,9 +104,17 @@ function Motibhaiaminresult() {
                     <tr>
                       <td>{i.currentyear}</td>
                       <td>{i.lname}</td>
-                      <td>{i.gam}</td>
+                      <td>{i.taluko}</td>
+                      <td>{i.district}</td>
                       <td>{i.marks}</td>
-                      <td><button onClick={handleshowdata(i.lname)}>Show data</button></td>
+                      <td>
+                        <button
+                          className="btn btn-primary"
+                          onClick={handleshowdata(i.lname)}
+                        >
+                          Show
+                        </button>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
