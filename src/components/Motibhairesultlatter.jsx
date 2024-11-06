@@ -88,12 +88,14 @@ function Motibhairesultlatter() {
                 <p>(૧) ઉત્તમ ગ્રંથાલય :- {data[0].lname}</p>
                 <p>(૨) મધ્યમ ગ્રંથાલય :- {data[1].lname}</p>
                 <p>(૩) સારૂ ગ્રંથાલય :- {data[2].lname}</p>
-                <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, અમદાવાદ</p>
-                <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, રાજકોટ</p>
-                <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, વડોદરા</p>
-                <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, ભાવનગર</p>
-                <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, સુરત</p>
-                <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, મહેસાણા</p>
+                <div className="namescontainer">
+                  <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, અમદાવાદ</p>
+                  <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, રાજકોટ</p>
+                  <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, વડોદરા</p>
+                  <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, ભાવનગર</p>
+                  <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, સુરત</p>
+                  <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, મહેસાણા</p>
+                </div>
                 <p className="latternames">
                   મદદનીશ ગ્રંથાલય નિયામક ગ્રંથાલય નિયામકની કચેરી, ગાંધીનગર
                 </p>
