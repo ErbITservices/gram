@@ -32,11 +32,12 @@ function Motibhaiaminresult() {
   }
   async function handleshowdata(e) {
     console.log(e);
+    const [library, setlibrary] = useState();
     try {
           const response = await axios.get(
-            `https://gramgranthalay-backend-2.onrender.com/district/${e}`
+            `https://gramgranthalay-backend-2.onrender.com/Motibhaiamin1/${e}`
           );
-          console.log(response.data), setpd(response.data);
+          console.log(response.data), setlibrary(response.data);
         } catch (error) {
           console.log(error);
         }
