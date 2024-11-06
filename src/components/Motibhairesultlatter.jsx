@@ -83,8 +83,22 @@ function Motibhairesultlatter() {
               પ્રાદેશિક સમિતિ કરે છે
             </h3>
             <p>(૧) ઉત્તમ ગ્રંથાલય :- {data}</p>
-            <p>second one :- {data}</p>
-            <p>third one :- {data}</p>
+            <p>(૨) મધ્યમ ગ્રંથાલય :- {data}</p>
+            <p>(૩) સારૂ ગ્રંથાલય :- {data}</p>
+            <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, અમદાવાદ</p>
+            <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, રાજકોટ</p>
+            <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, વડોદરા</p>
+            <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, ભાવનગર</p>
+            <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, સુરત</p>
+            <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, મહેસાણા</p>
+            <p className="latternames">
+              મદદનીશ ગ્રંથાલય નિયામક ગ્રંથાલય નિયામકની કચેરી, ગાંધીનગર
+            </p>
+            <p className="latternames">
+              ગ્રંથાલય નિયામક ગુજરાત રાજ્ય, ગાંધીનગર
+                      </p>
+                      {console.log(data)
+                      }
           </div>
           {data && (
             <>

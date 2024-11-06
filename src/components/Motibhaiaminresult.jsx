@@ -101,7 +101,7 @@ function Motibhaiaminresult() {
                       <td>
                         <button
                           className="btn btn-primary"
-                          onClick={handleshowdata(e)}
+                          onClick={handleshowdata}
                         >
                           Show data
                         </button>
