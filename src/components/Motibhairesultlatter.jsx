@@ -100,7 +100,7 @@ function Motibhairesultlatter() {
                 <p className="latternames">
                   ગ્રંથાલય નિયામક ગુજરાત રાજ્ય, ગાંધીનગર
                 </p>
-                {console.log(data)}
+                {console.log(data[0])}
               </div>
               <table
                 ref={pdfref}
