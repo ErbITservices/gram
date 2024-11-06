@@ -844,7 +844,7 @@ const ANAND = [
                   required
                   id="inputState"
                   onClick={handleInput}
-                  name="select_3"
+                  name="select_97"
                   value={data.select_97}
                   onChange={handleInput}
                   className="form-select"
@@ -860,7 +860,7 @@ const ANAND = [
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_3}</h4>
+                <h4>{data.select_97}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -872,7 +872,7 @@ const ANAND = [
                   required
                   id="inputState"
                   onClick={handleInput}
-                  name="select_4"
+                  name="select_98"
                   value={data.select_98}
                   onChange={handleInput}
                   className="form-select"
@@ -888,7 +888,7 @@ const ANAND = [
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_4}</h4>
+                <h4>{data.select_98}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
