@@ -78,7 +78,7 @@ function Motibhairesultlatter() {
 
           {data && (
             <>
-              <div className="latter">
+              <div className="latter" ref={pdfref}>
                 <h1> ભલામણ</h1>
                 <h3>
                   શહેર ગ્રંથાલય કક્ષાના સને ૨૦૨૨-૨૩ ના વર્ષ ના સ્પર્ધક
@@ -86,8 +86,8 @@ function Motibhairesultlatter() {
                   ભલામણ આ પેટા પ્રાદેશિક સમિતિ કરે છે
                 </h3>
                 <p>(૧) ઉત્તમ ગ્રંથાલય :- {data[0].lname}</p>
-                {/* <p>(૨) મધ્યમ ગ્રંથાલય :- {data}</p>
-                <p>(૩) સારૂ ગ્રંથાલય :- {data}</p> */}
+                <p>(૨) મધ્યમ ગ્રંથાલય :- {data[1].lname}</p>
+                <p>(૩) સારૂ ગ્રંથાલય :- {data[2].lname}</p>
                 <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, અમદાવાદ</p>
                 <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, રાજકોટ</p>
                 <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, વડોદરા</p>
@@ -102,7 +102,7 @@ function Motibhairesultlatter() {
                 </p>
                 {console.log(data[0].lname)}
               </div>
-              <table
+              {/* <table
                 ref={pdfref}
                 className="table table-bordered table-hover rounded"
               >
@@ -133,7 +133,7 @@ function Motibhairesultlatter() {
                     </tr>
                   ))}
                 </tbody>
-              </table>
+              </table> */}
               <button
                 type="button"
                 onClick={downloadpdf}
