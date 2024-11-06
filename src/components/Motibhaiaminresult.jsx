@@ -30,6 +30,10 @@ function Motibhaiaminresult() {
       console.log(error);
     }
   }
+  function handleshowdata(e) {
+    console.log(e);
+    
+  }
 
   return (
     <>
@@ -94,6 +98,7 @@ function Motibhaiaminresult() {
                       <td>{i.lname}</td>
                       <td>{i.gam}</td>
                       <td>{i.marks}</td>
+                      <td><button onClick={handleshowdata}>Show data</button></td>
                     </tr>
                   ))}
                 </tbody>
