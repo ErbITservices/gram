@@ -90,9 +90,13 @@ function Motibhairesultlatter() {
                 <p>(૩) સારૂ ગ્રંથાલય :- {data[2].lname}</p>
                 <div className="namescontainer">
                   <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, અમદાવાદ</p>
-                  <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, રાજકોટ</p>
                   <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, વડોદરા</p>
+                </div>
+                <div className="namescontainer">
+                  <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, રાજકોટ</p>
                   <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, ભાવનગર</p>
+                </div>
+                <div className="namescontainer">
                   <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, સુરત</p>
                   <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, મહેસાણા</p>
                 </div>
