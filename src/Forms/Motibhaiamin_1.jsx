@@ -16,327 +16,268 @@ function Motibhaiamin_1() {
   let year = d.getFullYear();
   const currentyear = useRef();
   const [loader, setloader] = useState("false");
-  const districtlist = ["AHMADABAD", "AMRELI", "ANAND", "ARAVALLI", "BANASKANTHA", "BHARUCH", "BHAVNAGAR", "BOTAD", "CHHOTA UDEPUR", "DAHOD", "DANGS", "DEVBHUMI DWARKA", "GANDHINAGAR", "GIR SOMNATH", "JAMNAGAR", "JUNAGADH", "KACHCHH", "KHEDA", "MAHESANA", "MAHISAGAR", "MORBI", "NARMADA", "NAVSARI", "PANCHMAHALS", "PATAN", "PORBANDAR", "RAJKOT", "SABARKANTHA", "SURAT", "SURENDRANAGAR", "TAPI", "VADODARA", "VALSAD"];
-  
+  const districtlist = [
+    "AHMADABAD",
+    "AMRELI",
+    "ANAND",
+    "ARAVALLI",
+    "BANASKANTHA",
+    "BHARUCH",
+    "BHAVNAGAR",
+    "BOTAD",
+    "CHHOTA UDEPUR",
+    "DAHOD",
+    "DANGS",
+    "DEVBHUMI DWARKA",
+    "GANDHINAGAR",
+    "GIR SOMNATH",
+    "JAMNAGAR",
+    "JUNAGADH",
+    "KACHCHH",
+    "KHEDA",
+    "MAHESANA",
+    "MAHISAGAR",
+    "MORBI",
+    "NARMADA",
+    "NAVSARI",
+    "PANCHMAHALS",
+    "PATAN",
+    "PORBANDAR",
+    "RAJKOT",
+    "SABARKANTHA",
+    "SURAT",
+    "SURENDRANAGAR",
+    "TAPI",
+    "VADODARA",
+    "VALSAD",
+  ];
 
   const AHMADABAD = [
-  "Ahmedabad City",
-  "Daskroi",
-  "Sanand",
-  "Bavla",
-  "Vijapur",
-  "Sankheda",
-  "Kotda Sangani",
-  "Naroda",
-  "Vastrapur",
-  "Bholav",
-  "Sarkhej"
-  ]
+    "Ahmedabad City",
+    "Daskroi",
+    "Sanand",
+    "Bavla",
+    "Vijapur",
+    "Sankheda",
+    "Kotda Sangani",
+    "Naroda",
+    "Vastrapur",
+    "Bholav",
+    "Sarkhej",
+  ];
   const AMRELI = [
-  "Amreli",
-  "Babra",
-  "Dhari",
-  "Lathi",
-  "Rajula",
-  "Savarkundla",
-  "Vallabhipur",
-  "Kunkavav",
-  "Khambhalida",
-  "Sihor"
-]
-const ANAND = [
-  "Anand",
-  "Borsad",
-  "Khambhat",
-  "Sojitra",
-  "Tarapur",
-  "Vallabh Vidyanagar"
-  ]
-  
-  const ARAVALLI = [
-  "Modasa",
-  "Malpur",
-  "Bayad",
-  "Kapadvanj",
-  "Dhansura",
-  "Garbada"
-]
-;
-  const BANASKANTHA = [
-  "Deesa",
-  "Palanpur",
-  "Tharad",
-  "Danta",
-  "Vav",
-  "Lakhani",
-  "Kankrej",
-  "BanasKantha"
-]
-;
-  const BHARUCH = [
-  "Bharuch",
-  "Ankleshwar",
-  "Dediapada",
-  "Jhagadia",
-  "Amod",
-  "Narmada"
-]
-;
-  const BHAVNAGAR = [
-  "Bhavnagar",
-  "Bhavnagar Rural",
-  "Gadhada",
-  "Mahuva",
-  "Sihor",
-  "Palitana",
-  "Valia",
-  "Umrala"
-]
-;
-  const BOTAD = [
-  "Botad",
-  "Barwala",
-  "Ranpur",
-  "Sihor"
-]
-;
-  const CHHOTA_UDEPUR = [
-  "Chhota Udepur",
-  "Bodeli",
-  "Pavi Jetpur",
-  "Sukhsada"
-]
-;
-  const DAHOD = [
-  "Dahod",
-  "Devgad Baria",
-  "Limkheda",
-  "Sanjeli",
-  "Dhanpur",
-  "Jhalod"
-]
-;
-  const DANGS = [
-  "Dangs",
-  "Ahwa",
-  "Saputara",
-  "Subir"
-]
-;
-  const DEVBHUMI_DWARKA = [
-  "Dwarka",
-  "Okhamandal",
-  "Bet Dwarka",
-  "Mundra",
-  "Kalyanpur"
-]
-;
-  const GANDHINAGAR = [
-  "Gandhinagar",
-  "Kalol",
-  "Mansa",
-  "Dehgam",
-  "Khanpur"
-]
-;
-  const GIR_SOMNATH = [
-  "Veraval",
-  "Gir Gadhada",
-  "Talala",
-  "Sutrapada",
-  "Prabhas Patan"
-]
-;
-  const JAMNAGAR = [
-  "Jamnagar",
-  "Kalavad",
-  "Jodiya",
-  "Khambhalia",
-  "Lakhata",
-  "Dhrol",
-  "Sihor"
-]
-;
-  const JUNAGADH = [
-  "Junagadh",
-  "Manavadar",
-  "Keshod",
-  "Bavka",
-  "Upleta",
-  "Dharangadhra",
-  "Mendarada",
-  "Talala"
-]
-;
-  const KACHCHH = [
-  "Bhuj",
-  "Anjar",
-  "Bhachau",
-  "Mandvi",
-  "Nakhatrana",
-  "Kutchhadi",
-  "Lakhpat",
-  "Mundra",
-  "Rapar"
-]
-;
-  const KHEDA = [
-  "Kheda",
-  "Nadiad",
-  "Matar",
-  "Kapadvanj",
-  "Mahudha",
-  "Dholka"
-]
-;
-  const MAHESANA = [
-  "Mehsana",
-  "Kadi",
-  "Unjha",
-  "Visnagar",
-  "Vadnagar",
-  "Ahmedabad"
-]
-;
-  const MAHISAGAR = [
-  "Lunawada",
-  "Gadkhol",
-  "Mahisagar",
-  "Santrampur",
-  "Khodamba"
-]
-;
-  const MORBI = [
-  "Morbi",
-  "Wankaner",
-  "Nawab Nagar",
-  "Maliya Hatina",
-  "Ranjit Nagar",
-  "Halvad"
-]
-;
-  const NARMADA = [
-  "Narmada",
-  "Dediapada",
-  "Jhagadia",
-  "Rajpipla",
-  "Sagbara"
-]
-;
-  const NAVSARI = [
-  "Navsari",
-  "Bansda",
-  "Gandevi",
-  "Chikhli",
-  "Khergam"
-]
-;
-  const PANCHMAHALS = [
-  "Godhra",
-  "Halol",
-  "Madhya Gujarat",
-  "Pavagadh",
-  "Sankheda",
-  "Kalol",
-  "Sihor"
-]
-;
-  const PATAN = [
-  "Patan",
-  "Sidhpur",
-  "Harij",
-  "Radhanpur",
-  "Sihor"
-]
-;
-  const PORBANDAR = [
-  "Porbandar",
-  "Madhavpur",
-  "Kutiyana",
-  "Ranavav",
-  "Bhanvad"
-]
-;
-  const RAJKOT = [
-  "Rajkot",
-  "Upleta",
-  "Jasdan",
-  "Gondal",
-  "Paddhari",
-  "Kotda Sangani",
-  "Dhank"
-]
-;
-  const SABARKANTHA = [
-  "Himmatnagar",
-  "Idar",
-  "Khedbrahma",
-  "Modasa",
-  "Prantij",
-  "Talod",
-  "Bayad"
-]
-;
-  const SURAT = [
-  "Surat",
-  "G Surat",
-  "Bardoli",
-  "Olpad",
-  "Mandvi",
-  "Kamrej",
-  "Utran",
-  "Ichchhpur"
-]
-;
-  const SURENDRANAGAR = [
-  "Surendranagar",
-  "Wadhwan",
-  "Dhrangadhra",
-  "Chotila",
-  "Muli",
-  "Ratanpur",
-  "Limbdi",
-  "Mandvi"
-]
-;
-  const TAPI = [
-  "Vyara",
-  "Songadh",
-  "Tapi",
-  "Madhya Tapi"
-]
-;
-  const VADODARA = [
-  "Vadodara",
-  "Savli",
-  "Karjan",
-  "Waghodia",
-  "Ankleshwar",
-  "Padra",
-  "Vaghodia"
-]
-;
-  const VALSAD = [
-  "Valsad",
-  "Dharampur",
-  "Pardi",
-  "Vapi",
-  "Umargam",
-  "Khergam"
-]
-;
+    "Amreli",
+    "Babra",
+    "Dhari",
+    "Lathi",
+    "Rajula",
+    "Savarkundla",
+    "Vallabhipur",
+    "Kunkavav",
+    "Khambhalida",
+    "Sihor",
+  ];
+  const ANAND = [
+    "Anand",
+    "Borsad",
+    "Khambhat",
+    "Sojitra",
+    "Tarapur",
+    "Vallabh Vidyanagar",
+  ];
 
-  const [listtaluka,setlisttaluka ]= useState([]);
+  const ARAVALLI = [
+    "Modasa",
+    "Malpur",
+    "Bayad",
+    "Kapadvanj",
+    "Dhansura",
+    "Garbada",
+  ];
+  const BANASKANTHA = [
+    "Deesa",
+    "Palanpur",
+    "Tharad",
+    "Danta",
+    "Vav",
+    "Lakhani",
+    "Kankrej",
+    "BanasKantha",
+  ];
+  const BHARUCH = [
+    "Bharuch",
+    "Ankleshwar",
+    "Dediapada",
+    "Jhagadia",
+    "Amod",
+    "Narmada",
+  ];
+  const BHAVNAGAR = [
+    "Bhavnagar",
+    "Bhavnagar Rural",
+    "Gadhada",
+    "Mahuva",
+    "Sihor",
+    "Palitana",
+    "Valia",
+    "Umrala",
+  ];
+  const BOTAD = ["Botad", "Barwala", "Ranpur", "Sihor"];
+  const CHHOTA_UDEPUR = ["Chhota Udepur", "Bodeli", "Pavi Jetpur", "Sukhsada"];
+  const DAHOD = [
+    "Dahod",
+    "Devgad Baria",
+    "Limkheda",
+    "Sanjeli",
+    "Dhanpur",
+    "Jhalod",
+  ];
+  const DANGS = ["Dangs", "Ahwa", "Saputara", "Subir"];
+  const DEVBHUMI_DWARKA = [
+    "Dwarka",
+    "Okhamandal",
+    "Bet Dwarka",
+    "Mundra",
+    "Kalyanpur",
+  ];
+  const GANDHINAGAR = ["Gandhinagar", "Kalol", "Mansa", "Dehgam", "Khanpur"];
+  const GIR_SOMNATH = [
+    "Veraval",
+    "Gir Gadhada",
+    "Talala",
+    "Sutrapada",
+    "Prabhas Patan",
+  ];
+  const JAMNAGAR = [
+    "Jamnagar",
+    "Kalavad",
+    "Jodiya",
+    "Khambhalia",
+    "Lakhata",
+    "Dhrol",
+    "Sihor",
+  ];
+  const JUNAGADH = [
+    "Junagadh",
+    "Manavadar",
+    "Keshod",
+    "Bavka",
+    "Upleta",
+    "Dharangadhra",
+    "Mendarada",
+    "Talala",
+  ];
+  const KACHCHH = [
+    "Bhuj",
+    "Anjar",
+    "Bhachau",
+    "Mandvi",
+    "Nakhatrana",
+    "Kutchhadi",
+    "Lakhpat",
+    "Mundra",
+    "Rapar",
+  ];
+  const KHEDA = ["Kheda", "Nadiad", "Matar", "Kapadvanj", "Mahudha", "Dholka"];
+  const MAHESANA = [
+    "Mehsana",
+    "Kadi",
+    "Unjha",
+    "Visnagar",
+    "Vadnagar",
+    "Ahmedabad",
+  ];
+  const MAHISAGAR = [
+    "Lunawada",
+    "Gadkhol",
+    "Mahisagar",
+    "Santrampur",
+    "Khodamba",
+  ];
+  const MORBI = [
+    "Morbi",
+    "Wankaner",
+    "Nawab Nagar",
+    "Maliya Hatina",
+    "Ranjit Nagar",
+    "Halvad",
+  ];
+  const NARMADA = ["Narmada", "Dediapada", "Jhagadia", "Rajpipla", "Sagbara"];
+  const NAVSARI = ["Navsari", "Bansda", "Gandevi", "Chikhli", "Khergam"];
+  const PANCHMAHALS = [
+    "Godhra",
+    "Halol",
+    "Madhya Gujarat",
+    "Pavagadh",
+    "Sankheda",
+    "Kalol",
+    "Sihor",
+  ];
+  const PATAN = ["Patan", "Sidhpur", "Harij", "Radhanpur", "Sihor"];
+  const PORBANDAR = [
+    "Porbandar",
+    "Madhavpur",
+    "Kutiyana",
+    "Ranavav",
+    "Bhanvad",
+  ];
+  const RAJKOT = [
+    "Rajkot",
+    "Upleta",
+    "Jasdan",
+    "Gondal",
+    "Paddhari",
+    "Kotda Sangani",
+    "Dhank",
+  ];
+  const SABARKANTHA = [
+    "Himmatnagar",
+    "Idar",
+    "Khedbrahma",
+    "Modasa",
+    "Prantij",
+    "Talod",
+    "Bayad",
+  ];
+  const SURAT = [
+    "Surat",
+    "G Surat",
+    "Bardoli",
+    "Olpad",
+    "Mandvi",
+    "Kamrej",
+    "Utran",
+    "Ichchhpur",
+  ];
+  const SURENDRANAGAR = [
+    "Surendranagar",
+    "Wadhwan",
+    "Dhrangadhra",
+    "Chotila",
+    "Muli",
+    "Ratanpur",
+    "Limbdi",
+    "Mandvi",
+  ];
+  const TAPI = ["Vyara", "Songadh", "Tapi", "Madhya Tapi"];
+  const VADODARA = [
+    "Vadodara",
+    "Savli",
+    "Karjan",
+    "Waghodia",
+    "Ankleshwar",
+    "Padra",
+    "Vaghodia",
+  ];
+  const VALSAD = ["Valsad", "Dharampur", "Pardi", "Vapi", "Umargam", "Khergam"];
+  const [listtaluka, setlisttaluka] = useState([]);
 
   function handlesettaluka() {
-    if (
-      librarydistrict.current.value === "AHMADABAD") {
+    if (librarydistrict.current.value === "AHMADABAD") {
       setlisttaluka(AHMADABAD);
-    }
-    else if (librarydistrict.current.value === "AMRELI")
+    } else if (librarydistrict.current.value === "AMRELI")
       setlisttaluka(AMRELI);
-    else if (librarydistrict.current.value === "ANAND")
-      setlisttaluka(ANAND);
+    else if (librarydistrict.current.value === "ANAND") setlisttaluka(ANAND);
     else if (librarydistrict.current.value === "ARAVALLI")
       setlisttaluka(ARAVALLI);
     else if (librarydistrict.current.value === "BANASKANTHA")
@@ -345,14 +286,11 @@ const ANAND = [
       setlisttaluka(BHARUCH);
     else if (librarydistrict.current.value === "BHAVNAGAR")
       setlisttaluka(BHAVNAGAR);
-    else if (librarydistrict.current.value === "BOTAD")
-      setlisttaluka(BOTAD);
+    else if (librarydistrict.current.value === "BOTAD") setlisttaluka(BOTAD);
     else if (librarydistrict.current.value === "CHHOTA UDEPUR")
       setlisttaluka(CHHOTA_UDEPUR);
-    else if (librarydistrict.current.value === "DAHOD")
-      setlisttaluka(DAHOD);
-    else if (librarydistrict.current.value === "DANGS")
-      setlisttaluka(DANGS);
+    else if (librarydistrict.current.value === "DAHOD") setlisttaluka(DAHOD);
+    else if (librarydistrict.current.value === "DANGS") setlisttaluka(DANGS);
     else if (librarydistrict.current.value === "DEVBHUMI DWARKA")
       setlisttaluka(DEVBHUMI_DWARKA);
     else if (librarydistrict.current.value === "GANDHINAGAR")
@@ -363,41 +301,34 @@ const ANAND = [
       setlisttaluka(JAMNAGAR);
     else if (librarydistrict.current.value === "JUNAGADH")
       setlisttaluka(JUNAGADH);
-    else if (librarydistrict.current.value === "KHEDA")
-      setlisttaluka(KHEDA);
+    else if (librarydistrict.current.value === "KHEDA") setlisttaluka(KHEDA);
     else if (librarydistrict.current.value === "KACHCHH")
       setlisttaluka(KACHCHH);
     else if (librarydistrict.current.value === "MAHESANA")
       setlisttaluka(MAHESANA);
     else if (librarydistrict.current.value === "MAHISAGAR")
       setlisttaluka(MAHISAGAR);
-    else if (librarydistrict.current.value === "MORBI")
-      setlisttaluka(MORBI);
+    else if (librarydistrict.current.value === "MORBI") setlisttaluka(MORBI);
     else if (librarydistrict.current.value === "NARMADA")
       setlisttaluka(NARMADA);
     else if (librarydistrict.current.value === "NAVSARI")
       setlisttaluka(NAVSARI);
     else if (librarydistrict.current.value === "PANCHMAHALS")
       setlisttaluka(PANCHMAHALS);
-    else if (librarydistrict.current.value === "PATAN")
-      setlisttaluka(PATAN);
+    else if (librarydistrict.current.value === "PATAN") setlisttaluka(PATAN);
     else if (librarydistrict.current.value === "PORBANDAR")
       setlisttaluka(PORBANDAR);
-    else if (librarydistrict.current.value === "RAJKOT")
-      setlisttaluka(RAJKOT);
+    else if (librarydistrict.current.value === "RAJKOT") setlisttaluka(RAJKOT);
     else if (librarydistrict.current.value === "SABARKANTHA")
       setlisttaluka(SABARKANTHA);
-    else if (librarydistrict.current.value === "SURAT")
-      setlisttaluka(SURAT);
+    else if (librarydistrict.current.value === "SURAT") setlisttaluka(SURAT);
     else if (librarydistrict.current.value === "SURENDRANAGAR")
       setlisttaluka(SURENDRANAGAR);
-    else if (librarydistrict.current.value === "TAPI")
-      setlisttaluka(TAPI);
+    else if (librarydistrict.current.value === "TAPI") setlisttaluka(TAPI);
     else if (librarydistrict.current.value === "VADODARA")
       setlisttaluka(VADODARA);
-    else if (librarydistrict.current.value === "VALSAD")
-      setlisttaluka(VALSAD);
-  } 
+    else if (librarydistrict.current.value === "VALSAD") setlisttaluka(VALSAD);
+  }
 
   const [data, setdata] = useState({
     select_1: "",
@@ -499,13 +430,13 @@ const ANAND = [
     select_97: "",
     select_98: "",
   });
-  
+
   const handleInput = (e) => {
     console.log(librarydistrict.current.value);
     // setlisttaluka(librarydistrict.current.value);
     console.log(listtaluka);
     console.log(e);
-    
+
     const name = e.target.name;
     const value = e.target.value;
     setdata({
@@ -544,7 +475,7 @@ const ANAND = [
             currentyear: currentyear.current.value,
             finacialyear: finacialyear.current.value,
             marks: count,
-            ...data
+            ...data,
           }),
         }
       );
@@ -667,7 +598,7 @@ const ANAND = [
     for (let index = 1; index <= 95; index++) {
       count += Number(data["select_" + index]);
     }
-    
+
     setloader("false");
     setcalculate(count);
   }
@@ -692,7 +623,9 @@ const ANAND = [
 
           <div className="row mb-3 col-sm-13 align-items-center">
             <div className=" col-2">
-              <label className="col-sm-10 col-form-label">ગ્રંથાલયનુ નામ :</label>
+              <label className="col-sm-10 col-form-label">
+                ગ્રંથાલયનુ નામ :
+              </label>
             </div>
             <div className="col-8">
               <input
@@ -709,12 +642,20 @@ const ANAND = [
               <label className="col-sm-10 col-form-label">જિલ્લો :</label>
             </div>
             <div className="col">
-               <select required onChange={handlesettaluka} ref={librarydistrict} className="form-select">
+              <select
+                required
+                onChange={handlesettaluka}
+                ref={librarydistrict}
+                className="form-select"
+              >
                 <option selected disabled value="">
                   Select
                 </option>
-                {districtlist.map((e,index) => <option key={index} value={e}>{e}</option>
-                    )}
+                {districtlist.map((e, index) => (
+                  <option key={index} value={e}>
+                    {e}
+                  </option>
+                ))}
               </select>
             </div>
             <div className=" col-2">
@@ -722,12 +663,14 @@ const ANAND = [
             </div>
             <div className="col">
               <select required ref={librarygam} className="form-select">
-                
                 <option selected disabled value="">
                   Select
                 </option>
-                {listtaluka.map((e,index) => <option key={index} value={e}>{e}</option>
-                    )}
+                {listtaluka.map((e, index) => (
+                  <option key={index} value={e}>
+                    {e}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
@@ -736,10 +679,16 @@ const ANAND = [
               <label className="col-sm-10 col-form-label">ચાલુ વર્ષ :</label>
             </div>
             <div className="col">
-              <select required onChange={handleInput} ref={currentyear} className="form-select">
-                
-                <option selected disabled>Select</option>
-                <option >{year }</option>
+              <select
+                required
+                onChange={handleInput}
+                ref={currentyear}
+                className="form-select"
+              >
+                <option selected disabled>
+                  Select
+                </option>
+                <option>{year}</option>
                 <option>{year - 1}</option>
                 <option>{year - 2}</option>
                 <option>{year - 3}</option>
@@ -751,15 +700,18 @@ const ANAND = [
               <label className="col-sm-10 col-form-label">નાણાકીય વર્ષ :</label>
             </div>
             <div className="col">
-              <select required ref={finacialyear} 
-                  onChange={handleInput} className="form-select">
-                
-                <option selected>{year }</option>
+              <select
+                required
+                ref={finacialyear}
+                onChange={handleInput}
+                className="form-select"
+              >
+                <option selected>{year}</option>
                 <option>{year - 1}</option>
                 <option>{year - 2}</option>
                 <option>{year - 3}</option>
                 <option>{year - 4}</option>
-                <option>{year-5}</option>
+                <option>{year - 5}</option>
               </select>
             </div>
           </div>
@@ -836,7 +788,9 @@ const ANAND = [
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  વર્ષ {currentyear.current && currentyear.current.value-2 } - {currentyear.current && currentyear.current.value-1 } નો avak :
+                  વર્ષ {currentyear.current && currentyear.current.value - 2} -{" "}
+                  {currentyear.current && currentyear.current.value - 1} નો આવક
+                  :
                 </label>
               </div>
               <div className="col">
@@ -864,7 +818,8 @@ const ANAND = [
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  વર્ષ {currentyear.current && currentyear.current.value-1 } - {currentyear.current && currentyear.current.value } નો avak :
+                  વર્ષ {currentyear.current && currentyear.current.value - 1} -{" "}
+                  {currentyear.current && currentyear.current.value} નો આવક :
                 </label>
               </div>
               <div className="col">
@@ -894,7 +849,9 @@ const ANAND = [
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  વર્ષ {currentyear.current && currentyear.current.value-2 } - {currentyear.current && currentyear.current.value-1 } નો ખર્ચ :
+                  વર્ષ {currentyear.current && currentyear.current.value - 2} -{" "}
+                  {currentyear.current && currentyear.current.value - 1} નો ખર્ચ
+                  :
                 </label>
               </div>
               <div className="col">
@@ -922,7 +879,8 @@ const ANAND = [
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  વર્ષ {currentyear.current && currentyear.current.value-1 } - {currentyear.current && currentyear.current.value } નો ખર્ચ :
+                  વર્ષ {currentyear.current && currentyear.current.value - 1} -{" "}
+                  {currentyear.current && currentyear.current.value} નો ખર્ચ :
                 </label>
               </div>
               <div className="col">

@@ -48,8 +48,7 @@ function Motibhaiamin1result({ data }) {
                 required
                 type="text"
                 className="form-control"
-                
-                  value={data[0].lname}
+                value={data[0].lname}
                 autoComplete="off"
               />
             </div>
@@ -59,8 +58,7 @@ function Motibhaiamin1result({ data }) {
               <label className="col-sm-10 col-form-label">જિલ્લો :</label>
             </div>
             <div className="col">
-              <select required className="form-select" 
-                  value={data[0].district}>
+              <select required className="form-select" value={data[0].district}>
                 <option selected disabled value="">
                   Select
                 </option>
@@ -70,8 +68,7 @@ function Motibhaiamin1result({ data }) {
               <label className="col-sm-10 col-form-label">તાલુકો :</label>
             </div>
             <div className="col">
-              <select required className="form-select" 
-                  value={data[0].taluko}>
+              <select required className="form-select" value={data[0].taluko}>
                 <option selected disabled value="">
                   Select
                 </option>
@@ -83,8 +80,11 @@ function Motibhaiamin1result({ data }) {
               <label className="col-sm-10 col-form-label">ચાલુ વર્ષ :</label>
             </div>
             <div className="col">
-              <select required className="form-select" 
-                  value={data[0].currentyear}>
+              <select
+                required
+                className="form-select"
+                value={data[0].currentyear}
+              >
                 <option selected disabled>
                   Select
                 </option>
@@ -180,7 +180,7 @@ function Motibhaiamin1result({ data }) {
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
                   વર્ષ {currentyear.current && currentyear.current.value - 2} -{" "}
-                  {currentyear.current && currentyear.current.value - 1} નો avak
+                  {currentyear.current && currentyear.current.value - 1} નો આવક
                   :
                 </label>
               </div>
@@ -208,7 +208,7 @@ function Motibhaiamin1result({ data }) {
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
                   વર્ષ {currentyear.current && currentyear.current.value - 1} -{" "}
-                  {currentyear.current && currentyear.current.value} નો avak :
+                  {currentyear.current && currentyear.current.value} નો આવક :
                 </label>
               </div>
               <div className="col">
