@@ -22,7 +22,7 @@ function Adl_ahemedabad_dashboard() {
     const dataget = async () => {
       try {
         const response = await axios.get(
-          `https://gramgranthalay-backend-2.onrender.com/district/Ahemedabad`
+          `https://gramgranthalay-backend-2.onrender.com/district/AHMADABAD`
         );
         console.log(response.data), setData(response.data);
         setloader("false");

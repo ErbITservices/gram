@@ -21,7 +21,7 @@ function Adl_bhavnagar_dashboard() {
     const dataget = async () => {
       try {
         const response = await axios.get(
-          `https://gramgranthalay-backend-2.onrender.com/district/Bhavnagar`
+          `https://gramgranthalay-backend-2.onrender.com/district/BHAVNAGAR`
         );
         console.log(response.data), setData(response.data);
         setloader("false");
