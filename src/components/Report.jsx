@@ -2,25 +2,10 @@ import { useReactToPrint } from "react-to-print";
 import { useRef } from "react";
 function Report({ arr, handleback, title }) {
   const pdfref = useRef();
-  const downloadpdf = () => {
-    const input = pdfref.current;
-    html2canvas(input).then((canvas) => {
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF("p", "mm", "a0", true);
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfheight = pdf.internal.pageSize.getHeight();
-      const imgwidth = canvas.width;
-      const imgheight = canvas.height;
-      const ratio = Math.min(pdfWidth / imgwidth, pdfheight / imgheight);
-      const imgx = (pdfWidth - imgwidth * ratio) / 2;
-      const imgy = 30;
-      console.log(pdfWidth);
-      console.log(imgwidth);
-      console.log(ratio);
-      pdf.addImage(imgData, "PNG", 0, 0);
-      pdf.save("DataTable.pdf");
-    });
-  };
+  const downloadpdf = useReactToPrint({
+    content: () => pdfref.current,
+    documentTitle: "Ahevalform",
+  });
   console.log(arr);
 
   return (
