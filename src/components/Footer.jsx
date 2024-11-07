@@ -93,8 +93,8 @@ const Footer = () => {
             </p>
           </div>
           <div className="contect">
-                    <p className="infotext">sector-15 ,gh-5, <br />near mahatma mandir , <br />gandhinagar,3800015 <br />
-                        mo:- 123456789</p>
+                    <p className="infotext">sector-17 ,opp. Town-Hall, <br />near mahatma mandir , <br />gandhinagar,382010 <br />
+                        contact:- 07923221107 <br/> </p>
           </div>
         </div>
       </div>
