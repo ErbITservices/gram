@@ -86,15 +86,15 @@ const Footer = () => {
               Copyright © 2024-25 All right reserved PANARAIT Services
             </p>
             <p className="infotext">
-              Central Library Department, Government of Gujarat
+              Directorate Of Librarys, Government of Gujarat
             </p>
             <p className="infotext">
-              Mainted and Oprated by Panara It
+              Mainted and Oprated by PANARAIT
             </p>
           </div>
           <div className="contect">
                     <p className="infotext">sector-17 ,opp. Town-Hall, <br />near mahatma mandir , <br />gandhinagar,382010 <br />
-                        contact:- 07923221107 <br/> </p>
+                        contact:- 07923221107 <br/>directorateoflibraries@gmail.com </p>
           </div>
         </div>
       </div>
