@@ -85,7 +85,7 @@ function Adl_bhavnagar_dashboard() {
             <Report
               handleback={handleback}
               arr={data}
-              title={"Scl gandhinagar"}
+              title={"ADL BHAVNAGAR"}
             />
           )}
         </div>

@@ -86,7 +86,7 @@ function Scl_gandhinagar_dashboard() {
             <Report
               handleback={handleback}
               arr={data}
-              title={"Scl gandhinagar"}
+              title={"SCL GANDHINAGAR"}
             />
           )}
         </div>

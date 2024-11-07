@@ -82,11 +82,7 @@ function Scl_vadodara_dashboard() {
             </div>
           )}
           {showdata === "true" && (
-            <Report
-              handleback={handleback}
-              arr={data}
-              title={"Scl gandhinagar"}
-            />
+            <Report handleback={handleback} arr={data} title={"SCL VADODARA"} />
           )}
         </div>
       )}

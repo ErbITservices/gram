@@ -136,13 +136,13 @@ function Directo_Dashbord() {
                   Select
                 </option>
 
-                <option>Gandhinagar</option>
-                <option>Meshana</option>
-                <option>Vadodara</option>
-                <option>Surat</option>
-                <option>Ahemedabad</option>
-                <option>Bhavnagar</option>
-                <option>Rajkot</option>
+                <option>GANDHINAGAR</option>
+                <option>MAHESANA</option>
+                <option>VADODARA</option>
+                <option>SURAT</option>
+                <option>AHMADABAD</option>
+                <option>BHAVNAGAR</option>
+                <option>RAJKOT</option>
                 <option value={"All"}>All</option>
               </select>
               <Report handleback={handleback} arr={data} title={"director"} />

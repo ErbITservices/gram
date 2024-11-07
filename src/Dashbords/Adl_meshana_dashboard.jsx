@@ -83,11 +83,7 @@ function Adl_meshana_dashboard() {
             </div>
           )}
           {showdata === "true" && (
-            <Report
-              handleback={handleback}
-              arr={data}
-              title={"Scl gandhinagar"}
-            />
+            <Report handleback={handleback} arr={data} title={"ADL MAHESANA"} />
           )}
         </div>
       )}

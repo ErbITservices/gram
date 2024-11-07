@@ -83,11 +83,7 @@ function Adl_vadodara_dashboard() {
             </div>
           )}
           {showdata === "true" && (
-            <Report
-              handleback={handleback}
-              arr={data}
-              title={"Scl gandhinagar"}
-            />
+            <Report handleback={handleback} arr={data} title={"ADL VADODARA"} />
           )}
         </div>
       )}

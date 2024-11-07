@@ -86,7 +86,7 @@ function Adl_surat_dashboard() {
             <Report
               handleback={handleback}
               arr={data}
-              title={"Scl gandhinagar"}
+              title={"ADL SURAT"}
             />
           )}
         </div>
