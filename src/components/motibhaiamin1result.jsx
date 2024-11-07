@@ -37,7 +37,7 @@ function Motibhaiamin1result({ data }) {
             </h1>{" "}
           </div>
 
-          {/* <div className="row mb-3 col-sm-13 align-items-center">
+          <div className="row mb-3 col-sm-13 align-items-center">
             <div className=" col-2">
               <label className="col-sm-10 col-form-label">
                 ગ્રંથાલયનુ નામ :
@@ -52,7 +52,7 @@ function Motibhaiamin1result({ data }) {
                 autoComplete="off"
               />
             </div>
-          </div> */}
+          </div>
           <div className="row mb-3 col-sm-13 align-items-center">
             <div className=" col-2">
               <label className="col-sm-10 col-form-label">જિલ્લો :</label>
