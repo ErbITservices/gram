@@ -77,6 +77,15 @@ function Motibhaiaminbtnpage() {
               વિશીષ્ટ લાઇબ્રેરી
             </button>
           </Link>
+          <Link to="/Motibhaiamin_7">
+            <button
+              class="btn  btn-primary m-3"
+              //   onClick={navigate("/master")}
+              type="button"
+            >
+              અંધજન લાઇબ્રેરી
+            </button>
+          </Link>
         </form>
       </div>
       <div>
