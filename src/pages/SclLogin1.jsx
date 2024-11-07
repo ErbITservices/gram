@@ -54,7 +54,7 @@ setloader("false");
         localStorage.setItem("login", "sclgandhinagar");
         localStorage.setItem("id", user.email);
         localStorage.setItem("pass", user.password);
-        localStorage.setItem("district", "Gandhinagar");
+        localStorage.setItem("district", "GANDHINAGAR");
         localStorage.setItem("code", "SCLG");
 
         setUser({

@@ -54,7 +54,7 @@ setloader("false");
 
         localStorage.setItem("id", user.email);
         localStorage.setItem("pass", user.password);
-        localStorage.setItem("district", "Vadodara");
+        localStorage.setItem("district", "VADODARA");
         localStorage.setItem("code", "SCLV");
 
         setUser({

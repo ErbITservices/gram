@@ -52,7 +52,7 @@ setloader("false");
         //storeTokenInLs(res_data.token);
 
         localStorage.setItem("login", "AdlAhemedabad");
-        localStorage.setItem("district", "Ahemedabad");
+        localStorage.setItem("district", "AHMADABAD");
         localStorage.setItem("id", user.email);
         localStorage.setItem("pass", user.password);
         localStorage.setItem("code", "ADLAHM");
