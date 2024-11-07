@@ -92,8 +92,8 @@ const Footer = () => {
           </div>
           <div className="contect">
             <p className="infotext">
-              Directorate Of Library Gandhinagar <br/> Sector-17, opp. Town-Hall, <br />
-               
+              Directorate Of Library Gandhinagar <br /> opp. Town-Hall,
+              Sector-17, <br />
               Gandhinagar-382010 <br />
               Contact:- 07923221107 <br />
               Email:- directorateoflibraries@gmail.com
