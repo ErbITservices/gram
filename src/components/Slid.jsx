@@ -11,10 +11,7 @@ const fadeImages = [
     url: "http://rrrlf.nic.in/NML/Images/ML/SCLGandhinagarGujarat/2.jpeg",
     caption: "Gandhinagar Central Library",
   },
-  {
-    url: "https://upload.wikimedia.org/wikipedia/commons/d/dc/Government_Taluka_Library_of_Khedbrahma_Gujarat.jpg",
-    caption: "Gujarat Government Library",
-  },
+  
 ];
 
 const Slideshow = () => {
