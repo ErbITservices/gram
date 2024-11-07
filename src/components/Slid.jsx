@@ -8,10 +8,9 @@ const fadeImages = [
     caption: "Baroda Central Library",
   },
   {
-    url: "http://rrrlf.nic.in/NML/Images/ML/SCLGandhinagarGujarat/2.jpeg",
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfIk3ncNbk7_3WbuTUlikL85ZL9dXypXMKyA&s",
     caption: "Gandhinagar Central Library",
   },
-  
 ];
 
 const Slideshow = () => {
