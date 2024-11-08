@@ -50,6 +50,7 @@ function Adl_rajkot_dashboard() {
       )}
       {loader === "false" && (
         <div>
+          <h1>ADL Rajkot</h1>
           {showdata === "false" && (
             <div class=" mb-3 btn-container">
               <form class="container-fluid justify-content-start">
@@ -83,11 +84,7 @@ function Adl_rajkot_dashboard() {
             </div>
           )}
           {showdata === "true" && (
-            <Report
-              handleback={handleback}
-              arr={data}
-              title={"ADL RAJKOT"}
-            />
+            <Report handleback={handleback} arr={data} title={"ADL RAJKOT"} />
           )}
         </div>
       )}

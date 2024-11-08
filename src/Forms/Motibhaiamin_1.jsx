@@ -15,6 +15,7 @@ function Motibhaiamin_1() {
   const d = new Date();
   let year = d.getFullYear();
   const currentyear = useRef();
+  const [AB, setAB] = useState({ A: "", B: "" });
   const [loader, setloader] = useState("false");
   const districtlist = [
     "AHMADABAD",
@@ -432,10 +433,7 @@ function Motibhaiamin_1() {
   });
 
   const handleInput = (e) => {
-    console.log(librarydistrict.current.value);
-    // setlisttaluka(librarydistrict.current.value);
-    console.log(listtaluka);
-    console.log(e);
+    
 
     const name = e.target.name;
     const value = e.target.value;
@@ -444,6 +442,18 @@ function Motibhaiamin_1() {
       [name]: value,
     });
     console.log(data);
+  };
+  const handlpercentcalculater = (e) => {
+    console.log(e.target.value);
+    
+
+    const name = e.target.name;
+    const value = e.target.value;
+    setAB({
+      ...AB,
+      [name]: value,
+    });
+    console.log(AB);
   };
 
   const libraryname = useRef();
@@ -1416,6 +1426,40 @@ function Motibhaiamin_1() {
               </div>
             </div>
 
+            <div className="row mb-3 col-sm-13 align-items-center">
+              <div className=" col">
+                <label className="col-sm-10 col-form-label">
+                  ટકાવારી કેલ્ક્યુલેટર :
+                </label>
+              </div>
+              
+              <div className="col">
+                <input
+                type="number"
+                  className="form-control"
+                  id="A"
+                  autoComplete="off"
+                  name="A"
+                  value={AB.A}
+                  onChange={handlpercentcalculater}
+              />
+              </div>
+              <div className="col">
+                <input
+                type="number"
+                  className="form-control"
+                  id="B"
+                  autoComplete="off"
+                  name="B"
+                  value={AB.B}
+                  onChange={handlpercentcalculater}
+              />
+              </div>
+              <div className="col-3">
+                {(Number(AB.B)*100)/Number(AB.A)>= 0 && (
+                <h4>{ (Number(AB.B)*100)/Number(AB.A)}%</h4>)}
+              </div>
+            </div>
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
