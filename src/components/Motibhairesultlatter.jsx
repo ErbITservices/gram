@@ -83,13 +83,19 @@ function Motibhairesultlatter() {
               <div className="latter" ref={pdfref}>
                 <h1> ભલામણ</h1>
                 <h3>
-                                  શહેર ગ્રંથાલય કક્ષાના સને { year-1}-{year} ના વર્ષ ના સ્પર્ધક
+                  શહેર ગ્રંથાલય કક્ષાના સને {year - 1}-{year} ના વર્ષ ના સ્પર્ધક
                   ગ્રંથાલયોના મૂલ્યાંકન બાદ નીચેની વિગતે ગ્રંથાલયોને ક્રમાનુસાર
                   ભલામણ આ પેટા પ્રાદેશિક સમિતિ કરે છે
                 </h3>
-                <p>(૧) ઉત્તમ ગ્રંથાલય :- {data[0].lname}</p>
-                <p>(૨) મધ્યમ ગ્રંથાલય :- {data[1].lname}</p>
-                <p>(૩) સારૂ ગ્રંથાલય :- {data[2].lname}</p>
+                <p>
+                  (૧) ઉત્તમ ગ્રંથાલય :- {data[0].lname} ગુણ :- {data[0].Marks}
+                </p>
+                <p>
+                  (૨) મધ્યમ ગ્રંથાલય :- {data[1].lname} ગુણ :- {data[1].Marks}
+                </p>
+                <p>
+                  (૩) સારૂ ગ્રંથાલય :- {data[2].lname} ગુણ :- {data[2].Marks}
+                </p>
                 <div className="namescontainer">
                   <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, અમદાવાદ</p>
                   <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, વડોદરા</p>
