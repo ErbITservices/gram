@@ -842,6 +842,7 @@ function Addnew() {
                   <option>વિશિષ્ટ લાઇબ્રેરી</option>
                   <option>બિન આદિજાતિ</option>
                   <option>આદિજાતિ</option>
+                  <option>સાંસ્કૃતિક કેન્દ્ર</option>
                 </select>
               </div>
               <div className="col-1">
