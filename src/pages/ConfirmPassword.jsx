@@ -104,7 +104,7 @@ function ConfirmPassword() {
                         name="password"
                         value={user.password}
                         onChange={handleInput}
-                        placeholder="Email"
+                        placeholder="Password"
                       />
                     </div>
                     <div>
@@ -114,7 +114,7 @@ function ConfirmPassword() {
                         name="pass"
                         // value={user.pass}
                         // onChange={handleInput}
-                        placeholder="Email"
+                        placeholder="Conform Password"
                       />
                     </div>
 
