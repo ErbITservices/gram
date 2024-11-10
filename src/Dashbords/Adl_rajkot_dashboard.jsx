@@ -59,7 +59,7 @@ function Adl_rajkot_dashboard() {
                   class="btn m-3 button-25 "
                   type="button"
                 >
-                  Report
+                  GIA Report
                 </button>
 
                 <Link to="/Addnew">
