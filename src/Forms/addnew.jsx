@@ -742,10 +742,10 @@ function Addnew() {
                   <option selected value="">
                     select
                   </option>
-                  <option>gam</option>
-                  <option>gam-1</option>
-                  <option>gam-3</option>
-                  <option>gam-2</option>
+                  <option>આસોજ</option>
+                  <option>ખાનપુર</option>
+                  <option>વાવજીપુરા</option>
+                  <option>મિરસાપુરા</option>
                 </select>
               </div>
               <div className="col-1">
@@ -901,8 +901,8 @@ function Addnew() {
                   <option selected value="">
                     select
                   </option>
-                  <option value="Active">સક્રિય</option>
-                  <option value="Disactivated">નિષ્ક્રિય</option>
+                  <option value="સક્રિય">સક્રિય</option>
+                  <option value="નિષ્ક્રિય">નિષ્ક્રિય</option>
                 </select>
               </div>
             </div>
@@ -923,7 +923,7 @@ function Addnew() {
                     onClick={downloadpdf}
                     className="btn btn-primary"
                   >
-                    downloadpdf
+                    Downloadpdf
                   </button>
                 </div>
 
@@ -977,8 +977,8 @@ function Addnew() {
               <table className="table-bordered table-hover datatable">
                 <tr>
                   <th className="helight">LibraryStatus</th>
-                  <th className="helight">name</th>
-                  <th className="helight">id</th>
+                  <th className="helight">Name</th>
+                  <th className="helight">UID</th>
                   <th className="helight"></th>
                 </tr>
 
