@@ -840,8 +840,8 @@ function Addnew() {
                   <option>શહેર લાઇબ્રેરી</option>
                   <option>અંધજન લાયબ્રેરી</option>
                   <option>વિશિષ્ટ લાઇબ્રેરી</option>
-                  <option>બિન અદિજાતિ</option>
-                  <option>અદિજાતિ</option>
+                  <option>બિન આદિજાતિ</option>
+                  <option>આદિજાતિ</option>
                 </select>
               </div>
               <div className="col-1">
