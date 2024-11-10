@@ -39,6 +39,7 @@ function Addnew() {
     libraryeneducation: "",
     email: "",
     phone: "",
+    pholibrarystatusne: "",
   });
 
 
@@ -474,6 +475,7 @@ function Addnew() {
           libraryenaddres: "",
           libraryeneducation: "",
           libraryensalary: "",
+          librarystatus:"",
         });
         let templist = [
           ...list,
@@ -491,6 +493,7 @@ function Addnew() {
             emai: data.email,
             emailmenaddres: data.emailmenaddres,
             phone: data.phone,
+            librarystatus:data.librarystatus,
             libraryenaddres: "",
           },
         ];
@@ -673,6 +676,7 @@ function Addnew() {
         libraryenaddres: "",
         libraryeneducation: "",
         libraryensalary: "",
+        librarystatus:"",
       });
       setloader("false");
     }
@@ -866,6 +870,25 @@ function Addnew() {
                 />
               </div>
             </div>
+
+            <div className="row mb-3 col-sm-13 align-items-center">
+              <div className="col">
+                <select
+                  required
+                  name="librarystatus"
+                  value={data.librarystatus}
+                  onChange={handleInput}
+                  className="form-select"
+                >
+                  <option selected value="">
+                    select
+                  </option>
+                  <option>Active</option>
+                  <option>Deactivated</option>
+                </select>
+              </div>
+            </div>
+
             <center>
               <div className="row mb-3 tab2 col-sm-13 align-items-center">
                 <div className=" col">
