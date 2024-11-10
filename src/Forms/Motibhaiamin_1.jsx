@@ -3517,7 +3517,7 @@ function Motibhaiamin_1() {
                 </div>
 
                 <div className=" col">
-                  <button onClick={handlecalculate} className="btn btn-primary">
+                  <button type="button" onClick={handlecalculate} className="btn btn-primary">
                     Calculate
                   </button>
                 </div>
