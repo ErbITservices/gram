@@ -840,6 +840,8 @@ function Addnew() {
                   <option>શહેર લાઇબ્રેરી</option>
                   <option>અંધજન લાયબ્રેરી</option>
                   <option>વિશિષ્ટ લાઇબ્રેરી</option>
+                  <option>બિન અદિજાતિ</option>
+                  <option>અદિજાતિ</option>
                 </select>
               </div>
               <div className="col-1">
@@ -874,8 +876,7 @@ function Addnew() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className="col-1">
                 <label className="col-form-label">
-                  પુસ્તકાલયની વર્તમાન સ્થિતિ
-                   :
+                  પુસ્તકાલયની વર્તમાન સ્થિતિ :
                 </label>
               </div>
               <div className="col">
