@@ -874,7 +874,7 @@ function Addnew() {
             </div>
 
             <div className="row mb-3 col-sm-13 align-items-center">
-              <div className="col-1">
+              <div className="col-4">
                 <label className="col-form-label">
                   પુસ્તકાલયની વર્તમાન સ્થિતિ :
                 </label>
