@@ -50,9 +50,9 @@ function Scl_gandhinagar_dashboard() {
       )}
       {loader === "false" && (
         <div>
+          <h1>SCL Gandhinagar</h1>
           {showdata === "false" && (
             <div class=" mb-3 btn-container">
-              <h1>SCL Gandhinagar</h1>
               <form class="container-fluid justify-content-start">
                 <button
                   onClick={handleshowdata}
