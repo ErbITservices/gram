@@ -891,8 +891,8 @@ function Addnew() {
                   <option selected value="">
                     select
                   </option>
-                  <option>Active</option>
-                  <option>Deactivated</option>
+                  <option>સક્રિય</option>
+                  <option>નિષ્ક્રિય</option>
                 </select>
               </div>
             </div>
