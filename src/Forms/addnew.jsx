@@ -746,6 +746,15 @@ function Addnew() {
                   <option>ખાનપુર</option>
                   <option>વાવજીપુરા</option>
                   <option>મિરસાપુરા</option>
+                  <option>રામનાથ</option>
+                  <option>ખડિરાવપુરા</option>
+                  <option>ગરધીયા</option>
+                  <option>ગાંગડીયા</option>
+                  <option>વેમાર</option>
+                  <option>શંકરપુરા</option>
+                  <option>વડદવા</option>
+                  <option>શેરપુરા</option>
+                  <option>વાસણા</option>
                 </select>
               </div>
               <div className="col-1">
