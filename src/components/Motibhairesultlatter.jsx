@@ -88,13 +88,16 @@ function Motibhairesultlatter() {
                   ભલામણ આ પેટા પ્રાદેશિક સમિતિ કરે છે
                 </h3>
                 <p>
-                  (૧) ઉત્તમ ગ્રંથાલય :- {data[0].lname} ગુણ :- {data[0].marks}
+                  (૧) ઉત્તમ ગ્રંથાલય :- {data[0].lname}{" "}
+                  <span className="spacing">ગુણ :- {data[0].marks}</span>
                 </p>
                 <p>
-                  (૨) મધ્યમ ગ્રંથાલય :- {data[1].lname} ગુણ :- {data[1].marks}
+                  (૨) મધ્યમ ગ્રંથાલય :- {data[1].lname}
+                  <span className="spacing">ગુણ :- {data[1].marks}</span>
                 </p>
                 <p>
-                  (૩) સારૂ ગ્રંથાલય :- {data[2].lname} ગુણ :- {data[2].marks}
+                  (૩) સારૂ ગ્રંથાલય :- {data[2].lname}
+                  <span className="spacing">ગુણ :- {data[2].marks}</span>
                 </p>
                 <div className="namescontainer">
                   <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, અમદાવાદ</p>
