@@ -503,11 +503,11 @@ function Master() {
               <h1 className="customeselect">
                 નિરીક્ષણ અહેવાલ{" "}
                 <select required className="form-select">
-                  <option selected>2024</option>
-                  <option>2023</option>
-                  <option>2022</option>
-                  <option>2021</option>
-                  <option>2020</option>
+                  <option selected>2024-25</option>
+                  <option>2023-24</option>
+                  <option>2022-23</option>
+                  <option>2021-22</option>
+                  <option>2020-21</option>
                 </select>
               </h1>
               <div className="row mb-3 col-sm-13 align-items-center">
