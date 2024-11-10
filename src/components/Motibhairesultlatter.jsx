@@ -89,15 +89,21 @@ function Motibhairesultlatter() {
                 </h3>
                 <p className="latterlname">
                   (૧) ઉત્તમ ગ્રંથાલય :- {data[0].lname}{" "}
-                  <span className="spacing">ગુણ :- {data[0].marks}</span>
+                  <span className="latterlname spacing">
+                    ગુણ :- {data[0].marks}
+                  </span>
                 </p>
                 <p className="latterlname">
                   (૨) મધ્યમ ગ્રંથાલય :- {data[1].lname}
-                  <span className="spacing">ગુણ :- {data[1].marks}</span>
+                  <span className="latterlname spacing">
+                    ગુણ :- {data[1].marks}
+                  </span>
                 </p>
                 <p className="latterlname">
                   (૩) સારૂ ગ્રંથાલય :- {data[2].lname}
-                  <span className="spacing">ગુણ :- {data[2].marks}</span>
+                  <span className="latterlname spacing">
+                    ગુણ :- {data[2].marks}
+                  </span>
                 </p>
                 <div className="namescontainer">
                   <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, અમદાવાદ</p>
