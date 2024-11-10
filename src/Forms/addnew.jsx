@@ -966,6 +966,7 @@ function Addnew() {
               </div>
               <table className="table-bordered table-hover datatable">
                 <tr>
+                  <th className="helight">LibraryStatus</th>
                   <th className="helight">name</th>
                   <th className="helight">id</th>
                   <th className="helight"></th>
@@ -973,6 +974,7 @@ function Addnew() {
 
                 {pd.map((i) => (
                   <tr>
+                    <th key={i.librarystatus}> {i.librarystatus}</th>
                     <th key={i.lname}> {i.lname}</th>
                     <th key={i.uid}> {i.uid}</th>
                     <th>
