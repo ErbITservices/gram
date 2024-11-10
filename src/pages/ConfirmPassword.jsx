@@ -108,7 +108,7 @@ function ConfirmPassword() {
                       />
                     </div>
                     <div>
-                      <label>conform Password </label>
+                      <label>Conform Password </label>
                       <input
                         type="password"
                         name="pass"
