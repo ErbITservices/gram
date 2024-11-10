@@ -500,12 +500,9 @@ function Master() {
           <NavBar titel={"ગ્રામ ગ્રંથાલયનો નિરીક્ષણ અહેવલ  "}></NavBar>
           <div>
             <div ref={pdfref} className="form ">
-              <h1>
+              <h1 className="customeselect">
                 નિરીક્ષણ અહેવાલ{" "}
-                <select
-                  required
-                  className="form-select"
-                >
+                <select required className="form-select">
                   <option selected>2024</option>
                   <option>2023</option>
                   <option>2022</option>

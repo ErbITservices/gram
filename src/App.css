@@ -407,5 +407,10 @@ margin: 20px 10px;
   margin: 0 20px;
 }
 .customeselect{
-  
+  display: flex;
+}
+.customeselect select
+{
+  margin: 0 10px;
+  width: 15%;
 }
