@@ -46,7 +46,7 @@ function Enter({ arr }) {
               <th scope="col">ગામ</th>
               <th scope="col">પિન</th>
               <th scope="col">તાલુકો</th>
-              <th scope="col">જીલો</th>
+              <th scope="col">જિલ્લો</th>
               <th scope="col">સ્થાપના તારીખ</th>
               <th scope="col">પુરશો</th>
               <th scope="col">સ્ત્રી</th>

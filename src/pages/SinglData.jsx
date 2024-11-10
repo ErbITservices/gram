@@ -98,7 +98,7 @@ function SingleData(props) {
               <label className="highlightdata">{arr[0].taluko}</label>
             </div>
             <div className="col-1">
-              <label className="col-form-label">જીલો :</label>
+              <label className="col-form-label">જિલ્લો :</label>
             </div>
             <div className="col">
               <label className="highlightdata">{arr[0].district}</label>

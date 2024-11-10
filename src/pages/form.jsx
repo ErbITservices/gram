@@ -367,7 +367,7 @@ function Form() {
             />
           </div>
           <div className="col-1">
-            <label className="col-form-label">જીલો :</label>
+            <label className="col-form-label">જિલ્લો :</label>
           </div>
           <div className="col">
             <select
