@@ -41523,7 +41523,7 @@ function q6() {
       console.log(y);
       try {
         (
-          await fetch("https://gramgranthalay-backend-2.onrender.com/form/", {
+          await fetch("https://gram-back.vercel.app/form/", {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(y),
@@ -47976,9 +47976,7 @@ function N2() {
     (async () => {
       try {
         console.log("mihir");
-        const j = await ht.get(
-          "https://gramgranthalay-backend-2.onrender.com/form/"
-        );
+        const j = await ht.get("https://gram-back.vercel.app/form/");
         console.log(j.data), i(j.data);
       } catch (j) {
         console.log(j);
@@ -48000,14 +47998,11 @@ function N2() {
       try {
         console.log("mihir"),
           (
-            await fetch(
-              `https://gramgranthalay-backend-2.onrender.com/form/${c.uid}`,
-              {
-                method: "PUT",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(c),
-              }
-            )
+            await fetch(`https://gram-back.vercel.app/form/${c.uid}`, {
+              method: "PUT",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(c),
+            })
           ).ok &&
             (console.log(c),
             n({
@@ -52972,9 +52967,7 @@ function y8() {
   J.useEffect(() => {
     (async () => {
       try {
-        const L = await ht.get(
-          "https://gramgranthalay-backend-2.onrender.com/form/"
-        );
+        const L = await ht.get("https://gram-back.vercel.app/form/");
         console.log(L.data), r(L.data);
       } catch (L) {
         console.log(L);
@@ -53141,9 +53134,7 @@ function _8(t) {
   J.useEffect(() => {
     (async () => {
       try {
-        const u = await ht.get(
-          "https://gramgranthalay-backend-2.onrender.com/form/"
-        );
+        const u = await ht.get("https://gram-back.vercel.app/form/");
         a(u.data), console.log(r);
       } catch (u) {
         console.log(u);
@@ -54080,14 +54071,11 @@ const S8 = () => {
   const n = async (o) => {
     o.preventDefault(), console.log(s), l("true");
     try {
-      const i = await fetch(
-        "https://gramgranthalay-backend-2.onrender.com/admin/login",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(s),
-        }
-      );
+      const i = await fetch("https://gram-back.vercel.app/admin/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(s),
+      });
       if (i.ok) {
         const A = await i.json();
         console.log("jaimin", A),
@@ -54203,7 +54191,7 @@ function F8() {
     (async () => {
       try {
         const R = await ht.get(
-          `https://gramgranthalay-backend-2.onrender.com/district/${localStorage.getItem(
+          `https://gram-back.vercel.app/district/${localStorage.getItem(
             "district"
           )}`
         );
@@ -54214,9 +54202,7 @@ function F8() {
     })(),
       (async () => {
         try {
-          const R = await ht.get(
-            "https://gramgranthalay-backend-2.onrender.com/Count/Count"
-          );
+          const R = await ht.get("https://gram-back.vercel.app/Count/Count");
           console.log(R.data[0].count), u(R.data[0].count);
         } catch (R) {
           console.log(R);
@@ -54245,12 +54231,12 @@ function F8() {
         ((async () => {
           try {
             const he = await ht.get(
-              `https://gramgranthalay-backend-2.onrender.com/district/${localStorage.getItem(
+              `https://gram-back.vercel.app/district/${localStorage.getItem(
                 "district"
               )}`
             );
             console.log(
-              `https://gramgranthalay-backend-2.onrender.com/district/${localStorage.getItem(
+              `https://gram-back.vercel.app/district/${localStorage.getItem(
                 "district"
               )}`
             ),
@@ -54267,7 +54253,7 @@ function F8() {
         console.log(C),
         console.log(),
         (
-          await fetch("https://gramgranthalay-backend-2.onrender.com/form/", {
+          await fetch("https://gram-back.vercel.app/form/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(c),
@@ -54315,7 +54301,7 @@ function F8() {
           (async () => {
             try {
               const xe = await ht.get(
-                `https://gramgranthalay-backend-2.onrender.com/district/${localStorage.getItem(
+                `https://gram-back.vercel.app/district/${localStorage.getItem(
                   "district"
                 )}`
               );
@@ -54330,14 +54316,11 @@ function F8() {
         console.log("mihir");
         let he = A + 1;
         (
-          await fetch(
-            `https://gramgranthalay-backend-2.onrender.com/Count/${A} `,
-            {
-              method: "PUT",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ count: he }),
-            }
-          )
+          await fetch(`https://gram-back.vercel.app/Count/${A} `, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ count: he }),
+          })
         ).ok && (console.log("done " + A), l("false"));
       } catch (he) {
         console.log("error"),
@@ -54353,9 +54336,7 @@ function F8() {
     }
     (async () => {
       try {
-        const L = await ht.get(
-          "https://gramgranthalay-backend-2.onrender.com/Count/Count"
-        );
+        const L = await ht.get("https://gram-back.vercel.app/Count/Count");
         console.log(L.data[0].count), u(L.data[0].count);
       } catch (L) {
         console.log(L);
@@ -54364,19 +54345,16 @@ function F8() {
   };
   async function B(S) {
     if (
-      await fetch(
-        `https://gramgranthalay-backend-2.onrender.com/form/${S.uid}`,
-        {
-          method: "DELETE",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ uid: S.uid }),
-        }
-      )
+      await fetch(`https://gram-back.vercel.app/form/${S.uid}`, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ uid: S.uid }),
+      })
     ) {
       (async () => {
         try {
           const xe = await ht.get(
-            `https://gramgranthalay-backend-2.onrender.com/district/${localStorage.getItem(
+            `https://gram-back.vercel.app/district/${localStorage.getItem(
               "district"
             )}`
           );
@@ -54409,20 +54387,17 @@ function F8() {
   }
   async function z() {
     console.log("mihir"), l("true"), console.log(y);
-    const S = await fetch(
-      `https://gramgranthalay-backend-2.onrender.com/form/${y.uid}`,
-      {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(y),
-      }
-    );
+    const S = await fetch(`https://gram-back.vercel.app/form/${y.uid}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(y),
+    });
     console.log("done"),
       S &&
         ((async () => {
           try {
             const R = await ht.get(
-              `https://gramgranthalay-backend-2.onrender.com/district/${localStorage.getItem(
+              `https://gram-back.vercel.app/district/${localStorage.getItem(
                 "district"
               )}`
             );
@@ -56698,14 +56673,11 @@ const tL = () => {
     const n = async (o) => {
       o.preventDefault(), console.log(s), l("true");
       try {
-        const i = await fetch(
-          "https://gramgranthalay-backend-2.onrender.com/admin/login",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(s),
-          }
-        );
+        const i = await fetch("https://gram-back.vercel.app/admin/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(s),
+        });
         if (i.ok) {
           l("false");
           const A = await i.json();
@@ -56807,14 +56779,11 @@ const tL = () => {
     const n = async (o) => {
       o.preventDefault(), console.log(s), l("true");
       try {
-        const i = await fetch(
-          "https://gramgranthalay-backend-2.onrender.com/admin/login",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(s),
-          }
-        );
+        const i = await fetch("https://gram-back.vercel.app/admin/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(s),
+        });
         if (i.ok) {
           l("false");
           const A = await i.json();
@@ -56916,14 +56885,11 @@ const tL = () => {
     const n = async (o) => {
       o.preventDefault(), console.log(s), l("true");
       try {
-        const i = await fetch(
-          "https://gramgranthalay-backend-2.onrender.com/admin/login",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(s),
-          }
-        );
+        const i = await fetch("https://gram-back.vercel.app/admin/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(s),
+        });
         if (i.ok) {
           l("false");
           const A = await i.json();
@@ -57025,14 +56991,11 @@ const tL = () => {
     const n = async (o) => {
       o.preventDefault(), console.log(s), l("true");
       try {
-        const i = await fetch(
-          "https://gramgranthalay-backend-2.onrender.com/admin/login",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(s),
-          }
-        );
+        const i = await fetch("https://gram-back.vercel.app/admin/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(s),
+        });
         if (i.ok) {
           l("false");
           const A = await i.json();
@@ -57134,14 +57097,11 @@ const tL = () => {
     const n = async (o) => {
       o.preventDefault(), console.log(s), l("true");
       try {
-        const i = await fetch(
-          "https://gramgranthalay-backend-2.onrender.com/admin/login",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(s),
-          }
-        );
+        const i = await fetch("https://gram-back.vercel.app/admin/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(s),
+        });
         if (i.ok) {
           l("false");
           const A = await i.json();
@@ -57243,14 +57203,11 @@ const tL = () => {
     const n = async (o) => {
       o.preventDefault(), console.log(s), l("true");
       try {
-        const i = await fetch(
-          "https://gramgranthalay-backend-2.onrender.com/admin/login",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(s),
-          }
-        );
+        const i = await fetch("https://gram-back.vercel.app/admin/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(s),
+        });
         if (i.ok) {
           l("false");
           const A = await i.json();
@@ -57367,7 +57324,7 @@ function aL() {
     console.log(a.current.value);
     try {
       const n = await ht.get(
-        `https://gramgranthalay-backend-2.onrender.com/${a.current.value}/`
+        `https://gram-back.vercel.app/${a.current.value}/`
       );
       console.log(n.data),
         n.data.sort(({ marks: o }, { marks: i }) => i - o),
@@ -57602,9 +57559,7 @@ function cL() {
     (async () => {
       o("true");
       try {
-        const f = await ht.get(
-          "https://gramgranthalay-backend-2.onrender.com/form/"
-        );
+        const f = await ht.get("https://gram-back.vercel.app/form/");
         console.log(f.data), r(f.data), o("false");
       } catch (f) {
         console.log(f), o("false");
@@ -57618,9 +57573,7 @@ function cL() {
   async function u() {
     if ((console.log(l.current.value), l.current.value === "All"))
       try {
-        const p = await ht.get(
-          "https://gramgranthalay-backend-2.onrender.com/form"
-        );
+        const p = await ht.get("https://gram-back.vercel.app/form");
         console.log(p.data), r(p.data), o("false");
       } catch (p) {
         console.log(p), o("false");
@@ -57628,7 +57581,7 @@ function cL() {
     else
       try {
         const p = await ht.get(
-          `https://gramgranthalay-backend-2.onrender.com/district/${l.current.value}`
+          `https://gram-back.vercel.app/district/${l.current.value}`
         );
         console.log(p.data), r(p.data), o("false");
       } catch (p) {
@@ -57735,7 +57688,7 @@ function oL() {
       (async () => {
         try {
           const m = await ht.get(
-            "https://gramgranthalay-backend-2.onrender.com/district/Gandhinagar"
+            "https://gram-back.vercel.app/district/Gandhinagar"
           );
           console.log(m.data), s(m.data), a("false");
         } catch (m) {
@@ -57821,7 +57774,7 @@ function AL() {
       (async () => {
         try {
           const m = await ht.get(
-            "https://gramgranthalay-backend-2.onrender.com/district/Vadodara"
+            "https://gram-back.vercel.app/district/Vadodara"
           );
           console.log(m.data), s(m.data), n("false");
         } catch (m) {
@@ -57907,7 +57860,7 @@ function dL() {
       (async () => {
         try {
           const m = await ht.get(
-            "https://gramgranthalay-backend-2.onrender.com/district/Ahemedabad"
+            "https://gram-back.vercel.app/district/Ahemedabad"
           );
           console.log(m.data), s(m.data), n("false");
         } catch (m) {
@@ -57993,7 +57946,7 @@ function uL() {
       (async () => {
         try {
           const m = await ht.get(
-            "https://gramgranthalay-backend-2.onrender.com/district/Meshana"
+            "https://gram-back.vercel.app/district/Meshana"
           );
           console.log(m.data), s(m.data), n("false");
         } catch (m) {
@@ -58079,7 +58032,7 @@ function hL() {
       (async () => {
         try {
           const m = await ht.get(
-            "https://gramgranthalay-backend-2.onrender.com/district/Bhavnagar"
+            "https://gram-back.vercel.app/district/Bhavnagar"
           );
           console.log(m.data), s(m.data), n("false");
         } catch (m) {
@@ -58165,7 +58118,7 @@ function mL() {
       (async () => {
         try {
           const m = await ht.get(
-            "https://gramgranthalay-backend-2.onrender.com/district/Rajkot"
+            "https://gram-back.vercel.app/district/Rajkot"
           );
           console.log(m.data), s(m.data), n("false");
         } catch (m) {
@@ -58250,9 +58203,7 @@ function fL() {
     n("true"),
       (async () => {
         try {
-          const m = await ht.get(
-            "https://gramgranthalay-backend-2.onrender.com/district/Surat"
-          );
+          const m = await ht.get("https://gram-back.vercel.app/district/Surat");
           console.log(m.data), s(m.data), n("false");
         } catch (m) {
           n("false"), console.log(m);
@@ -58337,7 +58288,7 @@ function xL() {
       (async () => {
         try {
           const m = await ht.get(
-            "https://gramgranthalay-backend-2.onrender.com/district/Vadodara"
+            "https://gram-back.vercel.app/district/Vadodara"
           );
           console.log(m.data), s(m.data), n("false");
         } catch (m) {
@@ -58423,14 +58374,11 @@ const pL = () => {
   const n = async (o) => {
     o.preventDefault(), console.log(s), l("true");
     try {
-      const i = await fetch(
-        "https://gramgranthalay-backend-2.onrender.com/admin/login",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(s),
-        }
-      );
+      const i = await fetch("https://gram-back.vercel.app/admin/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(s),
+      });
       if (i.ok) {
         l("false");
         const A = await i.json();
@@ -58537,7 +58485,7 @@ const vL = () => {
       i.preventDefault(), console.log(t), console.log("mihir"), r("true");
       try {
         const A = await fetch(
-          "https://gramgranthalay-backend-2.onrender.com/admin/sendpasswordlink",
+          "https://gram-back.vercel.app/admin/sendpasswordlink",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -58619,14 +58567,11 @@ const vL = () => {
     const n = async (o) => {
       o.preventDefault(), console.log(s), l("true");
       try {
-        const i = await fetch(
-          "https://gramgranthalay-backend-2.onrender.com/admin/login",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(s),
-          }
-        );
+        const i = await fetch("https://gram-back.vercel.app/admin/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(s),
+        });
         if (i.ok) {
           l("false");
           const A = await i.json();
@@ -58803,9 +58748,7 @@ function gL() {
   J.useEffect(() => {
     (async () => {
       try {
-        const L = await ht.get(
-          "https://gramgranthalay-backend-2.onrender.com/form"
-        );
+        const L = await ht.get("https://gram-back.vercel.app/form");
         console.log(L.data), r(L.data);
       } catch (L) {
         console.log(L);
@@ -59049,14 +58992,11 @@ function wL() {
       try {
         r("true");
         const N = await (
-          await fetch(
-            `https://gramgranthalay-backend-2.onrender.com/admin/${i}/${A}`,
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ password: p }),
-            }
-          )
+          await fetch(`https://gram-back.vercel.app/admin/${i}/${A}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ password: p }),
+          })
         ).json();
         N.status == 400
           ? (console.log("not done"),
@@ -59272,19 +59212,16 @@ function BL() {
     try {
       console.log("mihir"),
         (
-          await fetch(
-            "https://gramgranthalay-backend-2.onrender.com/Motibhaiamin1/",
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                lname: A.current.value,
-                gam: u.current.value,
-                currentyear: r.current.value,
-                marks: t,
-              }),
-            }
-          )
+          await fetch("https://gram-back.vercel.app/Motibhaiamin1/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              lname: A.current.value,
+              gam: u.current.value,
+              currentyear: r.current.value,
+              marks: t,
+            }),
+          })
         ).ok
           ? (console.log("done"),
             o({
@@ -63705,19 +63642,16 @@ function CL() {
     try {
       console.log("mihir"),
         (
-          await fetch(
-            "https://gramgranthalay-backend-2.onrender.com/Motibhaiamin2/",
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                lname: A.current.value,
-                gam: u.current.value,
-                currentyear: r.current.value,
-                marks: t,
-              }),
-            }
-          )
+          await fetch("https://gram-back.vercel.app/Motibhaiamin2/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              lname: A.current.value,
+              gam: u.current.value,
+              currentyear: r.current.value,
+              marks: t,
+            }),
+          })
         ).ok
           ? (console.log("done"),
             o({
@@ -68137,19 +68071,16 @@ function yL() {
     try {
       console.log("mihir"),
         (
-          await fetch(
-            "https://gramgranthalay-backend-2.onrender.com/Motibhaiamin_3/",
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                lname: A.current.value,
-                gam: u.current.value,
-                currentyear: r.current.value,
-                marks: t,
-              }),
-            }
-          )
+          await fetch("https://gram-back.vercel.app/Motibhaiamin_3/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              lname: A.current.value,
+              gam: u.current.value,
+              currentyear: r.current.value,
+              marks: t,
+            }),
+          })
         ).ok
           ? (console.log("done"),
             o({
@@ -72567,19 +72498,16 @@ function _L() {
     try {
       console.log("mihir"),
         (
-          await fetch(
-            "https://gramgranthalay-backend-2.onrender.com/Motibhaiamin_4/",
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                lname: A.current.value,
-                gam: u.current.value,
-                currentyear: r.current.value,
-                marks: t,
-              }),
-            }
-          )
+          await fetch("https://gram-back.vercel.app/Motibhaiamin_4/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              lname: A.current.value,
+              gam: u.current.value,
+              currentyear: r.current.value,
+              marks: t,
+            }),
+          })
         ).ok
           ? (console.log("done"),
             o({
@@ -76997,19 +76925,16 @@ function SL() {
     try {
       console.log("mihir"),
         (
-          await fetch(
-            "https://gramgranthalay-backend-2.onrender.com/Motibhaiamin5/",
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                lname: A.current.value,
-                gam: u.current.value,
-                currentyear: r.current.value,
-                marks: t,
-              }),
-            }
-          )
+          await fetch("https://gram-back.vercel.app/Motibhaiamin5/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              lname: A.current.value,
+              gam: u.current.value,
+              currentyear: r.current.value,
+              marks: t,
+            }),
+          })
         ).ok
           ? (console.log("done"),
             o({
@@ -81433,19 +81358,16 @@ function FL() {
     try {
       console.log("mihir"),
         (
-          await fetch(
-            "https://gramgranthalay-backend-2.onrender.com/Motibhaiamin6/",
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                lname: A.current.value,
-                gam: u.current.value,
-                currentyear: r.current.value,
-                marks: t,
-              }),
-            }
-          )
+          await fetch("https://gram-back.vercel.app/Motibhaiamin6/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              lname: A.current.value,
+              gam: u.current.value,
+              currentyear: r.current.value,
+              marks: t,
+            }),
+          })
         ).ok
           ? (console.log("done"),
             o({
@@ -85863,19 +85785,16 @@ function QL() {
     try {
       console.log("mihir"),
         (
-          await fetch(
-            "https://gramgranthalay-backend-2.onrender.com/Motibhaiamin7/",
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                lname: A.current.value,
-                gam: u.current.value,
-                currentyear: r.current.value,
-                marks: t,
-              }),
-            }
-          )
+          await fetch("https://gram-back.vercel.app/Motibhaiamin7/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              lname: A.current.value,
+              gam: u.current.value,
+              currentyear: r.current.value,
+              marks: t,
+            }),
+          })
         ).ok
           ? (console.log("done"),
             o({
