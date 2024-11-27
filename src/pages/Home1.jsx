@@ -13,7 +13,7 @@ function Home1() {
   return (
     <>
       <div>
-        <NavBar titel={"ગ્રામ ગ્રંથાલયનુ પોર્ટલ"}></NavBar>
+        <NavBar titel={"ગ્રામ ગ્રંથાલયનું પોર્ટલ"}></NavBar>
       </div>
       <div class=" mb-3 btn-container">
         <form class="container-fluid justify-content-start">

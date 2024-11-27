@@ -624,14 +624,14 @@ function Motibhaiamin_3() {
           <div>
             <h1>
               સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એવોર્ડ અને ઉત્તમ ગ્રંથાલય સેવા
-              પ્રમાણપત્ર માટેની યોજના અન્વય મહિલા બાળ ગ્રંથાલયનો માપદંડો
+              પ્રમાણપત્ર માટેની યોજના અન્વય ગ્રામ ગ્રંથાલયોના માપદંડો
             </h1>{" "}
           </div>
 
           <div className="row mb-3 col-sm-13 align-items-center">
             <div className=" col-2">
               <label className="col-sm-10 col-form-label">
-                ગ્રંથાલયનુ નામ :
+                ગ્રંથાલયનું નામ :
               </label>
             </div>
             <div className="col-8">
@@ -743,8 +743,8 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={1}>સહકારી સંસ્થા કે ટ્રસ્ટ હોય તો</option>
-                  <option value={2}>સ્થાનિક સ્વરાજ્યની સંસ્થા હોય તો</option>
+                  <option value={2}>સહકારી સંસ્થા કે ટ્રસ્ટ હોય તો</option>
+                  <option value={1}>સ્થાનિક સ્વરાજ્યની સંસ્થા હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -813,11 +813,10 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={0}>0 થી 2,00,000</option>
-                  <option value={1}>2,00,000 થી 2,50,000</option>
-                  <option value={2}>2,50,000 થી 3,00,000</option>
-                  <option value={3}>3,00,000 થી 3,50,000</option>
-                  <option value={4}>3,50,000 થી વધુ</option>
+                  <option value={0}>15000 થી ઓછું</option>
+                  <option value={1}>15001 થી 16,000</option>
+                  <option value={2}>16001 થી 17,000</option>
+                  <option value={3}>17,001 થી વધુ</option>
                 </select>
               </div>
               <div className="col-2">
@@ -841,12 +840,11 @@ function Motibhaiamin_3() {
                 >
                   <option selected disabled value="">
                     Select
-                  </option>
-                  <option value={0}>0 થી 2,00,000</option>
-                  <option value={1}>2,00,000 થી 2,50,000</option>
-                  <option value={2}>2,50,000 થી 3,00,000</option>
-                  <option value={3}>3,00,000 થી 3,50,000</option>
-                  <option value={4}>3,50,000 થી વધુ</option>
+                    </option>
+                  <option value={0}>15000 થી ઓછું</option>
+                  <option value={1}>15001 થી 16,000</option>
+                  <option value={2}>16001 થી 17,000</option>
+                  <option value={3}>17,001 થી વધુ</option>
                 </select>
               </div>
               <div className="col-2">
@@ -873,12 +871,11 @@ function Motibhaiamin_3() {
                 >
                   <option selected disabled value="">
                     Select
-                  </option>
-                  <option value={0}>0 થી 2,00,000</option>
-                  <option value={1}>2,00,000 થી 2,50,000</option>
-                  <option value={2}>2,50,000 થી 3,00,000</option>
-                  <option value={3}>3,00,000 થી 3,50,000</option>
-                  <option value={4}>3,50,000 થી વધુ</option>
+                    </option>
+                  <option value={0}>15000 થી ઓછું</option>
+                  <option value={1}>15001 થી 16,000</option>
+                  <option value={2}>16001 થી 17,000</option>
+                  <option value={3}>17,001 થી વધુ</option>
                 </select>
               </div>
               <div className="col-2">
@@ -902,12 +899,11 @@ function Motibhaiamin_3() {
                 >
                   <option selected disabled value="">
                     Select
-                  </option>
-                  <option value={0}>0 થી 2,00,000</option>
-                  <option value={1}>2,00,000 થી 2,50,000</option>
-                  <option value={2}>2,50,000 થી 3,00,000</option>
-                  <option value={3}>3,00,000 થી 3,50,000</option>
-                  <option value={4}>3,50,000 થી વધુ</option>
+                    </option>
+                  <option value={0}>15000 થી ઓછું</option>
+                  <option value={1}>15001 થી 16,000</option>
+                  <option value={2}>16001 થી 17,000</option>
+                  <option value={3}>17,001 થી વધુ</option>
                 </select>
               </div>
               <div className="col-2">
@@ -940,13 +936,8 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={5}>ગ્રંથપાલ+૩ થી વધુ કર્મચારી હોય</option>
-                  <option value={3}>
-                    ગ્રંથપાલ+ મદદનીશ સહાયક ગ્રંથપાલ + પટાવાળા{" "}
-                  </option>
                   <option value={2}>ગ્રંથપાલ + પટાવાળા </option>
                   <option value={1}>ગ્રંથપાલ</option>
-                  <option value={0}>કર્મચારી ન હોય</option>
                 </select>
               </div>
               <div className="col-2">
@@ -970,9 +961,8 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={5}>એમ.લીબ</option>
-                  <option value={3}>બી.લીબ</option>
-                  <option value={2}>ગ્રંથાલય સર્ટિફિકેટ કોર્ષ</option>
+                  <option value={2}>બી.લીબ</option>
+                  <option value={1}>ગ્રંથાલય સર્ટિફિકેટ કોર્ષ</option>
                   <option value={0}>ગ્રંથાલય વિજ્ઞાન ની લાયકાત ન હોય તો</option>
                 </select>
               </div>
@@ -1000,8 +990,8 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={5}>પગારધોરણ અપાય છે</option>
-                  <option value={2}>ફીક્સ પગાર</option>
+                  <option value={2}>પગારધોરણ અપાય છે</option>
+                  <option value={1}>ફીક્સ પગાર</option>
                   <option value={0}>માનદ સેવા</option>
                 </select>
               </div>
@@ -1026,10 +1016,9 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={0}>0 થી 6000</option>
-                  <option value={1}>6000 થી 7000</option>
-                  <option value={2}>7000 થી 8000</option>
-                  <option value={3}>8000 થી વધુ</option>
+                  <option value={0}>500 થી ઓછું</option>
+                  <option value={1}>501 થી 1500</option>
+                  <option value={2}>1500 થી વધુ</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1055,7 +1044,7 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>હા</option>
+                  <option value={1}>હા</option>
                   <option value={0}>ના</option>
                 </select>
               </div>
@@ -1081,7 +1070,7 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>હા</option>
+                  <option value={1}>હા</option>
                   <option value={0}>ના</option>
                 </select>
               </div>
@@ -1142,7 +1131,7 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>હા</option>
+                  <option value={1}>હા</option>
                   <option value={0}>ના</option>
                 </select>
               </div>
@@ -1168,7 +1157,7 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>હા</option>
+                  <option value={1}>હા</option>
                   <option value={0}>ના</option>
                 </select>
               </div>
@@ -1202,7 +1191,7 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>હા</option>
+                  <option value={1}>હા</option>
                   <option value={0}>ના</option>
                 </select>
               </div>
@@ -1236,10 +1225,10 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={5}>7 કલાક થી વધુ</option>
-                  <option value={4}>6 થી 7</option>
-                  <option value={3}>5 થી 6</option>
-                  <option value={0}>5 થી 1</option>
+                  <option value={2}>પાંચ કલાકથી વધુ હોય તો</option>
+                  <option value={1}>ચાર કલાકથી વધુ અને પાંચ કલાક સુધી હોય તો </option>
+                  <option value={0}>ચાર કલાકથી ઓછું હોય તો</option>
+
                 </select>
               </div>
               <div className="col-2">
@@ -1263,10 +1252,10 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={5}>8 કલાક થી વધુ</option>
-                  <option value={4}>7 થી 8</option>
-                  <option value={3}>6 થી 7</option>
-                  <option value={0}>6 થી 1</option>
+                  <option value={3}>પાંચ કલાકથી વધુ હોય તો</option>
+                  <option value={1}>ચાર કલાકથી વધુ અને પાંચ કલાક સુધી હોય તો </option>
+                  <option value={0}>ચાર કલાકથી ઓછું હોય તો</option>
+
                 </select>
               </div>
               <div className="col-2">
@@ -1292,7 +1281,7 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}>અઠવાડિક રજા ના હોય તો</option>
+                  <option value={2}>અઠવાડિક રજા ના હોય તો</option>
                   <option value={1}>સપ્તાહના એક દિવસ રજા હોય તો</option>
                   <option value={0}>રવિવારે રજા રખાતી હોય તો</option>
                 </select>
@@ -1348,10 +1337,10 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>351 થી 365</option>
-                  <option value={3}>321 થી 350</option>
-                  <option value={2}>301 થી 320</option>
-                  <option value={0}>300 થી less then 300</option>
+                  <option value={3}>351 દિવસ ચાલુ હોય</option>
+                  <option value={2}>320 દિવસ ચાલુ હોય</option>
+                  <option value={1}>300 દિવસ ચાલુ હોય</option>
+                  <option value={0}>300 થી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1384,11 +1373,9 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}> 50,001 થી વધુ</option>
-                  <option value={3}>35,001 થી 50,000સુધી</option>
-                  <option value={2}>30,001 થી 35,000સુધી</option>
-                  <option value={1}>30,000 થી 25,000સુધી</option>
-                  <option value={0}>25,000 થી 0ઓછા</option>
+                  <option value={3}> 7000 થી વધુ</option>
+                  <option value={2}>5000 થી 7000</option>
+                  <option value={1}>5,000 થી ઓછા</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1412,10 +1399,10 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}>201 થી વધુ ઉમેરાયેલા હોય તો </option>
-                  <option value={2}>101 થી 200 પુસ્તકો ઉમેરાયેલ હોય તો</option>
-                  <option value={1}>100 પુસ્તકો ઉમેરાયેલ હોય તો</option>
-                  <option value={0}>100 ઓછા ઉમેરાયેલ હોય તો</option>
+                  <option value={3}>75 થી વધુ ઉમેરાયેલા હોય તો </option>
+                  <option value={2}>50 થી 75 પુસ્તકો ઉમેરાયેલ હોય તો</option>
+                  <option value={1}>25 થી 50 પુસ્તકો ઉમેરાયેલ હોય તો</option>
+                  <option value={0}>25 ઓછા ઉમેરાયેલ હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1477,9 +1464,8 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}>અગ્રંથ વાંચન સામગ્રી પૂરતી હોય તો</option>
-                  <option value={1}>અગ્રંથ વાંચન સામગ્રી પૂરતી ન હોય તો</option>
-                  <option value={0}>અગ્રંથ વાંચન સામગ્રી ન હોય તો</option>
+                  <option value={2}>અગ્રંથ વાંચન સામગ્રી પૂરતી હોય તો</option>
+                  <option value={0}>અગ્રંથ વાંચન સામગ્રી પૂરતી ન હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1677,7 +1663,7 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}>વિષયવાર/લેખનવાર હોય તો</option>
+                  <option value={2}>વિષયવાર/લેખકવાર હોય તો</option>
                   <option value={1}>જનરલ રજીસ્ટર હોય તો</option>
                   <option value={0}>ગ્રંથ ગોઠવણી. અવ્યવસ્થિત હોય તો</option>
                 </select>
@@ -1705,7 +1691,7 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>ખુલ્લા કબાટમાં</option>
+                  <option value={1}>ખુલ્લા કબાટમાં</option>
                   <option value={0}>બંધ કબાટમાં</option>
                 </select>
               </div>
@@ -1730,7 +1716,7 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>હા</option>
+                  <option value={1}>હા</option>
                   <option value={0}>ના</option>
                 </select>
               </div>
@@ -1738,117 +1724,8 @@ function Motibhaiamin_3() {
                 <h4>{data.select_31}</h4>
               </div>
             </div>
-            <div className="row mb-3 col-sm-13 align-items-center">
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  કોમ્પ્યુટરાઈઝેશન કરવામાં આવેલ છે કે કેમ? :
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_34"
-                  value={data.select_34}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={5}>હા</option>
-                  <option value={0}>ના</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_34}</h4>
-              </div>
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  ક્યા સોફ્ટવેરનો ઉપયોગ કરેલ છે? :
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_35"
-                  value={data.select_35}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={3}>અધિકૃત બ્રાન્ડ સોફ્ટવેર હોય તો</option>
-                  <option value={1}>સેલ્ફ પેડ(પોતાની પદ્ધતિ)</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_35}</h4>
-              </div>
-            </div>
-            <div className="row mb-3 col-sm-13 align-items-center">
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  કઈ કઈ બાબતોનું કોમ્પ્યુટરાઈઝેશન થયેલ છે? ૧. ગ્રંથ નોંધણી ૨.
-                  સભ્ય નોંધણી ૩. સામયિક નોંધણી ૪. સૂચિકરણ ૫. ગ્રંથ આપ- લે ૬.
-                  વાચકોને સમૃતિપત્રો ૭. અતિદેય ગણત્રી ૮.ગ્રંથાલયના હિસબો ૯.
-                  ગ્રંથાલયની આકડાકીય માહિતી :
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_36"
-                  value={data.select_36}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={3}>
-                    તમામ કામગીરી કોમ્પ્યુટરાઈઝેશન થતી હોય તો
-                  </option>
-                  <option value={2}>અંશતઃ કામગીરી થતી હોય તો</option>
-                  <option value={0}>ન થતી હોય તો</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_36}</h4>
-              </div>
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  ઇ લાયબ્રેરી સુવિધા ઉપલબ્ધ છે? ૧. ઇ- બુકસ ૨. ઇ - જનૅલ્સ ૩. ઇ -
-                  મટીરીયલ :
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_37"
-                  value={data.select_37}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={3}>હા</option>
-                  <option value={0}>ના</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_37}</h4>
-              </div>
-            </div>
+            
+            
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -1868,7 +1745,7 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>હા</option>
+                  <option value={1}>હા</option>
                   <option value={0}>ના</option>
                 </select>
               </div>
@@ -1945,7 +1822,7 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>હા</option>
+                  <option value={1}>હા</option>
                   <option value={0}>ના</option>
                 </select>
               </div>
@@ -1972,7 +1849,7 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}>હા નિયત નમૂનામાં</option>
+                  <option value={2}>હા નિયત નમૂનામાં</option>
                   <option value={1}>જો હા પણ નિયત નમૂનામાં ન હોય તો</option>
                   <option value={0}>નોંધાતા ન હોય તો</option>
                 </select>
@@ -1999,7 +1876,7 @@ function Motibhaiamin_3() {
                     Select
                   </option>
                   <option value={0}>હા</option>
-                  <option value={2}>ના</option>
+                  <option value={1}>ના</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2025,11 +1902,10 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>50001થી વધુ</option>
-                  <option value={3}>40001થી 50000 </option>
-                  <option value={2}>30001થી 40000</option>
-                  <option value={1}>25001થી 30000</option>
-                  <option value={0}>25000થી ઓછા હોય તો</option>
+                  <option value={3}>5001થી વધુ</option>
+                  <option value={2}>4001થી 5000 </option>
+                  <option value={1}>3001થી 4000</option>
+                  <option value={0}>3000થી ઓછા હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2054,7 +1930,7 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>હા</option>
+                  <option value={1}>હા</option>
                   <option value={0}>ના</option>
                 </select>
               </div>
@@ -2082,7 +1958,7 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}>શાસ્ત્રીય પદ્ધતિ?</option>
+                  <option value={3}>યોગ્ય પદ્ધતિ?</option>
                   <option value={1}>સ્થાનિક પદ્ધતિ?</option>
                   <option value={0}>ન હોય તો</option>
                 </select>
@@ -2109,7 +1985,8 @@ function Motibhaiamin_3() {
                     Select
                   </option>
                   <option value={0}>બાકી હોય તો</option>
-                  <option value={3}>પૂર્ણ થયેલ છે</option>
+                  <option value={2}>પૂર્ણ થયેલ છે</option>
+                  <option value={1}>અધુરી હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2120,8 +1997,7 @@ function Motibhaiamin_3() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  પુસ્તકોનું સુચિકરણ કઈ પધ્ધતિથી કરવામાં આવે છે? (કોમ્પ્યુટર
-                  પ્રોગ્રામથી/ કાર્ડપધ્ધતિથી/ રજિસ્ટર્ડ પધ્ધતિથી) :
+                  પુસ્તકોનું સુચિકરણ કઈ પધ્ધતિથી કરવામાં આવે છે? (કાર્ડપધ્ધતિથી/ રજિસ્ટર્ડ પધ્ધતિથી) :
                 </label>
               </div>
               <div className="col">
@@ -2137,7 +2013,6 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}>કોમ્પ્યુટર OPAC હોય તો</option>
                   <option value={2}>સૂચિ કાર્ડ પદ્ધતિ</option>
                   <option value={1}>રજિસ્ટર હોય તો</option>
                   <option value={0}>કોઈ પદ્ધતિ ન હોય તો</option>
@@ -2176,7 +2051,7 @@ function Motibhaiamin_3() {
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
                   ગ્રંથો આપલે માટેની કઈ પધ્ધતિ અમલમાં છે?(ખાતાવહી, રજીસ્ટર,
-                  ટિકિટ પધ્ધતિ કે કોમ્પ્યુટર પ્રોગ્રામ દ્વાર):
+                  ટિકિટ પધ્ધતિ ):
                 </label>
               </div>
               <div className="col">
@@ -2192,9 +2067,9 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}>કોમ્પ્યુટરાઇઝ/ટિકિટ પદ્ધતિ</option>
                   <option value={2}>ખાતાવહી પદ્ધતિ</option>
                   <option value={1}>દૈનિક રજીસ્ટર પદ્ધતિ</option>
+                  <option value={0}>સ્થાનિક પદ્ધતિ</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2218,8 +2093,8 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>૧૪ દિવસ અને તેથી વધુ</option>
-                  <option value={0}>૧૪ થી ઓછા</option>
+                  <option value={0}>૧૪ દિવસ </option>
+                  <option value={1}>૧૪ થી ઓછા</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2245,7 +2120,7 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>હા</option>
+                  <option value={1}>હા</option>
                   <option value={0}>ના</option>
                 </select>
               </div>
@@ -2254,7 +2129,7 @@ function Motibhaiamin_3() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  નિયત મુદ્દતમાં પુસ્તક પાયા ન આવે તો સ્મૃતિપત્રો લખાય છે? :
+                  નિયત મુદ્દતમાં ગ્રંથો પાછા ન આવે તો સ્મૃતિપત્રો લખાય છે? :
                 </label>
               </div>
               <div className="col">
@@ -2270,7 +2145,7 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>હા</option>
+                  <option value={1}>હા</option>
                   <option value={0}>ના</option>
                 </select>
               </div>
@@ -2685,7 +2560,7 @@ function Motibhaiamin_3() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  સામયિકના જૂના અંકો વેચાણ મુકાય છે ? :
+                સામયિકોના છુટા અંકો વાચકોને ઇસ્યુ કરાય છે ? :
                 </label>
               </div>
               <div className="col">
@@ -3013,7 +2888,7 @@ function Motibhaiamin_3() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગ્રંથલાયના સભ્યોની સંખ્યા:
+                  ગ્રંથાલયના સભ્યોની સંખ્યા:
                 </label>
               </div>
               <div className="col">
@@ -3490,6 +3365,7 @@ function Motibhaiamin_3() {
                   <option value={2}>
                     પૂરતા પ્રયાસો થતાં હોય અને નાણાકીય સ્ત્રોત વધારેલ હોય તો
                   </option>
+                  <option value={1}>બિન સંતોષકારક કે અપૂરતા પ્રયત્નો હોય તો</option>
                   <option value={0}>કોઈ જ પ્રયત્નો ન હોય</option>
                 </select>
               </div>

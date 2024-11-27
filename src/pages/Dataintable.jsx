@@ -193,7 +193,7 @@ function Dataintable() {
 
   return (
     <>
-      <NavBar titel={"ગ્રામ ગ્રંથાલયનુ પોર્ટલ"}></NavBar>
+      <NavBar titel={"ગ્રામ ગ્રંથાલયનું પોર્ટલ"}></NavBar>
       <Input
         category={category}
         library={library}

@@ -313,7 +313,7 @@ function Form() {
         <div className="row mb-3 col-sm-13 align-items-center">
           <div className=" col-2">
             <label className="col-sm-10 col-form-label">
-              ગ્રંથાલયનું નામ :
+              ગ્રંથાલયનુંં નામ :
             </label>
           </div>
           <div className="col-10">
@@ -608,7 +608,7 @@ function Form() {
         <div className="row mb-3 col-sm-13 align-items-center">
           <div className="col-3">
             <label className="col-form-label col-sm-10">
-              ગ્રંથાલયનુ વ્યાવસ્થાતંત્ર : પંચાયત/સંસ્થા/મંડળ/શાળા/અન્ય સંચાલિત
+              ગ્રંથાલયનું વ્યાવસ્થાતંત્ર : પંચાયત/સંસ્થા/મંડળ/શાળા/અન્ય સંચાલિત
             </label>
           </div>
           <div className="col-2">

@@ -203,7 +203,7 @@ function Dataintable_Admin() {
 
   return (
     <>
-      <NavBar titel={"ગ્રામ ગ્રંથાલયનુ પોર્ટલ"}></NavBar>
+      <NavBar titel={"ગ્રામ ગ્રંથાલયનું પોર્ટલ"}></NavBar>
       <InputforAdmin
         category={category}
         library={library}
