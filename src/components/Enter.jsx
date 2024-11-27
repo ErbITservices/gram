@@ -42,7 +42,7 @@ function Enter({ arr }) {
             </tr>
             <tr>
               <th scope="col">ક્રમ</th>
-              <th scope="col">ગ્રંથાલયનું નામ</th>
+              <th scope="col">ગ્રંથાલયનુંં નામ</th>
               <th scope="col">ગામ</th>
               <th scope="col">પિન</th>
               <th scope="col">તાલુકો</th>
@@ -59,7 +59,7 @@ function Enter({ arr }) {
               <th scope="col">વાર્ષિક</th>
               <th scope="col">પુસ્તક આપ લે વિભાગ</th>
               <th scope="col">વાંચનાલય</th>
-              <th scope="col">ગ્રંથાલયનુ વ્યાવસ્થાતંત્ર</th>
+              <th scope="col">ગ્રંથાલયનું વ્યાવસ્થાતંત્ર</th>
               <th scope="col">નોંધણી ક્રમાંક</th>
               <th scope="col">પત્ર વ્યાહાર માટે જવાબદાર વ્યક્તિનુ નામ</th>
               <th scope="col">હોદો આને પૂરું સરનામું</th>

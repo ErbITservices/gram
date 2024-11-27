@@ -624,14 +624,14 @@ function Motibhaiamin_7() {
           <div>
             <h1>
               સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એવોર્ડ અને ઉત્તમ ગ્રંથાલય સેવા
-              પ્રમાણપત્ર માટેની યોજના અન્વય મહિલા બાળ ગ્રંથાલયનો માપદંડો
+              પ્રમાણપત્ર માટેની યોજના અન્વય વિશિષ્ટ ગ્રંથાલયનો માપદંડો
             </h1>{" "}
           </div>
 
           <div className="row mb-3 col-sm-13 align-items-center">
             <div className=" col-2">
               <label className="col-sm-10 col-form-label">
-                ગ્રંથાલયનુ નામ :
+                ગ્રંથાલયનું નામ :
               </label>
             </div>
             <div className="col-8">
@@ -743,8 +743,8 @@ function Motibhaiamin_7() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={1}>સહકારી સંસ્થા કે ટ્રસ્ટ હોય તો</option>
-                  <option value={2}>સ્થાનિક સ્વરાજ્યની સંસ્થા હોય તો</option>
+                  <option value={2}>સહકારી સંસ્થા કે ટ્રસ્ટ હોય તો</option>
+                  <option value={1}>સ્થાનિક સ્વરાજ્યની સંસ્થા હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1351,7 +1351,7 @@ function Motibhaiamin_7() {
                   <option value={4}>351 થી 365</option>
                   <option value={3}>321 થી 350</option>
                   <option value={2}>301 થી 320</option>
-                  <option value={0}>300 થી less then 300</option>
+                  <option value={0}>300 થી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1507,7 +1507,7 @@ function Motibhaiamin_7() {
                   <option value={3}>30 થી 39%</option>
                   <option value={2}>15 થી 29%</option>
                   <option value={1}>5 થી 14%</option>
-                  <option value={0}>5% થી</option>
+                  <option value={0}>5% થી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1653,7 +1653,7 @@ function Motibhaiamin_7() {
                   <option value={3}>80%</option>
                   <option value={2}>60%</option>
                   <option value={1}>30%</option>
-                  <option value={0}>option 2</option>
+                  <option value={0}>30% થી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1677,7 +1677,7 @@ function Motibhaiamin_7() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}>વિષયવાર/લેખનવાર હોય તો</option>
+                  <option value={3}>વિષયવાર/લેખકવાર હોય તો</option>
                   <option value={1}>જનરલ રજીસ્ટર હોય તો</option>
                   <option value={0}>ગ્રંથ ગોઠવણી. અવ્યવસ્થિત હોય તો</option>
                 </select>
@@ -2685,7 +2685,7 @@ function Motibhaiamin_7() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  સામયિકના જૂના અંકો વેચાણ મુકાય છે ? :
+                સામયિકોના છુટા અંકો વેચાણ મુકાય છે ? :
                 </label>
               </div>
               <div className="col">
@@ -3013,7 +3013,7 @@ function Motibhaiamin_7() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગ્રંથલાયના સભ્યોની સંખ્યા:
+                  ગ્રંથાલયના સભ્યોની સંખ્યા:
                 </label>
               </div>
               <div className="col">
@@ -3033,7 +3033,7 @@ function Motibhaiamin_7() {
                   <option value={3}>૩૦૦૧ થી ૪૦૦૦ સુધી</option>
                   <option value={2}>૨૦૦૧ થી ૩૦૦૦ સુધી</option>
                   <option value={1}>૧૦૦૧ થી ૨૦૦૦ સુધી</option>
-                  <option value={0}>૧૦૦૧ થી ૨૦૦૦ સુધી</option>
+                  <option value={0}>૧૦૦૧ થી ઓછા</option>
                 </select>
               </div>
               <div className="col-2">
@@ -3470,7 +3470,7 @@ function Motibhaiamin_7() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગ્રંથાલય માટે નાણાકીય સ્ત્રોતોનો વધારવા વ્યવસ્થાતંત્ર દ્વારા
+                  ગ્રંથાલય માટે નાણાકીય સ્ત્રોનો વધારવા વ્યવસ્થાતંત્ર દ્વારા
                   કોઈ વિશિષ્ટ પ્રવાસો થયા હોય તો તેની વિગત:
                 </label>
               </div>

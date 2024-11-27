@@ -709,7 +709,7 @@ function Addnew() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col-2">
                 <label className="col-sm-10 col-form-label">
-                  ગ્રંથાલયનું નામ :
+                  ગ્રંથાલયનુંં નામ :
                 </label>
               </div>
               <div className="col-10">

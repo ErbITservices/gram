@@ -624,14 +624,14 @@ function Motibhaiamin_2() {
           <div>
             <h1>
               સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એવોર્ડ અને ઉત્તમ ગ્રંથાલય સેવા
-              પ્રમાણપત્ર માટેની યોજના અન્વય મહિલા બાળ ગ્રંથાલયનો માપદંડો
+              પ્રમાણપત્ર માટેની યોજના અન્વય શહેર ગ્રંથાલયોના માપદંડો
             </h1>{" "}
           </div>
 
           <div className="row mb-3 col-sm-13 align-items-center">
             <div className=" col-2">
               <label className="col-sm-10 col-form-label">
-                ગ્રંથાલયનુ નામ :
+                ગ્રંથાલયનું નામ :
               </label>
             </div>
             <div className="col-8">
@@ -743,8 +743,8 @@ function Motibhaiamin_2() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={1}>સહકારી સંસ્થા કે ટ્રસ્ટ હોય તો</option>
-                  <option value={2}>સ્થાનિક સ્વરાજ્યની સંસ્થા હોય તો</option>
+                  <option value={2}>સહકારી સંસ્થા કે ટ્રસ્ટ હોય તો</option>
+                  <option value={1}>સ્થાનિક સ્વરાજ્યની સંસ્થા હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1388,7 +1388,7 @@ function Motibhaiamin_2() {
                   <option value={3}>35,001 થી 50,000સુધી</option>
                   <option value={2}>30,001 થી 35,000સુધી</option>
                   <option value={1}>30,000 થી 25,000સુધી</option>
-                  <option value={0}>25,000 થી 0ઓછા</option>
+                  <option value={0}>25,000 થી ઓછા</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1415,7 +1415,7 @@ function Motibhaiamin_2() {
                   <option value={3}>201 થી વધુ ઉમેરાયેલા હોય તો </option>
                   <option value={2}>101 થી 200 પુસ્તકો ઉમેરાયેલ હોય તો</option>
                   <option value={1}>100 પુસ્તકો ઉમેરાયેલ હોય તો</option>
-                  <option value={0}>100 ઓછા ઉમેરાયેલ હોય તો</option>
+                  <option value={0}>100 થી ઓછા ઉમેરાયેલ હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1507,7 +1507,7 @@ function Motibhaiamin_2() {
                   <option value={3}>30 થી 39%</option>
                   <option value={2}>15 થી 29%</option>
                   <option value={1}>5 થી 14%</option>
-                  <option value={0}>5% થી</option>
+                  <option value={0}>5% થી ઓછા</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1561,7 +1561,7 @@ function Motibhaiamin_2() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>24</option>
+                  <option value={4}>24 થી વધુ</option>
                   <option value={3}>18 થી 23</option>
                   <option value={2}>12 થી 17</option>
                   <option value={1}>6 થી 11</option>
@@ -1590,12 +1590,12 @@ function Motibhaiamin_2() {
                 >
                   <option selected disabled value="">
                     Select
-                  </option>
-                  <option value={4}>10%</option>
-                  <option value={3}>8%</option>
-                  <option value={2}>6%</option>
-                  <option value={1}>4%</option>
-                  <option value={0}>3% થી ઓછું</option>
+                    </option>
+                  <option value={4}>100%</option>
+                  <option value={3}>75 થી 99%</option>
+                  <option value={2}>50 થી 74%</option>
+                  <option value={1}>25 થી 49%</option>
+                  <option value={0}>25% થી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1653,8 +1653,8 @@ function Motibhaiamin_2() {
                   <option value={3}>80%</option>
                   <option value={2}>60%</option>
                   <option value={1}>30%</option>
-                  <option value={0}>option 2</option>
-                </select>
+                  <option value={0}>30% થી ઓછું</option>
+                  </select>
               </div>
               <div className="col-2">
                 <h4>{data.select_28}</h4>
@@ -1677,7 +1677,7 @@ function Motibhaiamin_2() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}>વિષયવાર/લેખનવાર હોય તો</option>
+                  <option value={3}>વિષયવાર/લેખકવાર હોય તો</option>
                   <option value={1}>જનરલ રજીસ્ટર હોય તો</option>
                   <option value={0}>ગ્રંથ ગોઠવણી. અવ્યવસ્થિત હોય તો</option>
                 </select>
@@ -2025,11 +2025,11 @@ function Motibhaiamin_2() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>50001થી વધુ</option>
-                  <option value={3}>40001થી 50000 </option>
-                  <option value={2}>30001થી 40000</option>
-                  <option value={1}>25001થી 30000</option>
-                  <option value={0}>25000થી ઓછા હોય તો</option>
+                  <option value={4}>50001 થી વધુ</option>
+                  <option value={3}>40001 થી 50000 </option>
+                  <option value={2}>30001 થી 40000</option>
+                  <option value={1}>25001 થી 30000</option>
+                  <option value={0}>25000 થી ઓછા હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2229,7 +2229,7 @@ function Motibhaiamin_2() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  નિયત મુદ્દતમાં પુસ્તક પરત ન આવે તે લેઇટ ફી લેવાય છે?કેટલી?:
+                  નિયત મુદ્દતમાં ગ્રંથો પાછા ન આવે તે લેઇટ ફી લેવાય છે?કેટલી?:
                 </label>
               </div>
               <div className="col">
@@ -2685,7 +2685,7 @@ function Motibhaiamin_2() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  સામયિકના જૂના અંકો વેચાણ મુકાય છે ? :
+                સામયિકોના છુટા અંકો વાચકોને ઇસ્યુ કરાય છે ? :
                 </label>
               </div>
               <div className="col">
@@ -2712,7 +2712,7 @@ function Motibhaiamin_2() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  સામયિકના જૂના અંકો વેચાણ મુકાય છે ?:
+                  સામયિકના જુના અંકો વેચાણ મુકાય છે ?:
                 </label>
               </div>
               <div className="col">
@@ -3013,7 +3013,7 @@ function Motibhaiamin_2() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગ્રંથલાયના સભ્યોની સંખ્યા:
+                  ગ્રંથાલયના સભ્યોની સંખ્યા:
                 </label>
               </div>
               <div className="col">
@@ -3201,7 +3201,7 @@ function Motibhaiamin_2() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  મકાનમાં દરેક સ્થળે પૂરતી સફાઈ રાખવામાં આવે છે કે કેમ? :
+                  મકાનમાં દરેક સ્થળે પુરતી સફાઈ રાખવામાં આવે છે કે કેમ? :
                 </label>
               </div>
               <div className="col">
@@ -3470,7 +3470,7 @@ function Motibhaiamin_2() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગ્રંથાલય માટે નાણાકીય સ્ત્રોતોનો વધારવા વ્યવસ્થાતંત્ર દ્વારા
+                  ગ્રંથાલય માટે નાણાકીય સ્ત્રોનો વધારવા વ્યવસ્થાતંત્ર દ્વારા
                   કોઈ વિશિષ્ટ પ્રવાસો થયા હોય તો તેની વિગત:
                 </label>
               </div>

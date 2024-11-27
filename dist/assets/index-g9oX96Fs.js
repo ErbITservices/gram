@@ -41548,7 +41548,7 @@ function q6() {
                 className: " col-2",
                 children: e.jsx("label", {
                   className: "col-sm-10 col-form-label",
-                  children: "ગ્રંથાલયનું નામ :",
+                  children: "ગ્રંથાલયનુંં નામ :",
                 }),
               }),
               e.jsx("div", {
@@ -41937,7 +41937,7 @@ function q6() {
                 children: e.jsx("label", {
                   className: "col-form-label col-sm-10",
                   children:
-                    "ગ્રંથાલયનુ વ્યાવસ્થાતંત્ર : પંચાયત/સંસ્થા/મંડળ/શાળા/અન્ય સંચાલિત",
+                    "ગ્રંથાલયનું વ્યાવસ્થાતંત્ર : પંચાયત/સંસ્થા/મંડળ/શાળા/અન્ય સંચાલિત",
                 }),
               }),
               e.jsx("div", {
@@ -48380,7 +48380,7 @@ function N2() {
                           className: " col-2",
                           children: e.jsx("label", {
                             className: "col-sm-10 col-form-label",
-                            children: "ગ્રંથાલયનું નામ :",
+                            children: "ગ્રંથાલયનુંં નામ :",
                           }),
                         }),
                         e.jsx("div", {
@@ -48819,7 +48819,7 @@ function N2() {
                           children: e.jsx("label", {
                             className: "col-form-label col-sm-10",
                             children:
-                              "ગ્રંથાલયનુ વ્યાવસ્થાતંત્ર : પંચાયત/સંસ્થા/મંડળ/શાળા/અન્ય સંચાલિત",
+                              "ગ્રંથાલયનું વ્યાવસ્થાતંત્ર : પંચાયત/સંસ્થા/મંડળ/શાળા/અન્ય સંચાલિત",
                           }),
                         }),
                         e.jsx("div", {
@@ -51023,7 +51023,7 @@ function w8() {
   return e.jsxs(e.Fragment, {
     children: [
       e.jsx("div", {
-        children: e.jsx(ft, { titel: "ગ્રામ ગ્રંથાલયનુ પોર્ટલ" }),
+        children: e.jsx(ft, { titel: "ગ્રામ ગ્રંથાલયનું પોર્ટલ" }),
       }),
       e.jsx("div", {
         class: " mb-3 btn-container",
@@ -51066,7 +51066,7 @@ function B8() {
   }
   return e.jsxs(e.Fragment, {
     children: [
-      e.jsx(ft, { titel: "ગ્રામ ગ્રંથાલયનુ પોર્ટલ" }),
+      e.jsx(ft, { titel: "ગ્રામ ગ્રંથાલયનું પોર્ટલ" }),
       e.jsx("div", {
         class: " mb-3",
         children: e.jsxs("form", {
@@ -51183,7 +51183,7 @@ function $5({ arr: t }) {
                 e.jsxs("tr", {
                   children: [
                     e.jsx("th", { scope: "col", children: "ક્રમ" }),
-                    e.jsx("th", { scope: "col", children: "ગ્રંથાલયનું નામ" }),
+                    e.jsx("th", { scope: "col", children: "ગ્રંથાલયનુંં નામ" }),
                     e.jsx("th", { scope: "col", children: "ગામ" }),
                     e.jsx("th", { scope: "col", children: "પિન" }),
                     e.jsx("th", { scope: "col", children: "તાલુકો" }),
@@ -51205,7 +51205,7 @@ function $5({ arr: t }) {
                     e.jsx("th", { scope: "col", children: "વાંચનાલય" }),
                     e.jsx("th", {
                       scope: "col",
-                      children: "ગ્રંથાલયનુ વ્યાવસ્થાતંત્ર",
+                      children: "ગ્રંથાલયનું વ્યાવસ્થાતંત્ર",
                     }),
                     e.jsx("th", { scope: "col", children: "નોંધણી ક્રમાંક" }),
                     e.jsx("th", {
@@ -53123,7 +53123,7 @@ function y8() {
   };
   return e.jsxs(e.Fragment, {
     children: [
-      e.jsx(ft, { titel: "ગ્રામ ગ્રંથાલયનુ પોર્ટલ" }),
+      e.jsx(ft, { titel: "ગ્રામ ગ્રંથાલયનું પોર્ટલ" }),
       e.jsx(C8, {
         category: B,
         library: T,
@@ -53217,7 +53217,7 @@ function _8(t) {
                   className: " col-2",
                   children: e.jsx("label", {
                     className: "col-sm-10 col-form-label",
-                    children: "ગ્રંથાલયનું નામ :",
+                    children: "ગ્રંથાલયનુંં નામ :",
                   }),
                 }),
                 e.jsx("div", {
@@ -53458,7 +53458,7 @@ function _8(t) {
                   children: e.jsx("label", {
                     className: "col-form-label col-sm-10",
                     children:
-                      "ગ્રંથાલયનુ વ્યાવસ્થાતંત્ર : પંચાયત/સંસ્થા/મંડળ/શાળા/અન્ય સંચાલિત",
+                      "ગ્રંથાલયનું વ્યાવસ્થાતંત્ર : પંચાયત/સંસ્થા/મંડળ/શાળા/અન્ય સંચાલિત",
                   }),
                 }),
                 e.jsx("div", {
@@ -54487,7 +54487,7 @@ function F8() {
                       className: " col-2",
                       children: e.jsx("label", {
                         className: "col-sm-10 col-form-label",
-                        children: "ગ્રંથાલયનું નામ :",
+                        children: "ગ્રંથાલયનુંં નામ :",
                       }),
                     }),
                     e.jsx("div", {
@@ -56597,7 +56597,7 @@ function C2() {
   return e.jsxs(e.Fragment, {
     children: [
       e.jsx("div", {
-        children: e.jsx(ft, { titel: "ગ્રામ ગ્રંથાલયનુ પોર્ટલ" }),
+        children: e.jsx(ft, { titel: "ગ્રામ ગ્રંથાલયનું પોર્ટલ" }),
       }),
       e.jsx("div", { children: e.jsx(eL, {}) }),
       e.jsx("div", {
@@ -58964,7 +58964,7 @@ function gL() {
   };
   return e.jsxs(e.Fragment, {
     children: [
-      e.jsx(ft, { titel: "ગ્રામ ગ્રંથાલયનુ પોર્ટલ" }),
+      e.jsx(ft, { titel: "ગ્રામ ગ્રંથાલયનું પોર્ટલ" }),
       e.jsx(mB, {
         category: B,
         library: T,
@@ -58983,7 +58983,7 @@ function bL() {
   }
   return e.jsxs(e.Fragment, {
     children: [
-      e.jsx(ft, { titel: "ગ્રામ ગ્રંથાલયનુ પોર્ટલ" }),
+      e.jsx(ft, { titel: "ગ્રામ ગ્રંથાલયનું પોર્ટલ" }),
       e.jsx("div", {
         class: " mb-3 btn-container",
         children: e.jsxs("form", {
@@ -90180,7 +90180,7 @@ function UL() {
   return e.jsxs(e.Fragment, {
     children: [
       e.jsx("div", {
-        children: e.jsx(ft, { titel: "ગ્રામ ગ્રંથાલયનુ પોર્ટલ" }),
+        children: e.jsx(ft, { titel: "ગ્રામ ગ્રંથાલયનું પોર્ટલ" }),
       }),
       e.jsx("div", {
         class: " mb-3 btn-container",

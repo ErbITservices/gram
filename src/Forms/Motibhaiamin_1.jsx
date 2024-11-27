@@ -433,8 +433,6 @@ function Motibhaiamin_1() {
   });
 
   const handleInput = (e) => {
-    
-
     const name = e.target.name;
     const value = e.target.value;
     setdata({
@@ -445,7 +443,6 @@ function Motibhaiamin_1() {
   };
   const handlpercentcalculater = (e) => {
     console.log(e.target.value);
-    
 
     const name = e.target.name;
     const value = e.target.value;
@@ -627,14 +624,14 @@ function Motibhaiamin_1() {
           <div>
             <h1>
               સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એવોર્ડ અને ઉત્તમ ગ્રંથાલય સેવા
-              પ્રમાણપત્ર માટેની યોજના અન્વય મહિલા બાળ ગ્રંથાલયનો માપદંડો
+              પ્રમાણપત્ર માટેની યોજના અન્વય અંધજન ગ્રંથાલયનો માપદંડો
             </h1>{" "}
           </div>
 
           <div className="row mb-3 col-sm-13 align-items-center">
             <div className=" col-2">
               <label className="col-sm-10 col-form-label">
-                ગ્રંથાલયનુ નામ :
+                ગ્રંથાલયનું નામ :
               </label>
             </div>
             <div className="col-8">
@@ -746,8 +743,8 @@ function Motibhaiamin_1() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={1}>સહકારી સંસ્થા કે ટ્રસ્ટ હોય તો</option>
-                  <option value={2}>સ્થાનિક સ્વરાજ્યની સંસ્થા હોય તો</option>
+                  <option value={2}>સહકારી સંસ્થા કે ટ્રસ્ટ હોય તો</option>
+                  <option value={1}>સ્થાનિક સ્વરાજ્યની સંસ્થા હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1354,7 +1351,7 @@ function Motibhaiamin_1() {
                   <option value={4}>351 થી 365</option>
                   <option value={3}>321 થી 350</option>
                   <option value={2}>301 થી 320</option>
-                  <option value={0}>300 થી less then 300</option>
+                  <option value={0}>300 થી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1391,7 +1388,7 @@ function Motibhaiamin_1() {
                   <option value={3}>35,001 થી 50,000સુધી</option>
                   <option value={2}>30,001 થી 35,000સુધી</option>
                   <option value={1}>30,000 થી 25,000સુધી</option>
-                  <option value={0}>25,000 થી 0ઓછા</option>
+                  <option value={0}>25,000 થી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1418,7 +1415,7 @@ function Motibhaiamin_1() {
                   <option value={3}>201 થી વધુ ઉમેરાયેલા હોય તો </option>
                   <option value={2}>101 થી 200 પુસ્તકો ઉમેરાયેલ હોય તો</option>
                   <option value={1}>100 પુસ્તકો ઉમેરાયેલ હોય તો</option>
-                  <option value={0}>100 ઓછા ઉમેરાયેલ હોય તો</option>
+                  <option value={0}>100 થી ઓછા ઉમેરાયેલ હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1432,32 +1429,33 @@ function Motibhaiamin_1() {
                   ટકાવારી કેલ્ક્યુલેટર :
                 </label>
               </div>
-              
+
               <div className="col">
                 <input
-                type="number"
+                  type="number"
                   className="form-control"
                   id="A"
                   autoComplete="off"
                   name="A"
                   value={AB.A}
                   onChange={handlpercentcalculater}
-              />
+                />
               </div>
               <div className="col">
                 <input
-                type="number"
+                  type="number"
                   className="form-control"
                   id="B"
                   autoComplete="off"
                   name="B"
                   value={AB.B}
                   onChange={handlpercentcalculater}
-              />
+                />
               </div>
               <div className="col-3">
-                {(Number(AB.B)*100)/Number(AB.A)>= 0 && (
-                <h4>{ (Number(AB.B)*100)/Number(AB.A)}%</h4>)}
+                {(Number(AB.B) * 100) / Number(AB.A) >= 0 && (
+                  <h4>{(Number(AB.B) * 100) / Number(AB.A)}%</h4>
+                )}
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -1509,7 +1507,7 @@ function Motibhaiamin_1() {
                   <option value={3}>30 થી 39%</option>
                   <option value={2}>15 થી 29%</option>
                   <option value={1}>5 થી 14%</option>
-                  <option value={0}>5% થી</option>
+                  <option value={0}>5% થી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1519,7 +1517,7 @@ function Motibhaiamin_1() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ભણેલ વસ્તીના પ્રમાણમાં સભ્યની ટકાવારી :
+                  ગામની ભણેલ વસ્તીના પ્રમાણમાં સભ્યની ટકાવારી :
                 </label>
               </div>
               <div className="col">
@@ -1547,7 +1545,7 @@ function Motibhaiamin_1() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :
+                  નોંધાયેલા સભ્યોના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :
                 </label>
               </div>
               <div className="col">
@@ -1563,7 +1561,7 @@ function Motibhaiamin_1() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>24</option>
+                  <option value={4}>24 થી વધુ</option>
                   <option value={3}>18 થી 23</option>
                   <option value={2}>12 થી 17</option>
                   <option value={1}>6 થી 11</option>
@@ -1593,11 +1591,11 @@ function Motibhaiamin_1() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>10%</option>
-                  <option value={3}>8%</option>
-                  <option value={2}>6%</option>
-                  <option value={1}>4%</option>
-                  <option value={0}>3% થી ઓછું</option>
+                  <option value={4}>100%</option>
+                  <option value={3}>75 થી 99%</option>
+                  <option value={2}>50 થી 74%</option>
+                  <option value={1}>25 થી 49%</option>
+                  <option value={0}>25% થી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1655,7 +1653,7 @@ function Motibhaiamin_1() {
                   <option value={3}>80%</option>
                   <option value={2}>60%</option>
                   <option value={1}>30%</option>
-                  <option value={0}>option 2</option>
+                  <option value={0}>30% થી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1679,9 +1677,9 @@ function Motibhaiamin_1() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}>વિષયવાર/લેખનવાર હોય તો</option>
+                  <option value={3}>વિષયવાર/લેખકવાર હોય તો</option>
                   <option value={1}>જનરલ રજીસ્ટર હોય તો</option>
-                  <option value={0}>ગ્રંથ ગોઠવણી. અવ્યવસ્થિત હોય તો</option>
+                  <option value={0}>ગ્રંથ ગોઠવણી અવ્યવસ્થિત હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1716,7 +1714,8 @@ function Motibhaiamin_1() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  વિષય તેમજ લેખકોનો નિર્દેશ કરતા માર્ગદર્શકો લગાવામાં આવેલ છે? :
+                  વિષય તેમજ લેખકોનો નિર્દેશ કરતા માર્ગદર્શકો લગાવવામાં આવેલ છે?
+                  :
                 </label>
               </div>
               <div className="col">
@@ -2256,7 +2255,7 @@ function Motibhaiamin_1() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  નિયત મુદ્દતમાં પુસ્તક પાયા ન આવે તો સ્મૃતિપત્રો લખાય છે? :
+                  નિયત મુદ્દતમાં ગ્રંથો પાછા ન આવે તો સ્મૃતિપત્રો લખાય છે? :
                 </label>
               </div>
               <div className="col">
@@ -2325,10 +2324,10 @@ function Motibhaiamin_1() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>૨૫,૦૦૧ કરતા વધુ</option>
-                  <option value={3}>૧૫૦૦૧ થી ૨૫૦૦૦ હોય તો</option>
-                  <option value={2}>૧૦૦૦૧ થી ૧૫૦૦૦ હોય તો</option>
-                  <option value={1}>૧૦૦૦૦ થી ઓછા હોય તો</option>
+                  <option value={4}>25001 કરતા વધુ</option>
+                  <option value={3}>15001 થી 25000હોય તો</option>
+                  <option value={2}>10001 થી 15000 હોય તો</option>
+                  <option value={1}>10000 થી ઓછા હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2687,7 +2686,7 @@ function Motibhaiamin_1() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  સામયિકના જૂના અંકો વેચાણ મુકાય છે ? :
+                સામયિકોના છુટા અંકો વાચકોને ઇસ્યુ કરાય છે? :
                 </label>
               </div>
               <div className="col">
@@ -2714,7 +2713,7 @@ function Motibhaiamin_1() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  સામયિકના જૂના અંકો વેચાણ મુકાય છે ?:
+                  સામયિકના જુના અંકો વેચાણ મુકાય છે ?:
                 </label>
               </div>
               <div className="col">
@@ -3015,7 +3014,7 @@ function Motibhaiamin_1() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગ્રંથલાયના સભ્યોની સંખ્યા:
+                  ગ્રંથાલયના સભ્યોની સંખ્યા:
                 </label>
               </div>
               <div className="col">
@@ -3203,7 +3202,7 @@ function Motibhaiamin_1() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  મકાનમાં દરેક સ્થળે પૂરતી સફાઈ રાખવામાં આવે છે કે કેમ? :
+                  મકાનમાં દરેક સ્થળે પુરતી સફાઈ રાખવામાં આવે છે કે કેમ? :
                 </label>
               </div>
               <div className="col">
@@ -3461,7 +3460,7 @@ function Motibhaiamin_1() {
                     Select
                   </option>
                   <option value={2}>
-                    વ્યવસ્થાતંત્રની ધગશ અને વિશિષ્ટ યોજના હોઈ તો
+                    વ્યવસ્થાતંત્રની ધગશ અને વિશિષ્ટ યોજના હોય તો
                   </option>
                   <option value={1}>યોજના હોય પણ સંતોષકારક પ્રગતિ ન હોય</option>
                   <option value={0}>કોઈ યોજના ન હોય તો</option>
@@ -3472,8 +3471,8 @@ function Motibhaiamin_1() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગ્રંથાલય માટે નાણાકીય સ્ત્રોતોનો વધારવા વ્યવસ્થાતંત્ર દ્વારા
-                  કોઈ વિશિષ્ટ પ્રવાસો થયા હોય તો તેની વિગત:
+                  ગ્રંથાલય માટે નાણાકીય સ્ત્રોનો વધારવા વ્યવસ્થાતંત્ર દ્વારા કોઈ
+                  વિશિષ્ટ પ્રવાસો થયા હોય તો તેની વિગત:
                 </label>
               </div>
               <div className="col">
@@ -3517,7 +3516,11 @@ function Motibhaiamin_1() {
                 </div>
 
                 <div className=" col">
-                  <button type="button" onClick={handlecalculate} className="btn btn-primary">
+                  <button
+                    type="button"
+                    onClick={handlecalculate}
+                    className="btn btn-primary"
+                  >
                     Calculate
                   </button>
                 </div>

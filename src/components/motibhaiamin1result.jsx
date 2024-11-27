@@ -40,7 +40,7 @@ function Motibhaiamin1result({ data }) {
           <div className="row mb-3 col-sm-13 align-items-center">
             <div className=" col-2">
               <label className="col-sm-10 col-form-label">
-                ગ્રંથાલયનુ નામ :
+                ગ્રંથાલયનું નામ :
               </label>
             </div>
             <div className="col-8">
@@ -2206,7 +2206,7 @@ function Motibhaiamin1result({ data }) {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગ્રંથલાયના સભ્યોની સંખ્યા:
+                  ગ્રંથાલયના સભ્યોની સંખ્યા:
                 </label>
               </div>
               <div className="col">
