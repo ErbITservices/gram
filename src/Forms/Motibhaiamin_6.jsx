@@ -1719,117 +1719,8 @@ function Motibhaiamin_6() {
                 <h4>{data.select_31}</h4>
               </div>
             </div>
-            <div className="row mb-3 col-sm-13 align-items-center">
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  કોમ્પ્યુટરાઈઝેશન કરવામાં આવેલ છે કે કેમ? :
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_34"
-                  value={data.select_34}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={5}>હા</option>
-                  <option value={0}>ના</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_34}</h4>
-              </div>
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  ક્યા સોફ્ટવેરનો ઉપયોગ કરેલ છે? :
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_35"
-                  value={data.select_35}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={3}>અધિકૃત બ્રાન્ડ સોફ્ટવેર હોય તો</option>
-                  <option value={1}>સેલ્ફ પેડ(પોતાની પદ્ધતિ)</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_35}</h4>
-              </div>
-            </div>
-            <div className="row mb-3 col-sm-13 align-items-center">
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  કઈ કઈ બાબતોનું કોમ્પ્યુટરાઈઝેશન થયેલ છે? ૧. ગ્રંથ નોંધણી ૨.
-                  સભ્ય નોંધણી ૩. સામયિક નોંધણી ૪. સૂચિકરણ ૫. ગ્રંથ આપ- લે ૬.
-                  વાચકોને સમૃતિપત્રો ૭. અતિદેય ગણત્રી ૮.ગ્રંથાલયના હિસબો ૯.
-                  ગ્રંથાલયની આકડાકીય માહિતી :
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_36"
-                  value={data.select_36}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={3}>
-                    તમામ કામગીરી કોમ્પ્યુટરાઈઝેશન થતી હોય તો
-                  </option>
-                  <option value={2}>અંશતઃ કામગીરી થતી હોય તો</option>
-                  <option value={0}>ન થતી હોય તો</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_36}</h4>
-              </div>
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  ઇ લાયબ્રેરી સુવિધા ઉપલબ્ધ છે? ૧. ઇ- બુકસ ૨. ઇ - જનૅલ્સ ૩. ઇ -
-                  મટીરીયલ :
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_37"
-                  value={data.select_37}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={3}>હા</option>
-                  <option value={0}>ના</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_37}</h4>
-              </div>
-            </div>
+            
+            
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2313,165 +2204,9 @@ function Motibhaiamin_6() {
                 <h4>{data.select_53}</h4>
               </div>
             </div>
-            <div className="row mb-3 col-sm-13 align-items-center">
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  આંતર ગ્રંથાલય લોનની સુવિધા છે?:
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_54"
-                  value={data.select_54}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={2}>હા</option>
-                  <option value={0}>ના</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_54}</h4>
-              </div>
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  ગ્રંથાલયમાં અલગ સંદર્ભ વિભાગ છે? :
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_55"
-                  value={data.select_55}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={2}>હા</option>
-                  <option value={0}>ના</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_55}</h4>
-              </div>
-            </div>
-            <div className="row mb-3 col-sm-13 align-items-center">
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  સંદર્ભગ્રંથોની સંખ્યા:
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_56"
-                  value={data.select_56}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={0}>૫૦૦ થી ૧૦૦૦</option>
-                  <option value={1}>૧૦૦૦ થી ૧૫૦૦ હોય તો</option>
-                  <option value={2}>૧૫૦૦ થી વધુ</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_56}</h4>
-              </div>
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  અપાતી સંદર્ભસેવાની નોંધ માટે આલગ રજીસ્ટર રખાઇ છે?:
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_57"
-                  value={data.select_57}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={1}>હા</option>
-                  <option value={0}>ના</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_57}</h4>
-              </div>
-            </div>
-            <div className="row mb-3 col-sm-13 align-items-center">
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  સંદર્ભસેવાનો લાભ લેનાર વાચકોની વાર્ષિક સંખ્યા:
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_58"
-                  value={data.select_58}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={5}>વાર્ષિક ૨૦૦૦ થી વધુ</option>
-                  <option value={4}>વાર્ષિક ૧૫૦૦ થી ૨૦૦૦</option>
-                  <option value={3}>વાર્ષિક ૧૦૦૦ થી ૧૫૦૦</option>
-                  <option value={0}>વાર્ષિક ૧૦૦૦ થી ઓછા</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_58}</h4>
-              </div>
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  ઝેરોક્ષ કે એવી કોઈ સુવિધા અપાય છે?:
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_59"
-                  value={data.select_59}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={2}>હા</option>
-                  <option value={0}>ના</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_59}</h4>
-              </div>
-            </div>
+            
+            
+            
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2688,7 +2423,7 @@ function Motibhaiamin_6() {
                 <h4>{data.select_67}</h4>
               </div>
             </div>
-            <div className="row mb-3 col-sm-13 align-items-center">
+            {/* <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
                   સામયિકના જૂના અંકો વેચાણ મુકાય છે ?:
@@ -2741,8 +2476,8 @@ function Motibhaiamin_6() {
               <div className="col-2">
                 <h4>{data.select_69}</h4>
               </div>
-            </div>
-            <div className="row mb-3 col-sm-13 align-items-center">
+            </div> */}
+            {/* <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
                   બાળ સભ્યો માટે અલગ વિભાગ છે :
@@ -2793,9 +2528,9 @@ function Motibhaiamin_6() {
               <div className="col-2">
                 <h4>{data.select_71}</h4>
               </div>
-            </div>
+            </div> */}
             <div className="row mb-3 col-sm-13 align-items-center">
-              <div className=" col">
+              {/* <div className=" col">
                 <label className="col-sm-10 col-form-label">
                   વેકેશનમાં બાળકો માટે અપાતી સેવાઓ કે થતી પધ્ધતિઓ અંગેની વિગતો:
                 </label>
@@ -2819,7 +2554,7 @@ function Motibhaiamin_6() {
               </div>
               <div className="col-2">
                 <h4>{data.select_72}</h4>
-              </div>
+              </div> */}
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
                   સભ્યનોંધણી માટે કઈ પધ્ધતિ - અમલમાં છે? (કોમ્પ્યુટર

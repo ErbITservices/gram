@@ -1821,32 +1821,7 @@ function Motibhaiamin_4() {
               <div className="col-2">
                 <h4>{data.select_36}</h4>
               </div>
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  ઇ લાયબ્રેરી સુવિધા ઉપલબ્ધ છે? ૧. ઇ- બુકસ ૨. ઇ - જનૅલ્સ ૩. ઇ -
-                  મટીરીયલ :
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_37"
-                  value={data.select_37}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={3}>હા</option>
-                  <option value={0}>ના</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_37}</h4>
-              </div>
+              
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
