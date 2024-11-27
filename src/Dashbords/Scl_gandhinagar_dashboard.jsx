@@ -22,7 +22,7 @@ function Scl_gandhinagar_dashboard() {
     const dataget = async () => {
       try {
         const response = await axios.get(
-          `https://gramgranthalay-backend-2.onrender.com/district/GANDHINAGAR`
+          `https://gram-back.vercel.app/district/GANDHINAGAR`
         );
         console.log(response.data), setData(response.data);
         setloader("false");

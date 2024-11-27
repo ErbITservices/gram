@@ -22,7 +22,7 @@ function Adl_meshana_dashboard() {
     const dataget = async () => {
       try {
         const response = await axios.get(
-          `https://gramgranthalay-backend-2.onrender.com/district/MAHESANA`
+          `https://gram-back.vercel.app/district/MAHESANA`
         );
         console.log(response.data), setData(response.data);
         setloader("false");

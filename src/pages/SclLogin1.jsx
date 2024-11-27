@@ -6,7 +6,6 @@ import Footer from "../components/Footer";
 import { FadeLoader } from "react-spinners";
 
 const SclLogin1 = () => {
-  
   const [loader, setloader] = useState("false");
   const [user, setUser] = useState({
     email: "",
@@ -33,17 +32,14 @@ const SclLogin1 = () => {
     console.log(user);
     setloader("true");
     try {
-      const response = await fetch(
-        `https://gramgranthalay-backend-2.onrender.com/admin/login`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(user),
-        }
-      );
-setloader("false");
+      const response = await fetch(`https://gram-back.vercel.app/admin/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      });
+      setloader("false");
       if (response.ok) {
         setloader("false");
 

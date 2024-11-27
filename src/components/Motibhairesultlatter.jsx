@@ -6,9 +6,9 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 function Motibhairesultlatter() {
-    const pdfref = useRef();
-    const d = new Date();
-    let year = d.getFullYear();
+  const pdfref = useRef();
+  const d = new Date();
+  let year = d.getFullYear();
   const downloadpdf = useReactToPrint({
     content: () => pdfref.current,
     documentTitle: "Ahevalform",
@@ -23,7 +23,7 @@ function Motibhairesultlatter() {
     console.log(category.current.value);
     try {
       const response = await axios.get(
-        `https://gramgranthalay-backend-2.onrender.com/${category.current.value}/`
+        `https://gram-back.vercel.app/${category.current.value}/`
       );
       console.log(response.data),
         response.data.sort(({ marks: a }, { marks: b }) => b - a);

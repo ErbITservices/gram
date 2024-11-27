@@ -469,7 +469,7 @@ function Motibhaiamin_7() {
       console.log("mihir");
 
       const senddata = await fetch(
-        `https://gramgranthalay-backend-2.onrender.com/Motibhaiamin7/`,
+        `https://gram-back.vercel.app/Motibhaiamin7/`,
         {
           method: "POST",
           headers: {
