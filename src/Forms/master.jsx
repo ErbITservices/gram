@@ -121,9 +121,7 @@ function Master() {
       try {
         console.log("mihir");
 
-        const response = await axios.get(
-          `https://gramgranthalay-backend-2.onrender.com/form/`
-        );
+        const response = await axios.get(`https://gram-back.vercel.app/form/`);
         console.log(response.data), setpd(response.data);
       } catch (error) {
         console.log(error);
@@ -161,7 +159,7 @@ function Master() {
       console.log("mihir");
 
       const senddata = await fetch(
-        `https://gramgranthalay-backend-2.onrender.com/form/${data.uid}`,
+        `https://gram-back.vercel.app/form/${data.uid}`,
         {
           method: "PUT",
           headers: {

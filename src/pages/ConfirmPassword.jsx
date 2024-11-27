@@ -27,7 +27,7 @@ function ConfirmPassword() {
   //   console.log('p');
 
   //   const res = await fetch(
-  //     `https://gramgranthalay-backend-2.onrender.com/forgotpassword/${id}/${token}`,
+  //     `https://gram-back.vercel.app/forgotpassword/${id}/${token}`,
   //     {
   //       method: "GET",
   //       headers: {
@@ -55,7 +55,7 @@ function ConfirmPassword() {
       setloader("true");
 
       const res = await fetch(
-        `https://gramgranthalay-backend-2.onrender.com/admin/${id}/${token}`,
+        `https://gram-back.vercel.app/admin/${id}/${token}`,
         {
           method: "POST",
           headers: {

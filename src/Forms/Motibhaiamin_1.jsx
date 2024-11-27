@@ -433,8 +433,6 @@ function Motibhaiamin_1() {
   });
 
   const handleInput = (e) => {
-    
-
     const name = e.target.name;
     const value = e.target.value;
     setdata({
@@ -445,7 +443,6 @@ function Motibhaiamin_1() {
   };
   const handlpercentcalculater = (e) => {
     console.log(e.target.value);
-    
 
     const name = e.target.name;
     const value = e.target.value;
@@ -472,7 +469,7 @@ function Motibhaiamin_1() {
       console.log("mihir");
 
       const senddata = await fetch(
-        `https://gramgranthalay-backend-2.onrender.com/Motibhaiamin1/`,
+        `https://gram-back.vercel.app/Motibhaiamin1/`,
         {
           method: "POST",
           headers: {
@@ -1432,32 +1429,33 @@ function Motibhaiamin_1() {
                   ટકાવારી કેલ્ક્યુલેટર :
                 </label>
               </div>
-              
+
               <div className="col">
                 <input
-                type="number"
+                  type="number"
                   className="form-control"
                   id="A"
                   autoComplete="off"
                   name="A"
                   value={AB.A}
                   onChange={handlpercentcalculater}
-              />
+                />
               </div>
               <div className="col">
                 <input
-                type="number"
+                  type="number"
                   className="form-control"
                   id="B"
                   autoComplete="off"
                   name="B"
                   value={AB.B}
                   onChange={handlpercentcalculater}
-              />
+                />
               </div>
               <div className="col-3">
-                {(Number(AB.B)*100)/Number(AB.A)>= 0 && (
-                <h4>{ (Number(AB.B)*100)/Number(AB.A)}%</h4>)}
+                {(Number(AB.B) * 100) / Number(AB.A) >= 0 && (
+                  <h4>{(Number(AB.B) * 100) / Number(AB.A)}%</h4>
+                )}
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -3517,7 +3515,11 @@ function Motibhaiamin_1() {
                 </div>
 
                 <div className=" col">
-                  <button type="button" onClick={handlecalculate} className="btn btn-primary">
+                  <button
+                    type="button"
+                    onClick={handlecalculate}
+                    className="btn btn-primary"
+                  >
                     Calculate
                   </button>
                 </div>

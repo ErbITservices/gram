@@ -22,7 +22,7 @@ function Motibhaiaminresult() {
     console.log(category.current.value);
     try {
       const response = await axios.get(
-        `https://gramgranthalay-backend-2.onrender.com/${category.current.value}/`
+        `https://gram-back.vercel.app/${category.current.value}/`
       );
       console.log(response.data),
         response.data.sort(({ marks: a }, { marks: b }) => b - a);
@@ -31,19 +31,18 @@ function Motibhaiaminresult() {
       console.log(error);
     }
   }
-  
-    const [library, setlibrary] = useState();
+
+  const [library, setlibrary] = useState();
   async function handleshowdata(e) {
     console.log(e);
     try {
-          const response = await axios.get(
-            `https://gramgranthalay-backend-2.onrender.com/Motibhaiamin1/${e}`
-          );
-          console.log(response.data), setlibrary(response.data);
-        } catch (error) {
-          console.log(error);
+      const response = await axios.get(
+        `https://gram-back.vercel.app/Motibhaiamin1/${e}`
+      );
+      console.log(response.data), setlibrary(response.data);
+    } catch (error) {
+      console.log(error);
     }
-    
   }
 
   return (
@@ -144,7 +143,7 @@ function Motibhaiaminresult() {
           </div>
         </center>
       )}
-      {library && (<Motibhaiamin1result data={library}></Motibhaiamin1result>)}
+      {library && <Motibhaiamin1result data={library}></Motibhaiamin1result>}
 
       <Footer></Footer>
     </>

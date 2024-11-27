@@ -22,7 +22,7 @@ function Adl_rajkot_dashboard() {
     const dataget = async () => {
       try {
         const response = await axios.get(
-          `https://gramgranthalay-backend-2.onrender.com/district/RAJKOT`
+          `https://gram-back.vercel.app/district/RAJKOT`
         );
         console.log(response.data), setData(response.data);
         setloader("false");
