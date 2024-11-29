@@ -623,9 +623,9 @@ function Motibhaiamin_4() {
         <form className="form " onSubmit={handleSubmit}>
           <div>
             <h1>
-              સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એવોર્ડ અને ઉત્તમ ગ્રંથાલય સેવા
-              પ્રમાણપત્ર માટેની યોજના અન્વય શહેર શાખા /નગરકક્ષા-૧ ગ્રંથાલયનો
-              માપદંડો
+              સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એભાભાવોર્ડ અને ઉત્તમ ગ્રંથાલય
+              સેવા પ્રમાણપત્ર માટેની યોજના અન્વય શહેર શાખા /નગરકક્ષા-૧
+              ગ્રંથાલયનો માપદંડો
             </h1>{" "}
           </div>
 
@@ -705,7 +705,9 @@ function Motibhaiamin_4() {
               </select>
             </div>
             <div className=" col-2">
-              <label className="col-sm-10 col-form-label">નાણાકીય વર્ષ :</label>
+              <label className="col-sm-10 col-form-label">
+                નાંણાકીય વર્ષ :
+              </label>
             </div>
             <div className="col">
               <select
@@ -1302,7 +1304,7 @@ function Motibhaiamin_4() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  અઠવાડિક રાજાના દિવસે અપાતી સેવાઓની વિગત :
+                  અઠવાડિક રજાના દિવસે અપાતી સેવાઓની વિગત :
                 </label>
               </div>
               <div className="col">
@@ -1713,7 +1715,8 @@ function Motibhaiamin_4() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  વિષય તેમજ લેખકોનો નિર્દેશ કરતા માર્ગદર્શકો લગાવામાં આવેલ છે? :
+                  વિષય તેમજ લેખકોનો નિર્દેશ કરતા માર્ગદર્શકો લગાવવામાં આવેલ છે?
+                  :
                 </label>
               </div>
               <div className="col">
@@ -1821,7 +1824,6 @@ function Motibhaiamin_4() {
               <div className="col-2">
                 <h4>{data.select_36}</h4>
               </div>
-              
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
@@ -1851,7 +1853,7 @@ function Motibhaiamin_4() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  પુસ્તક ખરીદી માટે વિક્રેતાઓ પાસેથી ભાવો મંગાવાય છે? :
+                  પુસ્તક ખરીદી માટે વિક્રેતાઓ પાસેથી ભાભાભાવો મંગાવાય છે? :
                 </label>
               </div>
               <div className="col">
@@ -1930,7 +1932,8 @@ function Motibhaiamin_4() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  પુસ્તકોની નોંધણી નમૂનાના પરિગ્રહણ રજીસ્ટરમાં થાય છે? :
+                  પુસ્તકોની નોંધણી નિયત નિયત નમૂનાના પરિગ્રહણ રજીસ્ટરમાં થાય છે?
+                  :
                 </label>
               </div>
               <div className="col">
@@ -2039,7 +2042,7 @@ function Motibhaiamin_4() {
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
                   પુસ્તકોનું વર્ગીકરણ કઈ પધ્ધતિથી કરવામાં આવે છે?
-                  (દશાંશ/બોર્ડન/દીબિંદુ કે અન્ય પધ્ધતિ):
+                  (દશાંશ/બોર્ડન/દ્વિબિંદુ કે અન્ય પધ્ધતિ):
                 </label>
               </div>
               <div className="col">
@@ -2112,7 +2115,7 @@ function Motibhaiamin_4() {
                     Select
                   </option>
                   <option value={3}>કોમ્પ્યુટર OPAC હોય તો</option>
-                  <option value={2}>સૂચિ કાર્ડ પદ્ધતિ</option>
+                  <option value={2}>સૂચિકાર્ડ પદ્ધતિ</option>
                   <option value={1}>રજિસ્ટર હોય તો</option>
                   <option value={0}>કોઈ પદ્ધતિ ન હોય તો</option>
                 </select>
@@ -2149,7 +2152,7 @@ function Motibhaiamin_4() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગ્રંથો આપલે માટેની કઈ પધ્ધતિ અમલમાં છે?(ખાતાવહી, રજીસ્ટર,
+                  ગ્રંથો આપ-લે માટેની કઈ પધ્ધતિ અમલમાં છે?(ખાતાવહી, રજીસ્ટર,
                   ટિકિટ પધ્ધતિ કે કોમ્પ્યુટર પ્રોગ્રામ દ્વાર):
                 </label>
               </div>
@@ -2167,7 +2170,7 @@ function Motibhaiamin_4() {
                     Select
                   </option>
                   <option value={3}>કોમ્પ્યુટરાઇઝ/ટિકિટ પદ્ધતિ</option>
-                  <option value={2}>ખાતાવહી પદ્ધતિ</option>
+                  <option value={2}>ખાતાકીય પદ્ધતિ/ટિકિટ પદ્ધતિ</option>
                   <option value={1}>દૈનિક રજીસ્ટર પદ્ધતિ</option>
                   <option value={0}>સ્થાનિક પદ્ધતિ</option>
                 </select>
@@ -2229,7 +2232,7 @@ function Motibhaiamin_4() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  નિયત મુદ્દતમાં પુસ્તક પાયા ન આવે તો સ્મૃતિપત્રો લખાય છે? :
+                  નિયત મુદ્દતમાં પુસ્તક પાછા ન આવે તો સ્મૃતિપત્રો લખાય છે? :
                 </label>
               </div>
               <div className="col">
@@ -2470,7 +2473,7 @@ function Motibhaiamin_4() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગ્રંથાલયમાં મંગાવતા દેનિકોની સંખ્યા (બને વર્ષોની સરેરાશ):
+                  ગ્રંથાલયમાં મંગાવતા દૈનિકોની સંખ્યા (બને વર્ષોની સરેરાશ):
                 </label>
               </div>
               <div className="col">
@@ -2512,8 +2515,8 @@ function Motibhaiamin_4() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={0}>15 સામયિકો</option>
-                  <option value={1}>15 થી 20 સામયિકો</option>
+                  <option value={0}>15 સામાયિકો</option>
+                  <option value={1}>15 થી 20 સામાયિકો</option>
                   <option value={2}>20 થી વધુ</option>
                 </select>
               </div>
@@ -2551,7 +2554,7 @@ function Motibhaiamin_4() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  સામયિકો માટેનો ખર્ચ :
+                  સામાયિકો માટેનો ખર્ચ :
                 </label>
               </div>
               <div className="col">
@@ -2567,7 +2570,7 @@ function Motibhaiamin_4() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={0}>7 હજાર  સુધી </option>
+                  <option value={0}>7 હજાર સુધી </option>
                   <option value={1}>7 થી 10 હજાર</option>
                   <option value={2}>10 થી 13 હજાર</option>
                   <option value={3}>13 થી વધુ</option>
@@ -2581,7 +2584,7 @@ function Motibhaiamin_4() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  વંચનાલાયમાં આવતા વાચકોની નોંધ માટે રજિસ્ટર રાખવામાં આવે છે:
+                  વાંચનાલયમાં આવતા વાચકોની નોંધ માટે રજિસ્ટર રાખવામાં આવે છે:
                 </label>
               </div>
               <div className="col">
@@ -2607,7 +2610,7 @@ function Motibhaiamin_4() {
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
                   ગ્રંથાલયમાં માંગવામાં આવતા સામાયિકો પૈકી બંધાવીને સાચવવામાં
-                  આવતા સામયિકોની યાદી :
+                  આવતા સામાયિકોની યાદી :
                 </label>
               </div>
               <div className="col">
@@ -2634,7 +2637,7 @@ function Motibhaiamin_4() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  બંધાયેલ સામયિકો વાચકોને પુસ્તક સ્વરૂપે ઇસ્યુ કરાય છે?:
+                  બંધાયેલ સામાયિકો વાચકોને પુસ્તક સ્વરૂપે ઇસ્યુ કરાય છે?:
                 </label>
               </div>
               <div className="col">
@@ -2659,7 +2662,7 @@ function Motibhaiamin_4() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                સામયિકોના છુટા અંકો વાચકોને ઇસ્યુ કરાય છે ? :
+                  સામાયિકોના છુટા અંકો વાચકોને ઇસ્યુ કરાય છે ? :
                 </label>
               </div>
               <div className="col">
@@ -3444,8 +3447,8 @@ function Motibhaiamin_4() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગ્રંથાલય માટે નાણાકીય સ્ત્રોનો વધારવા વ્યવસ્થાતંત્ર દ્વારા કોઈ
-                  વિશિષ્ટ પ્રવાસો થયા હોય તો તેની વિગત:
+                  ગ્રંથાલય માટે નાંણાકીય સ્ત્રોનો વધારવા વ્યવસ્થાતંત્ર દ્વારા
+                  કોઈ વિશિષ્ટ પ્રયાસો થયા હોય તો તેની વિગત:
                 </label>
               </div>
               <div className="col">
@@ -3462,7 +3465,7 @@ function Motibhaiamin_4() {
                     Select
                   </option>
                   <option value={2}>
-                    પૂરતા પ્રયાસો થતાં હોય અને નાણાકીય સ્ત્રોત વધારેલ હોય તો
+                    પૂરતા પ્રયાસો થતાં હોય અને નાંણાકીય સ્ત્રોત વધારેલ હોય તો
                   </option>
                   <option value={1}>
                     બિનસંતોષકારક કે અપૂરતા પ્રયત્નો હોય તો

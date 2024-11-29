@@ -1201,7 +1201,7 @@ function Master() {
                 </div>
                 <div className="col-3">
                   <label className="col-form-label  ">
-                    (2) વર્તમાન પત્રો તથા સામયિકો વાંચનારની દૈનિક સરેરાશ સંખ્યા
+                    (2) વર્તમાન પત્રો તથા સામાયિકો વાંચનારની દૈનિક સરેરાશ સંખ્યા
                     :
                   </label>
                 </div>
@@ -1219,8 +1219,8 @@ function Master() {
               <div className="row mb-3 col-13 align-items-center">
                 <div className="col-7">
                   <label className="col-form-label col highlight">
-                    વર્ષ દરમિયાન ગ્રંથાલયમાં આવતા વર્તમાનપત્રો તથા સામયિકોના નામ
-                    :
+                    વર્ષ દરમિયાન ગ્રંથાલયમાં આવતા વર્તમાનપત્રો તથા સામાયિકોના
+                    નામ :
                   </label>
                 </div>
                 <div className="col-5">
@@ -1961,7 +1961,7 @@ function Master() {
                           <div className="row mb-3 tab col-sm-13 align-items-center">
                             <div className="col">
                               <label className="col-form-label ">
-                                ૨. વર્તમાન પત્રો, સામયિકો :
+                                ૨. વર્તમાન પત્રો, સામાયિકો :
                               </label>
                             </div>
                             <div className="col">
