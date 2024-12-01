@@ -176,9 +176,12 @@ input[type="number"] {
   margin-right: 5px;
 } */
 .btn {
-  max-width: fit-content;
+  /* max-width: fit-content; */
   font-size: 2vh;
   /* background-color: aqua; */
+}
+.btn:hover{
+  color: white;
 }
 .loginbtn {
   margin: 100px;
@@ -355,13 +358,13 @@ background: rgb(26, 24, 24) !important;
   outline: 0;
   padding: 10px 25px 10px;
   text-align: center;
-  
+  color: white;
   width: 100%;
 }
 
 .button-25:hover {
-  background-color: #0085c7;
-  color: #ffffff;
+  background-color: #037cb9;
+  color: white;
   transition-duration: .15s, .15s;
 }
 .latter {
@@ -416,3 +419,36 @@ margin: 20px 10px;
   margin: 0 10px;
   width: 15%;
 }
+.dash-btn{
+    font-size: 2vh;
+  height: 150px;
+  width: 360px;
+  font-size: 25px;
+  color: white;
+  border: 1px solid grey;
+}
+.dash-btn:hover{
+  box-shadow: 0 0 10px gray;
+}
+.col-2 h4{
+  color:darkgreen;
+}
+.btn-info:hover{
+  background-color: #0a9ab7;
+}
+.dash-container{
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px grey;
+  padding: 15px;
+}
+/* .role-head::before{
+  content: "";
+  height: 4px;
+  width: 50px;
+  background-color:#00008b;
+  position: absolute;
+  top: 100%;
+  left: 0;
+} */

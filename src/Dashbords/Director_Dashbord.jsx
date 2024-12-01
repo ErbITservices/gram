@@ -74,30 +74,30 @@ function Directo_Dashbord() {
         </div>
       )}
       {loader === "false" && (
-        <div>
-          <h1>Director Of Library</h1>
+        <div className="dash-container">
+          <h1 className="role-head">Director Of Library</h1>
           {showdata === "false" && (
             <div class=" mb-3 btn-container">
               <form class="container-fluid justify-content-start">
                 <Link to="/Motibhaiaminbtnpage">
-                  <button class="btn btn-info m-3" type="button">
+                  <button class="dash-btn btn btn-info m-3" type="button">
                     Moti bhai amin form
                   </button>
                 </Link>
                 <Link to="/Motibhaiaminresult">
-                  <button class="btn m-3 btn-success " type="button">
+                  <button class="dash-btn btn m-3 btn-success " type="button">
                     Result of motibhai
                   </button>
                 </Link>
                 <Link to="/Motibhairesultlatter">
-                  <button class="btn m-3 btn-success " type="button">
+                  <button class="dash-btn btn m-3 btn-success " type="button">
                     Print Motibhaiamin Result
                   </button>
                 </Link>
 
                 <button
                   onClick={handleshowdata}
-                  class="btn m-3 button-25 "
+                  class="dash-btn btn m-3 button-25 "
                   type="button"
                 >
                   GIA Report
@@ -110,7 +110,7 @@ function Directo_Dashbord() {
           </Link> */}
 
                 <button
-                  class="btn btn-danger m-3"
+                  class="dash-btn btn-danger btn m-3"
                   onClick={Logout}
                   type="button"
                 >
