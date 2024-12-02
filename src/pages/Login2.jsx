@@ -115,6 +115,7 @@ const Login2 = () => {
                     <button type="submit " className="btn  btn-primary mb-3">
                       Login
                     </button>
+                    <br />
                     <Link to="/Forgotpassword">
                       <p>Forgot Password</p>
                     </Link>

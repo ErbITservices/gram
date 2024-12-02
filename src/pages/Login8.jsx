@@ -114,6 +114,7 @@ const Login8 = () => {
                     <button type="submit " className="btn btn-primary">
                       Login
                     </button>
+                    <br />
                     <Link to="/Forgotpassword">
                       <p>Forgot Password</p>
                     </Link>

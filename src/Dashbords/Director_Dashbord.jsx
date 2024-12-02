@@ -79,43 +79,54 @@ function Directo_Dashbord() {
           {showdata === "false" && (
             <div class=" mb-3 btn-container">
               <form class="container-fluid justify-content-start">
-                <Link to="/Motibhaiaminbtnpage">
+                <Link
+                  to="/Motibhaiaminbtnpage"
+                  style={{ textDecoration: "none" }}
+                >
                   <button class="dash-btn btn btn-info m-3" type="button">
                     Moti bhai amin form
                   </button>
                 </Link>
-                <Link to="/Motibhaiaminresult">
+                <Link
+                  to="/Motibhaiaminresult"
+                  style={{ textDecoration: "none" }}
+                >
                   <button class="dash-btn btn m-3 btn-success " type="button">
                     Result of motibhai
                   </button>
                 </Link>
-                <Link to="/Motibhairesultlatter">
+                <Link
+                  to="/Motibhairesultlatter"
+                  style={{ textDecoration: "none" }}
+                >
                   <button class="dash-btn btn m-3 btn-success " type="button">
                     Print Motibhaiamin Result
                   </button>
                 </Link>
-
-                <button
-                  onClick={handleshowdata}
-                  class="dash-btn btn m-3 button-25 "
-                  type="button"
-                >
-                  GIA Report
-                </button>
+                <Link style={{ textDecoration: "none" }}>
+                  <button
+                    onClick={handleshowdata}
+                    class="dash-btn btn m-3 button-25 "
+                    type="button"
+                  >
+                    GIA Report
+                  </button>
+                </Link>
 
                 {/* <Link to="/SingleData">
             <button class="btn btn-outline-success me-2" type="button">
               Show Single Data
             </button>
           </Link> */}
-
-                <button
-                  class="dash-btn btn-danger btn m-3"
-                  onClick={Logout}
-                  type="button"
-                >
-                  Log Out
-                </button>
+                <Link style={{ textDecoration: "none" }}>
+                  <button
+                    class="dash-btn btn-danger btn m-3"
+                    onClick={Logout}
+                    type="button"
+                  >
+                    Log Out
+                  </button>
+                </Link>
               </form>
             </div>
           )}

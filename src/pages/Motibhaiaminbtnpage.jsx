@@ -16,11 +16,11 @@ function Motibhaiaminbtnpage() {
         <form class="container-fluid justify-content-start">
           <Link to="/Motibhaiamin_1">
             <button
-              class="btn m-3 btn-primary"
-              //   onClick={navigate("/form")}
+              class="btn  btn-primary m-3"
+              //   onClick={navigate("/master")}
               type="button"
             >
-              મહિલા બાળ
+              અંધજન લાઇબ્રેરી
             </button>
           </Link>
           <Link to="/Motibhaiamin_2">
@@ -34,20 +34,20 @@ function Motibhaiaminbtnpage() {
           </Link>
           <Link to="/Motibhaiamin_3">
             <button
-              class="btn m-3 btn-primary "
-              //   onClick={navigate("/form")}
-              type="button"
-            >
-              શહેર શાખા નગરકક્ષા
-            </button>
-          </Link>
-          <Link to="/Motibhaiamin_4">
-            <button
               class="btn  btn-primary m-3"
               //   onClick={navigate("/master")}
               type="button"
             >
               ગ્રામ ગ્રંથાલય
+            </button>
+          </Link>
+          <Link to="/Motibhaiamin_4">
+            <button
+              class="btn m-3 btn-primary "
+              //   onClick={navigate("/form")}
+              type="button"
+            >
+              શહેર શાખા નગરકક્ષા
             </button>
           </Link>
           <Link to="/Motibhaiamin_5">
@@ -56,16 +56,16 @@ function Motibhaiaminbtnpage() {
               //   onClick={navigate("/master")}
               type="button"
             >
-              નગરકક્ષા ૧
+              નગરકક્ષા ૨
             </button>
           </Link>
           <Link to="/Motibhaiamin_6">
             <button
-              class="btn  btn-primary m-3"
-              //   onClick={navigate("/master")}
+              class="btn m-3 btn-primary"
+              //   onClick={navigate("/form")}
               type="button"
             >
-              નગરકક્ષા ૨
+              મહિલા બાળ
             </button>
           </Link>
           <Link to="/Motibhaiamin_7">
@@ -77,15 +77,15 @@ function Motibhaiaminbtnpage() {
               વિશીષ્ટ લાઇબ્રેરી
             </button>
           </Link>
-          <Link to="/Motibhaiamin_7">
+          {/* <Link to="/Motibhaiamin_7">
             <button
               class="btn  btn-primary m-3"
               //   onClick={navigate("/master")}
               type="button"
             >
-              અંધજન લાઇબ્રેરી
+              નગરકક્ષા ૧
             </button>
-          </Link>
+          </Link> */}
         </form>
       </div>
       <div>

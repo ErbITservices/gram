@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import { FadeLoader } from "react-spinners";
 
+
 const SclLogin2 = () => {
   const [loader, setloader] = useState("false");
   const [user, setUser] = useState({
@@ -115,6 +116,7 @@ const SclLogin2 = () => {
                     <button type="submit " className="btn btn-primary">
                       Login
                     </button>
+                    <br />
                     <Link to="/Forgotpassword">
                       <p>Forgot Password</p>
                     </Link>
