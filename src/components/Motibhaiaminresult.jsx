@@ -107,18 +107,18 @@ function Motibhaiaminresult() {
     //     console.log(error);
     //   }
     // }
-    // if (category.current.value === "Motibhaiamin7") {
-    //   try {
-    //     const response = await axios.get(
-    //       `https://gram-back.vercel.app/Motibhaiamin7/${e}`
-    //     );
+    if (category.current.value === "Motibhaiamin7") {
+      try {
+        const response = await axios.get(
+          `https://gram-back.vercel.app/Motibhaiamin7/${e}`
+        );
 
-    //     navigator("/Motibhaiamin7result", { state: { data: response.data } });
-    //     // console.log(response.data), setlibrary(response.data);
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // }
+        navigator("/Motibhaiamin7result", { state: { data: response.data } });
+        // console.log(response.data), setlibrary(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
     
   }
 
