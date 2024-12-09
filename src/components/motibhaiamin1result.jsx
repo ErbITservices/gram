@@ -329,20 +329,18 @@ function Motibhaiamin1result() {
     else if (librarydistrict.current.value === "VALSAD") setlisttaluka(VALSAD);
   }
 
-    const location = useLocation();
+  const location = useLocation();
   const [data, setdata] = useState(location.state.data[0]);
   console.log(data);
-  
-  
+
   //  useEffect(() => {
   //   const dataget = async () => {
-      
+
   //   const location = useLocation();
   //   setdata(location.state.data)
   //   };
   //   dataget();
   // }, []);
-  
 
   const handleInput = (e) => {
     const name = e.target.name;
@@ -387,7 +385,6 @@ function Motibhaiamin1result() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            
             marks: count,
             ...data,
           }),
@@ -560,7 +557,6 @@ function Motibhaiamin1result() {
                 required
                 onChange={handlesettaluka}
                 className="form-select"
-                
                 value={data.district}
               >
                 <option selected disabled value="">
@@ -581,7 +577,6 @@ function Motibhaiamin1result() {
                 required
                 onChange={handleInput}
                 className="form-select"
-                
                 value={data.taluko}
               >
                 <option selected disabled value={data.taluko}>
@@ -604,7 +599,6 @@ function Motibhaiamin1result() {
                 required
                 onChange={handleInput}
                 className="form-select"
-                
                 value={data.currentyear}
               >
                 <option selected disabled>
@@ -628,7 +622,6 @@ function Motibhaiamin1result() {
                 required
                 onChange={handleInput}
                 className="form-select"
-                
                 value={data.finacialyear}
               >
                 <option selected>{year}</option>
