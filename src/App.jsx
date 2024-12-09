@@ -164,6 +164,10 @@ function App() {
             element={<Motibhaiamin7result />}
           ></Route>
           <Route
+            path="/motibhaiamin1result"
+            element={<Motibhaiamin1result />}
+          ></Route>
+          <Route
             path="/Motibhairesultlatter"
             element={<Motibhairesultlatter />}
           ></Route>
