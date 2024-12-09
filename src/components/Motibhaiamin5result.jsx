@@ -371,6 +371,7 @@ function Motibhaiamin5result() {
 
   const [calculate, setcalculate] = useState();
   async function handleSubmit() {
+    count = 0;
     for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
     }
@@ -386,8 +387,9 @@ function Motibhaiamin5result() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            marks: count,
+           
             ...data,
+             marks: count,
           }),
         }
       );
@@ -395,106 +397,7 @@ function Motibhaiamin5result() {
         console.log("done");
         
         navigator("/Motibhaiaminresult")
-        setdata({
-          select_1: "",
-          select_2: "",
-          select_3: "",
-          select_4: "",
-          select_5: "",
-          select_6: "",
-          select_7: "",
-          select_8: "",
-          select_9: "",
-          select_10: "",
-          select_11: "",
-          select_12: "",
-          select_13: "",
-          select_14: "",
-          select_15: "",
-          select_16: "",
-          select_17: "",
-          select_18: "",
-          select_19: "",
-          select_20: "",
-          select_21: "",
-          select_22: "",
-          select_23: "",
-          select_24: "",
-          select_25: "",
-          select_26: "",
-          select_27: "",
-          select_28: "",
-          select_29: "",
-          select_30: "",
-          select_31: "",
-          select_32: "",
-          select_33: "",
-          select_34: "",
-          select_35: "",
-          select_36: "",
-          select_37: "",
-          select_38: "",
-          select_39: "",
-          select_40: "",
-          select_41: "",
-          select_42: "",
-          select_43: "",
-          select_44: "",
-          select_45: "",
-          select_46: "",
-          select_47: "",
-          select_48: "",
-          select_49: "",
-          select_50: "",
-          select_51: "",
-          select_52: "",
-          select_53: "",
-          select_54: "",
-          select_55: "",
-          select_56: "",
-          select_57: "",
-          select_58: "",
-          select_59: "",
-          select_60: "",
-          select_61: "",
-          select_62: "",
-          select_63: "",
-          select_64: "",
-          select_65: "",
-          select_66: "",
-          select_67: "",
-          select_68: "",
-          select_69: "",
-          select_70: "",
-          select_71: "",
-          select_72: "",
-          select_73: "",
-          select_74: "",
-          select_75: "",
-          select_76: "",
-          select_77: "",
-          select_78: "",
-          select_79: "",
-          select_80: "",
-          select_81: "",
-          select_82: "",
-          select_83: "",
-          select_84: "",
-          select_85: "",
-          select_86: "",
-          select_87: "",
-          select_88: "",
-          select_89: "",
-          select_90: "",
-          select_91: "",
-          select_92: "",
-          select_93: "",
-          select_94: "",
-          select_95: "",
-          select_96: "",
-          select_97: "",
-          select_98: "",
-        });
+        
         setloader("false");
       } else {
         setloader("false");
@@ -508,6 +411,7 @@ function Motibhaiamin5result() {
     }
   }
   function handlecalculate() {
+    count = 0;
     setloader("true");
     for (let index = 1; index <= 95; index++) {
       count += Number(data["select_" + index]);
