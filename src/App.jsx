@@ -25,7 +25,6 @@ import Login6 from "./pages/Login6";
 import Login7 from "./pages/Login7";
 import Login8 from "./pages/Login8";
 import Motibhaiaminresult from "./components/Motibhaiaminresult";
-import Motibhaiamin1result from "./components/Motibhaiamin1result";
 import Directo_Dashbord from "./Dashbords/Director_Dashbord";
 import Scl_gandhinagar_dashboard from "./Dashbords/Scl_gandhinagar_dashboard";
 import Scl_vadodara_dashboard from "./Dashbords/Scl_vadodara_dashboard";
@@ -54,6 +53,7 @@ import Motibhaiamin_4 from "./Forms/Motibhaiamin_4";
 import Motibhaiamin_5 from "./Forms/Motibhaiamin_5";
 import Motibhaiamin_6 from "./Forms/Motibhaiamin_6";
 import Motibhaiamin_7 from "./Forms/Motibhaiamin_7";
+// import Motibhaiamin1result from "./components/Motibhaiamin1result";
 
 import Motibhaiamin2result from "./components/Motibhaiamin2result";
 import Motibhaiamin3result from "./components/Motibhaiamin3result";
@@ -134,10 +134,10 @@ function App() {
           <Route path="/Motibhaiamin_5" element={<Motibhaiamin_5 />}></Route>
           <Route path="/Motibhaiamin_6" element={<Motibhaiamin_6 />}></Route>
           <Route path="/Motibhaiamin_7" element={<Motibhaiamin_7 />}></Route>
-          <Route
+          {/* <Route
             path="/Motibhaiamin1result"
             element={<Motibhaiamin1result />}
-          ></Route>
+          ></Route> */}
           {/* <Route
             path="/motibhaiamin2result"
             element={<Motibhaiamin2result />}
@@ -158,10 +158,10 @@ function App() {
             path="/motibhaiamin6result"
             element={<Motibhaiamin6result />}
           ></Route> */}
-          {/* <Route
+          <Route
             path="/motibhaiamin7result"
             element={<Motibhaiamin7result />}
-          ></Route> */}
+          ></Route>
           <Route
             path="/Motibhairesultlatter"
             element={<Motibhairesultlatter />}
