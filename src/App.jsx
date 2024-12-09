@@ -137,7 +137,7 @@ function App() {
             path="/motibhaiamin1result"
             element={<Motibhaiamin1result />}
           ></Route>
-          <Route
+          {/* <Route
             path="/motibhaiamin2result"
             element={<Motibhaiamin2result />}
           ></Route>
@@ -156,7 +156,7 @@ function App() {
           <Route
             path="/motibhaiamin6result"
             element={<Motibhaiamin6result />}
-          ></Route>
+          ></Route> */}
           <Route
             path="/motibhaiamin7result"
             element={<Motibhaiamin7result />}
