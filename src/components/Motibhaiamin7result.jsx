@@ -378,7 +378,7 @@ function Motibhaiamin7result() {
     try {
       console.log(data._id);
       const senddata = await fetch(
-        `https://gramgranthalay-backend.vercel.app/Motibhaiamin1/${data._id}`,
+        `https://gramgranthalay-backend.vercel.app/Motibhaiamin7/${data._id}`,
         {
           method: "PUT",
           headers: {
@@ -392,6 +392,8 @@ function Motibhaiamin7result() {
       );
       if (senddata.ok) {
         console.log("done");
+        
+        navigator("/Motibhaiaminresult");
         setdata({
           select_1: "",
           select_2: "",
@@ -528,7 +530,7 @@ function Motibhaiamin7result() {
           <div>
             <h1>
               સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એભાભાવોર્ડ અને ઉત્તમ ગ્રંથાલય
-              સેવા પ્રમાણપત્ર માટેની યોજના અન્વય અંધજન ગ્રંથાલયનો માપદંડો
+              સેવા પ્રમાણપત્ર માટેની યોજના અન્વય વિશિષ્ટ ગ્રંથાલયનો માપદંડો
             </h1>{" "}
           </div>
 
@@ -556,8 +558,9 @@ function Motibhaiamin7result() {
               <select
                 required
                 onChange={handlesettaluka}
-                className="form-select"
+                
                 value={data.district}
+                className="form-select"
               >
                 <option selected disabled value="">
                   Select
@@ -573,12 +576,7 @@ function Motibhaiamin7result() {
               <label className="col-sm-10 col-form-label">તાલુકો :</label>
             </div>
             <div className="col">
-              <select
-                required
-                onChange={handleInput}
-                className="form-select"
-                value={data.taluko}
-              >
+              <select required ref={librarygam} className="form-select">
                 <option selected disabled value={data.taluko}>
                   {data.taluko}
                 </option>
@@ -598,8 +596,9 @@ function Motibhaiamin7result() {
               <select
                 required
                 onChange={handleInput}
-                className="form-select"
+                
                 value={data.currentyear}
+                className="form-select"
               >
                 <option selected disabled>
                   Select
@@ -620,9 +619,9 @@ function Motibhaiamin7result() {
             <div className="col">
               <select
                 required
+                value={data.finacialyear}
                 onChange={handleInput}
                 className="form-select"
-                value={data.finacialyear}
               >
                 <option selected>{year}</option>
                 <option>{year - 1}</option>
@@ -1299,7 +1298,7 @@ function Motibhaiamin7result() {
                   <option value={3}>35,001 થી 50,000સુધી</option>
                   <option value={2}>30,001 થી 35,000સુધી</option>
                   <option value={1}>30,000 થી 25,000સુધી</option>
-                  <option value={0}>25,000 થી ઓછું</option>
+                  <option value={0}>25,000 થી 0ઓછા</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1326,7 +1325,7 @@ function Motibhaiamin7result() {
                   <option value={3}>201 થી વધુ ઉમેરાયેલા હોય તો </option>
                   <option value={2}>101 થી 200 પુસ્તકો ઉમેરાયેલ હોય તો</option>
                   <option value={1}>100 પુસ્તકો ઉમેરાયેલ હોય તો</option>
-                  <option value={0}>100 થી ઓછા ઉમેરાયેલ હોય તો</option>
+                  <option value={0}>100 ઓછા ઉમેરાયેલ હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1428,7 +1427,7 @@ function Motibhaiamin7result() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગામની ભણેલ વસ્તીના પ્રમાણમાં સભ્યની ટકાવારી :
+                  ભણેલ વસ્તીના પ્રમાણમાં સભ્યની ટકાવારી :
                 </label>
               </div>
               <div className="col">
@@ -1456,7 +1455,7 @@ function Motibhaiamin7result() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  નોંધાયેલા સભ્યોના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :
+                  નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :
                 </label>
               </div>
               <div className="col">
@@ -1472,7 +1471,7 @@ function Motibhaiamin7result() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>24 થી વધુ</option>
+                  <option value={4}>24</option>
                   <option value={3}>18 થી 23</option>
                   <option value={2}>12 થી 17</option>
                   <option value={1}>6 થી 11</option>
@@ -1502,11 +1501,11 @@ function Motibhaiamin7result() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>100%</option>
-                  <option value={3}>75 થી 99%</option>
-                  <option value={2}>50 થી 74%</option>
-                  <option value={1}>25 થી 49%</option>
-                  <option value={0}>25% થી ઓછું</option>
+                  <option value={4}>10%</option>
+                  <option value={3}>8%</option>
+                  <option value={2}>6%</option>
+                  <option value={1}>4%</option>
+                  <option value={0}>3% થી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1590,7 +1589,7 @@ function Motibhaiamin7result() {
                   </option>
                   <option value={3}>વિષયવાર/લેખકવાર હોય તો</option>
                   <option value={1}>જનરલ રજીસ્ટર હોય તો</option>
-                  <option value={0}>ગ્રંથ ગોઠવણી અવ્યવસ્થિત હોય તો</option>
+                  <option value={0}>ગ્રંથ ગોઠવણી. અવ્યવસ્થિત હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2167,7 +2166,7 @@ function Motibhaiamin7result() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  નિયત મુદ્દતમાં ગ્રંથો પાછા ન આવે તો સ્મૃતિપત્રો લખાય છે? :
+                  નિયત મુદ્દતમાં પુસ્તક પાછા ન આવે તો સ્મૃતિપત્રો લખાય છે? :
                 </label>
               </div>
               <div className="col">
@@ -2236,10 +2235,10 @@ function Motibhaiamin7result() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>25001 કરતા વધુ</option>
-                  <option value={3}>15001 થી 25000હોય તો</option>
-                  <option value={2}>10001 થી 15000 હોય તો</option>
-                  <option value={1}>10000 થી ઓછા હોય તો</option>
+                  <option value={4}>૨૫,૦૦૧ કરતા વધુ</option>
+                  <option value={3}>૧૫૦૦૧ થી ૨૫૦૦૦ હોય તો</option>
+                  <option value={2}>૧૦૦૦૧ થી ૧૫૦૦૦ હોય તો</option>
+                  <option value={1}>૧૦૦૦૦ થી ઓછા હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2598,7 +2597,7 @@ function Motibhaiamin7result() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  સામાયિકોના છુટા અંકો વાચકોને ઇસ્યુ કરાય છે? :
+                  સામાયિકોના છુટા અંકો વેચાણ મુકાય છે ? :
                 </label>
               </div>
               <div className="col">
@@ -2625,7 +2624,7 @@ function Motibhaiamin7result() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  સામયિકના જુના અંકો વેચાણ મુકાય છે ?:
+                  સામયિકના જૂના અંકો વેચાણ મુકાય છે ?:
                 </label>
               </div>
               <div className="col">
@@ -2946,7 +2945,7 @@ function Motibhaiamin7result() {
                   <option value={3}>૩૦૦૧ થી ૪૦૦૦ સુધી</option>
                   <option value={2}>૨૦૦૧ થી ૩૦૦૦ સુધી</option>
                   <option value={1}>૧૦૦૧ થી ૨૦૦૦ સુધી</option>
-                  <option value={0}>૧૦૦૧ થી ૨૦૦૦ સુધી</option>
+                  <option value={0}>૧૦૦૧ થી ઓછા</option>
                 </select>
               </div>
               <div className="col-2">
@@ -3114,7 +3113,7 @@ function Motibhaiamin7result() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  મકાનમાં દરેક સ્થળે પુરતી સફાઈ રાખવામાં આવે છે કે કેમ? :
+                  મકાનમાં દરેક સ્થળે પૂરતી સફાઈ રાખવામાં આવે છે કે કેમ? :
                 </label>
               </div>
               <div className="col">
@@ -3372,7 +3371,7 @@ function Motibhaiamin7result() {
                     Select
                   </option>
                   <option value={2}>
-                    વ્યવસ્થાતંત્રની ધગશ અને વિશિષ્ટ યોજના હોય તો
+                    વ્યવસ્થાતંત્રની ધગશ અને વિશિષ્ટ યોજના હોઈ તો
                   </option>
                   <option value={1}>યોજના હોય પણ સંતોષકારક પ્રગતિ ન હોય</option>
                   <option value={0}>કોઈ યોજના ન હોય તો</option>
@@ -3438,7 +3437,7 @@ function Motibhaiamin7result() {
                 </div>
                 <div className=" col">
                   <button type="submit" className="btn btn-primary">
-                    Edit
+                    Submit
                   </button>
                 </div>
               </div>

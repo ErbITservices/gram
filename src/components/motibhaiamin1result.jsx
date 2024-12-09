@@ -391,7 +391,9 @@ function Motibhaiamin1result() {
         }
       );
       if (senddata.ok) {
-        console.log("done");
+          console.log("done");
+          
+        navigator("/Motibhaiaminresult");
         setdata({
           select_1: "",
           select_2: "",
