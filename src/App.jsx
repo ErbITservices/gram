@@ -61,6 +61,7 @@ import Motibhaiamin4result from "./components/Motibhaiamin4result";
 import Motibhaiamin5result from "./components/Motibhaiamin5result";
 import Motibhaiamin6result from "./components/Motibhaiamin6result";
 import Motibhaiamin7result from "./components/Motibhaiamin7result";
+import Motibhaiamin1result from "./components/motibhaiamin1result";
 
 import Motibhairesultlatter from "./components/Motibhairesultlatter";
 import Motibhaiaminbtnpage from "./pages/Motibhaiaminbtnpage";
