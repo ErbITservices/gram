@@ -120,6 +120,13 @@ function Motibhaiaminresult() {
       }
     }
   }
+  async function handledelete(id) {
+    const response = await axios.delete(
+      `https://gramgranthalay-backend.vercel.app/Motibhaiamin7/${id}`
+    );
+    console.log(response);
+    
+  }
 
   return (
     <>
@@ -144,13 +151,15 @@ function Motibhaiaminresult() {
                   <option selected value={""}>
                     Select
                   </option>
-                  <option value={"Motibhaiamin1"}>મહિલા બાળ</option>
-                  <option value={"Motibhaiamin2"}>શહેર ગ્રંથાલય</option>
-                  <option value={"Motibhaiamin3"}>શહેર શાખા નગરકક્ષા</option>
-                  <option value={"Motibhaiamin4"}>ગ્રામ ગ્રંથાલય</option>
-                  <option value={"Motibhaiamin5"}>નગરકક્ષા ૧</option>
-                  <option value={"Motibhaiamin6"}>નગરકક્ષા ૨</option>
-                  <option value={"Motibhaiamin7"}>વિશીષ્ટ લાઇબ્રેરી</option>
+                  <option value={"Motibhaiamin1"}>અંધજન ગ્રંથાલય</option>
+                  <option value={"Motibhaiamin2"}>શહેર ગ્રંથાલયો</option>
+                  <option value={"Motibhaiamin3"}>ગ્રામ ગ્રંથાલયો</option>
+                  <option value={"Motibhaiamin4"}>
+                    શહેર શાખા /નગરકક્ષા-૧ ગ્રંથાલય
+                  </option>
+                  <option value={"Motibhaiamin5"}>નગરકક્ષા-૨ ગ્રંથાલય</option>
+                  <option value={"Motibhaiamin6"}>મહિલા બાળ ગ્રંથાલય</option>
+                  <option value={"Motibhaiamin7"}>વિશિષ્ટ ગ્રંથાલય</option>
                 </select>
               </div>
               <div className=" col">
@@ -176,7 +185,7 @@ function Motibhaiaminresult() {
                       <th>Taluko</th>
                       <th>District</th>
                       <th>Marks</th>
-                      <th>Show Data</th>
+                      <th>Show / Edit Data</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -195,9 +204,20 @@ function Motibhaiaminresult() {
                               handleshowdata(i.lname);
                             }}
                           >
-                            Show
+                            Edit
                           </button>
                         </td>
+                        {/* <td>
+                          <button
+                            type="button"
+                            className="btn btn-primary"
+                            onClick={() => {
+                              handledelete(i._id);
+                            }}
+                          >
+                            Delete
+                          </button>
+                        </td> */}
                       </tr>
                     ))}
                   </tbody>
