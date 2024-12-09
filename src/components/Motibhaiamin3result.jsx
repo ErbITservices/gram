@@ -1,525 +1,30 @@
-import { useEffect, useRef, useState } from "react";
-import Footer from "../components/Footer";
+import { useRef, useState } from "react";
+import Footer from "./Footer";
 import axios from "axios";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 // import { AdapterDayjs } from "@mui/x-date-pickers-pro/AdapterDayjs";
 
 import { FadeLoader } from "react-spinners";
-import NavBar from "../components/NavBar";
+import NavBar from "./NavBar";
 import { Link, useLocation } from "react-router-dom";
+import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+// import "./motibhai.css";
 
-function Motibhaiamin1result() {
+function Motibhaiamin3result() {
   let count = 0;
   const d = new Date();
   let year = d.getFullYear();
   const currentyear = useRef();
-  const [AB, setAB] = useState({ A: "", B: "" });
   const [loader, setloader] = useState("false");
-  const districtlist = [
-    "AHMADABAD",
-    "AMRELI",
-    "ANAND",
-    "ARAVALLI",
-    "BANASKANTHA",
-    "BHARUCH",
-    "BHAVNAGAR",
-    "BOTAD",
-    "CHHOTA UDEPUR",
-    "DAHOD",
-    "DANGS",
-    "DEVBHUMI DWARKA",
-    "GANDHINAGAR",
-    "GIR SOMNATH",
-    "JAMNAGAR",
-    "JUNAGADH",
-    "KACHCHH",
-    "KHEDA",
-    "MAHESANA",
-    "MAHISAGAR",
-    "MORBI",
-    "NARMADA",
-    "NAVSARI",
-    "PANCHMAHALS",
-    "PATAN",
-    "PORBANDAR",
-    "RAJKOT",
-    "SABARKANTHA",
-    "SURAT",
-    "SURENDRANAGAR",
-    "TAPI",
-    "VADODARA",
-    "VALSAD",
-  ];
 
-  const AHMADABAD = [
-    "Ahmedabad City",
-    "Daskroi",
-    "Sanand",
-    "Bavla",
-    "Vijapur",
-    "Sankheda",
-    "Kotda Sangani",
-    "Naroda",
-    "Vastrapur",
-    "Bholav",
-    "Sarkhej",
-  ];
-  const AMRELI = [
-    "Amreli",
-    "Babra",
-    "Dhari",
-    "Lathi",
-    "Rajula",
-    "Savarkundla",
-    "Vallabhipur",
-    "Kunkavav",
-    "Khambhalida",
-    "Sihor",
-  ];
-  const ANAND = [
-    "Anand",
-    "Borsad",
-    "Khambhat",
-    "Sojitra",
-    "Tarapur",
-    "Vallabh Vidyanagar",
-  ];
+  const location = useLocation();
+  const data = location.state.data;
+  console.log("mihir");
 
-  const ARAVALLI = [
-    "Modasa",
-    "Malpur",
-    "Bayad",
-    "Kapadvanj",
-    "Dhansura",
-    "Garbada",
-  ];
-  const BANASKANTHA = [
-    "Deesa",
-    "Palanpur",
-    "Tharad",
-    "Danta",
-    "Vav",
-    "Lakhani",
-    "Kankrej",
-    "BanasKantha",
-  ];
-  const BHARUCH = [
-    "Bharuch",
-    "Ankleshwar",
-    "Dediapada",
-    "Jhagadia",
-    "Amod",
-    "Narmada",
-  ];
-  const BHAVNAGAR = [
-    "Bhavnagar",
-    "Bhavnagar Rural",
-    "Gadhada",
-    "Mahuva",
-    "Sihor",
-    "Palitana",
-    "Valia",
-    "Umrala",
-  ];
-  const BOTAD = ["Botad", "Barwala", "Ranpur", "Sihor"];
-  const CHHOTA_UDEPUR = ["Chhota Udepur", "Bodeli", "Pavi Jetpur", "Sukhsada"];
-  const DAHOD = [
-    "Dahod",
-    "Devgad Baria",
-    "Limkheda",
-    "Sanjeli",
-    "Dhanpur",
-    "Jhalod",
-  ];
-  const DANGS = ["Dangs", "Ahwa", "Saputara", "Subir"];
-  const DEVBHUMI_DWARKA = [
-    "Dwarka",
-    "Okhamandal",
-    "Bet Dwarka",
-    "Mundra",
-    "Kalyanpur",
-  ];
-  const GANDHINAGAR = ["Gandhinagar", "Kalol", "Mansa", "Dehgam", "Khanpur"];
-  const GIR_SOMNATH = [
-    "Veraval",
-    "Gir Gadhada",
-    "Talala",
-    "Sutrapada",
-    "Prabhas Patan",
-  ];
-  const JAMNAGAR = [
-    "Jamnagar",
-    "Kalavad",
-    "Jodiya",
-    "Khambhalia",
-    "Lakhata",
-    "Dhrol",
-    "Sihor",
-  ];
-  const JUNAGADH = [
-    "Junagadh",
-    "Manavadar",
-    "Keshod",
-    "Bavka",
-    "Upleta",
-    "Dharangadhra",
-    "Mendarada",
-    "Talala",
-  ];
-  const KACHCHH = [
-    "Bhuj",
-    "Anjar",
-    "Bhachau",
-    "Mandvi",
-    "Nakhatrana",
-    "Kutchhadi",
-    "Lakhpat",
-    "Mundra",
-    "Rapar",
-  ];
-  const KHEDA = ["Kheda", "Nadiad", "Matar", "Kapadvanj", "Mahudha", "Dholka"];
-  const MAHESANA = [
-    "Mehsana",
-    "Kadi",
-    "Unjha",
-    "Visnagar",
-    "Vadnagar",
-    "Ahmedabad",
-  ];
-  const MAHISAGAR = [
-    "Lunawada",
-    "Gadkhol",
-    "Mahisagar",
-    "Santrampur",
-    "Khodamba",
-  ];
-  const MORBI = [
-    "Morbi",
-    "Wankaner",
-    "Nawab Nagar",
-    "Maliya Hatina",
-    "Ranjit Nagar",
-    "Halvad",
-  ];
-  const NARMADA = ["Narmada", "Dediapada", "Jhagadia", "Rajpipla", "Sagbara"];
-  const NAVSARI = ["Navsari", "Bansda", "Gandevi", "Chikhli", "Khergam"];
-  const PANCHMAHALS = [
-    "Godhra",
-    "Halol",
-    "Madhya Gujarat",
-    "Pavagadh",
-    "Sankheda",
-    "Kalol",
-    "Sihor",
-  ];
-  const PATAN = ["Patan", "Sidhpur", "Harij", "Radhanpur", "Sihor"];
-  const PORBANDAR = [
-    "Porbandar",
-    "Madhavpur",
-    "Kutiyana",
-    "Ranavav",
-    "Bhanvad",
-  ];
-  const RAJKOT = [
-    "Rajkot",
-    "Upleta",
-    "Jasdan",
-    "Gondal",
-    "Paddhari",
-    "Kotda Sangani",
-    "Dhank",
-  ];
-  const SABARKANTHA = [
-    "Himmatnagar",
-    "Idar",
-    "Khedbrahma",
-    "Modasa",
-    "Prantij",
-    "Talod",
-    "Bayad",
-  ];
-  const SURAT = [
-    "Surat",
-    "G Surat",
-    "Bardoli",
-    "Olpad",
-    "Mandvi",
-    "Kamrej",
-    "Utran",
-    "Ichchhpur",
-  ];
-  const SURENDRANAGAR = [
-    "Surendranagar",
-    "Wadhwan",
-    "Dhrangadhra",
-    "Chotila",
-    "Muli",
-    "Ratanpur",
-    "Limbdi",
-    "Mandvi",
-  ];
-  const TAPI = ["Vyara", "Songadh", "Tapi", "Madhya Tapi"];
-  const VADODARA = [
-    "Vadodara",
-    "Savli",
-    "Karjan",
-    "Waghodia",
-    "Ankleshwar",
-    "Padra",
-    "Vaghodia",
-  ];
-  const VALSAD = ["Valsad", "Dharampur", "Pardi", "Vapi", "Umargam", "Khergam"];
-  const [listtaluka, setlisttaluka] = useState([]);
-
-  function handlesettaluka() {
-    if (librarydistrict.current.value === "AHMADABAD") {
-      setlisttaluka(AHMADABAD);
-    } else if (librarydistrict.current.value === "AMRELI")
-      setlisttaluka(AMRELI);
-    else if (librarydistrict.current.value === "ANAND") setlisttaluka(ANAND);
-    else if (librarydistrict.current.value === "ARAVALLI")
-      setlisttaluka(ARAVALLI);
-    else if (librarydistrict.current.value === "BANASKANTHA")
-      setlisttaluka(BANASKANTHA);
-    else if (librarydistrict.current.value === "BHARUCH")
-      setlisttaluka(BHARUCH);
-    else if (librarydistrict.current.value === "BHAVNAGAR")
-      setlisttaluka(BHAVNAGAR);
-    else if (librarydistrict.current.value === "BOTAD") setlisttaluka(BOTAD);
-    else if (librarydistrict.current.value === "CHHOTA UDEPUR")
-      setlisttaluka(CHHOTA_UDEPUR);
-    else if (librarydistrict.current.value === "DAHOD") setlisttaluka(DAHOD);
-    else if (librarydistrict.current.value === "DANGS") setlisttaluka(DANGS);
-    else if (librarydistrict.current.value === "DEVBHUMI DWARKA")
-      setlisttaluka(DEVBHUMI_DWARKA);
-    else if (librarydistrict.current.value === "GANDHINAGAR")
-      setlisttaluka(GANDHINAGAR);
-    else if (librarydistrict.current.value === "GIR SOMNATH")
-      setlisttaluka(GIR_SOMNATH);
-    else if (librarydistrict.current.value === "JAMNAGAR")
-      setlisttaluka(JAMNAGAR);
-    else if (librarydistrict.current.value === "JUNAGADH")
-      setlisttaluka(JUNAGADH);
-    else if (librarydistrict.current.value === "KHEDA") setlisttaluka(KHEDA);
-    else if (librarydistrict.current.value === "KACHCHH")
-      setlisttaluka(KACHCHH);
-    else if (librarydistrict.current.value === "MAHESANA")
-      setlisttaluka(MAHESANA);
-    else if (librarydistrict.current.value === "MAHISAGAR")
-      setlisttaluka(MAHISAGAR);
-    else if (librarydistrict.current.value === "MORBI") setlisttaluka(MORBI);
-    else if (librarydistrict.current.value === "NARMADA")
-      setlisttaluka(NARMADA);
-    else if (librarydistrict.current.value === "NAVSARI")
-      setlisttaluka(NAVSARI);
-    else if (librarydistrict.current.value === "PANCHMAHALS")
-      setlisttaluka(PANCHMAHALS);
-    else if (librarydistrict.current.value === "PATAN") setlisttaluka(PATAN);
-    else if (librarydistrict.current.value === "PORBANDAR")
-      setlisttaluka(PORBANDAR);
-    else if (librarydistrict.current.value === "RAJKOT") setlisttaluka(RAJKOT);
-    else if (librarydistrict.current.value === "SABARKANTHA")
-      setlisttaluka(SABARKANTHA);
-    else if (librarydistrict.current.value === "SURAT") setlisttaluka(SURAT);
-    else if (librarydistrict.current.value === "SURENDRANAGAR")
-      setlisttaluka(SURENDRANAGAR);
-    else if (librarydistrict.current.value === "TAPI") setlisttaluka(TAPI);
-    else if (librarydistrict.current.value === "VADODARA")
-      setlisttaluka(VADODARA);
-    else if (librarydistrict.current.value === "VALSAD") setlisttaluka(VALSAD);
-  }
-
-    const location = useLocation();
-  const [data, setdata] = useState(location.state.data[0]);
   console.log(data);
-  
-  
-  //  useEffect(() => {
-  //   const dataget = async () => {
-      
-  //   const location = useLocation();
-  //   setdata(location.state.data)
-  //   };
-  //   dataget();
-  // }, []);
-  
-
-  const handleInput = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setdata({
-      ...data,
-      [name]: value,
-    });
-    console.log(data);
-  };
-  const handlpercentcalculater = (e) => {
-    console.log(e.target.value);
-
-    const name = e.target.name;
-    const value = e.target.value;
-    setAB({
-      ...AB,
-      [name]: value,
-    });
-    console.log(AB);
-  };
-
-  const libraryname = useRef();
-  const librarygam = useRef();
-  const librarydistrict = useRef();
-  const finacialyear = useRef();
-
-  const [calculate, setcalculate] = useState();
-  async function handleSubmit() {
-    for (let index = 1; index <= 95; index++) {
-      count += Number(data["select_" + index]);
-    }
-    console.log(count);
-    setloader("true");
-    try {
-      console.log(data._id);
-      const senddata = await fetch(
-        `https://gram-back.vercel.app/Motibhaiamin1/${data._id}`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            
-            marks: count,
-            ...data,
-          }),
-        }
-      );
-      if (senddata.ok) {
-        console.log("done");
-        setdata({
-          select_1: "",
-          select_2: "",
-          select_3: "",
-          select_4: "",
-          select_5: "",
-          select_6: "",
-          select_7: "",
-          select_8: "",
-          select_9: "",
-          select_10: "",
-          select_11: "",
-          select_12: "",
-          select_13: "",
-          select_14: "",
-          select_15: "",
-          select_16: "",
-          select_17: "",
-          select_18: "",
-          select_19: "",
-          select_20: "",
-          select_21: "",
-          select_22: "",
-          select_23: "",
-          select_24: "",
-          select_25: "",
-          select_26: "",
-          select_27: "",
-          select_28: "",
-          select_29: "",
-          select_30: "",
-          select_31: "",
-          select_32: "",
-          select_33: "",
-          select_34: "",
-          select_35: "",
-          select_36: "",
-          select_37: "",
-          select_38: "",
-          select_39: "",
-          select_40: "",
-          select_41: "",
-          select_42: "",
-          select_43: "",
-          select_44: "",
-          select_45: "",
-          select_46: "",
-          select_47: "",
-          select_48: "",
-          select_49: "",
-          select_50: "",
-          select_51: "",
-          select_52: "",
-          select_53: "",
-          select_54: "",
-          select_55: "",
-          select_56: "",
-          select_57: "",
-          select_58: "",
-          select_59: "",
-          select_60: "",
-          select_61: "",
-          select_62: "",
-          select_63: "",
-          select_64: "",
-          select_65: "",
-          select_66: "",
-          select_67: "",
-          select_68: "",
-          select_69: "",
-          select_70: "",
-          select_71: "",
-          select_72: "",
-          select_73: "",
-          select_74: "",
-          select_75: "",
-          select_76: "",
-          select_77: "",
-          select_78: "",
-          select_79: "",
-          select_80: "",
-          select_81: "",
-          select_82: "",
-          select_83: "",
-          select_84: "",
-          select_85: "",
-          select_86: "",
-          select_87: "",
-          select_88: "",
-          select_89: "",
-          select_90: "",
-          select_91: "",
-          select_92: "",
-          select_93: "",
-          select_94: "",
-          select_95: "",
-          select_96: "",
-          select_97: "",
-          select_98: "",
-        });
-        setloader("false");
-      } else {
-        setloader("false");
-        alert("data alredy submited");
-      }
-    } catch (error) {
-      console.log("error");
-      console.log(error);
-      alert("data not submited try again");
-      setloader("false");
-    }
-  }
-  function handlecalculate() {
-    setloader("true");
-    for (let index = 1; index <= 95; index++) {
-      count += Number(data["select_" + index]);
-    }
-
-    setloader("false");
-    setcalculate(count);
-  }
 
   return (
     <>
-      <NavBar />
       {loader === "true" && (
         <div className="loader">
           <h1>Loading...</h1>
@@ -527,11 +32,11 @@ function Motibhaiamin1result() {
         </div>
       )}
       {loader != "true" && (
-        <form className="form " onSubmit={handleSubmit}>
+        <form className="form ">
           <div>
             <h1>
-              સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એભાભાવોર્ડ અને ઉત્તમ ગ્રંથાલય
-              સેવા પ્રમાણપત્ર માટેની યોજના અન્વય અંધજન ગ્રંથાલયનો માપદંડો
+              સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એભાવોર્ડ અને ઉત્તમ ગ્રંથાલય
+              સેવા પ્રમાણપત્ર માટેની યોજના અન્વય મહિલા બાળ ગ્રંથાલયનો માપદંડો
             </h1>{" "}
           </div>
 
@@ -546,8 +51,8 @@ function Motibhaiamin1result() {
                 required
                 type="text"
                 className="form-control"
+                value={data[0].lname}
                 autoComplete="off"
-                value={data.lname}
               />
             </div>
           </div>
@@ -556,42 +61,20 @@ function Motibhaiamin1result() {
               <label className="col-sm-10 col-form-label">જિલ્લો :</label>
             </div>
             <div className="col">
-              <select
-                required
-                onChange={handlesettaluka}
-                className="form-select"
-                
-                value={data.district}
-              >
+              <select required className="form-select" value={data[0].district}>
                 <option selected disabled value="">
-                  Select
+                  {data[0].district}
                 </option>
-                {districtlist.map((e, index) => (
-                  <option key={index} value={e}>
-                    {e}
-                  </option>
-                ))}
               </select>
             </div>
             <div className=" col-2">
               <label className="col-sm-10 col-form-label">તાલુકો :</label>
             </div>
             <div className="col">
-              <select
-                required
-                onChange={handleInput}
-                className="form-select"
-                
-                value={data.taluko}
-              >
-                <option selected disabled value={data.taluko}>
-                  {data.taluko}
+              <select required className="form-select" value={data[0].taluko}>
+                <option selected disabled value="">
+                  {data[0].taluko}
                 </option>
-                {listtaluka.map((e, index) => (
-                  <option key={index} value={e}>
-                    {e}
-                  </option>
-                ))}
               </select>
             </div>
           </div>
@@ -602,10 +85,8 @@ function Motibhaiamin1result() {
             <div className="col">
               <select
                 required
-                onChange={handleInput}
                 className="form-select"
-                
-                value={data.currentyear}
+                value={data[0].currentyear}
               >
                 <option selected disabled>
                   Select
@@ -624,13 +105,7 @@ function Motibhaiamin1result() {
               </label>
             </div>
             <div className="col">
-              <select
-                required
-                onChange={handleInput}
-                className="form-select"
-                
-                value={data.finacialyear}
-              >
+              <select required className="form-select">
                 <option selected>{year}</option>
                 <option>{year - 1}</option>
                 <option>{year - 2}</option>
@@ -652,21 +127,19 @@ function Motibhaiamin1result() {
               <div className="col">
                 <select
                   required
-                  onClick={handleInput}
                   name="select_1"
-                  value={data.select_1}
-                  onChange={handleInput}
+                  value={data[0].select_1}
                   className="form-select"
                 >
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>સહકારી સંસ્થા કે ટ્રસ્ટ હોય તો</option>
-                  <option value={1}>સ્થાનિક સ્વરાજ્યની સંસ્થા હોય તો</option>
+                  <option value={1}>સહકારી સંસ્થા કે ટ્રસ્ટ હોય તો</option>
+                  <option value={2}>સ્થાનિક સ્વરાજ્યની સંસ્થા હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_1}</h4>
+                <h4>{data[0].select_1}</h4>
               </div>
             </div>
             <div className="row mb-3 col-13 align-items-center">
@@ -686,10 +159,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_2"
-                  value={data.select_2}
-                  onChange={handleInput}
+                  value={data[0].select_2}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -700,7 +171,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_2}</h4>
+                <h4>{data[0].select_2}</h4>
               </div>
             </div>
             <div className="row mb-3 col-13 align-items-center">
@@ -722,10 +193,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
-                  name="select_97"
-                  value={data.select_97}
-                  onChange={handleInput}
+                  name="select_3"
+                  value={data[0].select_97}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -739,7 +208,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_97}</h4>
+                <h4>{data[0].select_3}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -751,10 +220,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
-                  name="select_98"
-                  value={data.select_98}
-                  onChange={handleInput}
+                  name="select_4"
+                  value={data[0].select_98}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -768,7 +235,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_98}</h4>
+                <h4>{data[0].select_4}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -783,10 +250,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_3"
-                  value={data.select_3}
-                  onChange={handleInput}
+                  value={data[0].select_3}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -800,7 +265,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_3}</h4>
+                <h4>{data[0].select_3}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -812,10 +277,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_4"
-                  value={data.select_4}
-                  onChange={handleInput}
+                  value={data[0].select_4}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -829,7 +292,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_4}</h4>
+                <h4>{data[0].select_4}</h4>
               </div>
             </div>
             <div className="row mb-3 col-13 align-items-center">
@@ -849,10 +312,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_5"
-                  value={data.select_5}
-                  onChange={handleInput}
+                  value={data[0].select_5}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -868,7 +329,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_5}</h4>
+                <h4>{data[0].select_5}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -879,10 +340,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_6"
-                  value={data.select_6}
-                  onChange={handleInput}
+                  value={data[0].select_6}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -895,7 +354,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_6}</h4>
+                <h4>{data[0].select_6}</h4>
               </div>
             </div>
 
@@ -909,10 +368,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_7"
-                  value={data.select_7}
-                  onChange={handleInput}
+                  value={data[0].select_7}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -924,7 +381,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_7}</h4>
+                <h4>{data[0].select_7}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -935,10 +392,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_8"
-                  value={data.select_8}
-                  onChange={handleInput}
+                  value={data[0].select_8}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -951,7 +406,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_8}</h4>
+                <h4>{data[0].select_8}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -964,10 +419,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_9"
-                  value={data.select_9}
-                  onChange={handleInput}
+                  value={data[0].select_9}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -978,7 +431,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_9}</h4>
+                <h4>{data[0].select_9}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -990,10 +443,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_10"
-                  value={data.select_10}
-                  onChange={handleInput}
+                  value={data[0].select_10}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1004,7 +455,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_10}</h4>
+                <h4>{data[0].select_10}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -1017,10 +468,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_11"
-                  value={data.select_11}
-                  onChange={handleInput}
+                  value={data[0].select_11}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1031,7 +480,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_11}</h4>
+                <h4>{data[0].select_11}</h4>
               </div>
             </div>
             <div className="row mb-3 col-13 align-items-center">
@@ -1051,10 +500,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_12"
-                  value={data.select_12}
-                  onChange={handleInput}
+                  value={data[0].select_12}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1065,7 +512,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_12}</h4>
+                <h4>{data[0].select_12}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -1077,10 +524,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_13"
-                  value={data.select_13}
-                  onChange={handleInput}
+                  value={data[0].select_13}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1091,7 +536,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_13}</h4>
+                <h4>{data[0].select_13}</h4>
               </div>
             </div>
             <div className="row mb-3 col-13 align-items-center">
@@ -1111,10 +556,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_14"
-                  value={data.select_14}
-                  onChange={handleInput}
+                  value={data[0].select_14}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1125,7 +568,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_14}</h4>
+                <h4>{data[0].select_14}</h4>
               </div>
             </div>
             <div className="row mb-3 col-13 align-items-center">
@@ -1145,10 +588,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_15"
-                  value={data.select_15}
-                  onChange={handleInput}
+                  value={data[0].select_15}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1161,7 +602,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_15}</h4>
+                <h4>{data[0].select_15}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -1172,10 +613,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_16"
-                  value={data.select_16}
-                  onChange={handleInput}
+                  value={data[0].select_16}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1188,7 +627,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_16}</h4>
+                <h4>{data[0].select_16}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -1201,10 +640,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_17"
-                  value={data.select_17}
-                  onChange={handleInput}
+                  value={data[0].select_17}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1216,7 +653,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_17}</h4>
+                <h4>{data[0].select_17}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -1227,10 +664,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_18"
-                  value={data.select_18}
-                  onChange={handleInput}
+                  value={data[0].select_18}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1244,7 +679,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_18}</h4>
+                <h4>{data[0].select_18}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -1257,10 +692,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_19"
-                  value={data.select_19}
-                  onChange={handleInput}
+                  value={data[0].select_19}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1269,11 +702,11 @@ function Motibhaiamin1result() {
                   <option value={4}>351 થી 365</option>
                   <option value={3}>321 થી 350</option>
                   <option value={2}>301 થી 320</option>
-                  <option value={0}>300 થી ઓછું</option>
+                  <option value={0}>300 થી less then 300</option>
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_19}</h4>
+                <h4>{data[0].select_19}</h4>
               </div>
             </div>
             <div className="row mb-3 col-13 align-items-center">
@@ -1293,10 +726,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_20"
-                  value={data.select_20}
-                  onChange={handleInput}
+                  value={data[0].select_20}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1306,11 +737,11 @@ function Motibhaiamin1result() {
                   <option value={3}>35,001 થી 50,000સુધી</option>
                   <option value={2}>30,001 થી 35,000સુધી</option>
                   <option value={1}>30,000 થી 25,000સુધી</option>
-                  <option value={0}>25,000 થી ઓછું</option>
+                  <option value={0}>25,000 થી 0ઓછા</option>
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_20}</h4>
+                <h4>{data[0].select_20}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -1321,10 +752,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_21"
-                  value={data.select_21}
-                  onChange={handleInput}
+                  value={data[0].select_21}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1333,49 +762,14 @@ function Motibhaiamin1result() {
                   <option value={3}>201 થી વધુ ઉમેરાયેલા હોય તો </option>
                   <option value={2}>101 થી 200 પુસ્તકો ઉમેરાયેલ હોય તો</option>
                   <option value={1}>100 પુસ્તકો ઉમેરાયેલ હોય તો</option>
-                  <option value={0}>100 થી ઓછા ઉમેરાયેલ હોય તો</option>
+                  <option value={0}>100 ઓછા ઉમેરાયેલ હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_21}</h4>
+                <h4>{data[0].select_21}</h4>
               </div>
             </div>
 
-            <div className="row mb-3 col-sm-13 align-items-center">
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  ટકાવારી કેલ્ક્યુલેટર :
-                </label>
-              </div>
-
-              <div className="col">
-                <input
-                  type="number"
-                  className="form-control"
-                  id="A"
-                  autoComplete="off"
-                  name="A"
-                  value={AB.A}
-                  onChange={handlpercentcalculater}
-                />
-              </div>
-              <div className="col">
-                <input
-                  type="number"
-                  className="form-control"
-                  id="B"
-                  autoComplete="off"
-                  name="B"
-                  value={AB.B}
-                  onChange={handlpercentcalculater}
-                />
-              </div>
-              <div className="col-3">
-                {(Number(AB.B) * 100) / Number(AB.A) >= 0 && (
-                  <h4>{(Number(AB.B) * 100) / Number(AB.A)}%</h4>
-                )}
-              </div>
-            </div>
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -1386,10 +780,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_22"
-                  value={data.select_22}
-                  onChange={handleInput}
+                  value={data[0].select_22}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1401,7 +793,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_22}</h4>
+                <h4>{data[0].select_22}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -1412,10 +804,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_23"
-                  value={data.select_23}
-                  onChange={handleInput}
+                  value={data[0].select_23}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1425,27 +815,25 @@ function Motibhaiamin1result() {
                   <option value={3}>30 થી 39%</option>
                   <option value={2}>15 થી 29%</option>
                   <option value={1}>5 થી 14%</option>
-                  <option value={0}>5% થી ઓછું</option>
+                  <option value={0}>5% થી</option>
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_23}</h4>
+                <h4>{data[0].select_23}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગામની ભણેલ વસ્તીના પ્રમાણમાં સભ્યની ટકાવારી :
+                  ભણેલ વસ્તીના પ્રમાણમાં સભ્યની ટકાવારી :
                 </label>
               </div>
               <div className="col">
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_24"
-                  value={data.select_24}
-                  onChange={handleInput}
+                  value={data[0].select_24}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1459,27 +847,25 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_24}</h4>
+                <h4>{data[0].select_24}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  નોંધાયેલા સભ્યોના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :
+                  નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :
                 </label>
               </div>
               <div className="col">
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_25"
-                  value={data.select_25}
-                  onChange={handleInput}
+                  value={data[0].select_25}
                   className="form-select"
                 >
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>24 થી વધુ</option>
+                  <option value={4}>24</option>
                   <option value={3}>18 થી 23</option>
                   <option value={2}>12 થી 17</option>
                   <option value={1}>6 થી 11</option>
@@ -1487,7 +873,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_25}</h4>
+                <h4>{data[0].select_25}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -1500,38 +886,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_26"
-                  value={data.select_26}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={4}>100%</option>
-                  <option value={3}>75 થી 99%</option>
-                  <option value={2}>50 થી 74%</option>
-                  <option value={1}>25 થી 49%</option>
-                  <option value={0}>25% થી ઓછું</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_26}</h4>
-              </div>
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  ગામની ભણેલ વસ્તીના પ્રમાણમાં ઘરે આપેલ ગ્રંથોની ટકાવારી :
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_27"
-                  value={data.select_27}
-                  onChange={handleInput}
+                  value={data[0].select_26}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1545,7 +901,33 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_27}</h4>
+                <h4>{data[0].select_26}</h4>
+              </div>
+              <div className=" col">
+                <label className="col-sm-10 col-form-label">
+                  ગામની ભણેલ વસ્તીના પ્રમાણમાં ઘરે આપેલ ગ્રંથોની ટકાવારી :
+                </label>
+              </div>
+              <div className="col">
+                <select
+                  required
+                  id="inputState"
+                  name="select_27"
+                  value={data[0].select_27}
+                  className="form-select"
+                >
+                  <option selected disabled value="">
+                    Select
+                  </option>
+                  <option value={4}>10%</option>
+                  <option value={3}>8%</option>
+                  <option value={2}>6%</option>
+                  <option value={1}>4%</option>
+                  <option value={0}>3% થી ઓછું</option>
+                </select>
+              </div>
+              <div className="col-2">
+                <h4>{data[0].select_27}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -1558,10 +940,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_28"
-                  value={data.select_28}
-                  onChange={handleInput}
+                  value={data[0].select_28}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1571,11 +951,11 @@ function Motibhaiamin1result() {
                   <option value={3}>80%</option>
                   <option value={2}>60%</option>
                   <option value={1}>30%</option>
-                  <option value={0}>30% થી ઓછું</option>
+                  <option value={0}>option 2</option>
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_28}</h4>
+                <h4>{data[0].select_28}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -1586,22 +966,20 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_29"
-                  value={data.select_29}
-                  onChange={handleInput}
+                  value={data[0].select_29}
                   className="form-select"
                 >
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}>વિષયવાર/લેખકવાર હોય તો</option>
+                  <option value={3}>વિષયવાર/લેખનવાર હોય તો</option>
                   <option value={1}>જનરલ રજીસ્ટર હોય તો</option>
-                  <option value={0}>ગ્રંથ ગોઠવણી અવ્યવસ્થિત હોય તો</option>
+                  <option value={0}>ગ્રંથ ગોઠવણી. અવ્યવસ્થિત હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_29}</h4>
+                <h4>{data[0].select_29}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -1614,10 +992,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_30"
-                  value={data.select_30}
-                  onChange={handleInput}
+                  value={data[0].select_30}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1628,7 +1004,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_30}</h4>
+                <h4>{data[0].select_30}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -1640,10 +1016,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_31"
-                  value={data.select_31}
-                  onChange={handleInput}
+                  value={data[0].select_31}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1654,7 +1028,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_31}</h4>
+                <h4>{data[0].select_31}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -1667,10 +1041,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_34"
-                  value={data.select_34}
-                  onChange={handleInput}
+                  value={data[0].select_34}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1681,7 +1053,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_34}</h4>
+                <h4>{data[0].select_34}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -1692,10 +1064,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_35"
-                  value={data.select_35}
-                  onChange={handleInput}
+                  value={data[0].select_35}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1706,7 +1076,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_35}</h4>
+                <h4>{data[0].select_35}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -1722,10 +1092,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_36"
-                  value={data.select_36}
-                  onChange={handleInput}
+                  value={data[0].select_36}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1739,7 +1107,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_36}</h4>
+                <h4>{data[0].select_36}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -1751,10 +1119,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_37"
-                  value={data.select_37}
-                  onChange={handleInput}
+                  value={data[0].select_37}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1765,7 +1131,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_37}</h4>
+                <h4>{data[0].select_37}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -1778,10 +1144,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_38"
-                  value={data.select_38}
-                  onChange={handleInput}
+                  value={data[0].select_38}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1792,21 +1156,19 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_38}</h4>
+                <h4>{data[0].select_38}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  પુસ્તક ખરીદી માટે વિક્રેતાઓ પાસેથી ભાભાવો મંગાવાય છે? :
+                  પુસ્તક ખરીદી માટે વિક્રેતાઓ પાસેથી ભાવો મંગાવાય છે? :
                 </label>
               </div>
               <div className="col">
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_39"
-                  value={data.select_39}
-                  onChange={handleInput}
+                  value={data[0].select_39}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1817,7 +1179,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_39}</h4>
+                <h4>{data[0].select_39}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -1830,10 +1192,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_40"
-                  value={data.select_40}
-                  onChange={handleInput}
+                  value={data[0].select_40}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1844,7 +1204,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_40}</h4>
+                <h4>{data[0].select_40}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -1855,10 +1215,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_41"
-                  value={data.select_41}
-                  onChange={handleInput}
+                  value={data[0].select_41}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1869,24 +1227,21 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_41}</h4>
+                <h4>{data[0].select_41}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  પુસ્તકોની નોંધણી નિયત નિયત નમૂનાના પરિગ્રહણ રજીસ્ટરમાં થાય છે?
-                  :
+                  પુસ્તકોની નોંધણી નિયત નમૂનાના પરિગ્રહણ રજીસ્ટરમાં થાય છે? :
                 </label>
               </div>
               <div className="col">
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_42"
-                  value={data.select_42}
-                  onChange={handleInput}
+                  value={data[0].select_42}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1898,7 +1253,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_42}</h4>
+                <h4>{data[0].select_42}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -1909,10 +1264,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_43"
-                  value={data.select_43}
-                  onChange={handleInput}
+                  value={data[0].select_43}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1923,7 +1276,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_43}</h4>
+                <h4>{data[0].select_43}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -1936,10 +1289,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_44"
-                  value={data.select_44}
-                  onChange={handleInput}
+                  value={data[0].select_44}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1953,7 +1304,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_44}</h4>
+                <h4>{data[0].select_44}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -1965,10 +1316,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_32"
-                  value={data.select_32}
-                  onChange={handleInput}
+                  value={data[0].select_32}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -1979,7 +1328,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_32}</h4>
+                <h4>{data[0].select_32}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -1993,10 +1342,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_33"
-                  value={data.select_33}
-                  onChange={handleInput}
+                  value={data[0].select_33}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2008,7 +1355,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_33}</h4>
+                <h4>{data[0].select_33}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2019,10 +1366,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_45"
-                  value={data.select_45}
-                  onChange={handleInput}
+                  value={data[0].select_45}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2033,7 +1378,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_45}</h4>
+                <h4>{data[0].select_45}</h4>
               </div>
             </div>
 
@@ -2048,10 +1393,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_46"
-                  value={data.select_46}
-                  onChange={handleInput}
+                  value={data[0].select_46}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2064,7 +1407,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_46}</h4>
+                <h4>{data[0].select_46}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2075,10 +1418,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_47"
-                  value={data.select_47}
-                  onChange={handleInput}
+                  value={data[0].select_47}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2089,7 +1430,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_47}</h4>
+                <h4>{data[0].select_47}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -2103,10 +1444,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_48"
-                  value={data.select_48}
-                  onChange={handleInput}
+                  value={data[0].select_48}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2118,7 +1457,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_48}</h4>
+                <h4>{data[0].select_48}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2129,10 +1468,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_49"
-                  value={data.select_49}
-                  onChange={handleInput}
+                  value={data[0].select_49}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2143,7 +1480,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_49}</h4>
+                <h4>{data[0].select_49}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -2156,10 +1493,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_50"
-                  value={data.select_50}
-                  onChange={handleInput}
+                  value={data[0].select_50}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2170,21 +1505,19 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_50}</h4>
+                <h4>{data[0].select_50}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  નિયત મુદ્દતમાં ગ્રંથો પાછા ન આવે તો સ્મૃતિપત્રો લખાય છે? :
+                  નિયત મુદ્દતમાં પુસ્તક પાછા ન આવે તો સ્મૃતિપત્રો લખાય છે? :
                 </label>
               </div>
               <div className="col">
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_51"
-                  value={data.select_51}
-                  onChange={handleInput}
+                  value={data[0].select_51}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2195,7 +1528,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_51}</h4>
+                <h4>{data[0].select_51}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -2209,10 +1542,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_52"
-                  value={data.select_52}
-                  onChange={handleInput}
+                  value={data[0].select_52}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2223,7 +1554,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_52}</h4>
+                <h4>{data[0].select_52}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2234,23 +1565,21 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_53"
-                  value={data.select_53}
-                  onChange={handleInput}
+                  value={data[0].select_53}
                   className="form-select"
                 >
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>25001 કરતા વધુ</option>
-                  <option value={3}>15001 થી 25000હોય તો</option>
-                  <option value={2}>10001 થી 15000 હોય તો</option>
-                  <option value={1}>10000 થી ઓછા હોય તો</option>
+                  <option value={4}>૨૫,૦૦૧ કરતા વધુ</option>
+                  <option value={3}>૧૫૦૦૧ થી ૨૫૦૦૦ હોય તો</option>
+                  <option value={2}>૧૦૦૦૧ થી ૧૫૦૦૦ હોય તો</option>
+                  <option value={1}>૧૦૦૦૦ થી ઓછા હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_53}</h4>
+                <h4>{data[0].select_53}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -2263,10 +1592,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_54"
-                  value={data.select_54}
-                  onChange={handleInput}
+                  value={data[0].select_54}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2277,7 +1604,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_54}</h4>
+                <h4>{data[0].select_54}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2288,10 +1615,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_55"
-                  value={data.select_55}
-                  onChange={handleInput}
+                  value={data[0].select_55}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2302,7 +1627,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_55}</h4>
+                <h4>{data[0].select_55}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -2315,10 +1640,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_56"
-                  value={data.select_56}
-                  onChange={handleInput}
+                  value={data[0].select_56}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2330,7 +1653,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_56}</h4>
+                <h4>{data[0].select_56}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2341,10 +1664,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_57"
-                  value={data.select_57}
-                  onChange={handleInput}
+                  value={data[0].select_57}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2355,7 +1676,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_57}</h4>
+                <h4>{data[0].select_57}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -2368,10 +1689,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_58"
-                  value={data.select_58}
-                  onChange={handleInput}
+                  value={data[0].select_58}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2384,7 +1703,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_58}</h4>
+                <h4>{data[0].select_58}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2395,10 +1714,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_59"
-                  value={data.select_59}
-                  onChange={handleInput}
+                  value={data[0].select_59}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2409,7 +1726,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_59}</h4>
+                <h4>{data[0].select_59}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -2422,10 +1739,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_60"
-                  value={data.select_60}
-                  onChange={handleInput}
+                  value={data[0].select_60}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2437,7 +1752,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_60}</h4>
+                <h4>{data[0].select_60}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2448,10 +1763,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_61"
-                  value={data.select_61}
-                  onChange={handleInput}
+                  value={data[0].select_61}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2464,7 +1777,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_61}</h4>
+                <h4>{data[0].select_61}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -2477,10 +1790,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_62"
-                  value={data.select_62}
-                  onChange={handleInput}
+                  value={data[0].select_62}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2493,7 +1804,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_62}</h4>
+                <h4>{data[0].select_62}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2504,10 +1815,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_63"
-                  value={data.select_63}
-                  onChange={handleInput}
+                  value={data[0].select_63}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2520,7 +1829,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_63}</h4>
+                <h4>{data[0].select_63}</h4>
               </div>
             </div>
 
@@ -2534,10 +1843,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_64"
-                  value={data.select_64}
-                  onChange={handleInput}
+                  value={data[0].select_64}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2548,7 +1855,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_64}</h4>
+                <h4>{data[0].select_64}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2560,10 +1867,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_65"
-                  value={data.select_65}
-                  onChange={handleInput}
+                  value={data[0].select_65}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2574,7 +1879,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_65}</h4>
+                <h4>{data[0].select_65}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -2587,10 +1892,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_66"
-                  value={data.select_66}
-                  onChange={handleInput}
+                  value={data[0].select_66}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2601,21 +1904,19 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_66}</h4>
+                <h4>{data[0].select_66}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  સામાયિકોના છુટા અંકો વાચકોને ઇસ્યુ કરાય છે? :
+                  સામયિકના જૂના અંકો વેચાણ મુકાય છે ? :
                 </label>
               </div>
               <div className="col">
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_67"
-                  value={data.select_67}
-                  onChange={handleInput}
+                  value={data[0].select_67}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2626,23 +1927,21 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_67}</h4>
+                <h4>{data[0].select_67}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  સામયિકના જુના અંકો વેચાણ મુકાય છે ?:
+                  સામયિકના જૂના અંકો વેચાણ મુકાય છે ?:
                 </label>
               </div>
               <div className="col">
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_68"
-                  value={data.select_68}
-                  onChange={handleInput}
+                  value={data[0].select_68}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2655,7 +1954,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_68}</h4>
+                <h4>{data[0].select_68}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2666,10 +1965,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_69"
-                  value={data.select_69}
-                  onChange={handleInput}
+                  value={data[0].select_69}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2680,7 +1977,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_69}</h4>
+                <h4>{data[0].select_69}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -2693,10 +1990,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_70"
-                  value={data.select_70}
-                  onChange={handleInput}
+                  value={data[0].select_70}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2707,7 +2002,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_70}</h4>
+                <h4>{data[0].select_70}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2718,10 +2013,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_71"
-                  value={data.select_71}
-                  onChange={handleInput}
+                  value={data[0].select_71}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2732,7 +2025,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_71}</h4>
+                <h4>{data[0].select_71}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -2745,10 +2038,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_72"
-                  value={data.select_72}
-                  onChange={handleInput}
+                  value={data[0].select_72}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2759,7 +2050,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_72}</h4>
+                <h4>{data[0].select_72}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2771,10 +2062,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_73"
-                  value={data.select_73}
-                  onChange={handleInput}
+                  value={data[0].select_73}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2787,7 +2076,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_73}</h4>
+                <h4>{data[0].select_73}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -2800,10 +2089,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_96"
-                  value={data.select_96}
-                  onChange={handleInput}
+                  value={data[0].select_96}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2814,7 +2101,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_96}</h4>
+                <h4>{data[0].select_96}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -2827,10 +2114,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_74"
-                  value={data.select_74}
-                  onChange={handleInput}
+                  value={data[0].select_74}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2843,7 +2128,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_74}</h4>
+                <h4>{data[0].select_74}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2854,10 +2139,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_75"
-                  value={data.select_75}
-                  onChange={handleInput}
+                  value={data[0].select_75}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2871,7 +2154,7 @@ function Motibhaiamin1result() {
               </div>
 
               <div className="col-2">
-                <h4>{data.select_75}</h4>
+                <h4>{data[0].select_75}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -2884,10 +2167,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_76"
-                  value={data.select_76}
-                  onChange={handleInput}
+                  value={data[0].select_76}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2900,7 +2181,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_76}</h4>
+                <h4>{data[0].select_76}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2911,10 +2192,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_77"
-                  value={data.select_77}
-                  onChange={handleInput}
+                  value={data[0].select_77}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2927,7 +2206,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_77}</h4>
+                <h4>{data[0].select_77}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -2940,10 +2219,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_78"
-                  value={data.select_78}
-                  onChange={handleInput}
+                  value={data[0].select_78}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2957,7 +2234,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_78}</h4>
+                <h4>{data[0].select_78}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -2968,10 +2245,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_79"
-                  value={data.select_79}
-                  onChange={handleInput}
+                  value={data[0].select_79}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -2982,7 +2257,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_79}</h4>
+                <h4>{data[0].select_79}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -2995,10 +2270,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_80"
-                  value={data.select_80}
-                  onChange={handleInput}
+                  value={data[0].select_80}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -3011,7 +2284,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_80}</h4>
+                <h4>{data[0].select_80}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -3023,10 +2296,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_81"
-                  value={data.select_81}
-                  onChange={handleInput}
+                  value={data[0].select_81}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -3037,7 +2308,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_81}</h4>
+                <h4>{data[0].select_81}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -3051,10 +2322,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_82"
-                  value={data.select_82}
-                  onChange={handleInput}
+                  value={data[0].select_82}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -3065,7 +2334,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_82}</h4>
+                <h4>{data[0].select_82}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -3076,10 +2345,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_83"
-                  value={data.select_83}
-                  onChange={handleInput}
+                  value={data[0].select_83}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -3090,7 +2357,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_83}</h4>
+                <h4>{data[0].select_83}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -3103,10 +2370,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_84"
-                  value={data.select_84}
-                  onChange={handleInput}
+                  value={data[0].select_84}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -3117,21 +2382,19 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_84}</h4>
+                <h4>{data[0].select_84}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  મકાનમાં દરેક સ્થળે પુરતી સફાઈ રાખવામાં આવે છે કે કેમ? :
+                  મકાનમાં દરેક સ્થળે પૂરતી સફાઈ રાખવામાં આવે છે કે કેમ? :
                 </label>
               </div>
               <div className="col">
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_85"
-                  value={data.select_85}
-                  onChange={handleInput}
+                  value={data[0].select_85}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -3142,7 +2405,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_85}</h4>
+                <h4>{data[0].select_85}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -3155,10 +2418,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_86"
-                  value={data.select_86}
-                  onChange={handleInput}
+                  value={data[0].select_86}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -3169,7 +2430,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_86}</h4>
+                <h4>{data[0].select_86}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -3180,10 +2441,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_87"
-                  value={data.select_87}
-                  onChange={handleInput}
+                  value={data[0].select_87}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -3194,7 +2453,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_87}</h4>
+                <h4>{data[0].select_87}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -3207,10 +2466,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_88"
-                  value={data.select_88}
-                  onChange={handleInput}
+                  value={data[0].select_88}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -3221,7 +2478,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_88}</h4>
+                <h4>{data[0].select_88}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -3233,10 +2490,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_89"
-                  value={data.select_89}
-                  onChange={handleInput}
+                  value={data[0].select_89}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -3247,7 +2502,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_89}</h4>
+                <h4>{data[0].select_89}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -3260,10 +2515,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_90"
-                  value={data.select_90}
-                  onChange={handleInput}
+                  value={data[0].select_90}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -3274,7 +2527,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_90}</h4>
+                <h4>{data[0].select_90}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -3286,10 +2539,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_91"
-                  value={data.select_91}
-                  onChange={handleInput}
+                  value={data[0].select_91}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -3301,7 +2552,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_91}</h4>
+                <h4>{data[0].select_91}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -3315,10 +2566,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_92"
-                  value={data.select_92}
-                  onChange={handleInput}
+                  value={data[0].select_92}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -3329,7 +2578,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_92}</h4>
+                <h4>{data[0].select_92}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
@@ -3341,10 +2590,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_93"
-                  value={data.select_93}
-                  onChange={handleInput}
+                  value={data[0].select_93}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -3355,7 +2602,7 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_93}</h4>
+                <h4>{data[0].select_93}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -3369,28 +2616,26 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_94"
-                  value={data.select_94}
-                  onChange={handleInput}
+                  value={data[0].select_94}
                   className="form-select"
                 >
                   <option selected disabled value="">
                     Select
                   </option>
                   <option value={2}>
-                    વ્યવસ્થાતંત્રની ધગશ અને વિશિષ્ટ યોજના હોય તો
+                    વ્યવસ્થાતંત્રની ધગશ અને વિશિષ્ટ યોજના હોઈ તો
                   </option>
                   <option value={1}>યોજના હોય પણ સંતોષકારક પ્રગતિ ન હોય</option>
                   <option value={0}>કોઈ યોજના ન હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_94}</h4>
+                <h4>{data[0].select_94}</h4>
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગ્રંથાલય માટે નાંણાકીય સ્ત્રોનો વધારવા વ્યવસ્થાતંત્ર દ્વારા
+                  ગ્રંથાલય માટે નાંણાકીય સ્ત્રોતોનો વધારવા વ્યવસ્થાતંત્ર દ્વારા
                   કોઈ વિશિષ્ટ પ્રયાસો થયા હોય તો તેની વિગત:
                 </label>
               </div>
@@ -3398,10 +2643,8 @@ function Motibhaiamin1result() {
                 <select
                   required
                   id="inputState"
-                  onClick={handleInput}
                   name="select_95"
-                  value={data.select_95}
-                  onChange={handleInput}
+                  value={data[0].select_95}
                   className="form-select"
                 >
                   <option selected disabled value="">
@@ -3414,17 +2657,11 @@ function Motibhaiamin1result() {
                 </select>
               </div>
               <div className="col-2">
-                <h4>{data.select_95}</h4>
+                <h4>{data[0].select_95}</h4>
               </div>
             </div>
 
             <center>
-              {calculate && (
-                <div className="row mb-3 tab2 col-sm-13 align-items-center">
-                  <h2>Total Marks is {calculate}</h2>
-                </div>
-              )}
-              <div className="row mb-3 tab2 col-sm-13 align-items-center"></div>
               <div className="row mb-3 tab2 col-sm-13 align-items-center">
                 <div className=" col">
                   <Link to="/">
@@ -3433,30 +2670,12 @@ function Motibhaiamin1result() {
                     </button>
                   </Link>
                 </div>
-
-                <div className=" col">
-                  <button
-                    type="button"
-                    onClick={handlecalculate}
-                    className="btn btn-primary"
-                  >
-                    Calculate
-                  </button>
-                </div>
-                <div className=" col">
-                  <button type="submit" className="btn btn-primary">
-                    Edit
-                  </button>
-                </div>
               </div>
             </center>
           </div>
         </form>
       )}
-      <div>
-        <Footer></Footer>
-      </div>
     </>
   );
 }
-export default Motibhaiamin1result;
+export default Motibhaiamin3result;

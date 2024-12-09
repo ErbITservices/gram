@@ -4,8 +4,8 @@ import { useReactToPrint } from "react-to-print";
 import { useEffect, useRef, useState } from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import { Link } from "react-router-dom";
-import Motibhaiamin1result from "./motibhaiamin1result";
+import { Link, useNavigate } from "react-router-dom";
+import Motibhaiamin1result from "./Motibhaiamin1result";
 function Motibhaiaminresult() {
   const pdfref = useRef();
   const downloadpdf = useReactToPrint({
@@ -31,18 +31,95 @@ function Motibhaiaminresult() {
       console.log(error);
     }
   }
-
+  const navigator = useNavigate();
   const [library, setlibrary] = useState();
   async function handleshowdata(e) {
     console.log(e);
-    try {
-      const response = await axios.get(
-        `https://gram-back.vercel.app/Motibhaiamin1/${e}`
-      );
-      console.log(response.data), setlibrary(response.data);
-    } catch (error) {
-      console.log(error);
+    if (category.current.value === "Motibhaiamin1") {
+      try {
+        const response = await axios.get(
+          `https://gram-back.vercel.app/Motibhaiamin1/${e}`
+        );
+
+        navigator("/Motibhaiamin1result", { state: { data: response.data } });
+        // console.log(response.data), setlibrary(response.data);
+      } catch (error) {
+        console.log(error);
+      }
     }
+    if (category.current.value === "Motibhaiamin2") {
+      try {
+        const response = await axios.get(
+          `https://gram-back.vercel.app/Motibhaiamin2/${e}`
+        );
+
+        navigator("/Motibhaiamin2result", { state: { data: response.data } });
+        // console.log(response.data), setlibrary(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (category.current.value === "Motibhaiamin3") {
+      try {
+        const response = await axios.get(
+          `https://gram-back.vercel.app/Motibhaiamin3/${e}`
+        );
+
+        navigator("/Motibhaiamin3result", { state: { data: response.data } });
+        // console.log(response.data), setlibrary(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (category.current.value === "Motibhaiamin4") {
+      try {
+        const response = await axios.get(
+          `https://gram-back.vercel.app/Motibhaiamin4/${e}`
+        );
+
+        navigator("/Motibhaiamin4result", { state: { data: response.data } });
+        // console.log(response.data), setlibrary(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (category.current.value === "Motibhaiamin5") {
+      try {
+        const response = await axios.get(
+          `https://gram-back.vercel.app/Motibhaiamin5/${e}`
+        );
+
+        navigator("/Motibhaiamin5result", { state: { data: response.data } });
+        // console.log(response.data), setlibrary(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (category.current.value === "Motibhaiamin6") {
+      try {
+        const response = await axios.get(
+          `https://gram-back.vercel.app/Motibhaiamin6/${e}`
+        );
+
+        navigator("/Motibhaiamin6result", { state: { data: response.data } });
+        // console.log(response.data), setlibrary(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (category.current.value === "Motibhaiamin7") {
+      try {
+        const response = await axios.get(
+          `https://gram-back.vercel.app/Motibhaiamin7/${e}`
+        );
+
+        navigator("/Motibhaiamin7result", { state: { data: response.data } });
+        // console.log(response.data), setlibrary(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    
   }
 
   return (

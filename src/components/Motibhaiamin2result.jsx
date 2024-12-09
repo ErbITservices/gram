@@ -1,521 +1,27 @@
-import { useEffect, useRef, useState } from "react";
-import Footer from "../components/Footer";
+import { useRef, useState } from "react";
+import Footer from "./Footer";
 import axios from "axios";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 // import { AdapterDayjs } from "@mui/x-date-pickers-pro/AdapterDayjs";
 
 import { FadeLoader } from "react-spinners";
-import NavBar from "../components/NavBar";
+import NavBar from "./NavBar";
 import { Link, useLocation } from "react-router-dom";
+import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+// import "./motibhai.css";
 
-function Motibhaiamin1result() {
+function Motibhaiamin2result() {
   let count = 0;
   const d = new Date();
   let year = d.getFullYear();
   const currentyear = useRef();
-  const [AB, setAB] = useState({ A: "", B: "" });
   const [loader, setloader] = useState("false");
-  const districtlist = [
-    "AHMADABAD",
-    "AMRELI",
-    "ANAND",
-    "ARAVALLI",
-    "BANASKANTHA",
-    "BHARUCH",
-    "BHAVNAGAR",
-    "BOTAD",
-    "CHHOTA UDEPUR",
-    "DAHOD",
-    "DANGS",
-    "DEVBHUMI DWARKA",
-    "GANDHINAGAR",
-    "GIR SOMNATH",
-    "JAMNAGAR",
-    "JUNAGADH",
-    "KACHCHH",
-    "KHEDA",
-    "MAHESANA",
-    "MAHISAGAR",
-    "MORBI",
-    "NARMADA",
-    "NAVSARI",
-    "PANCHMAHALS",
-    "PATAN",
-    "PORBANDAR",
-    "RAJKOT",
-    "SABARKANTHA",
-    "SURAT",
-    "SURENDRANAGAR",
-    "TAPI",
-    "VADODARA",
-    "VALSAD",
-  ];
 
-  const AHMADABAD = [
-    "Ahmedabad City",
-    "Daskroi",
-    "Sanand",
-    "Bavla",
-    "Vijapur",
-    "Sankheda",
-    "Kotda Sangani",
-    "Naroda",
-    "Vastrapur",
-    "Bholav",
-    "Sarkhej",
-  ];
-  const AMRELI = [
-    "Amreli",
-    "Babra",
-    "Dhari",
-    "Lathi",
-    "Rajula",
-    "Savarkundla",
-    "Vallabhipur",
-    "Kunkavav",
-    "Khambhalida",
-    "Sihor",
-  ];
-  const ANAND = [
-    "Anand",
-    "Borsad",
-    "Khambhat",
-    "Sojitra",
-    "Tarapur",
-    "Vallabh Vidyanagar",
-  ];
+  const location = useLocation();
+  const data = location.state.data;
+  console.log("mihir");
 
-  const ARAVALLI = [
-    "Modasa",
-    "Malpur",
-    "Bayad",
-    "Kapadvanj",
-    "Dhansura",
-    "Garbada",
-  ];
-  const BANASKANTHA = [
-    "Deesa",
-    "Palanpur",
-    "Tharad",
-    "Danta",
-    "Vav",
-    "Lakhani",
-    "Kankrej",
-    "BanasKantha",
-  ];
-  const BHARUCH = [
-    "Bharuch",
-    "Ankleshwar",
-    "Dediapada",
-    "Jhagadia",
-    "Amod",
-    "Narmada",
-  ];
-  const BHAVNAGAR = [
-    "Bhavnagar",
-    "Bhavnagar Rural",
-    "Gadhada",
-    "Mahuva",
-    "Sihor",
-    "Palitana",
-    "Valia",
-    "Umrala",
-  ];
-  const BOTAD = ["Botad", "Barwala", "Ranpur", "Sihor"];
-  const CHHOTA_UDEPUR = ["Chhota Udepur", "Bodeli", "Pavi Jetpur", "Sukhsada"];
-  const DAHOD = [
-    "Dahod",
-    "Devgad Baria",
-    "Limkheda",
-    "Sanjeli",
-    "Dhanpur",
-    "Jhalod",
-  ];
-  const DANGS = ["Dangs", "Ahwa", "Saputara", "Subir"];
-  const DEVBHUMI_DWARKA = [
-    "Dwarka",
-    "Okhamandal",
-    "Bet Dwarka",
-    "Mundra",
-    "Kalyanpur",
-  ];
-  const GANDHINAGAR = ["Gandhinagar", "Kalol", "Mansa", "Dehgam", "Khanpur"];
-  const GIR_SOMNATH = [
-    "Veraval",
-    "Gir Gadhada",
-    "Talala",
-    "Sutrapada",
-    "Prabhas Patan",
-  ];
-  const JAMNAGAR = [
-    "Jamnagar",
-    "Kalavad",
-    "Jodiya",
-    "Khambhalia",
-    "Lakhata",
-    "Dhrol",
-    "Sihor",
-  ];
-  const JUNAGADH = [
-    "Junagadh",
-    "Manavadar",
-    "Keshod",
-    "Bavka",
-    "Upleta",
-    "Dharangadhra",
-    "Mendarada",
-    "Talala",
-  ];
-  const KACHCHH = [
-    "Bhuj",
-    "Anjar",
-    "Bhachau",
-    "Mandvi",
-    "Nakhatrana",
-    "Kutchhadi",
-    "Lakhpat",
-    "Mundra",
-    "Rapar",
-  ];
-  const KHEDA = ["Kheda", "Nadiad", "Matar", "Kapadvanj", "Mahudha", "Dholka"];
-  const MAHESANA = [
-    "Mehsana",
-    "Kadi",
-    "Unjha",
-    "Visnagar",
-    "Vadnagar",
-    "Ahmedabad",
-  ];
-  const MAHISAGAR = [
-    "Lunawada",
-    "Gadkhol",
-    "Mahisagar",
-    "Santrampur",
-    "Khodamba",
-  ];
-  const MORBI = [
-    "Morbi",
-    "Wankaner",
-    "Nawab Nagar",
-    "Maliya Hatina",
-    "Ranjit Nagar",
-    "Halvad",
-  ];
-  const NARMADA = ["Narmada", "Dediapada", "Jhagadia", "Rajpipla", "Sagbara"];
-  const NAVSARI = ["Navsari", "Bansda", "Gandevi", "Chikhli", "Khergam"];
-  const PANCHMAHALS = [
-    "Godhra",
-    "Halol",
-    "Madhya Gujarat",
-    "Pavagadh",
-    "Sankheda",
-    "Kalol",
-    "Sihor",
-  ];
-  const PATAN = ["Patan", "Sidhpur", "Harij", "Radhanpur", "Sihor"];
-  const PORBANDAR = [
-    "Porbandar",
-    "Madhavpur",
-    "Kutiyana",
-    "Ranavav",
-    "Bhanvad",
-  ];
-  const RAJKOT = [
-    "Rajkot",
-    "Upleta",
-    "Jasdan",
-    "Gondal",
-    "Paddhari",
-    "Kotda Sangani",
-    "Dhank",
-  ];
-  const SABARKANTHA = [
-    "Himmatnagar",
-    "Idar",
-    "Khedbrahma",
-    "Modasa",
-    "Prantij",
-    "Talod",
-    "Bayad",
-  ];
-  const SURAT = [
-    "Surat",
-    "G Surat",
-    "Bardoli",
-    "Olpad",
-    "Mandvi",
-    "Kamrej",
-    "Utran",
-    "Ichchhpur",
-  ];
-  const SURENDRANAGAR = [
-    "Surendranagar",
-    "Wadhwan",
-    "Dhrangadhra",
-    "Chotila",
-    "Muli",
-    "Ratanpur",
-    "Limbdi",
-    "Mandvi",
-  ];
-  const TAPI = ["Vyara", "Songadh", "Tapi", "Madhya Tapi"];
-  const VADODARA = [
-    "Vadodara",
-    "Savli",
-    "Karjan",
-    "Waghodia",
-    "Ankleshwar",
-    "Padra",
-    "Vaghodia",
-  ];
-  const VALSAD = ["Valsad", "Dharampur", "Pardi", "Vapi", "Umargam", "Khergam"];
-  const [listtaluka, setlisttaluka] = useState([]);
-
-  function handlesettaluka() {
-    if (librarydistrict.current.value === "AHMADABAD") {
-      setlisttaluka(AHMADABAD);
-    } else if (librarydistrict.current.value === "AMRELI")
-      setlisttaluka(AMRELI);
-    else if (librarydistrict.current.value === "ANAND") setlisttaluka(ANAND);
-    else if (librarydistrict.current.value === "ARAVALLI")
-      setlisttaluka(ARAVALLI);
-    else if (librarydistrict.current.value === "BANASKANTHA")
-      setlisttaluka(BANASKANTHA);
-    else if (librarydistrict.current.value === "BHARUCH")
-      setlisttaluka(BHARUCH);
-    else if (librarydistrict.current.value === "BHAVNAGAR")
-      setlisttaluka(BHAVNAGAR);
-    else if (librarydistrict.current.value === "BOTAD") setlisttaluka(BOTAD);
-    else if (librarydistrict.current.value === "CHHOTA UDEPUR")
-      setlisttaluka(CHHOTA_UDEPUR);
-    else if (librarydistrict.current.value === "DAHOD") setlisttaluka(DAHOD);
-    else if (librarydistrict.current.value === "DANGS") setlisttaluka(DANGS);
-    else if (librarydistrict.current.value === "DEVBHUMI DWARKA")
-      setlisttaluka(DEVBHUMI_DWARKA);
-    else if (librarydistrict.current.value === "GANDHINAGAR")
-      setlisttaluka(GANDHINAGAR);
-    else if (librarydistrict.current.value === "GIR SOMNATH")
-      setlisttaluka(GIR_SOMNATH);
-    else if (librarydistrict.current.value === "JAMNAGAR")
-      setlisttaluka(JAMNAGAR);
-    else if (librarydistrict.current.value === "JUNAGADH")
-      setlisttaluka(JUNAGADH);
-    else if (librarydistrict.current.value === "KHEDA") setlisttaluka(KHEDA);
-    else if (librarydistrict.current.value === "KACHCHH")
-      setlisttaluka(KACHCHH);
-    else if (librarydistrict.current.value === "MAHESANA")
-      setlisttaluka(MAHESANA);
-    else if (librarydistrict.current.value === "MAHISAGAR")
-      setlisttaluka(MAHISAGAR);
-    else if (librarydistrict.current.value === "MORBI") setlisttaluka(MORBI);
-    else if (librarydistrict.current.value === "NARMADA")
-      setlisttaluka(NARMADA);
-    else if (librarydistrict.current.value === "NAVSARI")
-      setlisttaluka(NAVSARI);
-    else if (librarydistrict.current.value === "PANCHMAHALS")
-      setlisttaluka(PANCHMAHALS);
-    else if (librarydistrict.current.value === "PATAN") setlisttaluka(PATAN);
-    else if (librarydistrict.current.value === "PORBANDAR")
-      setlisttaluka(PORBANDAR);
-    else if (librarydistrict.current.value === "RAJKOT") setlisttaluka(RAJKOT);
-    else if (librarydistrict.current.value === "SABARKANTHA")
-      setlisttaluka(SABARKANTHA);
-    else if (librarydistrict.current.value === "SURAT") setlisttaluka(SURAT);
-    else if (librarydistrict.current.value === "SURENDRANAGAR")
-      setlisttaluka(SURENDRANAGAR);
-    else if (librarydistrict.current.value === "TAPI") setlisttaluka(TAPI);
-    else if (librarydistrict.current.value === "VADODARA")
-      setlisttaluka(VADODARA);
-    else if (librarydistrict.current.value === "VALSAD") setlisttaluka(VALSAD);
-  }
-
-    const location = useLocation();
-  const [data, setdata] = useState(location.state.data[0]);
   console.log(data);
-  
-  
-  //  useEffect(() => {
-  //   const dataget = async () => {
-      
-  //   const location = useLocation();
-  //   setdata(location.state.data)
-  //   };
-  //   dataget();
-  // }, []);
-  
-
-  const handleInput = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setdata({
-      ...data,
-      [name]: value,
-    });
-    console.log(data);
-  };
-  const handlpercentcalculater = (e) => {
-    console.log(e.target.value);
-
-    const name = e.target.name;
-    const value = e.target.value;
-    setAB({
-      ...AB,
-      [name]: value,
-    });
-    console.log(AB);
-  };
-
-  const libraryname = useRef();
-  const librarygam = useRef();
-  const librarydistrict = useRef();
-  const finacialyear = useRef();
-
-  const [calculate, setcalculate] = useState();
-  async function handleSubmit() {
-    for (let index = 1; index <= 95; index++) {
-      count += Number(data["select_" + index]);
-    }
-    console.log(count);
-    setloader("true");
-    try {
-      console.log(data._id);
-      const senddata = await fetch(
-        `https://gram-back.vercel.app/Motibhaiamin1/${data._id}`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            
-            marks: count,
-            ...data,
-          }),
-        }
-      );
-      if (senddata.ok) {
-        console.log("done");
-        setdata({
-          select_1: "",
-          select_2: "",
-          select_3: "",
-          select_4: "",
-          select_5: "",
-          select_6: "",
-          select_7: "",
-          select_8: "",
-          select_9: "",
-          select_10: "",
-          select_11: "",
-          select_12: "",
-          select_13: "",
-          select_14: "",
-          select_15: "",
-          select_16: "",
-          select_17: "",
-          select_18: "",
-          select_19: "",
-          select_20: "",
-          select_21: "",
-          select_22: "",
-          select_23: "",
-          select_24: "",
-          select_25: "",
-          select_26: "",
-          select_27: "",
-          select_28: "",
-          select_29: "",
-          select_30: "",
-          select_31: "",
-          select_32: "",
-          select_33: "",
-          select_34: "",
-          select_35: "",
-          select_36: "",
-          select_37: "",
-          select_38: "",
-          select_39: "",
-          select_40: "",
-          select_41: "",
-          select_42: "",
-          select_43: "",
-          select_44: "",
-          select_45: "",
-          select_46: "",
-          select_47: "",
-          select_48: "",
-          select_49: "",
-          select_50: "",
-          select_51: "",
-          select_52: "",
-          select_53: "",
-          select_54: "",
-          select_55: "",
-          select_56: "",
-          select_57: "",
-          select_58: "",
-          select_59: "",
-          select_60: "",
-          select_61: "",
-          select_62: "",
-          select_63: "",
-          select_64: "",
-          select_65: "",
-          select_66: "",
-          select_67: "",
-          select_68: "",
-          select_69: "",
-          select_70: "",
-          select_71: "",
-          select_72: "",
-          select_73: "",
-          select_74: "",
-          select_75: "",
-          select_76: "",
-          select_77: "",
-          select_78: "",
-          select_79: "",
-          select_80: "",
-          select_81: "",
-          select_82: "",
-          select_83: "",
-          select_84: "",
-          select_85: "",
-          select_86: "",
-          select_87: "",
-          select_88: "",
-          select_89: "",
-          select_90: "",
-          select_91: "",
-          select_92: "",
-          select_93: "",
-          select_94: "",
-          select_95: "",
-          select_96: "",
-          select_97: "",
-          select_98: "",
-        });
-        setloader("false");
-      } else {
-        setloader("false");
-        alert("data alredy submited");
-      }
-    } catch (error) {
-      console.log("error");
-      console.log(error);
-      alert("data not submited try again");
-      setloader("false");
-    }
-  }
-  function handlecalculate() {
-    setloader("true");
-    for (let index = 1; index <= 95; index++) {
-      count += Number(data["select_" + index]);
-    }
-
-    setloader("false");
-    setcalculate(count);
-  }
 
   return (
     <>
@@ -531,7 +37,7 @@ function Motibhaiamin1result() {
           <div>
             <h1>
               સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એભાભાવોર્ડ અને ઉત્તમ ગ્રંથાલય
-              સેવા પ્રમાણપત્ર માટેની યોજના અન્વય અંધજન ગ્રંથાલયનો માપદંડો
+              સેવા પ્રમાણપત્ર માટેની યોજના અન્વય શહેર ગ્રંથાલયોના માપદંડો
             </h1>{" "}
           </div>
 
@@ -547,7 +53,7 @@ function Motibhaiamin1result() {
                 type="text"
                 className="form-control"
                 autoComplete="off"
-                value={data.lname}
+                ref={libraryname}
               />
             </div>
           </div>
@@ -559,9 +65,8 @@ function Motibhaiamin1result() {
               <select
                 required
                 onChange={handlesettaluka}
+                ref={librarydistrict}
                 className="form-select"
-                
-                value={data.district}
               >
                 <option selected disabled value="">
                   Select
@@ -577,15 +82,9 @@ function Motibhaiamin1result() {
               <label className="col-sm-10 col-form-label">તાલુકો :</label>
             </div>
             <div className="col">
-              <select
-                required
-                onChange={handleInput}
-                className="form-select"
-                
-                value={data.taluko}
-              >
-                <option selected disabled value={data.taluko}>
-                  {data.taluko}
+              <select required ref={librarygam} className="form-select">
+                <option selected disabled value="">
+                  Select
                 </option>
                 {listtaluka.map((e, index) => (
                   <option key={index} value={e}>
@@ -603,9 +102,8 @@ function Motibhaiamin1result() {
               <select
                 required
                 onChange={handleInput}
+                ref={currentyear}
                 className="form-select"
-                
-                value={data.currentyear}
               >
                 <option selected disabled>
                   Select
@@ -626,10 +124,9 @@ function Motibhaiamin1result() {
             <div className="col">
               <select
                 required
+                ref={finacialyear}
                 onChange={handleInput}
                 className="form-select"
-                
-                value={data.finacialyear}
               >
                 <option selected>{year}</option>
                 <option>{year - 1}</option>
@@ -1269,7 +766,7 @@ function Motibhaiamin1result() {
                   <option value={4}>351 થી 365</option>
                   <option value={3}>321 થી 350</option>
                   <option value={2}>301 થી 320</option>
-                  <option value={0}>300 થી ઓછું</option>
+                  <option value={0}>300 થી less then 300</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1306,7 +803,7 @@ function Motibhaiamin1result() {
                   <option value={3}>35,001 થી 50,000સુધી</option>
                   <option value={2}>30,001 થી 35,000સુધી</option>
                   <option value={1}>30,000 થી 25,000સુધી</option>
-                  <option value={0}>25,000 થી ઓછું</option>
+                  <option value={0}>25,000 થી ઓછા</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1425,7 +922,7 @@ function Motibhaiamin1result() {
                   <option value={3}>30 થી 39%</option>
                   <option value={2}>15 થી 29%</option>
                   <option value={1}>5 થી 14%</option>
-                  <option value={0}>5% થી ઓછું</option>
+                  <option value={0}>5% થી ઓછા</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1435,7 +932,7 @@ function Motibhaiamin1result() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગામની ભણેલ વસ્તીના પ્રમાણમાં સભ્યની ટકાવારી :
+                  ભણેલ વસ્તીના પ્રમાણમાં સભ્યની ટકાવારી :
                 </label>
               </div>
               <div className="col">
@@ -1463,7 +960,7 @@ function Motibhaiamin1result() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  નોંધાયેલા સભ્યોના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :
+                  નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :
                 </label>
               </div>
               <div className="col">
@@ -1597,7 +1094,7 @@ function Motibhaiamin1result() {
                   </option>
                   <option value={3}>વિષયવાર/લેખકવાર હોય તો</option>
                   <option value={1}>જનરલ રજીસ્ટર હોય તો</option>
-                  <option value={0}>ગ્રંથ ગોઠવણી અવ્યવસ્થિત હોય તો</option>
+                  <option value={0}>ગ્રંથ ગોઠવણી. અવ્યવસ્થિત હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1740,32 +1237,6 @@ function Motibhaiamin1result() {
               </div>
               <div className="col-2">
                 <h4>{data.select_36}</h4>
-              </div>
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  ઇ લાયબ્રેરી સુવિધા ઉપલબ્ધ છે? ૧. ઇ- બુકસ ૨. ઇ - જનૅલ્સ ૩. ઇ -
-                  મટીરીયલ :
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_37"
-                  value={data.select_37}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={3}>હા</option>
-                  <option value={0}>ના</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_37}</h4>
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
@@ -1945,11 +1416,11 @@ function Motibhaiamin1result() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>50001થી વધુ</option>
-                  <option value={3}>40001થી 50000 </option>
-                  <option value={2}>30001થી 40000</option>
-                  <option value={1}>25001થી 30000</option>
-                  <option value={0}>25000થી ઓછા હોય તો</option>
+                  <option value={4}>50001 થી વધુ</option>
+                  <option value={3}>40001 થી 50000 </option>
+                  <option value={2}>30001 થી 40000</option>
+                  <option value={1}>25001 થી 30000</option>
+                  <option value={0}>25000 થી ઓછા હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2149,7 +1620,7 @@ function Motibhaiamin1result() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  નિયત મુદ્દતમાં પુસ્તક પરત ન આવે તે લેઇટ ફી લેવાય છે?કેટલી?:
+                  નિયત મુદ્દતમાં ગ્રંથો પાછા ન આવે તે લેઇટ ફી લેવાય છે?કેટલી?:
                 </label>
               </div>
               <div className="col">
@@ -2174,7 +1645,7 @@ function Motibhaiamin1result() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  નિયત મુદ્દતમાં ગ્રંથો પાછા ન આવે તો સ્મૃતિપત્રો લખાય છે? :
+                  નિયત મુદ્દતમાં પુસ્તક પાછા ન આવે તો સ્મૃતિપત્રો લખાય છે? :
                 </label>
               </div>
               <div className="col">
@@ -2243,10 +1714,10 @@ function Motibhaiamin1result() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>25001 કરતા વધુ</option>
-                  <option value={3}>15001 થી 25000હોય તો</option>
-                  <option value={2}>10001 થી 15000 હોય તો</option>
-                  <option value={1}>10000 થી ઓછા હોય તો</option>
+                  <option value={4}>૨૫,૦૦૧ કરતા વધુ</option>
+                  <option value={3}>૧૫૦૦૧ થી ૨૫૦૦૦ હોય તો</option>
+                  <option value={2}>૧૦૦૦૧ થી ૧૫૦૦૦ હોય તો</option>
+                  <option value={1}>૧૦૦૦૦ થી ઓછા હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2605,7 +2076,7 @@ function Motibhaiamin1result() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  સામાયિકોના છુટા અંકો વાચકોને ઇસ્યુ કરાય છે? :
+                  સામાયિકોના છુટા અંકો વાચકોને ઇસ્યુ કરાય છે ? :
                 </label>
               </div>
               <div className="col">
@@ -3379,7 +2850,7 @@ function Motibhaiamin1result() {
                     Select
                   </option>
                   <option value={2}>
-                    વ્યવસ્થાતંત્રની ધગશ અને વિશિષ્ટ યોજના હોય તો
+                    વ્યવસ્થાતંત્રની ધગશ અને વિશિષ્ટ યોજના હોઈ તો
                   </option>
                   <option value={1}>યોજના હોય પણ સંતોષકારક પ્રગતિ ન હોય</option>
                   <option value={0}>કોઈ યોજના ન હોય તો</option>
@@ -3445,7 +2916,7 @@ function Motibhaiamin1result() {
                 </div>
                 <div className=" col">
                   <button type="submit" className="btn btn-primary">
-                    Edit
+                    Submit
                   </button>
                 </div>
               </div>
@@ -3459,4 +2930,4 @@ function Motibhaiamin1result() {
     </>
   );
 }
-export default Motibhaiamin1result;
+export default Motibhaiamin2result;
