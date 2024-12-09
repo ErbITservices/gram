@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { Link, useNavigate } from "react-router-dom";
-import Motibhaiamin1result from "./Motibhaiamin1result";
+// import Motibhaiamin1result from "./Motibhaiamin1result";
 function Motibhaiaminresult() {
   const pdfref = useRef();
   const downloadpdf = useReactToPrint({
@@ -220,7 +220,7 @@ function Motibhaiaminresult() {
           </div>
         </center>
       )}
-      {library && <Motibhaiamin1result data={library}></Motibhaiamin1result>}
+      {/* {library && <Motibhaiamin1result data={library}></Motibhaiamin1result>} */}
 
       <Footer></Footer>
     </>
