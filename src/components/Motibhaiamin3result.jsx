@@ -3216,7 +3216,7 @@ function Motibhaiamin3result() {
                 </div>
                 <div className=" col">
                   <button type="submit" className="btn btn-primary">
-                    Submit
+                    Edit
                   </button>
                 </div>
               </div>
