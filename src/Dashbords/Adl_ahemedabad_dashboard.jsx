@@ -22,7 +22,7 @@ function Adl_ahemedabad_dashboard() {
     const dataget = async () => {
       try {
         const response = await axios.get(
-          `https://gram-back.vercel.app/district/AHMADABAD`
+          `https://gramgranthalay-backend.vercel.app/district/AHMADABAD`
         );
         console.log(response.data), setData(response.data);
         setloader("false");

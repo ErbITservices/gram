@@ -21,7 +21,7 @@ function Scl_vadodara_dashboard() {
     const dataget = async () => {
       try {
         const response = await axios.get(
-          `https://gram-back.vercel.app/district/VADODARA`
+          `https://gramgranthalay-backend.vercel.app/district/VADODARA`
         );
         console.log(response.data), setData(response.data);
         setloader("false");

@@ -469,7 +469,7 @@ function Motibhaiamin_3() {
       console.log("mihir");
 
       const senddata = await fetch(
-        `https://gram-back.vercel.app/Motibhaiamin3/`,
+        `https://gramgranthalay-backend.vercel.app/Motibhaiamin3/`,
         {
           method: "POST",
           headers: {
@@ -2555,11 +2555,8 @@ function Motibhaiamin_3() {
                     Select
                   </option>
                   <option value={2}>5001 થી વધુ હોય તો</option>
-                  <option value={1}>3001થી 5000 હોય તો
-</option>
-                  <option value={0}>3000 થી ઓછું હોય તો
-</option>
-                  
+                  <option value={1}>3001થી 5000 હોય તો</option>
+                  <option value={0}>3000 થી ઓછું હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2568,7 +2565,6 @@ function Motibhaiamin_3() {
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
                   વાંચનાલયમાં લાભ લેતા વાંચો કોની વાર્ષિક સંખ્યા:
-
                 </label>
               </div>
               <div className="col">
@@ -2584,11 +2580,9 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>9000 થી વધુ
-</option>
+                  <option value={2}>9000 થી વધુ</option>
                   <option value={1}>7001 થી 9000</option>
-                  <option value={0}>7000 થી ઓછા
-</option>
+                  <option value={0}>7000 થી ઓછા</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2648,7 +2642,7 @@ function Motibhaiamin_3() {
               </div>
             </div>  */}
 
-{/* end  */}
+            {/* end  */}
 
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
@@ -2702,7 +2696,7 @@ function Motibhaiamin_3() {
                 <h4>{data.select_67}</h4>
               </div>
             </div>
-            
+
             <div className="row mb-3 col-sm-13 align-items-center">
               {/* <div className=" col">
                 <label className="col-sm-10 col-form-label">

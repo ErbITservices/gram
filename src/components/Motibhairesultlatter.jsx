@@ -23,7 +23,7 @@ function Motibhairesultlatter() {
     console.log(category.current.value);
     try {
       const response = await axios.get(
-        `https://gram-back.vercel.app/${category.current.value}/`
+        `https://gramgranthalay-backend.vercel.app/${category.current.value}/`
       );
       console.log(response.data),
         response.data.sort(({ marks: a }, { marks: b }) => b - a);

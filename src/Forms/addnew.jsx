@@ -363,7 +363,7 @@ function Addnew() {
     const dataget = async () => {
       try {
         const response = await axios.get(
-          `https://gram-back.vercel.app/district/${localStorage.getItem(
+          `https://gramgranthalay-backend.vercel.app/district/${localStorage.getItem(
             "district"
           )}`
         );
@@ -376,7 +376,7 @@ function Addnew() {
     const getcount = async () => {
       try {
         const response = await axios.get(
-          `https://gram-back.vercel.app/Count/Count`
+          `https://gramgranthalay-backend.vercel.app/Count/Count`
         );
         console.log(response.data[0].count), setcount(response.data[0].count);
       } catch (error) {
@@ -430,12 +430,12 @@ function Addnew() {
       const dataget = async () => {
         try {
           const response = await axios.get(
-            `https://gram-back.vercel.app/district/${localStorage.getItem(
+            `https://gramgranthalay-backend.vercel.app/district/${localStorage.getItem(
               "district"
             )}`
           );
           console.log(
-            `https://gram-back.vercel.app/district/${localStorage.getItem(
+            `https://gramgranthalay-backend.vercel.app/district/${localStorage.getItem(
               "district"
             )}`
           );
@@ -457,13 +457,16 @@ function Addnew() {
       console.log(list);
       console.log();
 
-      const senddata = await fetch(`https://gram-back.vercel.app/form/`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const senddata = await fetch(
+        `https://gramgranthalay-backend.vercel.app/form/`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
       if (senddata.ok) {
         console.log(data);
         setdata({
@@ -508,7 +511,7 @@ function Addnew() {
         const dataget = async () => {
           try {
             const response = await axios.get(
-              `https://gram-back.vercel.app/district/${localStorage.getItem(
+              `https://gramgranthalay-backend.vercel.app/district/${localStorage.getItem(
                 "district"
               )}`
             );
@@ -527,7 +530,7 @@ function Addnew() {
         let ind = count + 1;
         // setcount({count: ind + 1})
         const senddata = await fetch(
-          `https://gram-back.vercel.app/Count/${count} `,
+          `https://gramgranthalay-backend.vercel.app/Count/${count} `,
           {
             method: "PUT",
             headers: {
@@ -557,7 +560,7 @@ function Addnew() {
     const getcount = async () => {
       try {
         const response = await axios.get(
-          `https://gram-back.vercel.app/Count/Count`
+          `https://gramgranthalay-backend.vercel.app/Count/Count`
         );
         console.log(response.data[0].count), setcount(response.data[0].count);
       } catch (error) {
@@ -570,19 +573,22 @@ function Addnew() {
   async function handledelete(i) {
     // list.remove(i);
 
-    const delet = await fetch(`https://gram-back.vercel.app/form/${i.uid}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ uid: i.uid }),
-    });
+    const delet = await fetch(
+      `https://gramgranthalay-backend.vercel.app/form/${i.uid}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ uid: i.uid }),
+      }
+    );
 
     if (delet) {
       const dataget = async () => {
         try {
           const response = await axios.get(
-            `https://gram-back.vercel.app/district/${localStorage.getItem(
+            `https://gramgranthalay-backend.vercel.app/district/${localStorage.getItem(
               "district"
             )}`
           );
@@ -624,7 +630,7 @@ function Addnew() {
     console.log(editvalu);
 
     const edit = await fetch(
-      `https://gram-back.vercel.app/form/${editvalu.uid}`,
+      `https://gramgranthalay-backend.vercel.app/form/${editvalu.uid}`,
       {
         method: "PUT",
         headers: {
@@ -639,7 +645,7 @@ function Addnew() {
       const dataget = async () => {
         try {
           const response = await axios.get(
-            `https://gram-back.vercel.app/district/${localStorage.getItem(
+            `https://gramgranthalay-backend.vercel.app/district/${localStorage.getItem(
               "district"
             )}`
           );

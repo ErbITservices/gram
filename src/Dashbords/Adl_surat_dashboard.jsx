@@ -22,7 +22,7 @@ function Adl_surat_dashboard() {
     const dataget = async () => {
       try {
         const response = await axios.get(
-          `https://gram-back.vercel.app/district/SURAT`
+          `https://gramgranthalay-backend.vercel.app/district/SURAT`
         );
         console.log(response.data), setData(response.data);
         setloader("false");

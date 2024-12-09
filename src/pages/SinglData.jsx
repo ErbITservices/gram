@@ -10,7 +10,9 @@ function SingleData(props) {
   useEffect(() => {
     const dataget = async () => {
       try {
-        const response = await axios.get(`https://gram-back.vercel.app/form/`);
+        const response = await axios.get(
+          `https://gramgranthalay-backend.vercel.app/form/`
+        );
 
         setData(response.data);
         console.log(data);

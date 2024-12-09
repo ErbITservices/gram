@@ -378,7 +378,7 @@ function Motibhaiamin1result() {
     try {
       console.log(data._id);
       const senddata = await fetch(
-        `https://gram-back.vercel.app/Motibhaiamin1/${data._id}`,
+        `https://gramgranthalay-backend.vercel.app/Motibhaiamin1/${data._id}`,
         {
           method: "PUT",
           headers: {

@@ -21,7 +21,7 @@ function Adl_bhavnagar_dashboard() {
     const dataget = async () => {
       try {
         const response = await axios.get(
-          `https://gram-back.vercel.app/district/BHAVNAGAR`
+          `https://gramgranthalay-backend.vercel.app/district/BHAVNAGAR`
         );
         console.log(response.data), setData(response.data);
         setloader("false");

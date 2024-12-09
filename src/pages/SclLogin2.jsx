@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import { FadeLoader } from "react-spinners";
 
-
 const SclLogin2 = () => {
   const [loader, setloader] = useState("false");
   const [user, setUser] = useState({
@@ -33,13 +32,16 @@ const SclLogin2 = () => {
     console.log(user);
     setloader("true");
     try {
-      const response = await fetch(`https://gram-back.vercel.app/admin/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      });
+      const response = await fetch(
+        `https://gramgranthalay-backend.vercel.app/admin/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(user),
+        }
+      );
       setloader("false");
       if (response.ok) {
         setloader("false");

@@ -30,7 +30,9 @@ function Dataintable_Admin() {
   useEffect(() => {
     const dataget = async () => {
       try {
-        const response = await axios.get(`https://gram-back.vercel.app/form`);
+        const response = await axios.get(
+          `https://gramgranthalay-backend.vercel.app/form`
+        );
         console.log(response.data), setData(response.data);
       } catch (error) {
         console.log(error);

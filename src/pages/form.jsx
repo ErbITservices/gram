@@ -290,13 +290,16 @@ function Form() {
 
     console.log(data);
     try {
-      const senddata = await fetch(`https://gram-back.vercel.app/form/`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const senddata = await fetch(
+        `https://gramgranthalay-backend.vercel.app/form/`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       if (senddata.ok) {
       }

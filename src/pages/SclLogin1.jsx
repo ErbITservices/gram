@@ -32,13 +32,16 @@ const SclLogin1 = () => {
     console.log(user);
     setloader("true");
     try {
-      const response = await fetch(`https://gram-back.vercel.app/admin/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      });
+      const response = await fetch(
+        `https://gramgranthalay-backend.vercel.app/admin/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(user),
+        }
+      );
       setloader("false");
       if (response.ok) {
         setloader("false");

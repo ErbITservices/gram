@@ -22,7 +22,9 @@ function Directo_Dashbord() {
     const dataget = async () => {
       setloader("true");
       try {
-        const response = await axios.get(`https://gram-back.vercel.app/form/`);
+        const response = await axios.get(
+          `https://gramgranthalay-backend.vercel.app/form/`
+        );
         console.log(response.data), setData(response.data);
         setloader("false");
       } catch (error) {
@@ -40,7 +42,9 @@ function Directo_Dashbord() {
     console.log(district.current.value);
     if (district.current.value === "All") {
       try {
-        const response = await axios.get(`https://gram-back.vercel.app/form`);
+        const response = await axios.get(
+          `https://gramgranthalay-backend.vercel.app/form`
+        );
         console.log(response.data), setData(response.data);
         setloader("false");
       } catch (error) {
@@ -50,7 +54,7 @@ function Directo_Dashbord() {
     } else {
       try {
         const response = await axios.get(
-          `https://gram-back.vercel.app/district/${district.current.value}`
+          `https://gramgranthalay-backend.vercel.app/district/${district.current.value}`
         );
         console.log(response.data), setData(response.data);
         setloader("false");

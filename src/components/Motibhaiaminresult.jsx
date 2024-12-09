@@ -22,7 +22,7 @@ function Motibhaiaminresult() {
     console.log(category.current.value);
     try {
       const response = await axios.get(
-        `https://gram-back.vercel.app/${category.current.value}/`
+        `https://gramgranthalay-backend.vercel.app/${category.current.value}/`
       );
       console.log(response.data),
         response.data.sort(({ marks: a }, { marks: b }) => b - a);
@@ -38,7 +38,7 @@ function Motibhaiaminresult() {
     if (category.current.value === "Motibhaiamin1") {
       try {
         const response = await axios.get(
-          `https://gram-back.vercel.app/Motibhaiamin1/${e}`
+          `https://gramgranthalay-backend.vercel.app/Motibhaiamin1/${e}`
         );
 
         navigator("/motibhaiamin1result", { state: { data: response.data } });
@@ -47,70 +47,70 @@ function Motibhaiaminresult() {
         console.log(error);
       }
     }
-    // if (category.current.value === "Motibhaiamin2") {
-    //   try {
-    //     const response = await axios.get(
-    //       `https://gram-back.vercel.app/Motibhaiamin2/${e}`
-    //     );
+    if (category.current.value === "Motibhaiamin2") {
+      try {
+        const response = await axios.get(
+          `https://gramgranthalay-backend.vercel.app/Motibhaiamin2/${e}`
+        );
 
-    //     navigator("/Motibhaiamin2result", { state: { data: response.data } });
-    //     // console.log(response.data), setlibrary(response.data);
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // }
-    // if (category.current.value === "Motibhaiamin3") {
-    //   try {
-    //     const response = await axios.get(
-    //       `https://gram-back.vercel.app/Motibhaiamin3/${e}`
-    //     );
+        navigator("/Motibhaiamin2result", { state: { data: response.data } });
+        // console.log(response.data), setlibrary(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (category.current.value === "Motibhaiamin3") {
+      try {
+        const response = await axios.get(
+          `https://gramgranthalay-backend.vercel.app/Motibhaiamin3/${e}`
+        );
 
-    //     navigator("/Motibhaiamin3result", { state: { data: response.data } });
-    //     // console.log(response.data), setlibrary(response.data);
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // }
-    // if (category.current.value === "Motibhaiamin4") {
-    //   try {
-    //     const response = await axios.get(
-    //       `https://gram-back.vercel.app/Motibhaiamin4/${e}`
-    //     );
+        navigator("/Motibhaiamin3result", { state: { data: response.data } });
+        // console.log(response.data), setlibrary(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (category.current.value === "Motibhaiamin4") {
+      try {
+        const response = await axios.get(
+          `https://gramgranthalay-backend.vercel.app/Motibhaiamin4/${e}`
+        );
 
-    //     navigator("/Motibhaiamin4result", { state: { data: response.data } });
-    //     // console.log(response.data), setlibrary(response.data);
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // }
-    // if (category.current.value === "Motibhaiamin5") {
-    //   try {
-    //     const response = await axios.get(
-    //       `https://gram-back.vercel.app/Motibhaiamin5/${e}`
-    //     );
+        navigator("/Motibhaiamin4result", { state: { data: response.data } });
+        // console.log(response.data), setlibrary(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (category.current.value === "Motibhaiamin5") {
+      try {
+        const response = await axios.get(
+          `https://gramgranthalay-backend.vercel.app/Motibhaiamin5/${e}`
+        );
 
-    //     navigator("/Motibhaiamin5result", { state: { data: response.data } });
-    //     // console.log(response.data), setlibrary(response.data);
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // }
-    // if (category.current.value === "Motibhaiamin6") {
-    //   try {
-    //     const response = await axios.get(
-    //       `https://gram-back.vercel.app/Motibhaiamin6/${e}`
-    //     );
+        navigator("/Motibhaiamin5result", { state: { data: response.data } });
+        // console.log(response.data), setlibrary(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (category.current.value === "Motibhaiamin6") {
+      try {
+        const response = await axios.get(
+          `https://gramgranthalay-backend.vercel.app/Motibhaiamin6/${e}`
+        );
 
-    //     navigator("/Motibhaiamin6result", { state: { data: response.data } });
-    //     // console.log(response.data), setlibrary(response.data);
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // }
+        navigator("/Motibhaiamin6result", { state: { data: response.data } });
+        // console.log(response.data), setlibrary(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
     if (category.current.value === "Motibhaiamin7") {
       try {
         const response = await axios.get(
-          `https://gram-back.vercel.app/Motibhaiamin7/${e}`
+          `https://gramgranthalay-backend.vercel.app/Motibhaiamin7/${e}`
         );
 
         navigator("/Motibhaiamin7result", { state: { data: response.data } });
@@ -119,7 +119,6 @@ function Motibhaiaminresult() {
         console.log(error);
       }
     }
-    
   }
 
   return (

@@ -36,7 +36,7 @@ const Forgotpassword = () => {
 
     try {
       const response = await fetch(
-        `https://gram-back.vercel.app/admin/sendpasswordlink`,
+        `https://gramgranthalay-backend.vercel.app/admin/sendpasswordlink`,
         {
           method: "POST",
           headers: {
