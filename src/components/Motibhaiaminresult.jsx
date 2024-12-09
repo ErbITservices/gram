@@ -35,11 +35,11 @@ function Motibhaiaminresult() {
   const [library, setlibrary] = useState();
   async function handleshowdata(e) {
     console.log(e);
-    // if (category.current.value === "Motibhaiamin1") {
-    //   try {
-    //     const response = await axios.get(
-    //       `https://gram-back.vercel.app/Motibhaiamin1/${e}`
-    //     );
+    if (category.current.value === "Motibhaiamin1") {
+      try {
+        const response = await axios.get(
+          `https://gram-back.vercel.app/Motibhaiamin1/${e}`
+        );
 
     //     navigator("/Motibhaiamin1result", { state: { data: response.data } });
     //     // console.log(response.data), setlibrary(response.data);
