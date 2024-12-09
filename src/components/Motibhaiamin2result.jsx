@@ -9,6 +9,7 @@ import NavBar from "../components/NavBar";
 import { Link, useLocation } from "react-router-dom";
 
 function Motibhaiamin2result() {
+  const navigator = useNavigate();
   let count = 0;
   const d = new Date();
   let year = d.getFullYear();
@@ -370,7 +371,7 @@ function Motibhaiamin2result() {
 
   const [calculate, setcalculate] = useState();
   async function handleSubmit() {
-    for (let index = 1; index <= 95; index++) {
+    for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
     }
     console.log(count);
@@ -385,8 +386,8 @@ function Motibhaiamin2result() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            marks: count,
             ...data,
+            marks: count,
           }),
         }
       );

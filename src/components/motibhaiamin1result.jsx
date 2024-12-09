@@ -6,10 +6,11 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
 import { FadeLoader } from "react-spinners";
 import NavBar from "../components/NavBar";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Motibhaiamin1result() {
-  let count = 0;
+    const navigator = useNavigate();
+  
   const d = new Date();
   let year = d.getFullYear();
   const currentyear = useRef();
@@ -369,8 +370,9 @@ function Motibhaiamin1result() {
   const finacialyear = useRef();
 
   const [calculate, setcalculate] = useState();
-  async function handleSubmit() {
-    for (let index = 1; index <= 95; index++) {
+    async function handleSubmit() {
+        let count = 0;
+    for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
     }
     console.log(count);
@@ -385,8 +387,8 @@ function Motibhaiamin1result() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            marks: count,
             ...data,
+            marks: count,
           }),
         }
       );
@@ -506,9 +508,11 @@ function Motibhaiamin1result() {
       setloader("false");
     }
   }
-  function handlecalculate() {
+    function handlecalculate() {
+      
+        let count = 0;
     setloader("true");
-    for (let index = 1; index <= 95; index++) {
+    for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
     }
 

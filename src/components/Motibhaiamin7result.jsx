@@ -367,10 +367,11 @@ function Motibhaiamin7result() {
   const librarygam = useRef();
   const librarydistrict = useRef();
   const finacialyear = useRef();
+  const navigator = useNavigate();
 
   const [calculate, setcalculate] = useState();
   async function handleSubmit() {
-    for (let index = 1; index <= 95; index++) {
+    for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
     }
     console.log(count);
@@ -558,7 +559,6 @@ function Motibhaiamin7result() {
               <select
                 required
                 onChange={handlesettaluka}
-                
                 value={data.district}
                 className="form-select"
               >
@@ -596,7 +596,6 @@ function Motibhaiamin7result() {
               <select
                 required
                 onChange={handleInput}
-                
                 value={data.currentyear}
                 className="form-select"
               >
@@ -3419,7 +3418,7 @@ function Motibhaiamin7result() {
               <div className="row mb-3 tab2 col-sm-13 align-items-center"></div>
               <div className="row mb-3 tab2 col-sm-13 align-items-center">
                 <div className=" col">
-                  <Link to="/">
+                  <Link to="/Motibhaiaminresult">
                     <button type="button" className="btn btn-warning">
                       Back
                     </button>
@@ -3437,7 +3436,7 @@ function Motibhaiamin7result() {
                 </div>
                 <div className=" col">
                   <button type="submit" className="btn btn-primary">
-                    Submit
+                    Edit
                   </button>
                 </div>
               </div>

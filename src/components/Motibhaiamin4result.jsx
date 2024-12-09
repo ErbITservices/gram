@@ -367,10 +367,11 @@ function Motibhaiamin4result() {
   const librarygam = useRef();
   const librarydistrict = useRef();
   const finacialyear = useRef();
+  const navigator = useNavigate();
 
   const [calculate, setcalculate] = useState();
   async function handleSubmit() {
-    for (let index = 1; index <= 95; index++) {
+    for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
     }
     console.log(count);
@@ -576,7 +577,7 @@ function Motibhaiamin4result() {
               <label className="col-sm-10 col-form-label">તાલુકો :</label>
             </div>
             <div className="col">
-              <select required ref={librarygam} className="form-select">
+              <select required  className="form-select">
                 <option selected disabled value={data.taluko}>
                   {data.taluko}
                 </option>

@@ -11,6 +11,7 @@ import { Link, useLocation } from "react-router-dom";
 function Motibhaiamin3result() {
   let count = 0;
   const d = new Date();
+  const navigator = useNavigate();
   let year = d.getFullYear();
   const currentyear = useRef();
   const [AB, setAB] = useState({ A: "", B: "" });
@@ -370,7 +371,7 @@ function Motibhaiamin3result() {
 
   const [calculate, setcalculate] = useState();
   async function handleSubmit() {
-    for (let index = 1; index <= 95; index++) {
+    for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
     }
     console.log(count);
@@ -385,8 +386,8 @@ function Motibhaiamin3result() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            marks: count,
             ...data,
+            marks: count,
           }),
         }
       );
