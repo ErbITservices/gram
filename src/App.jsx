@@ -54,12 +54,6 @@ import Motibhaiamin_5 from "./Forms/Motibhaiamin_5";
 import Motibhaiamin_6 from "./Forms/Motibhaiamin_6";
 import Motibhaiamin_7 from "./Forms/Motibhaiamin_7";
 import Motibhaiamin1result from "./components/Motibhaiamin1result";
-import Motibhaiamin2result from "./components/Motibhaiamin2result";
-import Motibhaiamin3result from "./components/Motibhaiamin3result";
-import Motibhaiamin4result from "./components/Motibhaiamin4result";
-import Motibhaiamin5result from "./components/Motibhaiamin5result";
-import Motibhaiamin6result from "./components/Motibhaiamin6result";
-import Motibhaiamin7result from "./components/Motibhaiamin7result";
 
 import Motibhairesultlatter from "./components/Motibhairesultlatter";
 import Motibhaiaminbtnpage from "./pages/Motibhaiaminbtnpage";
