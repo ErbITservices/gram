@@ -152,8 +152,8 @@ function Motibhaiaminresult() {
                     Select
                   </option>
                   <option value={"Motibhaiamin1"}>અંધજન ગ્રંથાલય</option>
-                  <option value={"Motibhaiamin2"}>શહેર ગ્રંથાલયો</option>
-                  <option value={"Motibhaiamin3"}>ગ્રામ ગ્રંથાલયો</option>
+                  <option value={"Motibhaiamin2"}>શહેર ગ્રંથાલય</option>
+                  <option value={"Motibhaiamin3"}>ગ્રામ ગ્રંથાલય</option>
                   <option value={"Motibhaiamin4"}>
                     શહેર શાખા /નગરકક્ષા-૧ ગ્રંથાલય
                   </option>
