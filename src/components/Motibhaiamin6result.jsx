@@ -387,7 +387,6 @@ function Motibhaiamin6result() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            
             ...data,
             marks: count,
           }),
@@ -395,8 +394,8 @@ function Motibhaiamin6result() {
       );
       if (senddata.ok) {
         console.log("done");
-        navigator("/Motibhaiaminresult")
-        
+        navigator("/Motibhaiaminresult");
+
         setloader("false");
       } else {
         setloader("false");
@@ -433,8 +432,8 @@ function Motibhaiamin6result() {
         <form className="form " onSubmit={handleSubmit}>
           <div>
             <h1>
-              સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એભાભાવોર્ડ અને ઉત્તમ ગ્રંથાલય
-              સેવા પ્રમાણપત્ર માટેની યોજના અન્વય મહિલા બાળ ગ્રંથાલયનો માપદંડો
+              સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એવોર્ડ અને ઉત્તમ ગ્રંથાલય સેવા
+              પ્રમાણપત્ર માટેની યોજના અન્વય મહિલા બાળ ગ્રંથાલયનો માપદંડો
             </h1>{" "}
           </div>
 
@@ -1561,7 +1560,7 @@ function Motibhaiamin6result() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  પુસ્તક ખરીદી માટે વિક્રેતાઓ પાસેથી ભાભાવો મંગાવાય છે? :
+                  પુસ્તક ખરીદી માટે વિક્રેતાઓ પાસેથી ભાવો મંગાવાય છે? :
                 </label>
               </div>
               <div className="col">

@@ -387,7 +387,6 @@ function Motibhaiamin4result() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            
             ...data,
             marks: count,
           }),
@@ -395,9 +394,9 @@ function Motibhaiamin4result() {
       );
       if (senddata.ok) {
         console.log("done");
-        
+
         navigator("/Motibhaiaminresult");
-        
+
         setloader("false");
       } else {
         setloader("false");
@@ -434,9 +433,9 @@ function Motibhaiamin4result() {
         <form className="form " onSubmit={handleSubmit}>
           <div>
             <h1>
-              સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એભાભાવોર્ડ અને ઉત્તમ ગ્રંથાલય
-              સેવા પ્રમાણપત્ર માટેની યોજના અન્વય શહેર શાખા /નગરકક્ષા-૧
-              ગ્રંથાલયનો માપદંડો
+              સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એવોર્ડ અને ઉત્તમ ગ્રંથાલય સેવા
+              પ્રમાણપત્ર માટેની યોજના અન્વય શહેર શાખા /નગરકક્ષા-૧ ગ્રંથાલયનો
+              માપદંડો
             </h1>{" "}
           </div>
 
@@ -481,7 +480,7 @@ function Motibhaiamin4result() {
               <label className="col-sm-10 col-form-label">તાલુકો :</label>
             </div>
             <div className="col">
-              <select required  className="form-select">
+              <select required className="form-select">
                 <option selected disabled value={data.taluko}>
                   {data.taluko}
                 </option>
@@ -1664,7 +1663,7 @@ function Motibhaiamin4result() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  પુસ્તક ખરીદી માટે વિક્રેતાઓ પાસેથી ભાભાભાવો મંગાવાય છે? :
+                  પુસ્તક ખરીદી માટે વિક્રેતાઓ પાસેથી ભાવો મંગાવાય છે? :
                 </label>
               </div>
               <div className="col">

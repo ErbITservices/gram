@@ -623,7 +623,7 @@ function Motibhaiamin_7() {
         <form className="form " onSubmit={handleSubmit}>
           <div>
             <h1>
-              સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એભાભાવોર્ડ અને ઉત્તમ ગ્રંથાલય
+              સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એવોર્ડ અને ઉત્તમ ગ્રંથાલય
               સેવા પ્રમાણપત્ર માટેની યોજના અન્વય વિશિષ્ટ ગ્રંથાલયનો માપદંડો
             </h1>{" "}
           </div>
@@ -1880,7 +1880,7 @@ function Motibhaiamin_7() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  પુસ્તક ખરીદી માટે વિક્રેતાઓ પાસેથી ભાભાવો મંગાવાય છે? :
+                  પુસ્તક ખરીદી માટે વિક્રેતાઓ પાસેથી ભાવો મંગાવાય છે? :
                 </label>
               </div>
               <div className="col">
