@@ -112,14 +112,7 @@ function Addnew() {
     "Vallabh Vidyanagar",
   ];
 
-  const ARAVALLI = [
-    "Modasa",
-    "Malpur",
-    "Bayad",
-    "Kapadvanj",
-    "Dhansura",
-    "Garbada",
-  ];
+  const ARAVALLI = ["Modasa", "Malpur", "Bayad", "Dhansura", "Garbada"];
   const BANASKANTHA = [
     "Deesa",
     "Palanpur",
@@ -147,6 +140,7 @@ function Addnew() {
     "Palitana",
     "Valia",
     "Umrala",
+    "Vallabhipur",
   ];
   const BOTAD = ["Botad", "Barwala", "Ranpur", "Sihor"];
   const CHHOTA_UDEPUR = ["Chhota Udepur", "Bodeli", "Pavi Jetpur", "Sukhsada"];

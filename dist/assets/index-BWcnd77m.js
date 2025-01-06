@@ -33926,7 +33926,7 @@ function up() {
                       children: e.jsx("label", {
                         className: "col-sm-10 col-form-label",
                         children:
-                          "ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :",
+                          "ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યા :",
                       }),
                     }),
                     e.jsx("div", {
@@ -40894,7 +40894,7 @@ function WS() {
                       children: e.jsx("label", {
                         className: "col-sm-10 col-form-label",
                         children:
-                          "ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :",
+                          "ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યા :",
                       }),
                     }),
                     e.jsx("div", {
@@ -45868,7 +45868,7 @@ function JS() {
                       children: e.jsx("label", {
                         className: "col-sm-10 col-form-label",
                         children:
-                          "ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :",
+                          "ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યા :",
                       }),
                     }),
                     e.jsx("div", {
@@ -46138,7 +46138,7 @@ function JS() {
                       children: e.jsx("label", {
                         className: "col-sm-10 col-form-label",
                         children:
-                          "નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :",
+                          "નોંધાયેલા સભ્યોના પ્રમાણમાં વંચાયેલા ગ્રંથનું પ્રમાણ :",
                       }),
                     }),
                     e.jsx("div", {
@@ -50799,7 +50799,7 @@ function QS() {
                       children: e.jsx("label", {
                         className: "col-sm-10 col-form-label",
                         children:
-                          "ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :",
+                          "ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યા :",
                       }),
                     }),
                     e.jsx("div", {
@@ -51057,7 +51057,7 @@ function QS() {
                       children: e.jsx("label", {
                         className: "col-sm-10 col-form-label",
                         children:
-                          "નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :",
+                          "નોંધાયેલા સભ્યોના પ્રમાણમાં વંચાયેલા ગ્રંથનું પ્રમાણ :",
                       }),
                     }),
                     e.jsx("div", {
@@ -55196,7 +55196,7 @@ function YS() {
                       children: e.jsx("label", {
                         className: "col-sm-10 col-form-label",
                         children:
-                          "ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :",
+                          "ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યા :",
                       }),
                     }),
                     e.jsx("div", {
@@ -55458,7 +55458,7 @@ function YS() {
                       children: e.jsx("label", {
                         className: "col-sm-10 col-form-label",
                         children:
-                          "નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :",
+                          "નોંધાયેલા સભ્યોના પ્રમાણમાં વંચાયેલા ગ્રંથનું પ્રમાણ :",
                       }),
                     }),
                     e.jsx("div", {
@@ -60135,7 +60135,7 @@ function XS() {
                       children: e.jsx("label", {
                         className: "col-sm-10 col-form-label",
                         children:
-                          "ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :",
+                          "ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યા :",
                       }),
                     }),
                     e.jsx("div", {
@@ -60401,7 +60401,7 @@ function XS() {
                       children: e.jsx("label", {
                         className: "col-sm-10 col-form-label",
                         children:
-                          "નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :",
+                          "નોંધાયેલા સભ્યોના પ્રમાણમાં વંચાયેલા ગ્રંથનું પ્રમાણ :",
                       }),
                     }),
                     e.jsx("div", {
@@ -65073,7 +65073,7 @@ function ZS() {
                       children: e.jsx("label", {
                         className: "col-sm-10 col-form-label",
                         children:
-                          "ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :",
+                          "ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યા :",
                       }),
                     }),
                     e.jsx("div", {
@@ -65332,7 +65332,7 @@ function ZS() {
                       children: e.jsx("label", {
                         className: "col-sm-10 col-form-label",
                         children:
-                          "નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :",
+                          "નોંધાયેલા સભ્યોના પ્રમાણમાં વંચાયેલા ગ્રંથનું પ્રમાણ :",
                       }),
                     }),
                     e.jsx("div", {
@@ -69428,7 +69428,7 @@ function ey() {
                       children: e.jsx("label", {
                         className: "col-sm-10 col-form-label",
                         children:
-                          "ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :",
+                          "ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યા :",
                       }),
                     }),
                     e.jsx("div", {
@@ -69698,7 +69698,7 @@ function ey() {
                       children: e.jsx("label", {
                         className: "col-sm-10 col-form-label",
                         children:
-                          "નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :",
+                          "નોંધાયેલા સભ્યોના પ્રમાણમાં વંચાયેલા ગ્રંથનું પ્રમાણ :",
                       }),
                     }),
                     e.jsx("div", {
@@ -73896,7 +73896,7 @@ function ly() {
                         children: e.jsx("label", {
                           className: "col-sm-10 col-form-label",
                           children:
-                            "ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :",
+                            "ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યા :",
                         }),
                       }),
                       e.jsx("div", {
@@ -74190,7 +74190,7 @@ function ly() {
                         children: e.jsx("label", {
                           className: "col-sm-10 col-form-label",
                           children:
-                            "નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :",
+                            "નોંધાયેલા સભ્યોના પ્રમાણમાં વંચાયેલા ગ્રંથનું પ્રમાણ :",
                         }),
                       }),
                       e.jsx("div", {
@@ -78339,7 +78339,7 @@ function sy() {
                         children: e.jsx("label", {
                           className: "col-sm-10 col-form-label",
                           children:
-                            "ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :",
+                            "ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યા :",
                         }),
                       }),
                       e.jsx("div", {
@@ -78573,7 +78573,7 @@ function sy() {
                         children: e.jsx("label", {
                           className: "col-sm-10 col-form-label",
                           children:
-                            "નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :",
+                            "નોંધાયેલા સભ્યોના પ્રમાણમાં વંચાયેલા ગ્રંથનું પ્રમાણ :",
                         }),
                       }),
                       e.jsx("div", {
@@ -82563,7 +82563,7 @@ function cy() {
                         children: e.jsx("label", {
                           className: "col-sm-10 col-form-label",
                           children:
-                            "ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :",
+                            "ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યા :",
                         }),
                       }),
                       e.jsx("div", {
@@ -82797,7 +82797,7 @@ function cy() {
                         children: e.jsx("label", {
                           className: "col-sm-10 col-form-label",
                           children:
-                            "નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :",
+                            "નોંધાયેલા સભ્યોના પ્રમાણમાં વંચાયેલા ગ્રંથનું પ્રમાણ :",
                         }),
                       }),
                       e.jsx("div", {
@@ -86787,7 +86787,7 @@ function ty() {
                         children: e.jsx("label", {
                           className: "col-sm-10 col-form-label",
                           children:
-                            "ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :",
+                            "ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યા :",
                         }),
                       }),
                       e.jsx("div", {
@@ -87021,7 +87021,7 @@ function ty() {
                         children: e.jsx("label", {
                           className: "col-sm-10 col-form-label",
                           children:
-                            "નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :",
+                            "નોંધાયેલા સભ્યોના પ્રમાણમાં વંચાયેલા ગ્રંથનું પ્રમાણ :",
                         }),
                       }),
                       e.jsx("div", {
@@ -91011,7 +91011,7 @@ function ay() {
                         children: e.jsx("label", {
                           className: "col-sm-10 col-form-label",
                           children:
-                            "ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :",
+                            "ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યા :",
                         }),
                       }),
                       e.jsx("div", {
@@ -91245,7 +91245,7 @@ function ay() {
                         children: e.jsx("label", {
                           className: "col-sm-10 col-form-label",
                           children:
-                            "નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :",
+                            "નોંધાયેલા સભ્યોના પ્રમાણમાં વંચાયેલા ગ્રંથનું પ્રમાણ :",
                         }),
                       }),
                       e.jsx("div", {
@@ -95235,7 +95235,7 @@ function iy() {
                         children: e.jsx("label", {
                           className: "col-sm-10 col-form-label",
                           children:
-                            "ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :",
+                            "ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યા :",
                         }),
                       }),
                       e.jsx("div", {
@@ -95469,7 +95469,7 @@ function iy() {
                         children: e.jsx("label", {
                           className: "col-sm-10 col-form-label",
                           children:
-                            "નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :",
+                            "નોંધાયેલા સભ્યોના પ્રમાણમાં વંચાયેલા ગ્રંથનું પ્રમાણ :",
                         }),
                       }),
                       e.jsx("div", {

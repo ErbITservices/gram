@@ -90,7 +90,6 @@ function Motibhaiamin1result() {
     "Modasa",
     "Malpur",
     "Bayad",
-    "Kapadvanj",
     "Dhansura",
     "Garbada",
   ];
@@ -121,6 +120,7 @@ function Motibhaiamin1result() {
     "Palitana",
     "Valia",
     "Umrala",
+    "Vallabhipur",
   ];
   const BOTAD = ["Botad", "Barwala", "Ranpur", "Sihor"];
   const CHHOTA_UDEPUR = ["Chhota Udepur", "Bodeli", "Pavi Jetpur", "Sukhsada"];
@@ -1058,7 +1058,7 @@ function Motibhaiamin1result() {
                   <option value={5}>7 કલાક થી વધુ</option>
                   <option value={4}>6 થી 7</option>
                   <option value={3}>5 થી 6</option>
-                  <option value={0}>5 થી 1</option>
+                  <option value={0}>1 થી 5</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1187,7 +1187,7 @@ function Motibhaiamin1result() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :
+                  ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યાયા :
                 </label>
               </div>
               <div className="col">
@@ -1604,6 +1604,7 @@ function Motibhaiamin1result() {
                   </option>
                   <option value={3}>અધિકૃત બ્રાન્ડ સોફ્ટવેર હોય તો</option>
                   <option value={1}>સેલ્ફ પેડ(પોતાની પદ્ધતિ)</option>
+                  <option value={0}>કોમ્પ્યુટરાઈઝેશન થયેલ નથી</option>
                 </select>
               </div>
               <div className="col-2">

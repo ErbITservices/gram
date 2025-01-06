@@ -86,14 +86,7 @@ function Motibhaiamin3result() {
     "Vallabh Vidyanagar",
   ];
 
-  const ARAVALLI = [
-    "Modasa",
-    "Malpur",
-    "Bayad",
-    "Kapadvanj",
-    "Dhansura",
-    "Garbada",
-  ];
+  const ARAVALLI = ["Modasa", "Malpur", "Bayad", "Dhansura", "Garbada"];
   const BANASKANTHA = [
     "Deesa",
     "Palanpur",
@@ -121,6 +114,7 @@ function Motibhaiamin3result() {
     "Palitana",
     "Valia",
     "Umrala",
+    "Vallabhipur",
   ];
   const BOTAD = ["Botad", "Barwala", "Ranpur", "Sihor"];
   const CHHOTA_UDEPUR = ["Chhota Udepur", "Bodeli", "Pavi Jetpur", "Sukhsada"];
@@ -387,17 +381,15 @@ function Motibhaiamin3result() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            
             ...data,
             marks: count,
           }),
         }
       );
-        if (senddata.ok) {
-          
+      if (senddata.ok) {
         navigator("/Motibhaiaminresult");
         console.log("done");
-        
+
         setloader("false");
       } else {
         setloader("false");
@@ -434,8 +426,8 @@ function Motibhaiamin3result() {
         <form className="form " onSubmit={handleSubmit}>
           <div>
             <h1>
-              સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એવોર્ડ અને ઉત્તમ ગ્રંથાલય
-              સેવા પ્રમાણપત્ર માટેની યોજના અન્વય ગ્રામ ગ્રંથાલયોના માપદંડો
+              સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એવોર્ડ અને ઉત્તમ ગ્રંથાલય સેવા
+              પ્રમાણપત્ર માટેની યોજના અન્વય ગ્રામ ગ્રંથાલયોના માપદંડો
             </h1>{" "}
           </div>
 
@@ -480,7 +472,7 @@ function Motibhaiamin3result() {
               <label className="col-sm-10 col-form-label">તાલુકો :</label>
             </div>
             <div className="col">
-              <select required ref={librarygam}  className="form-select">
+              <select required ref={librarygam} className="form-select">
                 <option selected disabled value={data.taluko}>
                   {data.taluko}
                 </option>
@@ -1172,7 +1164,7 @@ function Motibhaiamin3result() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :
+                  ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યા :
                 </label>
               </div>
               <div className="col">
@@ -1346,7 +1338,7 @@ function Motibhaiamin3result() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :
+                  નોંધાયેલા સભ્યોના પ્રમાણમાં વંચાયેલા ગ્રંથનું પ્રમાણ :
                 </label>
               </div>
               <div className="col">
@@ -1454,7 +1446,7 @@ function Motibhaiamin3result() {
                   <option value={3}>80%</option>
                   <option value={2}>60%</option>
                   <option value={1}>30%</option>
-                  <option value={0}>option 2</option>
+                  <option value={0}>30% થી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2257,7 +2249,7 @@ function Motibhaiamin3result() {
                   </option>
                   <option value={2}>4001 થી વધુ</option>
                   <option value={1}>3001 થી 4000 </option>
-                  <option value={0}>4000 થી ઓછું</option>
+                  <option value={0}>3000 થી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">

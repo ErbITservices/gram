@@ -85,14 +85,7 @@ function Motibhaiamin4result() {
     "Vallabh Vidyanagar",
   ];
 
-  const ARAVALLI = [
-    "Modasa",
-    "Malpur",
-    "Bayad",
-    "Kapadvanj",
-    "Dhansura",
-    "Garbada",
-  ];
+  const ARAVALLI = ["Modasa", "Malpur", "Bayad", "Dhansura", "Garbada"];
   const BANASKANTHA = [
     "Deesa",
     "Palanpur",
@@ -120,6 +113,7 @@ function Motibhaiamin4result() {
     "Palitana",
     "Valia",
     "Umrala",
+    "Vallabhipur",
   ];
   const BOTAD = ["Botad", "Barwala", "Ranpur", "Sihor"];
   const CHHOTA_UDEPUR = ["Chhota Udepur", "Bodeli", "Pavi Jetpur", "Sukhsada"];
@@ -1180,7 +1174,7 @@ function Motibhaiamin4result() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  ગ્રંથાલયનાં ગ્રંથસંગ્રાની માહિતી કુલગ્રંથસંખ્યા :
+                  ગ્રંથાલયનાં ગ્રંથ સંગ્રહની માહિતી કુલ ગ્રંથસંખ્યા :
                 </label>
               </div>
               <div className="col">
@@ -1355,7 +1349,7 @@ function Motibhaiamin4result() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  નોંધાયેલા સભ્યના પ્રમાણમાં વાંચકો ને ગ્રંથનું પ્રમાણ :
+                  નોંધાયેલા સભ્યોના પ્રમાણમાં વંચાયેલા ગ્રંથનું પ્રમાણ :
                 </label>
               </div>
               <div className="col">
@@ -1463,7 +1457,7 @@ function Motibhaiamin4result() {
                   <option value={3}>80%</option>
                   <option value={2}>60%</option>
                   <option value={1}>30%</option>
-                  <option value={0}>option 2</option>
+                  <option value={0}>30% થી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1596,6 +1590,7 @@ function Motibhaiamin4result() {
                   </option>
                   <option value={2}>અધિકૃત બ્રાન્ડ સોફ્ટવેર હોય તો</option>
                   <option value={1}>સેલ્ફ પેડ(પોતાની પદ્ધતિ)</option>
+                  <option value={0}>કોમ્પ્યુટરાઈઝેશન થયેલ નથી</option>
                 </select>
               </div>
               <div className="col-2">
