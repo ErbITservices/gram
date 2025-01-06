@@ -325,7 +325,7 @@ function Motibhaiamin3result() {
   }
 
   const location = useLocation();
-  const [data, setdata] = useState(location.state.data[0]);
+  const [data, setdata] = useState(location.state.data);
   console.log(data);
 
   //  useEffect(() => {
@@ -443,6 +443,8 @@ function Motibhaiamin3result() {
                 type="text"
                 className="form-control"
                 autoComplete="off"
+                name="lname"
+                onChange={handleInput}
                 value={data.lname}
               />
             </div>
@@ -455,11 +457,11 @@ function Motibhaiamin3result() {
               <select
                 required
                 onChange={handlesettaluka}
-                value={data.district}
                 className="form-select"
+                ref={librarydistrict}
               >
-                <option selected disabled value="">
-                  Select
+                <option selected value={data.district}>
+                  {data.district}
                 </option>
                 {districtlist.map((e, index) => (
                   <option key={index} value={e}>
@@ -472,7 +474,13 @@ function Motibhaiamin3result() {
               <label className="col-sm-10 col-form-label">તાલુકો :</label>
             </div>
             <div className="col">
-              <select required ref={librarygam} className="form-select">
+              <select
+                required
+                name="taluko"
+                onChange={handleInput}
+                className="form-select"
+                value={data.taluko}
+              >
                 <option selected disabled value={data.taluko}>
                   {data.taluko}
                 </option>

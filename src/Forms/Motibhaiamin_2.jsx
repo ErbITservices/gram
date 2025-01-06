@@ -6,7 +6,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
 import { FadeLoader } from "react-spinners";
 import NavBar from "../components/NavBar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import "./motibhai.css";
 
@@ -603,7 +603,16 @@ function Motibhaiamin_2() {
     setloader("false");
     setcalculate(count);
   }
-
+  const navigator = useNavigate();
+  const Winner = useRef();
+  function checkwinner() {
+    if (Winner.current.value === "true") {
+      alert(
+        `વર્ષ ${year - 2} કે ${year - 1} માં એવોર્ડ મળેલ હોય તો તમે આ વર્ષે મોતીભાઈ અમીન માં ફોર્મ ભરી સકસો નહી`
+      );
+      navigator("/Motibhaiaminbtnpage");
+    }
+  }
   return (
     <>
       <NavBar />
@@ -639,6 +648,25 @@ function Motibhaiamin_2() {
             </div>
           </div>
           <div className="row mb-3 col-sm-13 align-items-center">
+            <div className=" col-2">
+              <label className="col-sm-10 col-form-label">
+                વર્ષ {year - 2} કે {year - 1} માં એવોર્ડ મળેલ છે ?
+              </label>
+            </div>
+            <div className="col">
+              <select
+                required
+                onChange={checkwinner}
+                ref={Winner}
+                className="form-select"
+              >
+                <option selected disabled value="">
+                  Select
+                </option>
+                <option value="true">હા</option>
+                <option value="false">ના</option>
+              </select>
+            </div>
             <div className=" col-2">
               <label className="col-sm-10 col-form-label">જિલ્લો :</label>
             </div>
