@@ -408,7 +408,7 @@ function Motibhaiamin6result() {
   function handlecalculate() {
     setloader("true");
     count = 0;
-    for (let index = 1; index <= 95; index++) {
+    for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
     }
 

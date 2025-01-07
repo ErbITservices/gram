@@ -454,7 +454,7 @@ function Motibhaiamin_6() {
 
   const [calculate, setcalculate] = useState();
   async function handleSubmit() {
-    for (let index = 1; index <= 95; index++) {
+    for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
     }
     console.log(count);
@@ -596,7 +596,7 @@ function Motibhaiamin_6() {
   }
   function handlecalculate() {
     setloader("true");
-    for (let index = 1; index <= 95; index++) {
+    for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
     }
 
@@ -898,7 +898,7 @@ function Motibhaiamin_6() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={0}>30000 થી ઓછું </option>
+                  <option value={0}>30,000 થી ઓછું </option>
                   <option value={1}>30,001 થી 33,000</option>
                   <option value={2}>33,001 થી 35,000</option>
                   <option value={3}>35,000 થી વધુ</option>
@@ -926,7 +926,7 @@ function Motibhaiamin_6() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={0}>30000 થી ઓછું </option>
+                  <option value={0}>30,000 થી ઓછું </option>
                   <option value={1}>30,001 થી 33,000</option>
                   <option value={2}>33,001 થી 35,000</option>
                   <option value={3}>35,000 થી વધુ</option>
@@ -1252,7 +1252,7 @@ function Motibhaiamin_6() {
                     Select
                   </option>
                   <option value={2}>5 કલાક થી વધુ</option>
-                  <option value={1}>ચાર કલાકથી વધુ પાંચ કલાક</option>
+                  <option value={1}>ચાર કલાક થી પાંચ કલાક</option>
                   <option value={0}>ચાર કલાક થી ઓછું</option>
                 </select>
               </div>
@@ -1398,8 +1398,8 @@ function Motibhaiamin_6() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}> 12,001 થી વધુ 15000</option>
-                  <option value={2}>10,001 થી 12,000સુધી</option>
+                  <option value={3}> 12,001 થી 15000 સુધી</option>
+                  <option value={2}>10,001 થી 12,000 સુધી</option>
                   <option value={1}>10,000 થી ઓછા</option>
                 </select>
               </div>
@@ -1449,6 +1449,7 @@ function Motibhaiamin_6() {
                   id="A"
                   autoComplete="off"
                   name="A"
+                  placeholder="Total"
                   value={AB.A}
                   onChange={handlpercentcalculater}
                 />
@@ -1460,6 +1461,7 @@ function Motibhaiamin_6() {
                   id="B"
                   autoComplete="off"
                   name="B"
+                  placeholder="Obtained"
                   value={AB.B}
                   onChange={handlpercentcalculater}
                 />
