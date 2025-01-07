@@ -240,9 +240,12 @@ function Motibhaiamin_2() {
     "Bardoli",
     "Olpad",
     "Mandvi",
+    "Mahuva",
+    "Mangrol",
+    "PalSana",
     "Kamrej",
-    "Utran",
-    "Ichchhpur",
+    "Umarpada",
+    "Chorasi",
   ];
   const SURENDRANAGAR = [
     "Surendranagar",
@@ -608,7 +611,9 @@ function Motibhaiamin_2() {
   function checkwinner() {
     if (Winner.current.value === "true") {
       alert(
-        `વર્ષ ${year - 2} કે ${year - 1} માં એવોર્ડ મળેલ હોય તો તમે આ વર્ષે મોતીભાઈ અમીન માં ફોર્મ ભરી સકસો નહી`
+        `વર્ષ ${year - 2} કે ${
+          year - 1
+        } માં એવોર્ડ મળેલ હોય તો તમે આ વર્ષે મોતીભાઈ અમીન માં ફોર્મ ભરી સકસો નહી`
       );
       navigator("/Motibhaiaminbtnpage");
     }

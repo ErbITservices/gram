@@ -239,15 +239,18 @@ function Motibhaiamin1result() {
     "Talod",
     "Bayad",
   ];
-  const SURAT = [
+ const SURAT = [
     "Surat",
     "G Surat",
     "Bardoli",
     "Olpad",
     "Mandvi",
+    "Mahuva",
+    "Mangrol",
+    "PalSana",
     "Kamrej",
-    "Utran",
-    "Ichchhpur",
+    "Umarpada",
+    "Chorasi",
   ];
   const SURENDRANAGAR = [
     "Surendranagar",

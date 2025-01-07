@@ -929,7 +929,7 @@ function Motibhaiamin6result() {
               </div>
             </div>
             <div className="row mb-3 col-sm-13 align-items-center">
-              <div className=" col">
+              {/* <div className=" col">
                 <label className="col-sm-10 col-form-label">
                   પુસ્તકો/ ફર્નિચર/ મકાન/ બાંધકામ માટે મળેલ સહાયની વિગત{" "}
                 </label>
@@ -953,7 +953,7 @@ function Motibhaiamin6result() {
               </div>
               <div className="col-2">
                 <h4>{data.select_12}</h4>
-              </div>
+              </div> */}
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
                   પુસ્તકો/ ફર્નિચર/ મકાન/ બાંધકામ માટે મળેલ સહાયની વિગત

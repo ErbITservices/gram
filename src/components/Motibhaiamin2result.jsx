@@ -239,9 +239,12 @@ function Motibhaiamin2result() {
     "Bardoli",
     "Olpad",
     "Mandvi",
+    "Mahuva",
+    "Mangrol",
+    "PalSana",
     "Kamrej",
-    "Utran",
-    "Ichchhpur",
+    "Umarpada",
+    "Chorasi",
   ];
   const SURENDRANAGAR = [
     "Surendranagar",
@@ -459,11 +462,10 @@ function Motibhaiamin2result() {
                 required
                 onChange={handlesettaluka}
                 className="form-select"
-                
                 ref={librarydistrict}
               >
                 <option selected value={data.district}>
-                {data.district}
+                  {data.district}
                 </option>
                 {districtlist.map((e, index) => (
                   <option key={index} value={e}>
@@ -478,7 +480,6 @@ function Motibhaiamin2result() {
             <div className="col">
               <select
                 required
-                
                 name="taluko"
                 onChange={handleInput}
                 className="form-select"

@@ -239,9 +239,12 @@ function Motibhaiamin3result() {
     "Bardoli",
     "Olpad",
     "Mandvi",
+    "Mahuva",
+    "Mangrol",
+    "PalSana",
     "Kamrej",
-    "Utran",
-    "Ichchhpur",
+    "Umarpada",
+    "Chorasi",
   ];
   const SURENDRANAGAR = [
     "Surendranagar",
