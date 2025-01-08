@@ -409,7 +409,7 @@ function Motibhaiamin5result() {
   function handlecalculate() {
     count = 0;
     setloader("true");
-    for (let index = 1; index <= 95; index++) {
+    for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
     }
 
@@ -1196,7 +1196,7 @@ function Motibhaiamin5result() {
                   </option>
                   <option value={4}> 20,000 થી વધુ ગ્રંથો</option>
                   <option value={3}>15,001 થી વધુ 20,000</option>
-                  <option value={2}>100001 થી 15,000 સુધી ગ્રંથો હોય તો</option>
+                  <option value={2}>10,001 થી 15,000 સુધી ગ્રંથો હોય તો</option>
                   <option value={0}>10,000 થી ઓછા</option>
                 </select>
               </div>

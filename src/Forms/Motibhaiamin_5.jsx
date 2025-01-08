@@ -457,7 +457,8 @@ function Motibhaiamin_5() {
 
   const [calculate, setcalculate] = useState();
   async function handleSubmit() {
-    for (let index = 1; index <= 95; index++) {
+    count = 0;
+    for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
     }
     console.log(count);
@@ -599,7 +600,8 @@ function Motibhaiamin_5() {
   }
   function handlecalculate() {
     setloader("true");
-    for (let index = 1; index <= 95; index++) {
+    count = 0;
+    for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
     }
 
@@ -1259,8 +1261,8 @@ function Motibhaiamin_5() {
                     Select
                   </option>
                   <option value={3}>6 કલાક થી વધુ</option>
-                  <option value={2}>પાંચ કલાકથી વધુ અને છ કલાકથી ઓછું</option>
-                  <option value={1}>ચાર કલાકથી વધુ પાંચ કલાક</option>
+                  <option value={2}>પાંચ કલાક થી વધુ અને છ કલાક થી ઓછું</option>
+                  <option value={1}>ચાર કલાક થી વધુ પાંચ કલાક</option>
                   <option value={0}>ચાર કલાક થી ઓછું</option>
                 </select>
               </div>
@@ -1286,8 +1288,8 @@ function Motibhaiamin_5() {
                     Select
                   </option>
                   <option value={3}>6 કલાક થી વધુ</option>
-                  <option value={2}>પાંચ કલાકથી વધુ અને છ કલાકથી ઓછું</option>
-                  <option value={1}>ચાર કલાકથી વધુ પાંચ કલાક</option>
+                  <option value={2}>પાંચ કલાક થી વધુ અને છ કલાક થી ઓછું</option>
+                  <option value={1}>ચાર કલાક થી વધુ પાંચ કલાક</option>
                   <option value={0}>ચાર કલાક થી ઓછું</option>
                 </select>
               </div>
@@ -1408,7 +1410,7 @@ function Motibhaiamin_5() {
                   </option>
                   <option value={4}> 20,000 થી વધુ ગ્રંથો</option>
                   <option value={3}>15,001 થી વધુ 20,000</option>
-                  <option value={2}>100001 થી 15,000 સુધી ગ્રંથો હોય તો</option>
+                  <option value={2}>10,001 થી 15,000 સુધી ગ્રંથો હોય તો</option>
                   <option value={0}>10,000 થી ઓછા</option>
                 </select>
               </div>
@@ -1457,6 +1459,7 @@ function Motibhaiamin_5() {
                   className="form-control"
                   id="A"
                   autoComplete="off"
+                  placeholder="Total"
                   name="A"
                   value={AB.A}
                   onChange={handlpercentcalculater}
@@ -1468,6 +1471,7 @@ function Motibhaiamin_5() {
                   className="form-control"
                   id="B"
                   autoComplete="off"
+                  placeholder="Obtained"
                   name="B"
                   value={AB.B}
                   onChange={handlpercentcalculater}
@@ -1525,9 +1529,9 @@ function Motibhaiamin_5() {
                     Select
                   </option>
                   <option value={4}>40% </option>
-                  <option value={3}>30 થી 39% </option>
-                  <option value={2}>15 થી 29% </option>
-                  <option value={1}>5 થી 14% </option>
+                  <option value={3}>30% થી 39% </option>
+                  <option value={2}>15% થી 29% </option>
+                  <option value={1}>5% થી 14% </option>
                   <option value={0}>5% થી ઓછા</option>
                 </select>
               </div>
@@ -1554,11 +1558,11 @@ function Motibhaiamin_5() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={0}>5 થી 14%</option>
-                  <option value={1}>15 થી 20%</option>
-                  <option value={2}>21 થી 30%</option>
-                  <option value={3}>31 થી 40%</option>
-                  <option value={4}>40 થી 50%</option>
+                  <option value={0}>5% થી 14%</option>
+                  <option value={1}>15% થી 20%</option>
+                  <option value={2}>21% થી 30%</option>
+                  <option value={3}>31% થી 40%</option>
+                  <option value={4}>40% થી 50%</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1582,11 +1586,11 @@ function Motibhaiamin_5() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>24 થી વધુ</option>
-                  <option value={3}>18 થી 23</option>
-                  <option value={2}>12 થી 17</option>
-                  <option value={1}>6 થી 11</option>
-                  <option value={0}>3 કે તેથી ઓછું</option>
+                  <option value={4}>24% થી વધુ</option>
+                  <option value={3}>18% થી 23%</option>
+                  <option value={2}>12% થી 17%</option>
+                  <option value={1}>6% થી 11%</option>
+                  <option value={0}>3% કે તેથી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">

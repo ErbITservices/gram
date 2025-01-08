@@ -457,7 +457,8 @@ function Motibhaiamin_4() {
 
   const [calculate, setcalculate] = useState();
   async function handleSubmit() {
-    for (let index = 1; index <= 95; index++) {
+    count = 0;
+    for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
     }
     console.log(count);
@@ -599,7 +600,8 @@ function Motibhaiamin_4() {
   }
   function handlecalculate() {
     setloader("true");
-    for (let index = 1; index <= 95; index++) {
+    count = 0;
+    for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
     }
 
