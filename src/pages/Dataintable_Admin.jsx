@@ -96,7 +96,8 @@ function Dataintable_Admin() {
     "mandvi",
     "mangrod",
   ];
-  const tapi = ["uchal", "nijar", "songadh", "vyara", "dolwan", "valod"];
+  const TAPI = ["Vyara", "Songadh", "Nirzar", "Tapi", "Madhya Tapi"];
+
   const navsari = ["gandevi", "jalalpor", "chikhali", "vansada", "navsari"];
   const valsad = ["valsad", "dharampur", "paradi"];
   const vadodra = [
