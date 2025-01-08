@@ -179,13 +179,13 @@ function Motibhaiamin1result() {
     "Rapar",
   ];
   const KHEDA = ["Kheda", "Nadiad", "Matar", "Kapadvanj", "Mahudha", "Dholka"];
-  const MAHESANA = [
+   const MAHESANA = [
     "Mehsana",
     "Kadi",
     "Unjha",
     "Visnagar",
     "Vadnagar",
-    "Ahmedabad",
+    "Vijapur",
   ];
   const MAHISAGAR = [
     "Lunawada",

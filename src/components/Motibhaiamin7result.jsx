@@ -178,7 +178,7 @@ function Motibhaiamin7result() {
     "Unjha",
     "Visnagar",
     "Vadnagar",
-    "Ahmedabad",
+    "Vijapur",
   ];
   const MAHISAGAR = [
     "Lunawada",

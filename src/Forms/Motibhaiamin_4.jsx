@@ -180,7 +180,7 @@ function Motibhaiamin_4() {
     "Unjha",
     "Visnagar",
     "Vadnagar",
-    "Ahmedabad",
+    "Vijapur",
   ];
   const MAHISAGAR = [
     "Lunawada",
