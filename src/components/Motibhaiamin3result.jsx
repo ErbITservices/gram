@@ -256,7 +256,7 @@ function Motibhaiamin3result() {
     "Limbdi",
     "Mandvi",
   ];
-  const TAPI = ["Vyara", "Songadh", "Tapi", "Madhya Tapi"];
+  const TAPI = ["Vyara", "Songadh", "Nirzar", "Tapi", "Madhya Tapi"];
   const VADODARA = [
     "Vadodara",
     "Savli",

@@ -180,7 +180,7 @@ function Motibhaiamin_6() {
     "Unjha",
     "Visnagar",
     "Vadnagar",
-    "Ahmedabad",
+    "Vijapur",
   ];
   const MAHISAGAR = [
     "Lunawada",
@@ -257,7 +257,7 @@ function Motibhaiamin_6() {
     "Limbdi",
     "Mandvi",
   ];
-  const TAPI = ["Vyara", "Songadh", "Tapi", "Madhya Tapi"];
+  const TAPI = ["Vyara", "Songadh", "Nirzar", "Tapi", "Madhya Tapi"];
   const VADODARA = [
     "Vadodara",
     "Savli",
