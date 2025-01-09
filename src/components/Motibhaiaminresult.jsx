@@ -166,6 +166,7 @@ function Motibhaiaminresult() {
                 >
                   <thead>
                     <tr>
+                      <th>Sr No.</th>
                       <th>Year</th>
                       <th>Library Name</th>
                       <th>Taluko</th>
@@ -176,8 +177,9 @@ function Motibhaiaminresult() {
                     </tr>
                   </thead>
                   <tbody>
-                    {data.map((i) => (
+                    {data.map((i, e) => (
                       <tr>
+                        <td>{e+1}</td>
                         <td>{i.currentyear}</td>
                         <td>{i.lname}</td>
                         <td>{i.taluko}</td>
