@@ -58,13 +58,22 @@ function Motibhairesultlatter() {
                 <option selected value={""}>
                   Select
                 </option>
-                <option value={"Motibhaiamin1"}>મહિલા બાળ</option>
+                <option value={"Motibhaiamin1"}>અંધજન ગ્રંથાલય</option>
+                <option value={"Motibhaiamin2"}>શહેર ગ્રંથાલય</option>
+                <option value={"Motibhaiamin3"}>ગ્રામ ગ્રંથાલય</option>
+                <option value={"Motibhaiamin4"}>
+                  શહેર શાખા /નગરકક્ષા-૧ ગ્રંથાલય
+                </option>
+                <option value={"Motibhaiamin5"}>નગરકક્ષા-૨ ગ્રંથાલય</option>
+                <option value={"Motibhaiamin6"}>મહિલા બાળ ગ્રંથાલય</option>
+                <option value={"Motibhaiamin7"}>વિશિષ્ટ ગ્રંથાલય</option>
+                {/* <option value={"Motibhaiamin1"}>મહિલા બાળ</option>
                 <option value={"Motibhaiamin2"}>શહેર ગ્રંથાલય</option>
                 <option value={"Motibhaiamin3"}>શહેર શાખા નગરકક્ષા</option>
                 <option value={"Motibhaiamin4"}>ગ્રામ ગ્રંથાલય</option>
                 <option value={"Motibhaiamin5"}>નગરકક્ષા ૧</option>
                 <option value={"Motibhaiamin6"}>નગરકક્ષા ૨</option>
-                <option value={"Motibhaiamin7"}>વિશીષ્ટ લાઇબ્રેરી</option>
+                <option value={"Motibhaiamin7"}>વિશીષ્ટ લાઇબ્રેરી</option> */}
               </select>
             </div>
             <div className=" col">
