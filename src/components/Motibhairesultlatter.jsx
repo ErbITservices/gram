@@ -91,11 +91,11 @@ function Motibhairesultlatter() {
             <>
               <div className="latter" ref={pdfref}>
                 <h1> ભલામણ</h1>
-                <h3>
+                <h5>
                   શહેર ગ્રંથાલય કક્ષાના સને {year - 1}-{year} ના વર્ષ ના સ્પર્ધક
                   ગ્રંથાલયોના મૂલ્યાંકન બાદ નીચેની વિગતે ગ્રંથાલયોને ક્રમાનુસાર
                   ભલામણ આ પેટા પ્રાદેશિક સમિતિ કરે છે
-                </h3>
+                </h5>
                 <p className="latterlname">
                   (૧) ઉત્તમ ગ્રંથાલય :- {data[0].lname}{" "}
                   <span className="latterlname spacing">

@@ -399,8 +399,12 @@ margin: 20px 10px;
 }
 .latter h1{
     
-
+ margin-bottom: 20px;
     border-bottom: 1.5px solid black;
+}
+.latter h5{
+    
+margin-bottom: 35px;
 }
 .namescontainer{
   width: 100%;
@@ -409,13 +413,15 @@ margin: 20px 10px;
   justify-content: center;
 }
 .latternames{
-  margin: 100px;
-  font-size: 20px;
+  
+  margin: 0px 50px;
+  margin-top: 89px;
+  font-size: 15px;
   
     font-weight: 700;
 }
 .latterlname{
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
 }
 .spacing{
