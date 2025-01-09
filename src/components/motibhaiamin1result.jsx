@@ -77,12 +77,13 @@ function Motibhaiamin1result() {
     "Khambhalida",
     "Sihor",
   ];
-  const ANAND = [
+ const ANAND = [
     "Anand",
     "Borsad",
     "Khambhat",
     "Sojitra",
     "Tarapur",
+    "Petlad",
     "Vallabh Vidyanagar",
   ];
 

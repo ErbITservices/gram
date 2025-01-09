@@ -84,6 +84,7 @@ function Motibhaiamin_6() {
     "Khambhat",
     "Sojitra",
     "Tarapur",
+    "Petlad",
     "Vallabh Vidyanagar",
   ];
 
@@ -742,7 +743,8 @@ function Motibhaiamin_6() {
                 onChange={handleInput}
                 className="form-select"
               >
-                <option selected>{year}</option>
+                <option selected disabled>Select</option>
+                <option >{year}</option>
                 <option>{year - 1}</option>
                 <option>{year - 2}</option>
                 <option>{year - 3}</option>
@@ -1145,32 +1147,6 @@ function Motibhaiamin_6() {
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
                   પુસ્તકો/ ફર્નિચર/ મકાન/ બાંધકામ માટે મળેલ સહાયની વિગત{" "}
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
-                  name="select_12"
-                  value={data.select_12}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={1}>હા</option>
-                  <option value={0}>ના</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_12}</h4>
-              </div>
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  પુસ્તકો/ ફર્નિચર/ મકાન/ બાંધકામ માટે મળેલ સહાયની વિગત
-                  2021-2022 :
                 </label>
               </div>
               <div className="col">
@@ -2228,7 +2204,7 @@ function Motibhaiamin_6() {
                   </option>
                   <option value={2}>10001 કરતા વધુ</option>
                   <option value={1}>9000 થી 10000 હોય તો</option>
-                  <option value={0}>10000 થી ઓછા હોય તો</option>
+                  <option value={0}>9000 થી ઓછા હોય તો</option>
                 </select>
               </div>
               <div className="col-2">

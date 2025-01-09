@@ -82,6 +82,7 @@ function Motibhaiamin5result() {
     "Khambhat",
     "Sojitra",
     "Tarapur",
+    "Petlad",
     "Vallabh Vidyanagar",
   ];
 
@@ -944,32 +945,6 @@ function Motibhaiamin5result() {
                   required
                   id="inputState"
                   onClick={handleInput}
-                  name="select_12"
-                  value={data.select_12}
-                  onChange={handleInput}
-                  className="form-select"
-                >
-                  <option selected disabled value="">
-                    Select
-                  </option>
-                  <option value={2}>હા</option>
-                  <option value={0}>ના</option>
-                </select>
-              </div>
-              <div className="col-2">
-                <h4>{data.select_12}</h4>
-              </div>
-              <div className=" col">
-                <label className="col-sm-10 col-form-label">
-                  પુસ્તકો/ ફર્નિચર/ મકાન/ બાંધકામ માટે મળેલ સહાયની વિગત
-                  2021-2022 :
-                </label>
-              </div>
-              <div className="col">
-                <select
-                  required
-                  id="inputState"
-                  onClick={handleInput}
                   name="select_13"
                   value={data.select_13}
                   onChange={handleInput}
@@ -985,6 +960,7 @@ function Motibhaiamin5result() {
               <div className="col-2">
                 <h4>{data.select_13}</h4>
               </div>
+              
             </div>
             <div className="row mb-3 col-13 align-items-center">
               <div className="col">

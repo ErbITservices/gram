@@ -109,6 +109,7 @@ function Addnew() {
     "Khambhat",
     "Sojitra",
     "Tarapur",
+    "Petlad",
     "Vallabh Vidyanagar",
   ];
 

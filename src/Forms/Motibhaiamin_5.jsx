@@ -84,6 +84,7 @@ function Motibhaiamin_5() {
     "Khambhat",
     "Sojitra",
     "Tarapur",
+    "Petlad",
     "Vallabh Vidyanagar",
   ];
 
@@ -257,7 +258,7 @@ function Motibhaiamin_5() {
     "Limbdi",
     "Mandvi",
   ];
-  const TAPI = ["Vyara", "Songadh", "Nirzar" ,"Tapi", "Madhya Tapi"];
+  const TAPI = ["Vyara", "Songadh", "Nirzar", "Tapi", "Madhya Tapi"];
   const VADODARA = [
     "Vadodara",
     "Savli",
@@ -1176,7 +1177,7 @@ function Motibhaiamin_5() {
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
                   પુસ્તકો/ ફર્નિચર/ મકાન/ બાંધકામ માટે મળેલ સહાયની વિગત
-                  2021-2022 :
+                   :
                 </label>
               </div>
               <div className="col">

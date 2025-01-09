@@ -83,6 +83,7 @@ function Motibhaiamin2result() {
     "Khambhat",
     "Sojitra",
     "Tarapur",
+    "Petlad",
     "Vallabh Vidyanagar",
   ];
 
