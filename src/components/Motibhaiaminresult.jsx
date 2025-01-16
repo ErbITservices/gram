@@ -107,11 +107,36 @@ function Motibhaiaminresult() {
     }
   }
   async function handledelete(id) {
-    const response = await axios.delete(
-      `https://gramgranthalay-backend.vercel.app/Motibhaiamin7/${id}`
-    );
-    console.log(response);
-    
+    if (category.current.value === "Motibhaiamin1") {
+      await axios.delete(
+        `https://gramgranthalay-backend.vercel.app/Motibhaiamin1/${id}`
+      );
+    }
+    else if (category.current.value === "Motibhaiamin2") {
+      await axios.delete(
+        `https://gramgranthalay-backend.vercel.app/Motibhaiamin2/${id}`
+      );
+    } else if (category.current.value === "Motibhaiamin3") {
+      await axios.delete(
+        `https://gramgranthalay-backend.vercel.app/Motibhaiamin3/${id}`
+      );
+    } else if (category.current.value === "Motibhaiamin4") {
+      await axios.delete(
+        `https://gramgranthalay-backend.vercel.app/Motibhaiamin4/${id}`
+      );
+    } else if (category.current.value === "Motibhaiamin5") {
+      await axios.delete(
+        `https://gramgranthalay-backend.vercel.app/Motibhaiamin5/${id}`
+      );
+    } else if (category.current.value === "Motibhaiamin6") {
+      await axios.delete(
+        `https://gramgranthalay-backend.vercel.app/Motibhaiamin6/${id}`
+      );
+    } else if (category.current.value === "Motibhaiamin7") {
+      await axios.delete(
+        `https://gramgranthalay-backend.vercel.app/Motibhaiamin7/${id}`
+      );
+    }
   }
 
   return (
