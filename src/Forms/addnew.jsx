@@ -432,11 +432,13 @@ function Addnew() {
               "district"
             )}`
           );
-          console.log(
-            `https://gramgranthalay-backend.vercel.app/district/${localStorage.getItem(
-              "district"
-            )}`
-          );
+            
+              const response2 = await axios.get(
+                `https://gramgranthalay-backend.vercel.app/Count/Count`
+              );
+              console.log(response2.data[0].count),
+                setcount(response2.data[0].count);
+          
 
           console.log(response.data), setpd(response.data);
         } catch (error) {
