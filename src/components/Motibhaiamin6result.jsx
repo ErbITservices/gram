@@ -86,7 +86,14 @@ function Motibhaiamin6result() {
     "Vallabh Vidyanagar",
   ];
 
-  const ARAVALLI = ["Modasa", "Malpur", "Bayad", "Dhansura", "Garbada"];
+  const ARAVALLI = [
+    "Modasa",
+    "Malpur",
+    "Bayad",
+    "Bhiloda",
+    "Dhansura",
+    "Garbada",
+  ];
   const BANASKANTHA = [
     "Deesa",
     "Palanpur",
@@ -232,6 +239,7 @@ function Motibhaiamin6result() {
     "Prantij",
     "Talod",
     "Bayad",
+    "Vijaynagar",
   ];
   const SURAT = [
     "Surat",

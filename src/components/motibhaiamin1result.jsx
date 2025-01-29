@@ -9,8 +9,8 @@ import NavBar from "../components/NavBar";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Motibhaiamin1result() {
-    const navigator = useNavigate();
-  
+  const navigator = useNavigate();
+
   const d = new Date();
   let year = d.getFullYear();
   const currentyear = useRef();
@@ -77,7 +77,7 @@ function Motibhaiamin1result() {
     "Khambhalida",
     "Sihor",
   ];
- const ANAND = [
+  const ANAND = [
     "Anand",
     "Borsad",
     "Khambhat",
@@ -91,6 +91,7 @@ function Motibhaiamin1result() {
     "Modasa",
     "Malpur",
     "Bayad",
+    "Bhiloda",
     "Dhansura",
     "Garbada",
   ];
@@ -180,7 +181,7 @@ function Motibhaiamin1result() {
     "Rapar",
   ];
   const KHEDA = ["Kheda", "Nadiad", "Matar", "Kapadvanj", "Mahudha", "Dholka"];
-   const MAHESANA = [
+  const MAHESANA = [
     "Mehsana",
     "Kadi",
     "Unjha",
@@ -239,8 +240,9 @@ function Motibhaiamin1result() {
     "Prantij",
     "Talod",
     "Bayad",
+    "Vijaynagar",
   ];
- const SURAT = [
+  const SURAT = [
     "Surat",
     "G Surat",
     "Bardoli",
@@ -263,7 +265,7 @@ function Motibhaiamin1result() {
     "Limbdi",
     "Mandvi",
   ];
-   const TAPI = ["Vyara", "Songadh", "Nirzar" ,"Tapi", "Madhya Tapi"];
+  const TAPI = ["Vyara", "Songadh", "Nirzar", "Tapi", "Madhya Tapi"];
   const VADODARA = [
     "Vadodara",
     "Savli",
@@ -278,7 +280,7 @@ function Motibhaiamin1result() {
 
   function handlesettaluka() {
     console.log(librarydistrict);
-    
+
     if (librarydistrict.current.value === "AHMADABAD") {
       setlisttaluka(AHMADABAD);
     } else if (librarydistrict.current.value === "AMRELI")
@@ -376,8 +378,8 @@ function Motibhaiamin1result() {
   const finacialyear = useRef();
 
   const [calculate, setcalculate] = useState();
-    async function handleSubmit() {
-        let count = 0;
+  async function handleSubmit() {
+    let count = 0;
     for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
     }
@@ -393,17 +395,16 @@ function Motibhaiamin1result() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            
-              ...data,
-              marks: count,
+            ...data,
+            marks: count,
           }),
         }
       );
       if (senddata.ok) {
-          console.log("done");
-          
+        console.log("done");
+
         navigator("/Motibhaiaminresult");
-        
+
         setloader("false");
       } else {
         setloader("false");
@@ -416,9 +417,8 @@ function Motibhaiamin1result() {
       setloader("false");
     }
   }
-    function handlecalculate() {
-      
-        let count = 0;
+  function handlecalculate() {
+    let count = 0;
     setloader("true");
     for (let index = 1; index <= 98; index++) {
       count += Number(data["select_" + index]);
@@ -441,8 +441,8 @@ function Motibhaiamin1result() {
         <form className="form " onSubmit={handleSubmit}>
           <div>
             <h1>
-              સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એવોર્ડ અને ઉત્તમ ગ્રંથાલય
-              સેવા પ્રમાણપત્ર માટેની યોજના અન્વય અંધજન ગ્રંથાલયનો માપદંડો
+              સ્વ શ્રી મોતીભાઈ અમીન ગ્રંથાલય સેવા એવોર્ડ અને ઉત્તમ ગ્રંથાલય સેવા
+              પ્રમાણપત્ર માટેની યોજના અન્વય અંધજન ગ્રંથાલયનો માપદંડો
             </h1>{" "}
           </div>
 
@@ -458,7 +458,6 @@ function Motibhaiamin1result() {
                 type="text"
                 className="form-control"
                 autoComplete="off"
-
                 name="lname"
                 onChange={handleInput}
                 value={data.lname}
@@ -477,7 +476,7 @@ function Motibhaiamin1result() {
                 ref={librarydistrict}
               >
                 <option selected value={data.district}>
-                {data.district}
+                  {data.district}
                 </option>
                 {districtlist.map((e, index) => (
                   <option key={index} value={e}>
@@ -492,7 +491,6 @@ function Motibhaiamin1result() {
             <div className="col">
               <select
                 required
-                
                 name="taluko"
                 onChange={handleInput}
                 className="form-select"

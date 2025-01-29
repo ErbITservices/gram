@@ -88,7 +88,7 @@ function Motibhaiamin_3() {
     "Vallabh Vidyanagar",
   ];
 
-  const ARAVALLI = ["Modasa", "Malpur", "Bayad", "Dhansura", "Garbada"];
+  const ARAVALLI = ["Modasa", "Malpur", "Bayad","Bhiloda", "Dhansura", "Garbada"];
   const BANASKANTHA = [
     "Deesa",
     "Palanpur",
@@ -234,6 +234,7 @@ function Motibhaiamin_3() {
     "Prantij",
     "Talod",
     "Bayad",
+    "Vijaynagar",
   ];
   const SURAT = [
     "Surat",
@@ -1231,11 +1232,11 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>પાંચ કલાકથી વધુ હોય તો</option>
+                  <option value={2}>પાંચ કલાક થી વધુ હોય તો</option>
                   <option value={1}>
-                    ચાર કલાકથી વધુ અને પાંચ કલાક સુધી હોય તો{" "}
+                    ચાર કલાક થી વધુ અને પાંચ કલાક સુધી હોય તો{" "}
                   </option>
-                  <option value={0}>ચાર કલાકથી ઓછું હોય તો</option>
+                  <option value={0}>ચાર કલાક થી ઓછું હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1259,11 +1260,11 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}>પાંચ કલાકથી વધુ હોય તો</option>
+                  <option value={3}>પાંચ કલાક થી વધુ હોય તો</option>
                   <option value={1}>
-                    ચાર કલાકથી વધુ અને પાંચ કલાક સુધી હોય તો{" "}
+                    ચાર કલાક થી વધુ અને પાંચ કલાક સુધી હોય તો{" "}
                   </option>
-                  <option value={0}>ચાર કલાકથી ઓછું હોય તો</option>
+                  <option value={0}>ચાર કલાક થી ઓછું હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1432,6 +1433,7 @@ function Motibhaiamin_3() {
                   id="A"
                   autoComplete="off"
                   name="A"
+                  placeholder="Total"
                   value={AB.A}
                   onChange={handlpercentcalculater}
                 />
@@ -1443,6 +1445,7 @@ function Motibhaiamin_3() {
                   id="B"
                   autoComplete="off"
                   name="B"
+                  placeholder="Obtaine"
                   value={AB.B}
                   onChange={handlpercentcalculater}
                 />
@@ -1498,9 +1501,9 @@ function Motibhaiamin_3() {
                     Select
                   </option>
                   <option value={4}>40%</option>
-                  <option value={3}>30 થી 39%</option>
-                  <option value={2}>15 થી 29%</option>
-                  <option value={1}>5 થી 14%</option>
+                  <option value={3}>30% થી 39%</option>
+                  <option value={2}>15% થી 29%</option>
+                  <option value={1}>5% થી 14%</option>
                   <option value={0}>5% થી</option>
                 </select>
               </div>
@@ -1527,11 +1530,11 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={0}>5 થી 14%</option>
-                  <option value={1}>15 થી 20%</option>
-                  <option value={2}>21 થી 30%</option>
-                  <option value={3}>31 થી 40%</option>
-                  <option value={4}>40 થી 50%</option>
+                  <option value={0}>5% થી 14%</option>
+                  <option value={1}>15% થી 20%</option>
+                  <option value={2}>21% થી 30%</option>
+                  <option value={3}>31% થી 40%</option>
+                  <option value={4}>40% થી 50%</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1555,11 +1558,11 @@ function Motibhaiamin_3() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>24</option>
-                  <option value={3}>18 થી 23</option>
-                  <option value={2}>12 થી 17</option>
-                  <option value={1}>6 થી 11</option>
-                  <option value={0}>3 કે તેથી ઓછું</option>
+                  <option value={4}>24%</option>
+                  <option value={3}>18% થી 23%</option>
+                  <option value={2}>12% થી 17%</option>
+                  <option value={1}>6% થી 11%</option>
+                  <option value={0}>3% કે તેથી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2568,7 +2571,7 @@ function Motibhaiamin_3() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  વાંચનાલયમાં લાભ લેતા વાંચો કોની વાર્ષિક સંખ્યા:
+                  વાંચનાલયમાં લાભ લેતા વાંચોકો ની વાર્ષિક સંખ્યા:
                 </label>
               </div>
               <div className="col">

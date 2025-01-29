@@ -88,7 +88,14 @@ function Motibhaiamin_5() {
     "Vallabh Vidyanagar",
   ];
 
-  const ARAVALLI = ["Modasa", "Malpur", "Bayad", "Dhansura", "Garbada"];
+  const ARAVALLI = [
+    "Modasa",
+    "Malpur",
+    "Bayad",
+    "Bhiloda",
+    "Dhansura",
+    "Garbada",
+  ];
   const BANASKANTHA = [
     "Deesa",
     "Palanpur",
@@ -234,6 +241,7 @@ function Motibhaiamin_5() {
     "Prantij",
     "Talod",
     "Bayad",
+    "Vijaynagar",
   ];
   const SURAT = [
     "Surat",
@@ -1176,8 +1184,7 @@ function Motibhaiamin_5() {
               </div> */}
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  પુસ્તકો/ ફર્નિચર/ મકાન/ બાંધકામ માટે મળેલ સહાયની વિગત
-                   :
+                  પુસ્તકો/ ફર્નિચર/ મકાન/ બાંધકામ માટે મળેલ સહાયની વિગત :
                 </label>
               </div>
               <div className="col">

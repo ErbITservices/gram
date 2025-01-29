@@ -113,7 +113,14 @@ function Addnew() {
     "Vallabh Vidyanagar",
   ];
 
-  const ARAVALLI = ["Modasa", "Malpur", "Bayad", "Dhansura", "Garbada"];
+  const ARAVALLI = [
+    "Modasa",
+    "Malpur",
+    "Bayad",
+    "Bhiloda",
+    "Dhansura",
+    "Garbada",
+  ];
   const BANASKANTHA = [
     "Deesa",
     "Palanpur",
@@ -259,6 +266,7 @@ function Addnew() {
     "Prantij",
     "Talod",
     "Bayad",
+    "Vijaynagar",
   ];
   const SURAT = [
     "Surat",
@@ -432,13 +440,12 @@ function Addnew() {
               "district"
             )}`
           );
-            
-              const response2 = await axios.get(
-                `https://gramgranthalay-backend.vercel.app/Count/Count`
-              );
-              console.log(response2.data[0].count),
-                setcount(response2.data[0].count);
-          
+
+          const response2 = await axios.get(
+            `https://gramgranthalay-backend.vercel.app/Count/Count`
+          );
+          console.log(response2.data[0].count),
+            setcount(response2.data[0].count);
 
           console.log(response.data), setpd(response.data);
         } catch (error) {

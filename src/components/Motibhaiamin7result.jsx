@@ -86,7 +86,14 @@ function Motibhaiamin7result() {
     "Vallabh Vidyanagar",
   ];
 
-  const ARAVALLI = ["Modasa", "Malpur", "Bayad", "Dhansura", "Garbada"];
+  const ARAVALLI = [
+    "Modasa",
+    "Malpur",
+    "Bayad",
+    "Bhiloda",
+    "Dhansura",
+    "Garbada",
+  ];
   const BANASKANTHA = [
     "Deesa",
     "Palanpur",
@@ -232,6 +239,7 @@ function Motibhaiamin7result() {
     "Prantij",
     "Talod",
     "Bayad",
+    "Vijaynagar",
   ];
   const SURAT = [
     "Surat",
@@ -969,7 +977,6 @@ function Motibhaiamin7result() {
               <div className="col-2">
                 <h4>{data.select_13}</h4>
               </div>
-              
             </div>
             <div className="row mb-3 col-13 align-items-center">
               <div className="col">

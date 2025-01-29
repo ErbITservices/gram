@@ -88,7 +88,14 @@ function Motibhaiamin_6() {
     "Vallabh Vidyanagar",
   ];
 
-  const ARAVALLI = ["Modasa", "Malpur", "Bayad", "Dhansura", "Garbada"];
+  const ARAVALLI = [
+    "Modasa",
+    "Malpur",
+    "Bayad",
+    "Bhiloda",
+    "Dhansura",
+    "Garbada",
+  ];
   const BANASKANTHA = [
     "Deesa",
     "Palanpur",
@@ -234,6 +241,7 @@ function Motibhaiamin_6() {
     "Prantij",
     "Talod",
     "Bayad",
+    "Vijaynagar",
   ];
   const SURAT = [
     "Surat",
@@ -743,8 +751,10 @@ function Motibhaiamin_6() {
                 onChange={handleInput}
                 className="form-select"
               >
-                <option selected disabled>Select</option>
-                <option >{year}</option>
+                <option selected disabled>
+                  Select
+                </option>
+                <option>{year}</option>
                 <option>{year - 1}</option>
                 <option>{year - 2}</option>
                 <option>{year - 3}</option>

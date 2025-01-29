@@ -87,7 +87,14 @@ function Motibhaiamin3result() {
     "Vallabh Vidyanagar",
   ];
 
-  const ARAVALLI = ["Modasa", "Malpur", "Bayad", "Dhansura", "Garbada"];
+  const ARAVALLI = [
+    "Modasa",
+    "Malpur",
+    "Bayad",
+    "Bhiloda",
+    "Dhansura",
+    "Garbada",
+  ];
   const BANASKANTHA = [
     "Deesa",
     "Palanpur",
@@ -233,6 +240,7 @@ function Motibhaiamin3result() {
     "Prantij",
     "Talod",
     "Bayad",
+    "Vijaynagar",
   ];
   const SURAT = [
     "Surat",
@@ -1016,11 +1024,11 @@ function Motibhaiamin3result() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={2}>પાંચ કલાકથી વધુ હોય તો</option>
+                  <option value={2}>પાંચ કલાક થી વધુ હોય તો</option>
                   <option value={1}>
-                    ચાર કલાકથી વધુ અને પાંચ કલાક સુધી હોય તો{" "}
+                    ચાર કલાક થી વધુ અને પાંચ કલાક સુધી હોય તો{" "}
                   </option>
-                  <option value={0}>ચાર કલાકથી ઓછું હોય તો</option>
+                  <option value={0}>ચાર કલાક થી ઓછું હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1044,11 +1052,11 @@ function Motibhaiamin3result() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}>પાંચ કલાકથી વધુ હોય તો</option>
+                  <option value={3}>પાંચ કલાક થી વધુ હોય તો</option>
                   <option value={1}>
-                    ચાર કલાકથી વધુ અને પાંચ કલાક સુધી હોય તો{" "}
+                    ચાર કલાક થી વધુ અને પાંચ કલાક સુધી હોય તો{" "}
                   </option>
-                  <option value={0}>ચાર કલાકથી ઓછું હોય તો</option>
+                  <option value={0}>ચાર કલાક થી ઓછું હોય તો</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2353,7 +2361,7 @@ function Motibhaiamin3result() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  વાંચનાલયમાં લાભ લેતા વાંચો કોની વાર્ષિક સંખ્યા:
+                  વાંચનાલયમાં લાભ લેતા વાંચોકો ની વાર્ષિક સંખ્યા:
                 </label>
               </div>
               <div className="col">
