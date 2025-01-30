@@ -1330,9 +1330,9 @@ function Motibhaiamin2result() {
                     Select
                   </option>
                   <option value={4}>40%</option>
-                  <option value={3}>30 થી 39%</option>
-                  <option value={2}>15 થી 29%</option>
-                  <option value={1}>5 થી 14%</option>
+                  <option value={3}>30% થી 39%</option>
+                  <option value={2}>15% થી 29%</option>
+                  <option value={1}>5% થી 14%</option>
                   <option value={0}>5% થી ઓછું</option>
                 </select>
               </div>
