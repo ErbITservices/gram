@@ -1251,9 +1251,9 @@ function Motibhaiamin_2() {
                     Select
                   </option>
                   <option value={5}>7 કલાક થી વધુ</option>
-                  <option value={4}>6 થી 7</option>
-                  <option value={3}>5 થી 6</option>
-                  <option value={0}>5 થી 1</option>
+                  <option value={4}>6 કલાક થી 7 કલાક</option>
+                  <option value={3}>5 કલાક થી 6 કલાક</option>
+                  <option value={0}>5 કલાક થી 1 કલાક</option>
                 </select>
               </div>
               <div className="col-2">

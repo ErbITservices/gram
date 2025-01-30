@@ -1251,9 +1251,9 @@ function Motibhaiamin_7() {
                     Select
                   </option>
                   <option value={5}>7 કલાક થી વધુ</option>
-                  <option value={4}>6 થી 7</option>
-                  <option value={3}>5 થી 6</option>
-                  <option value={0}>5 થી 1</option>
+                  <option value={4}>6 કલાક થી 7 કલાક</option>
+                  <option value={3}>5 કલાક થી 6 કલાક</option>
+                  <option value={0}>5 કલાક થી 1 કલાક</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1401,8 +1401,8 @@ function Motibhaiamin_7() {
                   <option value={4}> 50,001 થી વધુ</option>
                   <option value={3}>35,001 થી 50,000સુધી</option>
                   <option value={2}>30,001 થી 35,000સુધી</option>
-                  <option value={1}>30,000 થી 25,000સુધી</option>
-                  <option value={0}>25,000 થી 0ઓછા</option>
+                  <option value={1}>25,000 થી 30,000સુધી</option>
+                  <option value={0}>25,000 થી ઓછા</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1575,11 +1575,11 @@ function Motibhaiamin_7() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>24</option>
-                  <option value={3}>18 થી 23</option>
-                  <option value={2}>12 થી 17</option>
-                  <option value={1}>6 થી 11</option>
-                  <option value={0}>3 કે તેથી ઓછું</option>
+                  <option value={4}>24%</option>
+                  <option value={3}>18% થી 23%</option>
+                  <option value={2}>12% થી 17%</option>
+                  <option value={1}>6% થી 11%</option>
+                  <option value={0}>3% કે તેથી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2099,8 +2099,8 @@ function Motibhaiamin_7() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}>શાસ્ત્રીય પદ્ધતિ?</option>
-                  <option value={1}>સ્થાનિક પદ્ધતિ?</option>
+                  <option value={3}>શાસ્ત્રીય પદ્ધતિ</option>
+                  <option value={1}>સ્થાનિક પદ્ધતિ</option>
                   <option value={0}>ન હોય તો</option>
                 </select>
               </div>
@@ -2431,7 +2431,7 @@ function Motibhaiamin_7() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  અપાતી સંદર્ભસેવાની નોંધ માટે આલગ રજીસ્ટર રખાઇ છે?:
+                  અપાતી સંદર્ભસેવાની નોંધ માટે અલગ રજીસ્ટર રખાઇ છે?:
                 </label>
               </div>
               <div className="col">
@@ -2583,10 +2583,10 @@ function Motibhaiamin_7() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={3}>૨૦ થી વધુ</option>
-                  <option value={2}>૧૫ થી ૨૦ હજાર</option>
-                  <option value={1}>૮ થી ૧૫ હજાર</option>
-                  <option value={0}>૭ હજાર</option>
+                  <option value={3}>20,000 થી વધુ</option>
+                  <option value={2}>15,000 થી 20,000</option>
+                  <option value={1}>8,000 થી 15,000 </option>
+                  <option value={0}>7,000 થી 0</option>
                 </select>
               </div>
               <div className="col-2">
@@ -2610,10 +2610,10 @@ function Motibhaiamin_7() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={0}>૧૦૦૦૦ ૱</option>
-                  <option value={1}>૧૦ થી ૧૫ હજાર</option>
-                  <option value={2}>૧૫ થી ૨૦ હજાર</option>
-                  <option value={3}>૨૦ થી વધુ</option>
+                  <option value={0}>0 થી 10,000</option>
+                  <option value={1}>10,000 થી 15,000</option>
+                  <option value={2}>15,000 થી 20,000</option>
+                  <option value={3}>20,000 થી વધુ</option>
                 </select>
               </div>
               <div className="col-2">
@@ -3046,11 +3046,11 @@ function Motibhaiamin_7() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>૪૦૦૧ થી વધુ</option>
-                  <option value={3}>૩૦૦૧ થી ૪૦૦૦ સુધી</option>
-                  <option value={2}>૨૦૦૧ થી ૩૦૦૦ સુધી</option>
-                  <option value={1}>૧૦૦૧ થી ૨૦૦૦ સુધી</option>
-                  <option value={0}>૧૦૦૧ થી ઓછા</option>
+                  <option value={4}>4001 થી વધુ</option>
+                  <option value={3}>3001 થી 4000 સુધી</option>
+                  <option value={2}>2001 થી 3000 સુધી</option>
+                  <option value={1}>1001 થી 2000 સુધી</option>
+                  <option value={0}>1001 થી ઓછા</option>
                 </select>
               </div>
               <div className="col-2">

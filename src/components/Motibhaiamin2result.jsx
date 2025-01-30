@@ -1063,9 +1063,9 @@ function Motibhaiamin2result() {
                     Select
                   </option>
                   <option value={5}>7 કલાક થી વધુ</option>
-                  <option value={4}>6 થી 7</option>
-                  <option value={3}>5 થી 6</option>
-                  <option value={0}>1 થી 5</option>
+                  <option value={4}>6 કલાક થી 7 કલાક</option>
+                  <option value={3}>5 કલાક થી 6 કલાક</option>
+                  <option value={0}>1 કલાક થી 5 કલાક</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1359,11 +1359,11 @@ function Motibhaiamin2result() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={0}>5 થી 14%</option>
-                  <option value={1}>15 થી 20%</option>
-                  <option value={2}>21 થી 30%</option>
-                  <option value={3}>31 થી 40%</option>
-                  <option value={4}>40 થી 50%</option>
+                  <option value={0}>5% થી 14%</option>
+                  <option value={1}>15% થી 20%</option>
+                  <option value={2}>21% થી 30%</option>
+                  <option value={3}>31% થી 40%</option>
+                  <option value={4}>40% થી 50%</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1387,11 +1387,11 @@ function Motibhaiamin2result() {
                   <option selected disabled value="">
                     Select
                   </option>
-                  <option value={4}>24 થી વધુ</option>
-                  <option value={3}>18 થી 23</option>
-                  <option value={2}>12 થી 17</option>
-                  <option value={1}>6 થી 11</option>
-                  <option value={0}>3 કે તેથી ઓછું</option>
+                  <option value={4}>24% થી વધુ</option>
+                  <option value={3}>18% થી 23%</option>
+                  <option value={2}>12% થી 17%</option>
+                  <option value={1}>6% થી 11%</option>
+                  <option value={0}>3% કે તેથી ઓછું</option>
                 </select>
               </div>
               <div className="col-2">
@@ -1418,9 +1418,9 @@ function Motibhaiamin2result() {
                     Select
                   </option>
                   <option value={4}>100%</option>
-                  <option value={3}>75 થી 99%</option>
-                  <option value={2}>50 થી 74%</option>
-                  <option value={1}>25 થી 49%</option>
+                  <option value={3}>75% થી 99%</option>
+                  <option value={2}>50% થી 74%</option>
+                  <option value={1}>25% થી 49%</option>
                   <option value={0}>25% થી ઓછું</option>
                 </select>
               </div>

@@ -91,29 +91,81 @@ function Motibhairesultlatter() {
             <>
               <div className="latter" ref={pdfref}>
                 <h1> ભલામણ</h1>
-                <h5>
-                  શહેર ગ્રંથાલય કક્ષાના સને {year - 1}-{year} ના વર્ષ ના સ્પર્ધક
-                  ગ્રંથાલયોના મૂલ્યાંકન બાદ નીચેની વિગતે ગ્રંથાલયોને ક્રમાનુસાર
-                  ભલામણ આ પેટા પ્રાદેશિક સમિતિ કરે છે
-                </h5>
-                <p className="latterlname">
-                  (૧) ઉત્તમ ગ્રંથાલય :- {data[0].lname}{" "}
-                  <span className="latterlname spacing">
-                    ગુણ :- {data[0].marks}
-                  </span>
-                </p>
-                <p className="latterlname">
-                  (૨) મધ્યમ ગ્રંથાલય :- {data[1].lname}
-                  <span className="latterlname spacing">
-                    ગુણ :- {data[1].marks}
-                  </span>
-                </p>
-                <p className="latterlname">
-                  (૩) સારૂ ગ્રંથાલય :- {data[2].lname}
-                  <span className="latterlname spacing">
-                    ગુણ :- {data[2].marks}
-                  </span>
-                </p>
+
+                {category.current.value === "Motibhaiamin1" && (
+                  <h5>
+                    અંધજન ગ્રંથાલય કક્ષાના સને {year - 1}-{year} ના વર્ષ ના
+                    સ્પર્ધક ગ્રંથાલયોના મૂલ્યાંકન બાદ નીચેની વિગતે ગ્રંથાલયોને
+                    ક્રમાનુસાર ભલામણ આ પેટા પ્રાદેશિક સમિતિ કરે છે
+                  </h5>
+                )}
+                {category.current.value === "Motibhaiamin2" && (
+                  <h5>
+                    શહેર ગ્રંથાલય કક્ષાના સને {year - 1}-{year} ના વર્ષ ના
+                    સ્પર્ધક ગ્રંથાલયોના મૂલ્યાંકન બાદ નીચેની વિગતે ગ્રંથાલયોને
+                    ક્રમાનુસાર ભલામણ આ પેટા પ્રાદેશિક સમિતિ કરે છે
+                  </h5>
+                )}
+                {category.current.value === "Motibhaiamin3" && (
+                  <h5>
+                    ગ્રામ ગ્રંથાલય કક્ષાના સને {year - 1}-{year} ના વર્ષ ના
+                    સ્પર્ધક ગ્રંથાલયોના મૂલ્યાંકન બાદ નીચેની વિગતે ગ્રંથાલયોને
+                    ક્રમાનુસાર ભલામણ આ પેટા પ્રાદેશિક સમિતિ કરે છે
+                  </h5>
+                )}
+                {category.current.value === "Motibhaiamin4" && (
+                  <h5>
+                    શહેર શાખા /નગરકક્ષા-૧ ગ્રંથાલય કક્ષાના સને {year - 1}-{year}{" "}
+                    ના વર્ષ ના સ્પર્ધક ગ્રંથાલયોના મૂલ્યાંકન બાદ નીચેની વિગતે
+                    ગ્રંથાલયોને ક્રમાનુસાર ભલામણ આ પેટા પ્રાદેશિક સમિતિ કરે છે
+                  </h5>
+                )}
+                {category.current.value === "Motibhaiamin5" && (
+                  <h5>
+                    નગરકક્ષા-૨ ગ્રંથાલય કક્ષાના સને {year - 1}-{year} ના વર્ષ ના
+                    સ્પર્ધક ગ્રંથાલયોના મૂલ્યાંકન બાદ નીચેની વિગતે ગ્રંથાલયોને
+                    ક્રમાનુસાર ભલામણ આ પેટા પ્રાદેશિક સમિતિ કરે છે
+                  </h5>
+                )}
+                {category.current.value === "Motibhaiamin6" && (
+                  <h5>
+                    મહિલા બાળ ગ્રંથાલય કક્ષાના સને {year - 1}-{year} ના વર્ષ ના
+                    સ્પર્ધક ગ્રંથાલયોના મૂલ્યાંકન બાદ નીચેની વિગતે ગ્રંથાલયોને
+                    ક્રમાનુસાર ભલામણ આ પેટા પ્રાદેશિક સમિતિ કરે છે
+                  </h5>
+                )}
+                {category.current.value === "Motibhaiamin7" && (
+                  <h5>
+                    વિશિષ્ટ ગ્રંથાલય કક્ષાના સને {year - 1}-{year} ના વર્ષ ના
+                    સ્પર્ધક ગ્રંથાલયોના મૂલ્યાંકન બાદ નીચેની વિગતે ગ્રંથાલયોને
+                    ક્રમાનુસાર ભલામણ આ પેટા પ્રાદેશિક સમિતિ કરે છે
+                  </h5>
+                )}
+
+                {data[0] && (
+                  <p className="latterlname">
+                    (૧) ઉત્તમ ગ્રંથાલય :- {data[0].lname}{" "}
+                    <span className=" spacing">
+                      ગુણ :- {data[0].marks}
+                    </span>
+                  </p>
+                )}
+                {data[1] && (
+                  <p className="latterlname">
+                    (૨) મધ્યમ ગ્રંથાલય :- {data[1].lname}
+                    <span className=" spacing">
+                      ગુણ :- {data[1].marks}
+                    </span>
+                  </p>
+                )}
+                {data[2] && (
+                  <p className="latterlname">
+                    (૩) સારૂ ગ્રંથાલય :- {data[2].lname}
+                    <span className=" spacing">
+                      ગુણ :- {data[2].marks}
+                    </span>
+                  </p>
+                )}
                 <div className="namescontainer">
                   <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, અમદાવાદ</p>
                   <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, વડોદરા</p>
