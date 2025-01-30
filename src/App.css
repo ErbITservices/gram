@@ -415,7 +415,7 @@ margin-bottom: 35px;
 .latternames{
   
   margin: 0px 50px;
-  margin-top: 89px;
+  margin-top: 91px;
   font-size: 15px;
   
     font-weight: 700;
@@ -428,7 +428,11 @@ margin-bottom: 35px;
   font-weight: 700;
 }
 .spacing{
-  margin: 0 20px;
+  /* margin: 0 20px;
+ */
+ margin-right: 35px;
+  font-size: 15px;
+  font-weight: 700;
 }
 .customeselect{
   display: flex;

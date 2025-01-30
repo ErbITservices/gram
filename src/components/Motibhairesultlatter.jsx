@@ -145,25 +145,19 @@ function Motibhairesultlatter() {
                 {data[0] && (
                   <p className="latterlname">
                     (૧) ઉત્તમ ગ્રંથાલય :- {data[0].lname}{" "}
-                    <span className=" spacing">
-                      ગુણ :- {data[0].marks}
-                    </span>
+                    <span className=" spacing">ગુણ :- {data[0].marks}</span>
                   </p>
                 )}
                 {data[1] && (
                   <p className="latterlname">
                     (૨) મધ્યમ ગ્રંથાલય :- {data[1].lname}
-                    <span className=" spacing">
-                      ગુણ :- {data[1].marks}
-                    </span>
+                    <span className=" spacing">ગુણ :- {data[1].marks}</span>
                   </p>
                 )}
                 {data[2] && (
                   <p className="latterlname">
                     (૩) સારૂ ગ્રંથાલય :- {data[2].lname}
-                    <span className=" spacing">
-                      ગુણ :- {data[2].marks}
-                    </span>
+                    <span className=" spacing">ગુણ :- {data[2].marks}</span>
                   </p>
                 )}
                 <div className="namescontainer">
@@ -179,10 +173,16 @@ function Motibhairesultlatter() {
                   <p className="latternames">મદદનીશ ગ્રંથાલય નિયામક, મહેસાણા</p>
                 </div>
                 <p className="latternames">
-                  મદદનીશ ગ્રંથાલય નિયામક ગ્રંથાલય નિયામકની કચેરી, ગાંધીનગર
+                  મદદનીશ ગ્રંથાલય નિયામક
+                  <br />
+                  ગ્રંથાલય નિયામકની કચેરી,
+                  <br />
+                  ગાંધીનગર
                 </p>
                 <p className="latternames">
-                  ગ્રંથાલય નિયામક ગુજરાત રાજ્ય, ગાંધીનગર
+                  ગ્રંથાલય નિયામક ગુજરાત રાજ્ય,
+                  <br />
+                  ગાંધીનગર
                 </p>
                 {console.log(data[0].lname)}
               </div>
