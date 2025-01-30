@@ -180,7 +180,9 @@ function Motibhairesultlatter() {
                   ગાંધીનગર
                 </p>
                 <p className="latternames">
-                  ગ્રંથાલય નિયામક ગુજરાત રાજ્ય,
+                  ગ્રંથાલય નિયામક
+                  <br />
+                  ગુજરાત રાજ્ય,
                   <br />
                   ગાંધીનગર
                 </p>
