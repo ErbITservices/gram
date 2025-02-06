@@ -406,8 +406,35 @@ margin: 20px 10px;
     border-bottom: 1.5px solid black;
 }
 .latter h5{
-font-weight: 900;
+font-weight: 700;
 margin-bottom: 35px;
+}
+.heading-container{
+  border-bottom: 2px dotted black;
+  width: 90%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.heading1{
+  font-size: 20px;
+  font-weight: 900;
+  word-spacing: 8px;
+  margin-bottom: 15px;
+}
+.heading2{
+font-size: 30px;
+  font-weight: 900;
+   word-spacing: 8px;
+  margin-bottom: 15px;
+}
+.heading3{
+font-size: 20px;
+  font-weight: 900;
+   word-spacing: 5px;
+  margin-bottom: 15px;
 }
 .namescontainer{
   width: 100%;

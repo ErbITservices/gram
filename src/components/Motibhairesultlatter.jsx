@@ -90,6 +90,14 @@ function Motibhairesultlatter() {
           {data && (
             <>
               <div className="latter" ref={pdfref}>
+                <div className="heading-container">
+                  <h2 className="heading1">
+                    રમતગમત, યુવા અને સાંસ્કૃતિક પ્રવૃતિઓ વિભાગ
+                  </h2>
+                  <h2 className="heading2">ગ્રંથાલય નિયમકની કચેરી</h2>
+                  <h2 className="heading3">ગુજરાત રાજ્ય, ગાંધીનગર</h2>
+                </div>
+
                 <h1> ભલામણ</h1>
 
                 {category.current.value === "Motibhaiamin1" && (
