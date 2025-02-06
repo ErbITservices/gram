@@ -388,10 +388,13 @@ background: rgb(26, 24, 24) !important;
     justify-content: center;
 }
 .latter {
-    
-
+    border: 5px double black;
+    padding: 20px;
     font-size: 20px;
     font-weight: 700;
+    margin: 5px;
+    width: 785px;
+    min-height: 1110px;
 }
 .latter h3 {
     
@@ -399,11 +402,11 @@ margin: 20px 10px;
 }
 .latter h1{
     
- margin-bottom: 20px;
+ margin-bottom: 30px;
     border-bottom: 1.5px solid black;
 }
 .latter h5{
-    
+font-weight: 900;
 margin-bottom: 35px;
 }
 .namescontainer{
