@@ -371,7 +371,7 @@ background: rgb(26, 24, 24) !important;
   padding: 10px 25px 10px;
   text-align: center;
   color: white;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .button-25:hover {
@@ -530,4 +530,28 @@ font-size: 20px;
 } */
  td{
   text-align: center;
+ }
+ .checklistcontainer{
+  display: flex;
+ }
+ .checklist{
+  width: fit-content;
+  margin: 0 10px;
+ }
+ .checklist input{
+  border: 1px solid grey;
+  margin: 5px 5px;
+ }
+ .reporttable th{
+  background-color:#0098e4;
+  padding: 5px;
+  height: fit-content;
+  font-size: 17px;
+ }
+ .reporttable td{
+  font-weight: 300;
+ }
+ .reporttable thead{
+  height: fit-content;
+
  }

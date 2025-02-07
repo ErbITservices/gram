@@ -155,7 +155,7 @@ function Directo_Dashbord() {
                 <option>RAJKOT</option>
                 <option value={"All"}>All</option>
               </select>
-              <Report handleback={handleback} arr={data} title={"director"} />
+              <Report handleback={handleback} arr={data}  />
             </>
           )}
         </div>

@@ -1,5 +1,5 @@
 import { useReactToPrint } from "react-to-print";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 function Report({ arr, handleback, title }) {
   const pdfref = useRef();
   const downloadpdf = useReactToPrint({
@@ -8,36 +8,262 @@ function Report({ arr, handleback, title }) {
   });
   console.log(arr);
 
+  const [showlist, setshowlist] = useState({
+    uid: true,
+    lname: true,
+    gam: true,
+    pin: "",
+    taluko: false,
+    sthapnadate: "",
+    district: false,
+    male: "",
+    female: "",
+    studypeople: "",
+    studymale: "",
+    studyfemale: "",
+    studychild: "",
+    lavaj: "",
+    lavajamount: "",
+    workinghourslibrary: "",
+    workinghoursbook: "",
+    handleby: "",
+    registernumber: "",
+    emailmen: "",
+    emailmenaddres: "",
+    libraryen: "",
+    libraryenaddres: "",
+    libraryeneducation: "",
+    libraryensalary: "",
+    housestate: "",
+    houserent: "",
+    hosestatus: "",
+    aircondition: "",
+    openforevryone: "",
+    lastyearbookcount: "",
+    currentyearbookcount: "",
+    lastyearaddedbook: "",
+    endyearabookcount: "",
+    publishbook: "",
+    newspapercount: "",
+    newpaper: "",
+    parigrahan: "",
+    register: "",
+    deadregister: "",
+    attendencregister: "",
+    anualrequest: "",
+    recieptbook: "",
+    voucherbook: "",
+    rojmel: "",
+    commandbook: "",
+    publishregister: "",
+    followinstructoin: "",
+    whichlevel: "",
+    requirment: "",
+    grant: "",
+    vanchansamagrik: "",
+    vanchansamagrim: "",
+    pagark: "",
+    pagarm: "",
+    note1: "",
+    note2: "",
+    note3: "",
+    furnichark: "",
+    furnicharm: "",
+    otherm: "",
+    otherk: "",
+    alavajam: "",
+    aintrest: "",
+    arent: "",
+    awest: "",
+    agrant: "",
+    ahelp: "",
+    adistrict: "",
+    ataluko: "",
+    agam: "",
+    aotherhelp: "",
+    aother: "",
+    aprevios: "",
+    kbook: "",
+    knewspaper: "",
+    kbookbinding: "",
+    kinfletion: "",
+    ksalary: "",
+    kother: "",
+    kfurnichar: "",
+    kfurnicharrepair: "",
+    kotherbuy: "",
+    krent: "",
+    krepair: "",
+    ktax: "",
+    kstationary: "",
+    kmail: "",
+    ktrip: "",
+    kpremium: "",
+    klightbill: "",
+    kothersmall: "",
+    Currentyear: "",
+    phone: "",
+    email: "",
+  });
+  function handleshow(e) {
+    const name = e.target.name;
+    const value = e.target.checked;
+    setshowlist({ ...showlist, [name]: value })
+    console.log(showlist);
+    console.log(value);
+    
+  }
   return (
     <center>
       <div className="main rounded">
         <h1 className="heighlight">{title}</h1>
+        <div className="checklistcontainer">
+          <div className="checklist">
+            <label className="form-check-label">UID</label>
+            <input
+              required
+              defaultChecked
+              className="form-check-input"
+              type="checkbox"
+              name="uid"
+              value={showlist.uid}
+              onChange={handleshow}
+            />
+          </div>
+          <div className="checklist">
+            <label className="form-check-label">Library Name</label>
+            <input
+              required
+              defaultChecked
+              className="form-check-input"
+              type="checkbox"
+              name="lname"
+              value={showlist.lname}
+              onChange={handleshow}
+            />
+          </div>
+          <div className="checklist">
+            <label className="form-check-label">City </label>
+            <input
+              required
+              defaultChecked
+              className="form-check-input"
+              type="checkbox"
+              name="gam"
+              value={showlist.gam}
+              onChange={handleshow}
+            />
+          </div>
+          <div className="checklist">
+            <label className="form-check-label">Phone </label>
+            <input
+              required
+              
+              className="form-check-input"
+              type="checkbox"
+              name="phone"
+              value={showlist.phone}
+              onChange={handleshow}
+            />
+          </div>
+          <div className="checklist">
+            <label className="form-check-label">Email </label>
+            <input
+              required
+              
+              className="form-check-input"
+              type="checkbox"
+              name="email"
+              value={showlist.email}
+              onChange={handleshow}
+            />
+          </div>
+          <div className="checklist">
+            <label className="form-check-label">District </label>
+            <input
+              required
+              className="form-check-input"
+              type="checkbox"
+              name="district"
+              value={showlist.district}
+              onChange={handleshow}
+            />
+          </div>
+          <div className="checklist">
+            <label className="form-check-label">Taluko </label>
+            <input
+              required
+              className="form-check-input"
+              type="checkbox"
+              name="taluko"
+              value={showlist.taluko}
+              onChange={handleshow}
+            />
+          </div>
+          {/* <div className="checklist">
+            <label className="form-check-label">City </label>
+            <input
+              required
+              
+              className="form-check-input"
+              type="checkbox"
+              name="gam"
+              value={showlist.gam}
+              onChange={handleshow}
+            />
+          </div> */}
+          {/* <div className="checklist">
+            <label className="form-check-label">City </label>
+            <input
+              required
+              defaultChecked
+              className="form-check-input"
+              type="checkbox"
+              name="gam"
+              value={showlist.gam}
+              onChange={handleshow}
+            />
+          </div>
+          <div className="checklist">
+            <label className="form-check-label">City </label>
+            <input
+              required
+              defaultChecked
+              className="form-check-input"
+              type="checkbox"
+              name="gam"
+              value={showlist.gam}
+              onChange={handleshow}
+            />
+          </div> */}
+        </div>
+
         <table
           ref={pdfref}
-          className="table table-bordered table-hover rounded"
+          className="table table-bordered table-hover rounded reporttable"
         >
           <thead>
             <tr>
-              <th>Library id</th>
-              <th>Library Name</th>
-              <th>District</th>
-              <th>Taluko</th>
-              <th>City</th>
-              <th>phone</th>
-              <th>email</th>
+              {showlist.uid && <th>Library id</th>}
+              {showlist.lname && <th>Library Name</th>}
+              {showlist.district && <th>District</th>}
+              {showlist.taluko && <th>Taluko</th>}
+              {showlist.gam && <th>City</th>}
+              {showlist.phone && <th>phone</th>}
+              {showlist.email && <th>email</th>}
             </tr>
           </thead>
           <tbody>
             {arr &&
               arr.map((i) => (
                 <tr>
-                  <td>{i.uid}</td>
-                  <td>{i.lname}</td>
-                  <td>{i.district}</td>
-                  <td>{i.taluko}</td>
-                  <td>{i.gam}</td>
-                  <td>{i.phone}</td>
-                  <td>{i.email}</td>
+                  {showlist.uid && <td>{i.uid}</td>}
+                  {showlist.lname && <td>{i.lname}</td>}
+                  {showlist.district && <td>{i.district}</td>}
+                  {showlist.taluko && <td>{i.taluko}</td>}
+                  {showlist.gam && <td>{i.gam}</td>}
+                  {showlist.phone && <td>{i.phone}</td>}
+                  {showlist.email && <td>{i.email}</td>}
                 </tr>
               ))}
           </tbody>

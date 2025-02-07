@@ -112,6 +112,7 @@ function Master() {
     kpremium: "",
     klightbill: "",
     kothersmall: "",
+    Currentyear: "",
   });
 
   const [pd, setpd] = useState([]);
@@ -143,7 +144,7 @@ function Master() {
     console.log(data);
   };
   const handleCheck = (e) => {
-    // console.log(data);
+    console.log(data);
     const name = e.target.name;
     const value = e.target.checked;
     setdata({
@@ -267,6 +268,7 @@ function Master() {
           kothersmall: "",
           email: "",
           phone: "",
+          Currentyear: "",
         });
         setloader("false");
       }
@@ -374,6 +376,7 @@ function Master() {
       kothersmall: "",
       email: "",
       phone: "",
+      Currentyear: "",
     },
   ]);
   const checkpin = () => {
@@ -480,6 +483,7 @@ function Master() {
         kothersmall: "",
         email: "",
         phone: "",
+        Currentyear: "",
       });
       setloader("false");
     }
@@ -502,7 +506,13 @@ function Master() {
             <div ref={pdfref} className="form ">
               <h1 className="customeselect">
                 નિરીક્ષણ અહેવાલ{" "}
-                <select required className="form-select">
+                <select
+                  required
+                  className="form-select"
+                  name="Currentyear"
+                  value={data.Currentyear}
+                  onChange={handleInput}
+                >
                   <option selected>2024-25</option>
                   <option>2023-24</option>
                   <option>2022-23</option>
