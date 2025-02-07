@@ -385,11 +385,10 @@ background: rgb(26, 24, 24) !important;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-.latter {
+    /* justify-content: center; */
+
     border: 5px double black;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
     font-size: 20px;
     font-weight: 700;
     margin: 5px;
@@ -403,17 +402,31 @@ margin: 20px 10px;
 .latter h1{
     
  margin-bottom: 24px;
-    border-bottom: 1.5px solid black;
+    border-bottom: 2px dotted black;
 }
 .latter h5{
 font-weight: 700;
 margin-bottom: 35px;
 }
 .heading-container{
-  border-bottom: 2px dotted black;
-  width: 90%;
+  border-bottom: 2.5px dotted grey;
+  width: 775px;
+  margin-top: 0;
   margin-bottom: 10px;
   display: flex;
+  gap: 50px;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  background-color: skyblue;
+  padding: 8px;
+}
+.heading-container img{
+  width: 65px;
+  height: 100px;
+}
+.heading-container div{
+   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
