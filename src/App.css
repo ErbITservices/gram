@@ -481,6 +481,7 @@ font-size: 20px;
  margin-right: 35px;
   font-size: 15px;
   font-weight: 700;
+  min-width: fit-content;
 }
 .customeselect{
   display: flex;

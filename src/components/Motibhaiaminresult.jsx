@@ -13,11 +13,13 @@ function Motibhaiaminresult() {
     documentTitle: "Ahevalform",
   });
   const [data, setdata] = useState();
+  const [yearvisedata, setyearvisedata] = useState();
   useEffect(() => {
     const dataget = async () => {};
     dataget();
   }, []);
   const category = useRef();
+  const year = useRef();
   async function showresult() {
     console.log(category.current.value);
     try {
@@ -26,7 +28,22 @@ function Motibhaiaminresult() {
       );
       console.log(response.data),
         response.data.sort(({ marks: a }, { marks: b }) => b - a);
-      setdata(response.data);
+      if (year.current.value === "All") {
+        setdata(response.data)
+      }
+      else {
+        setdata(
+          response.data.filter(function checkyear(e) {
+            if (year.current.value === e.currentyear) {
+              // console.log(e);
+
+              return e;
+            }
+          })
+        );
+      }
+      
+      
     } catch (error) {
       console.log(error);
     }
@@ -151,11 +168,10 @@ function Motibhaiaminresult() {
               <div className=" col-2">
                 <label className="col-sm-10 col-form-label">Category :</label>
               </div>
-              <div className="col-8">
+              <div className="col-3">
                 <select
                   required
                   id="inputState"
-                  name="gam"
                   ref={category}
                   className="form-select"
                 >
@@ -171,6 +187,26 @@ function Motibhaiaminresult() {
                   <option value={"Motibhaiamin5"}>નગરકક્ષા-૨ ગ્રંથાલય</option>
                   <option value={"Motibhaiamin6"}>મહિલા બાળ ગ્રંથાલય</option>
                   <option value={"Motibhaiamin7"}>વિશિષ્ટ ગ્રંથાલય</option>
+                </select>
+              </div>
+              <div className=" col-2">
+                <label className="col-sm-5 col-form-label">Year :</label>
+              </div>
+              <div className="col-3">
+                <select
+                  required
+                  id="inputState"
+                  ref={year}
+                  
+                  className="form-select"
+                >
+                  <option selected value={""}>
+                    Select
+                  </option>
+                  <option value={"All"}>All</option>
+                  <option value={"2024"}>2024</option>
+                  <option value={"2025"}>2025</option>
+                  
                 </select>
               </div>
               <div className=" col">
@@ -203,7 +239,9 @@ function Motibhaiaminresult() {
                   </thead>
                   <tbody>
                     {data.map((i, e) => (
+                     
                       <tr>
+                        
                         <td>{e+1}</td>
                         <td>{i.currentyear}</td>
                         <td>{i.lname}</td>

@@ -7,6 +7,8 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 function Motibhairesultlatter() {
   const pdfref = useRef();
+  const cyear = useRef();
+
   const d = new Date();
   let year = d.getFullYear();
   const downloadpdf = useReactToPrint({
@@ -27,7 +29,20 @@ function Motibhairesultlatter() {
       );
       console.log(response.data),
         response.data.sort(({ marks: a }, { marks: b }) => b - a);
-      setdata(response.data);
+      
+      if (cyear.current.value === "All") {
+        setdata(response.data);
+      } else {
+        setdata(
+          response.data.filter(function checkyear(e) {
+            if (cyear.current.value === e.currentyear) {
+              // console.log(e);
+
+              return e;
+            }
+          })
+        );
+      }
     } catch (error) {
       console.log(error);
     }
@@ -47,7 +62,7 @@ function Motibhairesultlatter() {
             <div className=" col-2">
               <label className="col-sm-10 col-form-label">Category :</label>
             </div>
-            <div className="col-8">
+            <div className="col-3">
               <select
                 required
                 id="inputState"
@@ -74,6 +89,22 @@ function Motibhairesultlatter() {
                 <option value={"Motibhaiamin5"}>નગરકક્ષા ૧</option>
                 <option value={"Motibhaiamin6"}>નગરકક્ષા ૨</option>
                 <option value={"Motibhaiamin7"}>વિશીષ્ટ લાઇબ્રેરી</option> */}
+              </select>
+            </div>
+            <div className=" col-2">
+              <label className="col-sm-5 col-form-label">Year :</label>
+            </div>
+            <div className="col-3">
+              <select
+                required
+                id="inputState"
+                ref={cyear}
+                className="form-select"
+              >
+                
+                <option value={"All"}>All</option>
+                <option value={"2024"}>2024</option>
+                <option value={"2025"}>2025</option>
               </select>
             </div>
             <div className=" col">
