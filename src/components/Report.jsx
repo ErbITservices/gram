@@ -12,6 +12,7 @@ function Report({ arr, handleback, title }) {
     uid: true,
     lname: true,
     gam: true,
+    librarystatus: true,
     pin: "",
     taluko: false,
     sthapnadate: "",
@@ -115,8 +116,8 @@ function Report({ arr, handleback, title }) {
   }
   return (
     <center>
-      <div className="main rounded">
-        <h1 className="heighlight">{title}</h1>
+      <div className=" rounded">
+        {/* <h1 className="heighlight">{title}</h1> */}
         <div className="checklistcontainer">
           <div className="checklist">
             <label className="form-check-label">UID</label>
@@ -155,10 +156,21 @@ function Report({ arr, handleback, title }) {
             />
           </div>
           <div className="checklist">
+            <label className="form-check-label">Library Status </label>
+            <input
+              required
+              defaultChecked
+              className="form-check-input"
+              type="checkbox"
+              name="librarystatus"
+              value={showlist.librarystatus}
+              onChange={handleshow}
+            />
+          </div>
+          <div className="checklist">
             <label className="form-check-label">Phone </label>
             <input
               required
-              
               className="form-check-input"
               type="checkbox"
               name="phone"
@@ -170,11 +182,21 @@ function Report({ arr, handleback, title }) {
             <label className="form-check-label">Email </label>
             <input
               required
-              
               className="form-check-input"
               type="checkbox"
               name="email"
               value={showlist.email}
+              onChange={handleshow}
+            />
+          </div>
+          <div className="checklist">
+            <label className="form-check-label">Year </label>
+            <input
+              required
+              className="form-check-input"
+              type="checkbox"
+              name="Currentyear"
+              value={showlist.Currentyear}
               onChange={handleshow}
             />
           </div>
@@ -244,20 +266,24 @@ function Report({ arr, handleback, title }) {
         >
           <thead>
             <tr>
+              {showlist.Currentyear && <th>Year</th>}
               {showlist.uid && <th>Library id</th>}
+              {showlist.librarystatus && <th>Library Status</th>}
               {showlist.lname && <th>Library Name</th>}
               {showlist.district && <th>District</th>}
               {showlist.taluko && <th>Taluko</th>}
               {showlist.gam && <th>City</th>}
-              {showlist.phone && <th>phone</th>}
-              {showlist.email && <th>email</th>}
+              {showlist.phone && <th>Phone</th>}
+              {showlist.email && <th>Email</th>}
             </tr>
           </thead>
           <tbody>
             {arr &&
               arr.map((i) => (
                 <tr>
+                  {showlist.Currentyear && <td>{i.Currentyear}</td>}
                   {showlist.uid && <td>{i.uid}</td>}
+                  {showlist.librarystatus && <td>{i.librarystatus}</td>}
                   {showlist.lname && <td>{i.lname}</td>}
                   {showlist.district && <td>{i.district}</td>}
                   {showlist.taluko && <td>{i.taluko}</td>}
