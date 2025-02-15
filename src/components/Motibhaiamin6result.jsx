@@ -513,6 +513,7 @@ function Motibhaiamin6result() {
                 required
                 onChange={handleInput}
                 value={data.currentyear}
+                name="currentyear"
                 className="form-select"
               >
                 <option selected disabled>
@@ -535,6 +536,7 @@ function Motibhaiamin6result() {
               <select
                 required
                 value={data.finacialyear}
+                name="finacialyear"
                 onChange={handleInput}
                 className="form-select"
               >

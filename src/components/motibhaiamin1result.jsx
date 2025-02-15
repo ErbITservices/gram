@@ -514,9 +514,11 @@ function Motibhaiamin1result() {
             <div className="col">
               <select
                 required
-                onChange={handleInput}
                 className="form-select"
+                name="currentyear"
                 value={data.currentyear}
+                onChange={handleInput}
+
               >
                 <option selected disabled>
                   Select
@@ -537,9 +539,10 @@ function Motibhaiamin1result() {
             <div className="col">
               <select
                 required
-                onChange={handleInput}
                 className="form-select"
+                name="finacialyear"
                 value={data.finacialyear}
+                
               >
                 <option selected>{year}</option>
                 <option>{year - 1}</option>
