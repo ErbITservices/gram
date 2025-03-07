@@ -624,9 +624,10 @@ function Motibhaiamin4result() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  વર્ષ {currentyear.current && currentyear.current.value - 2} -{" "}
-                  {currentyear.current && currentyear.current.value - 1} નો આવક
-                  :
+                  વર્ષ{" "}
+                  {Number(data.currentyear) && Number(data.currentyear) - 2} -{" "}
+                  {Number(data.currentyear) && Number(data.currentyear) - 1} નો
+                  આવક :
                 </label>
               </div>
               <div className="col">
@@ -653,8 +654,10 @@ function Motibhaiamin4result() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  વર્ષ {currentyear.current && currentyear.current.value - 1} -{" "}
-                  {currentyear.current && currentyear.current.value} નો આવક :
+                  વર્ષ{" "}
+                  {Number(data.currentyear) && Number(data.currentyear) - 1} -{" "}
+                  {Number(data.currentyear) && Number(data.currentyear)} નો આવક
+                  :
                 </label>
               </div>
               <div className="col">
@@ -683,9 +686,10 @@ function Motibhaiamin4result() {
             <div className="row mb-3 col-sm-13 align-items-center">
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  વર્ષ {currentyear.current && currentyear.current.value - 2} -{" "}
-                  {currentyear.current && currentyear.current.value - 1} નો ખર્ચ
-                  :
+                  વર્ષ{" "}
+                  {Number(data.currentyear) && Number(data.currentyear) - 2} -{" "}
+                  {Number(data.currentyear) && Number(data.currentyear) - 1} નો
+                  ખર્ચ :
                 </label>
               </div>
               <div className="col">
@@ -712,8 +716,10 @@ function Motibhaiamin4result() {
               </div>
               <div className=" col">
                 <label className="col-sm-10 col-form-label">
-                  વર્ષ {currentyear.current && currentyear.current.value - 1} -{" "}
-                  {currentyear.current && currentyear.current.value} નો ખર્ચ :
+                  વર્ષ{" "}
+                  {Number(data.currentyear) && Number(data.currentyear) - 1} -{" "}
+                  {Number(data.currentyear) && Number(data.currentyear)} નો ખર્ચ
+                  :
                 </label>
               </div>
               <div className="col">
