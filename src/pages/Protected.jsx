@@ -5,6 +5,7 @@ function Protected(props) {
     const { Components } = props;
   const navigator = useNavigate();
   navigator("/All_Login");
+  // temp
     // let login = localStorage.getItem("login");
     // useEffect(() => {
         
