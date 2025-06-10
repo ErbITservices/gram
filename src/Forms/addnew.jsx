@@ -116,10 +116,10 @@ function Addnew() {
   const ARAVALLI = [
     "Modasa",
     "Malpur",
+    "Maghraj",
     "Bayad",
     "Bhiloda",
     "Dhansura",
-    "Garbada",
   ];
   const BANASKANTHA = [
     "Deesa",
@@ -262,10 +262,8 @@ function Addnew() {
     "Himmatnagar",
     "Idar",
     "Khedbrahma",
-    "Modasa",
     "Prantij",
     "Talod",
-    "Bayad",
     "Vijaynagar",
   ];
   const SURAT = [
